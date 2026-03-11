@@ -1,0 +1,2471 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BISOU — L'or qui t'embrasse | Bijoux Plaqués Or Maroc</title>
+  <meta name="description" content="BISOU — Bijoux plaqués or, acier inoxydable 316L, anti-allergique. Livraison COD partout au Maroc. Basé à Marrakech." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =============================================
+       DESIGN TOKENS
+    ============================================= */
+    :root {
+      --gold: #D4AF37;
+      --gold-light: #F5E6A3;
+      --gold-dark: #A8862E;
+      --dark: #0D0D0D;
+      --dark-2: #1a1a1a;
+      --dark-3: #222222;
+      --cream: #FDF6E3;
+      --cream-2: #F5EDD4;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1da851;
+      --text-muted: #888888;
+      --white: #ffffff;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Jost', sans-serif;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.25);
+      --shadow-card: 0 8px 40px rgba(0, 0, 0, 0.4);
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* =============================================
+       RESET & BASE
+    ============================================= */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background: var(--dark);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* =============================================
+       ANIMATIONS
+    ============================================= */
+    @keyframes pulse-gold {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.5); }
+      50% { box-shadow: 0 0 0 14px rgba(212, 175, 55, 0); }
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.15); opacity: 0.85; }
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes rotate-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes glow-border {
+      0%, 100% { border-color: rgba(212,175,55,0.3); }
+      50% { border-color: rgba(212,175,55,0.9); }
+    }
+
+    /* =============================================
+       UTILITY CLASSES
+    ============================================= */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .gold-text {
+      color: var(--gold);
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+
+    .section-subtitle {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 1rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    /* =============================================
+       BUTTONS
+    ============================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      border: none;
+      transition: all var(--transition);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+      color: var(--dark);
+      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+      filter: brightness(1.1);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid rgba(212, 175, 55, 0.5);
+    }
+
+    .btn-outline:hover {
+      background: rgba(212, 175, 55, 0.1);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+    }
+
+    .btn-whatsapp-sm {
+      background: var(--whatsapp);
+      color: var(--white);
+      padding: 10px 20px;
+      font-size: 0.85rem;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: all var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-body);
+    }
+
+    .btn-whatsapp-sm:hover {
+      background: var(--whatsapp-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    /* =============================================
+       1. NAVBAR
+    ============================================= */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 0 24px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(13, 13, 13, 0.9);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+      transition: all var(--transition);
+    }
+
+    .navbar-logo {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: 2rem;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .navbar-logo span {
+      font-style: italic;
+    }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .navbar-links a {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    .navbar-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width var(--transition);
+    }
+
+    .navbar-links a:hover {
+      color: var(--gold);
+    }
+
+    .navbar-links a:hover::after {
+      width: 100%;
+    }
+
+    .navbar-cta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--gold);
+      transition: all var(--transition);
+    }
+
+    /* =============================================
+       2. HERO
+    ============================================= */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(212, 175, 55, 0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(212, 175, 55, 0.04) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 80% 20%, rgba(212, 175, 55, 0.04) 0%, transparent 60%),
+        var(--dark);
+    }
+
+    .hero-bg-lines {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(212,175,55,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212,175,55,0.04) 1px, transparent 1px);
+      background-size: 80px 80px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    }
+
+    .hero-ornament {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border: 1px solid rgba(212,175,55,0.05);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: rotate-slow 60s linear infinite;
+    }
+
+    .hero-ornament-2 {
+      width: 400px;
+      height: 400px;
+      border-color: rgba(212,175,55,0.08);
+      animation-duration: 40s;
+      animation-direction: reverse;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.8rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.5;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(3.5rem, 10vw, 8rem);
+      line-height: 0.9;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-title-main {
+      display: block;
+      background: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.7) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-title-gold {
+      display: block;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold-light), var(--gold));
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 5s linear infinite;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.1em;
+      margin-bottom: 36px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      border-radius: 50px;
+      padding: 10px 20px;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--gold-light);
+      letter-spacing: 0.05em;
+      margin-bottom: 48px;
+      animation: pulse-gold 3s ease infinite;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse-dot 2s ease infinite;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.3);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      animation: floatY 2.5s ease-in-out infinite;
+    }
+
+    .hero-scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, rgba(212,175,55,0.5), transparent);
+    }
+
+    /* =============================================
+       3. BANDEAU CONFIANCE
+    ============================================= */
+    .trust-band {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light), var(--gold));
+      background-size: 300% auto;
+      animation: shimmer 6s linear infinite;
+      padding: 20px 24px;
+    }
+
+    .trust-band-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px 36px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--dark);
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+
+    .trust-icon {
+      font-size: 1.1rem;
+    }
+
+    .trust-divider {
+      width: 1px;
+      height: 20px;
+      background: rgba(13,13,13,0.2);
+    }
+
+    /* =============================================
+       SECTION WRAPPER
+    ============================================= */
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      margin: 20px auto 0;
+    }
+
+    /* =============================================
+       4. BESTSELLERS
+    ============================================= */
+    .bestsellers {
+      background: var(--dark);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      background: var(--dark-2);
+      border: 1px solid rgba(212, 175, 55, 0.1);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all var(--transition);
+      position: relative;
+      group: true;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: rgba(212, 175, 55, 0.4);
+      box-shadow: var(--shadow-gold), var(--shadow-card);
+    }
+
+    .product-image {
+      aspect-ratio: 1;
+      background: var(--dark-3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-image-svg {
+      width: 80px;
+      height: 80px;
+      opacity: 0.5;
+      transition: all var(--transition);
+    }
+
+    .product-card:hover .product-image-svg {
+      opacity: 0.9;
+      transform: scale(1.1);
+    }
+
+    .product-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(212,175,55,0.05) 0%, transparent 70%);
+      transition: all var(--transition);
+    }
+
+    .product-card:hover .product-image::after {
+      background: radial-gradient(circle at center, rgba(212,175,55,0.12) 0%, transparent 70%);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--gold);
+      color: var(--dark);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 50px;
+    }
+
+    .product-badge-new {
+      background: #e74c3c;
+      color: white;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-name {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+
+    .product-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      letter-spacing: 0.03em;
+    }
+
+    .product-price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .product-price {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: var(--gold);
+    }
+
+    .product-price span {
+      font-size: 0.8rem;
+      font-family: var(--font-body);
+      font-weight: 400;
+    }
+
+    /* =============================================
+       5. PACKS PROMO
+    ============================================= */
+    .packs {
+      background: var(--cream);
+    }
+
+    .packs .section-title,
+    .packs .section-subtitle {
+      color: var(--dark);
+    }
+
+    .packs .section-divider {
+      background: linear-gradient(to right, transparent, var(--gold-dark), transparent);
+    }
+
+    .packs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .pack-card {
+      background: var(--white);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      text-align: center;
+      position: relative;
+      transition: all var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .pack-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold);
+      box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
+    }
+
+    .pack-card.featured {
+      border-color: var(--gold);
+      background: linear-gradient(160deg, #fff9ec, white);
+      animation: glow-border 3s ease infinite;
+    }
+
+    .pack-featured-label {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: var(--dark);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+
+    .pack-icon {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .pack-name {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 1.4rem;
+      color: var(--dark);
+      letter-spacing: 0.03em;
+    }
+
+    .pack-contents {
+      font-size: 0.82rem;
+      color: #666;
+      line-height: 1.8;
+    }
+
+    .pack-price-block {
+      margin: 4px 0;
+    }
+
+    .pack-price-original {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: #999;
+      text-decoration: line-through;
+      margin-bottom: 4px;
+    }
+
+    .pack-price {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 2.4rem;
+      color: var(--dark);
+      line-height: 1;
+    }
+
+    .pack-price .currency {
+      font-size: 1rem;
+      font-weight: 400;
+      font-family: var(--font-body);
+      color: #555;
+    }
+
+    .pack-savings {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--gold-dark);
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.78rem;
+      padding: 4px 12px;
+      border-radius: 50px;
+      letter-spacing: 0.05em;
+    }
+
+    /* =============================================
+       6. BRAND STORY
+    ============================================= */
+    .brand-story {
+      background: var(--dark);
+    }
+
+    .brand-story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .brand-story-text p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    .brand-story-text p:first-child {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .brand-story-text .brand-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .brand-story-image {
+      position: relative;
+    }
+
+    .brand-story-placeholder {
+      aspect-ratio: 4/5;
+      background: var(--dark-2);
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-story-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 30%, rgba(212,175,55,0.08) 0%, transparent 70%);
+    }
+
+    .brand-story-placeholder svg {
+      width: 80px;
+      height: 80px;
+      opacity: 0.3;
+    }
+
+    .brand-story-caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(13,13,13,0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+    }
+
+    .brand-story-caption p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      font-style: italic;
+      margin: 0;
+    }
+
+    .brand-story-caption strong {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--gold);
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .brand-story-decoration {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 120px;
+      height: 120px;
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 50%;
+    }
+
+    .brand-story-decoration-2 {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      width: 80px;
+      height: 80px;
+      border: 1px solid rgba(212,175,55,0.15);
+      border-radius: 50%;
+    }
+
+    /* =============================================
+       7. COMMENT ÇA MARCHE
+    ============================================= */
+    .how-it-works {
+      background: var(--dark-2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .how-it-works::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 50% 100%, rgba(212,175,55,0.05) 0%, transparent 70%);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      position: relative;
+    }
+
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: calc(16.66% + 20px);
+      right: calc(16.66% + 20px);
+      height: 1px;
+      background: linear-gradient(to right, rgba(212,175,55,0.3), rgba(212,175,55,0.6), rgba(212,175,55,0.3));
+    }
+
+    .step-card {
+      text-align: center;
+      padding: 40px 24px;
+      position: relative;
+    }
+
+    .step-number {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(212,175,55,0.05));
+      border: 1px solid rgba(212,175,55,0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 2rem;
+      position: relative;
+      z-index: 2;
+      background-color: var(--dark-2);
+    }
+
+    .step-title {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 1.3rem;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .step-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .step-tag {
+      display: inline-block;
+      background: rgba(37, 211, 102, 0.1);
+      color: var(--whatsapp);
+      border: 1px solid rgba(37, 211, 102, 0.3);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-top: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    /* =============================================
+       8. AVIS CLIENTS
+    ============================================= */
+    .reviews {
+      background: var(--dark);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .review-card {
+      background: var(--dark-2);
+      border: 1px solid rgba(212, 175, 55, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      transition: all var(--transition);
+      position: relative;
+    }
+
+    .review-card:hover {
+      border-color: rgba(212, 175, 55, 0.3);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .review-quote-icon {
+      font-size: 2.5rem;
+      color: rgba(212,175,55,0.2);
+      font-family: Georgia, serif;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .review-stars {
+      color: var(--gold);
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .review-text {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.8;
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .review-avatar {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: var(--dark);
+      flex-shrink: 0;
+    }
+
+    .review-name {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--white);
+    }
+
+    .review-city {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .review-verified {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.7rem;
+      color: var(--whatsapp);
+      margin-top: 4px;
+    }
+
+    /* =============================================
+       9. LIVRAISON
+    ============================================= */
+    .livraison {
+      background: var(--dark-2);
+    }
+
+    .livraison-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .livraison-map {
+      background: var(--dark-3);
+      border: 1px solid rgba(212,175,55,0.15);
+      border-radius: var(--radius-lg);
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .livraison-map::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 45% 55%, rgba(212,175,55,0.1) 0%, transparent 60%);
+    }
+
+    .livraison-map svg {
+      width: 70%;
+      height: auto;
+      opacity: 0.5;
+    }
+
+    .livraison-zones {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .zone-item {
+      background: var(--dark-3);
+      border: 1px solid rgba(212, 175, 55, 0.1);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      transition: all var(--transition);
+    }
+
+    .zone-item:hover {
+      border-color: rgba(212, 175, 55, 0.3);
+      background: rgba(212, 175, 55, 0.04);
+    }
+
+    .zone-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .zone-icon {
+      font-size: 1.4rem;
+    }
+
+    .zone-name {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--white);
+    }
+
+    .zone-cities {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .zone-delay {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .zone-delay-time {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--gold);
+      font-weight: 400;
+    }
+
+    .zone-delay-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .livraison-note {
+      margin-top: 24px;
+      background: rgba(37, 211, 102, 0.08);
+      border: 1px solid rgba(37, 211, 102, 0.25);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.75);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* =============================================
+       10. INSTAGRAM FEED
+    ============================================= */
+    .instagram {
+      background: var(--dark);
+    }
+
+    .instagram-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .instagram-handle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-top: 8px;
+    }
+
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 4px;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .instagram-item {
+      aspect-ratio: 1;
+      background: var(--dark-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+
+    .instagram-item::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(212,175,55,0.05) 0%, transparent 70%);
+    }
+
+    .instagram-item:hover {
+      transform: scale(1.03);
+      z-index: 2;
+    }
+
+    .instagram-item:hover .instagram-overlay {
+      opacity: 1;
+    }
+
+    .instagram-item svg {
+      width: 40%;
+      height: 40%;
+      opacity: 0.25;
+      transition: all var(--transition);
+    }
+
+    .instagram-item:hover svg {
+      opacity: 0.5;
+    }
+
+    .instagram-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(212, 175, 55, 0.08);
+      opacity: 0;
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* =============================================
+       11. FOOTER
+    ============================================= */
+    .footer {
+      background: #080808;
+      border-top: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    .footer-top {
+      padding: 72px 24px 48px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-brand-logo {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: 2.5rem;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand-tagline {
+      font-style: italic;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .footer-brand-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 280px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .footer-contact-icon {
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .footer-contact-label {
+      font-size: 0.7rem;
+      color: var(--gold);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .footer-contact-value {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .footer-col-title {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    .footer-whatsapp-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(37, 211, 102, 0.1);
+      border: 1px solid rgba(37, 211, 102, 0.3);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      margin-top: 24px;
+      color: var(--whatsapp);
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all var(--transition);
+    }
+
+    .footer-whatsapp-btn:hover {
+      background: rgba(37, 211, 102, 0.15);
+      border-color: var(--whatsapp);
+    }
+
+    .footer-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      margin: 0 24px;
+    }
+
+    .footer-bottom {
+      padding: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-bottom-text {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .footer-legal-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-legal-links a {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      transition: color var(--transition);
+    }
+
+    .footer-legal-links a:hover {
+      color: var(--gold);
+    }
+
+    /* =============================================
+       STICKY WHATSAPP BUTTON (MOBILE)
+    ============================================= */
+    .sticky-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      width: 58px;
+      height: 58px;
+      background: var(--whatsapp);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      animation: pulse-gold 3s ease infinite;
+      transition: all var(--transition);
+    }
+
+    .sticky-wa:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+    }
+
+    .sticky-wa svg {
+      width: 28px;
+      height: 28px;
+      fill: white;
+    }
+
+    /* =============================================
+       RESPONSIVE — TABLET
+    ============================================= */
+    @media (max-width: 1024px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .packs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .instagram-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* =============================================
+       RESPONSIVE — MOBILE
+    ============================================= */
+    @media (max-width: 768px) {
+      .navbar-links,
+      .navbar-cta .btn-whatsapp {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero-ctas {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .trust-band-inner {
+        gap: 10px 20px;
+      }
+
+      .trust-divider {
+        display: none;
+      }
+
+      .trust-item {
+        font-size: 0.8rem;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .packs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-story-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .steps-grid::before {
+        display: none;
+      }
+
+      .step-card {
+        padding: 32px 16px;
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .livraison-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .livraison-map {
+        display: none;
+      }
+
+      .instagram-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-legal-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .section-header {
+        margin-bottom: 48px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================================================
+       STICKY WHATSAPP BUTTON
+  ================================================ -->
+  <a
+    href="https://wa.me/212600000000?text=Bonjour%20BISOU%20!%20Je%20souhaite%20passer%20une%20commande%20%F0%9F%92%AB"
+    class="sticky-wa"
+    aria-label="Commander sur WhatsApp"
+    target="_blank"
+    rel="noopener"
+  >
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ================================================
+       1. NAVBAR
+  ================================================ -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="navbar-logo"><span>B</span>ISOU</a>
+
+    <ul class="navbar-links">
+      <li><a href="#collection">Collection</a></li>
+      <li><a href="#packs">Packs</a></li>
+      <li><a href="#livraison">Livraison</a></li>
+      <li><a href="#commander">Commander</a></li>
+    </ul>
+
+    <div class="navbar-cta">
+      <a
+        href="https://wa.me/212600000000?text=Bonjour%20BISOU%20!%20Je%20souhaite%20commander%20%F0%9F%92%AB"
+        class="btn btn-whatsapp"
+        target="_blank"
+        rel="noopener"
+      >
+        📲 Commander sur WhatsApp
+      </a>
+      <div class="hamburger" role="button" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================================================
+       2. HERO
+  ================================================ -->
+  <section class="hero" id="accueil">
+    <div class="hero-bg"></div>
+    <div class="hero-bg-lines"></div>
+    <div class="hero-ornament"></div>
+    <div class="hero-ornament hero-ornament-2"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Bijoux Plaqués Or</div>
+
+      <h1 class="hero-title">
+        <span class="hero-title-main">L'or qui</span>
+        <span class="hero-title-gold"><em>t'embrasse</em></span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Bijoux plaqués or &nbsp;•&nbsp; Livraison COD partout au Maroc
+      </p>
+
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        🇲🇦 Marrakech → Tout le Maroc
+      </div>
+
+      <div class="hero-ctas">
+        <a href="#collection" class="btn btn-outline">Voir la collection ↓</a>
+        <a
+          href="https://wa.me/212600000000?text=Bonjour%20BISOU%20!%20Je%20souhaite%20voir%20la%20collection%20%F0%9F%92%AB"
+          class="btn btn-whatsapp"
+          target="_blank"
+          rel="noopener"
+        >
+          📲 Commander WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      Découvrir
+    </div>
+  </section>
+
+  <!-- ================================================
+       3. BANDEAU CONFIANCE
+  ================================================ -->
+  <div class="trust-band">
+    <div class="trust-band-inner">
+      <div class="trust-item">
+        <span class="trust-icon">✅</span>
+        COD uniquement
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-icon">🚚</span>
+        Livraison 3–5 jours
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-icon">💛</span>
+        Garanti 6 mois
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-icon">🔒</span>
+        Acier 316L anti-allergique
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================
+       4. BESTSELLERS
+  ================================================ -->
+  <section class="section bestsellers" id="collection">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Nos Pièces</p>
+        <h2 class="section-title gold-gradient-text">Bestsellers</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="products-grid">
+
+        <!-- Produit 1 -->
+        <div class="product-card">
+          <div class="product-image">
+            <span class="product-badge">BESTSELLER</span>
+            <svg class="product-image-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="30" r="14" stroke="#D4AF37" stroke-width="1.5"/>
+              <path d="M33 44 C33 52 47 52 47 44" stroke="#D4AF37" stroke-width="1.5"/>
+              <line x1="40" y1="44" x2="40" y2="60" stroke="#D4AF37" stroke-width="1.5"/>
+              <circle cx="40" cy="30" r="6" stroke="#D4AF37" stroke-width="1" stroke-dasharray="2 2"/>
+              <path d="M40 22 L41.5 27 L46 27 L42.5 30 L44 35 L40 32 L36 35 L37.5 30 L34 27 L38.5 27 Z" fill="#D4AF37" opacity="0.6"/>
+            </svg>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Collier Lune Dorée</h3>
+            <p class="product-desc">Plaqué or 18k • Acier 316L • Anti-allergique</p>
+            <div class="product-price-row">
+              <div class="product-price">89 <span>MAD</span></div>
+              <a
+                href="checkout-cod.html?produit=Collier+Lune+Dor%C3%A9e&prix=89"
+                class="btn-whatsapp-sm"
+              >📲 Commander</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 2 -->
+        <div class="product-card">
+          <div class="product-image">
+            <span class="product-badge product-badge-new">NOUVEAU</span>
+            <svg class="product-image-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="18" stroke="#D4AF37" stroke-width="1.5"/>
+              <circle cx="40" cy="40" r="10" stroke="#D4AF37" stroke-width="1" stroke-dasharray="3 2"/>
+              <path d="M40 22 L42 30 L50 30 L44 36 L46 44 L40 40 L34 44 L36 36 L30 30 L38 30 Z" fill="#D4AF37" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Bague Soleil</h3>
+            <p class="product-desc">Plaqué or 18k • Taille ajustable • Acier 316L</p>
+            <div class="product-price-row">
+              <div class="product-price">59 <span>MAD</span></div>
+              <a
+                href="checkout-cod.html?produit=Bague+Soleil&prix=59"
+                class="btn-whatsapp-sm"
+              >📲 Commander</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 3 -->
+        <div class="product-card">
+          <div class="product-image">
+            <span class="product-badge">BESTSELLER</span>
+            <svg class="product-image-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 40 Q20 20 40 20 Q60 20 60 40 Q60 60 40 60 Q20 60 20 40 Z" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+              <path d="M25 40 Q25 25 40 25 Q55 25 55 40" stroke="#D4AF37" stroke-width="1" stroke-dasharray="3 2"/>
+              <circle cx="20" cy="40" r="3" fill="#D4AF37" opacity="0.7"/>
+              <circle cx="40" cy="20" r="2.5" fill="#D4AF37" opacity="0.5"/>
+              <circle cx="60" cy="40" r="3" fill="#D4AF37" opacity="0.7"/>
+            </svg>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Bracelet Chaîne Or</h3>
+            <p class="product-desc">Plaqué or 18k • Longueur 18cm • Acier 316L</p>
+            <div class="product-price-row">
+              <div class="product-price">79 <span>MAD</span></div>
+              <a
+                href="checkout-cod.html?produit=Bracelet+Cha%C3%AEne+Or&prix=79"
+                class="btn-whatsapp-sm"
+              >📲 Commander</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 4 -->
+        <div class="product-card">
+          <div class="product-image">
+            <span class="product-badge">BESTSELLER</span>
+            <svg class="product-image-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="28" cy="40" rx="10" ry="16" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+              <ellipse cx="52" cy="40" rx="10" ry="16" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+              <line x1="28" y1="24" x2="28" y2="18" stroke="#D4AF37" stroke-width="1.5"/>
+              <line x1="52" y1="24" x2="52" y2="18" stroke="#D4AF37" stroke-width="1.5"/>
+              <line x1="28" y1="18" x2="40" y2="15" stroke="#D4AF37" stroke-width="1.5"/>
+              <line x1="52" y1="18" x2="40" y2="15" stroke="#D4AF37" stroke-width="1.5"/>
+              <circle cx="40" cy="14" r="2.5" fill="#D4AF37" opacity="0.7"/>
+            </svg>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Boucles d'oreilles Créoles</h3>
+            <p class="product-desc">Plaqué or 18k • Diamètre 3cm • Acier 316L</p>
+            <div class="product-price-row">
+              <div class="product-price">69 <span>MAD</span></div>
+              <a
+                href="checkout-cod.html?produit=Boucles+d%27oreilles+Cr%C3%A9oles&prix=69"
+                class="btn-whatsapp-sm"
+              >📲 Commander</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       5. PACKS PROMO
+  ================================================ -->
+  <section class="section packs" id="packs">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle" style="color:#a08020;">Offres Spéciales</p>
+        <h2 class="section-title" style="color:var(--dark);">Nos <em style="font-style:italic;color:var(--gold-dark);">Packs</em></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="packs-grid">
+
+        <!-- Pack Mini -->
+        <div class="pack-card">
+          <span class="pack-icon">✨</span>
+          <div class="pack-name">Pack Mini</div>
+          <div class="pack-contents">
+            2 pièces au choix<br>
+            Collier + Bague<br>
+            Livraison incluse
+          </div>
+          <div class="pack-price-block">
+            <div class="pack-price-original">238 MAD</div>
+            <div class="pack-price">159 <span class="currency">MAD</span></div>
+          </div>
+          <div class="pack-savings">Vous économisez 79 MAD</div>
+          <a
+            href="checkout-cod.html?pack=Pack+Mini&prix=159"
+            class="btn btn-outline"
+            style="width:100%;justify-content:center;margin-top:8px;color:var(--dark);border-color:rgba(0,0,0,0.2);"
+          >📲 Commander ce pack</a>
+        </div>
+
+        <!-- Pack Découverte — FEATURED -->
+        <div class="pack-card featured">
+          <div class="pack-featured-label">⭐ BESTSELLER</div>
+          <span class="pack-icon">💛</span>
+          <div class="pack-name">Pack Découverte</div>
+          <div class="pack-contents">
+            3 pièces au choix<br>
+            Collier + Bracelet + Bague<br>
+            Livraison incluse
+          </div>
+          <div class="pack-price-block">
+            <div class="pack-price-original">367 MAD</div>
+            <div class="pack-price">229 <span class="currency">MAD</span></div>
+          </div>
+          <div class="pack-savings">Vous économisez 138 MAD</div>
+          <a
+            href="checkout-cod.html?pack=Pack+D%C3%A9couverte&prix=229"
+            class="btn btn-gold"
+            style="width:100%;justify-content:center;margin-top:8px;"
+          >📲 Commander ce pack</a>
+        </div>
+
+        <!-- Pack Cadeau -->
+        <div class="pack-card">
+          <span class="pack-icon">🎁</span>
+          <div class="pack-name">Pack Cadeau</div>
+          <div class="pack-contents">
+            4 pièces + emballage cadeau<br>
+            Collier + Bracelet + 2 Bagues<br>
+            Livraison express
+          </div>
+          <div class="pack-price-block">
+            <div class="pack-price-original">398 MAD</div>
+            <div class="pack-price">279 <span class="currency">MAD</span></div>
+          </div>
+          <div class="pack-savings">Vous économisez 119 MAD</div>
+          <a
+            href="checkout-cod.html?pack=Pack+Cadeau&prix=279"
+            class="btn btn-outline"
+            style="width:100%;justify-content:center;margin-top:8px;color:var(--dark);border-color:rgba(0,0,0,0.2);"
+          >📲 Commander ce pack</a>
+        </div>
+
+        <!-- Pack Mariée -->
+        <div class="pack-card">
+          <span class="pack-icon">👑</span>
+          <div class="pack-name">Pack Mariée</div>
+          <div class="pack-contents">
+            Collection complète mariage<br>
+            6 pièces premium + coffret<br>
+            Livraison prioritaire
+          </div>
+          <div class="pack-price-block">
+            <div class="pack-price-original">756 MAD</div>
+            <div class="pack-price">449 <span class="currency">MAD</span></div>
+          </div>
+          <div class="pack-savings">Vous économisez 307 MAD</div>
+          <a
+            href="checkout-cod.html?pack=Pack+Trio+Mari%C3%A9e&prix=449"
+            class="btn btn-outline"
+            style="width:100%;justify-content:center;margin-top:8px;color:var(--dark);border-color:rgba(0,0,0,0.2);"
+          >📲 Commander ce pack</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       6. BRAND STORY
+  ================================================ -->
+  <section class="section brand-story">
+    <div class="container">
+      <div class="brand-story-grid">
+
+        <div class="brand-story-text">
+          <div class="brand-tag">✦ Notre Histoire</div>
+          <h2 class="section-title" style="margin-bottom:32px;">L'or accessible,<br><em style="font-style:italic;color:var(--gold);">enfin.</em></h2>
+          <p>
+            BISOU est née d'une conviction simple : chaque femme mérite de porter de l'or, sans se ruiner. Depuis les ruelles dorées de la médina de Marrakech, nous créons des bijoux plaqués or qui allient artisanat marocain et modernité accessible.
+          </p>
+          <p>
+            Nos pièces en acier inoxydable 316L, plaqué or 18 carats, sont soigneusement sélectionnées pour leur durabilité, leur beauté et leur douceur sur la peau. Anti-allergiques, garanties 6 mois, elles accompagnent votre quotidien avec élégance.
+          </p>
+          <p>
+            Pas de boutique physique, pas d'intermédiaires — juste BISOU et vous, sur WhatsApp. Vous choisissez, on prépare, on expédie depuis Marrakech, et vous payez à la réception. Simple. Honnête. Or.
+          </p>
+          <div style="display:flex;gap:32px;margin-top:36px;flex-wrap:wrap;">
+            <div>
+              <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--gold);font-weight:300;line-height:1;">500+</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;">Clientes satisfaites</div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--gold);font-weight:300;line-height:1;">6 mois</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;">De garantie</div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--gold);font-weight:300;line-height:1;">100%</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;">COD Maroc</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="brand-story-image">
+          <div class="brand-story-decoration"></div>
+          <div class="brand-story-decoration-2"></div>
+          <div class="brand-story-placeholder">
+            <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="20" width="80" height="80" rx="8" stroke="#D4AF37" stroke-width="1.5"/>
+              <circle cx="60" cy="50" r="18" stroke="#D4AF37" stroke-width="1.5"/>
+              <path d="M42 80 Q42 62 60 62 Q78 62 78 80" stroke="#D4AF37" stroke-width="1.5"/>
+              <path d="M60 36 L62 43 L69 43 L64 47 L66 54 L60 50 L54 54 L56 47 L51 43 L58 43 Z" fill="#D4AF37" opacity="0.4"/>
+            </svg>
+            <div class="brand-story-caption">
+              <p>"Née à Marrakech, portée partout au Maroc"</p>
+              <strong>— L'atelier BISOU, Médina de Marrakech</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       7. COMMENT ÇA MARCHE
+  ================================================ -->
+  <section class="section how-it-works" id="commander">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Simple & Rapide</p>
+        <h2 class="section-title gold-gradient-text">Comment ça marche ?</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="steps-grid">
+
+        <div class="step-card">
+          <div class="step-number">📲</div>
+          <h3 class="step-title">Tu commandes sur WhatsApp</h3>
+          <p class="step-desc">
+            Dis-nous quel bijou ou pack tu veux, ta ville, et ton adresse de livraison. C'est tout. Pas de compte, pas de carte, pas de stress.
+          </p>
+          <span class="step-tag">Réponse en moins d'1h</span>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">📦</div>
+          <h3 class="step-title">On prépare & expédie depuis Marrakech</h3>
+          <p class="step-desc">
+            Ton colis est soigneusement emballé dans nos ateliers de Marrakech et expédié via nos partenaires logistiques partout au Maroc.
+          </p>
+          <span class="step-tag">Expédition sous 24-48h</span>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">🏠</div>
+          <h3 class="step-title">Tu paies à la livraison (COD)</h3>
+          <p class="step-desc">
+            Le livreur arrive à ta porte, tu inspectes ton bijou, tu es satisfaite — puis tu paies en cash. Aucun risque, aucune avance.
+          </p>
+          <span class="step-tag">100% COD — Paiement à la réception</span>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:56px;">
+        <a
+          href="https://wa.me/212600000000?text=Bonjour%20BISOU%20!%20Je%20voudrais%20passer%20une%20commande%20%F0%9F%92%AB"
+          class="btn btn-whatsapp"
+          style="font-size:1rem;padding:18px 40px;"
+          target="_blank"
+          rel="noopener"
+        >
+          📲 Commander maintenant sur WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       8. AVIS CLIENTS
+  ================================================ -->
+  <section class="section reviews">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Elles adorent BISOU</p>
+        <h2 class="section-title gold-gradient-text">Avis Clients</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="reviews-grid">
+
+        <!-- Avis 1 -->
+        <div class="review-card">
+          <div class="review-quote-icon">"</div>
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">
+            Franchement je suis bluffée par la qualité ! Le collier est magnifique, bien doré, et il ne m'a provoqué aucune allergie. La livraison à Casablanca en 2 jours c'était parfait. Je recommande à 100%.
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">S</div>
+            <div>
+              <div class="review-name">Sara M.</div>
+              <div class="review-city">Casablanca</div>
+              <div class="review-verified">✓ Achat vérifié</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avis 2 -->
+        <div class="review-card">
+          <div class="review-quote-icon">"</div>
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">
+            J'ai commandé le Pack Découverte pour mon anniversaire et waaw ! L'emballage est soigné, les bijoux sont super beaux. Le paiement à la livraison m'a mis en confiance. BISOU c'est ma nouvelle adresse bijoux !
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">N</div>
+            <div>
+              <div class="review-name">Nadia K.</div>
+              <div class="review-city">Rabat</div>
+              <div class="review-verified">✓ Achat vérifié</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avis 3 -->
+        <div class="review-card">
+          <div class="review-quote-icon">"</div>
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">
+            Super expérience ! J'ai commandé sur WhatsApp et la réponse était ultra rapide. Ma commande est arrivée bien emballée, les créoles sont parfaites pour tous les jours. Le COD c'est vraiment rassurant pour commander en ligne.
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">L</div>
+            <div>
+              <div class="review-name">Layla B.</div>
+              <div class="review-city">Marrakech</div>
+              <div class="review-verified">✓ Achat vérifié</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       9. ZONES DE LIVRAISON
+  ================================================ -->
+  <section class="section livraison" id="livraison">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Partout au Maroc</p>
+        <h2 class="section-title gold-gradient-text">Livraison COD</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="livraison-inner">
+
+        <div class="livraison-map">
+          <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Simplified Morocco shape -->
+            <path d="M60 20 L140 20 L160 50 L170 90 L165 130 L150 160 L130 180 L100 190 L70 175 L50 155 L40 120 L35 80 L45 50 Z" stroke="#D4AF37" stroke-width="1.5" fill="rgba(212,175,55,0.05)"/>
+            <!-- City dots -->
+            <circle cx="100" cy="95" r="5" fill="#D4AF37" opacity="0.9"/>
+            <text x="108" y="99" fill="#D4AF37" font-size="8" font-family="Jost">Marrakech</text>
+            <circle cx="90" cy="55" r="3" fill="#D4AF37" opacity="0.6"/>
+            <text x="97" y="59" fill="#D4AF37" font-size="7" font-family="Jost">Rabat</text>
+            <circle cx="75" cy="65" r="3" fill="#D4AF37" opacity="0.6"/>
+            <text x="40" y="69" fill="#D4AF37" font-size="7" font-family="Jost">Casa</text>
+            <circle cx="110" cy="45" r="3" fill="#D4AF37" opacity="0.5"/>
+            <text x="115" y="49" fill="#D4AF37" font-size="7" font-family="Jost">Fès</text>
+            <circle cx="80" cy="30" r="3" fill="#D4AF37" opacity="0.5"/>
+            <text x="85" y="34" fill="#D4AF37" font-size="7" font-family="Jost">Tanger</text>
+            <!-- Pulse on Marrakech -->
+            <circle cx="100" cy="95" r="12" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+            <circle cx="100" cy="95" r="18" stroke="#D4AF37" stroke-width="0.3" opacity="0.15"/>
+          </svg>
+        </div>
+
+        <div class="livraison-zones">
+
+          <div class="zone-item">
+            <div class="zone-left">
+              <span class="zone-icon">🏙️</span>
+              <div>
+                <div class="zone-name">Marrakech</div>
+                <div class="zone-cities">Amana / Glovo — Intra-muros & Gueliz</div>
+              </div>
+            </div>
+            <div class="zone-delay">
+              <div class="zone-delay-time">24–48h</div>
+              <div class="zone-delay-label">délai estimé</div>
+            </div>
+          </div>
+
+          <div class="zone-item">
+            <div class="zone-left">
+              <span class="zone-icon">🚀</span>
+              <div>
+                <div class="zone-name">Grandes villes</div>
+                <div class="zone-cities">Casablanca, Rabat, Fès, Tanger, Agadir</div>
+              </div>
+            </div>
+            <div class="zone-delay">
+              <div class="zone-delay-time">2–3 jours</div>
+              <div class="zone-delay-label">délai estimé</div>
+            </div>
+          </div>
+
+          <div class="zone-item">
+            <div class="zone-left">
+              <span class="zone-icon">🇲🇦</span>
+              <div>
+                <div class="zone-name">Tout le Maroc</div>
+                <div class="zone-cities">Partout où Amana & CTM livrent</div>
+              </div>
+            </div>
+            <div class="zone-delay">
+              <div class="zone-delay-time">3–5 jours</div>
+              <div class="zone-delay-label">délai estimé</div>
+            </div>
+          </div>
+
+          <div class="livraison-note">
+            <span style="font-size:1.3rem;">🎁</span>
+            <span><strong style="color:var(--white);">Frais de livraison offerts</strong> dès 200 MAD d'achat — soit dès le Pack Découverte !</span>
+          </div>
+
+          <div style="margin-top:8px;">
+            <a
+              href="https://wa.me/212600000000?text=Bonjour%20BISOU%20!%20Je%20veux%20savoir%20si%20vous%20livrez%20dans%20ma%20ville%20%F0%9F%9A%9A"
+              class="btn btn-whatsapp"
+              style="width:100%;justify-content:center;"
+              target="_blank"
+              rel="noopener"
+            >
+              📲 Vérifier ma zone de livraison
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       10. INSTAGRAM FEED SIMULÉ
+  ================================================ -->
+  <section class="section instagram">
+    <div class="container">
+      <div class="instagram-header">
+        <p class="section-subtitle">Suivez-nous</p>
+        <h2 class="section-title gold-gradient-text">Sur Instagram</h2>
+        <div class="section-divider"></div>
+        <a
+          href="https://instagram.com/bisou_or_ma"
+          class="instagram-handle"
+          target="_blank"
+          rel="noopener"
+          style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="url(#ig-gradient)" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ig-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#f09433"/>
+                <stop offset="25%" style="stop-color:#e6683c"/>
+                <stop offset="50%" style="stop-color:#dc2743"/>
+                <stop offset="75%" style="stop-color:#cc2366"/>
+                <stop offset="100%" style="stop-color:#bc1888"/>
+              </linearGradient>
+            </defs>
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          @bisou_or_ma
+        </a>
+      </div>
+
+      <div class="instagram-grid">
+        <!-- 6 placeholders instagram -->
+        <div class="instagram-item">
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="28" r="10" stroke="#D4AF37" stroke-width="1"/>
+            <rect x="10" y="10" width="40" height="40" rx="6" stroke="#D4AF37" stroke-width="1"/>
+            <circle cx="43" cy="17" r="2" fill="#D4AF37" opacity="0.6"/>
+          </svg>
+          <div class="instagram-overlay">
+            <span style="color:var(--gold);font-size:1.5rem;">♡</span>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="28" r="10" stroke="#D4AF37" stroke-width="1"/>
+            <rect x="10" y="10" width="40" height="40" rx="6" stroke="#D4AF37" stroke-width="1"/>
+            <circle cx="43" cy="17" r="2" fill="#D4AF37" opacity="0.6"/>
+          </svg>
+          <div class="instagram-overlay">
+            <span style="color:var(--gold);font-size:1.5rem;">♡</span>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="28" r="10" stroke="#D4AF37" stroke-width="1"/>
+            <rect x="10" y="10" width="40" height="40" rx="6" stroke="#D4AF37" stroke-width="1"/>
+            <circle cx="43" cy="17" r="2" fill="#D4AF37" opacity="0.6"/>
+          </svg>
+          <div class="instagram-overlay">
+            <span style="color:var(--gold);font-size:1.5rem;">♡</span>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="28" r="10" stroke="#D4AF37" stroke-width="1"/>
+            <rect x="10" y="10" width="40" height="40" rx="6" stroke="#D4AF37" stroke-width="1"/>
+            <circle cx="43" cy="17" r="2" fill="#D4AF37" opacity="0.6"/>
+          </svg>
+          <div class="instagram-overlay">
+            <span style="color:var(--gold);font-size:1.5rem;">♡</span>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="28" r="10" stroke="#D4AF37" stroke-width="1"/>
+            <rect x="10" y="10" width="40" height="40" rx="6" stroke="#D4AF37" stroke-width="1"/>
+            <circle cx="43" cy="17" r="2" fill="#D4AF37" opacity="0.6"/>
+          </svg>
+          <div class="instagram-overlay">
+            <span style="color:var(--gold);font-size:1.5rem;">♡</span>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="28" r="10" stroke="#D4AF37" stroke-width="1"/>
+            <rect x="10" y="10" width="40" height="40" rx="6" stroke="#D4AF37" stroke-width="1"/>
+            <circle cx="43" cy="17" r="2" fill="#D4AF37" opacity="0.6"/>
+          </svg>
+          <div class="instagram-overlay">
+            <span style="color:var(--gold);font-size:1.5rem;">♡</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CTA FINAL
+  ================================================ -->
+  <section style="background:linear-gradient(135deg, #0D0D0D 0%, #1a1400 50%, #0D0D0D 100%);padding:100px 24px;text-align:center;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 50%, rgba(212,175,55,0.08) 0%, transparent 70%);"></div>
+    <div style="position:relative;z-index:2;max-width:700px;margin:0 auto;">
+      <p style="font-family:var(--font-body);font-size:0.8rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">Prête à briller ?</p>
+      <h2 style="font-family:var(--font-display);font-weight:300;font-size:clamp(2.5rem,7vw,5rem);line-height:1.05;margin-bottom:24px;">
+        <span style="display:block;color:white;">Ton bijou t'attend</span>
+        <em style="font-style:italic;background:linear-gradient(135deg,var(--gold-dark),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">sur WhatsApp</em>
+      </h2>
+      <p style="font-size:1rem;color:rgba(255,255,255,0.55);margin-bottom:40px;line-height:1.7;">
+        Commande en 1 minute. Paye à la livraison. Aucun risque.
+      </p>
+      <a
+        href="https://wa.me/212600000000?text=Bonjour%20BISOU%20!%20Je%20veux%20voir%20vos%20bijoux%20et%20passer%20commande%20%F0%9F%92%AB%20Merci%20!"
+        class="btn btn-whatsapp"
+        style="font-size:1.05rem;padding:20px 48px;"
+        target="_blank"
+        rel="noopener"
+      >
+        📲 Commander sur WhatsApp maintenant
+      </a>
+      <p style="margin-top:20px;font-size:0.8rem;color:rgba(255,255,255,0.3);">
+        Réponse garantie en moins d'1h · COD partout au Maroc · Garanti 6 mois
+      </p>
+    </div>
+  </section>
+
+  <!-- ================================================
+       11. FOOTER
+  ================================================ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-grid">
+
+        <!-- Col 1 — Brand -->
+        <div>
+          <div class="footer-brand-logo">BISOU</div>
+          <div class="footer-brand-tagline">L'or qui t'embrasse</div>
+          <p class="footer-brand-desc">
+            Bijoux plaqués or en acier inoxydable 316L. Anti-allergique, garanti 6 mois. Livraison COD partout au Maroc depuis Marrakech.
+          </p>
+          <a
+            href="https://wa.me/212600000000?text=Bonjour%20BISOU%20!"
+            class="footer-whatsapp-btn"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Écrire sur WhatsApp
+          </a>
+        </div>
+
+        <!-- Col 2 — Contact -->
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📲</span>
+            <div>
+              <div class="footer-contact-label">WhatsApp</div>
+              <a href="https://wa.me/212600000000" class="footer-contact-value" target="_blank" rel="noopener">
+                +212 6XX XXX XXX
+              </a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉️</span>
+            <div>
+              <div class="footer-contact-label">Email</div>
+              <a href="mailto:contact@bisou-or.ma" class="footer-contact-value">
+                contact@bisou-or.ma
+              </a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <div>
+              <div class="footer-contact-label">Adresse</div>
+              <div class="footer-contact-value">Marrakech, Maroc</div>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">🕐</span>
+            <div>
+              <div class="footer-contact-label">Disponibilité</div>
+              <div class="footer-contact-value">Lun–Sam · 9h–20h</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 3 — Navigation -->
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#packs">Packs Promo</a></li>
+            <li><a href="#commander">Comment commander</a></li>
+            <li><a href="#livraison">Zones de livraison</a></li>
+            <li><a href="https://instagram.com/bisou_or_ma" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 — Garanties -->
+        <div>
+          <div class="footer-col-title">Garanties</div>
+          <ul class="footer-links">
+            <li><a href="#">Politique de garantie</a></li>
+            <li><a href="#">Conditions de livraison</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Retours & échanges</a></li>
+            <li><a href="#">Nous contacter</a></li>
+          </ul>
+          <div style="margin-top:24px;padding:16px;background:rgba(212,175,55,0.06);border:1px solid rgba(212,175,55,0.15);border-radius:var(--radius);">
+            <div style="font-size:0.7rem;color:var(--gold);font-weight:500;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;">Garantie BISOU</div>
+            <div style="font-size:0.82rem;color:rgba(255,255,255,0.6);line-height:1.6;">✓ Acier 316L certifié<br>✓ Garanti 6 mois<br>✓ Anti-allergique<br>✓ Plaqué or 18k</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="footer-divider" />
+
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">
+        &copy; 2025 BISOU — L'or qui t'embrasse. Tous droits réservés. Marrakech, Maroc.
+      </p>
+      <ul class="footer-legal-links">
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Confidentialité</a></li>
+        <li><a href="#">CGV</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

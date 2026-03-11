@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BISOU — Brand Identity Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold-light:  #F5E6A3;
+      --gold-main:   #D4AF37;
+      --gold-mid:    #C9A84C;
+      --gold-dark:   #A8862E;
+      --black:       #0D0D0D;
+      --black-soft:  #1A1A1A;
+      --grey-dark:   #2C2C2C;
+      --grey-mid:    #555555;
+      --grey-light:  #AAAAAA;
+      --white:       #FAFAFA;
+      --cream:       #FDF6E3;
+      --rose:        #F2D7D5;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.7;
+    }
+
+    /* ── HEADER ─────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(160deg, #0D0D0D 60%, #1a140a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(212,175,55,0.07) 0%, transparent 70%);
+    }
+
+    .hero-logo {
+      width: min(380px, 88vw);
+      margin-bottom: 40px;
+      filter: drop-shadow(0 0 30px rgba(212,175,55,0.35));
+    }
+
+    .hero-subtitle {
+      font-family: 'Jost', sans-serif;
+      font-weight: 200;
+      font-size: clamp(10px, 1.5vw, 13px);
+      letter-spacing: 8px;
+      color: var(--gold-mid);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(28px, 5vw, 52px);
+      letter-spacing: 2px;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .hero-title span { color: var(--gold-main); font-style: italic; }
+
+    .hero-divider {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-main), transparent);
+      margin: 32px auto;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 40px;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: var(--grey-light);
+      text-transform: uppercase;
+    }
+
+    /* ── SECTIONS ────────────────────────── */
+    section {
+      padding: 100px 5vw;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 6px;
+      color: var(--gold-mid);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+
+    .section-title span { color: var(--gold-main); font-style: italic; }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gold-main);
+      margin-bottom: 48px;
+      opacity: 0.6;
+    }
+
+    hr.full {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--grey-dark), transparent);
+      margin: 0 5vw;
+    }
+
+    /* ── BRAND ESSENCE ───────────────────── */
+    .essence-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2px;
+      margin-top: 40px;
+    }
+
+    .essence-card {
+      background: var(--black-soft);
+      padding: 40px 32px;
+      border-top: 1px solid rgba(212,175,55,0.2);
+      transition: border-color 0.3s;
+    }
+
+    .essence-card:hover { border-color: var(--gold-main); }
+
+    .essence-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .essence-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--gold-light);
+      margin-bottom: 12px;
+    }
+
+    .essence-card p {
+      font-size: 13px;
+      color: var(--grey-light);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    /* ── COLORS ──────────────────────────── */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .color-swatch {
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .swatch-color {
+      height: 120px;
+      width: 100%;
+    }
+
+    .swatch-info {
+      background: var(--black-soft);
+      padding: 16px;
+    }
+
+    .swatch-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .swatch-hex {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--grey-light);
+    }
+
+    /* ── TYPOGRAPHY ──────────────────────── */
+    .typo-block {
+      background: var(--black-soft);
+      padding: 48px;
+      margin-bottom: 16px;
+      border-left: 2px solid rgba(212,175,55,0.3);
+    }
+
+    .typo-sample-display {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .typo-sample-display em { color: var(--gold-main); font-style: italic; }
+
+    .typo-sample-body {
+      font-family: 'Jost', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--grey-light);
+      max-width: 600px;
+      letter-spacing: 0.5px;
+    }
+
+    .typo-meta {
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--gold-mid);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    /* ── LOGO VARIANTS ───────────────────── */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px;
+      margin-top: 40px;
+    }
+
+    .logo-variant {
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-variant.dark  { background: var(--black-soft); }
+    .logo-variant.light { background: var(--cream); }
+    .logo-variant.gold  { background: linear-gradient(135deg, #C9A84C, #D4AF37, #A8862E); }
+
+    .logo-variant img { width: min(260px, 80%); }
+
+    .logo-variant-label {
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: var(--grey-mid);
+      text-transform: uppercase;
+    }
+
+    .logo-variant.light .logo-variant-label { color: #888; }
+
+    /* Inline SVG for light & gold versions */
+    .logo-inline-light text { fill: #0D0D0D; }
+
+    /* ── PRODUCTS ────────────────────────── */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2px;
+      margin-top: 40px;
+    }
+
+    .product-card {
+      background: var(--black-soft);
+      padding: 40px 28px;
+      text-align: center;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s, transform 0.3s;
+      cursor: default;
+    }
+
+    .product-card:hover {
+      border-color: var(--gold-main);
+      transform: translateY(-4px);
+    }
+
+    .product-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .product-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+    }
+
+    .product-card p {
+      font-size: 12px;
+      color: var(--grey-light);
+      font-weight: 300;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .product-price {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--gold-mid);
+      text-transform: uppercase;
+    }
+
+    /* ── AUDIENCE ────────────────────────── */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .audience-persona {
+      background: var(--black-soft);
+      padding: 40px 32px;
+      position: relative;
+    }
+
+    .persona-age {
+      font-size: 48px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      color: rgba(212,175,55,0.15);
+      position: absolute;
+      top: 20px;
+      right: 24px;
+    }
+
+    .persona-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .persona-tag {
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--gold-mid);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .persona-traits {
+      list-style: none;
+    }
+
+    .persona-traits li {
+      font-size: 13px;
+      color: var(--grey-light);
+      font-weight: 300;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .persona-traits li::before {
+      content: '—';
+      color: var(--gold-mid);
+      font-size: 10px;
+    }
+
+    /* ── BRAND VOICE ─────────────────────── */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) { .voice-grid { grid-template-columns: 1fr; } }
+
+    .voice-card {
+      padding: 40px 32px;
+    }
+
+    .voice-card.do   { background: rgba(212,175,55,0.05); border-left: 2px solid var(--gold-main); }
+    .voice-card.dont { background: rgba(255,80,80,0.04);  border-left: 2px solid rgba(200,60,60,0.4); }
+
+    .voice-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .voice-card.dont h3 { color: #cc6666; }
+
+    .voice-list { list-style: none; }
+
+    .voice-list li {
+      font-size: 13px;
+      color: var(--grey-light);
+      padding: 8px 0;
+      font-weight: 300;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .voice-list li span {
+      display: inline-block;
+      width: 20px;
+      color: var(--gold-mid);
+      font-weight: 400;
+    }
+
+    /* ── PACKAGING ───────────────────────── */
+    .packaging-mockup {
+      background: var(--black-soft);
+      padding: 60px 40px;
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box-mockup {
+      width: 180px;
+      height: 180px;
+      border: 1px solid rgba(212,175,55,0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
+      background: #0D0D0D;
+    }
+
+    .box-mockup::after {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(212,175,55,0.15);
+    }
+
+    .box-logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--gold-main);
+      letter-spacing: 8px;
+    }
+
+    .box-tagline-text {
+      font-size: 7px;
+      letter-spacing: 3px;
+      color: var(--gold-mid);
+      text-transform: uppercase;
+    }
+
+    .bag-mockup {
+      width: 140px;
+      height: 200px;
+      border: 1px solid rgba(212,175,55,0.3);
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 30px;
+      gap: 8px;
+    }
+
+    .bag-handle {
+      width: 60px;
+      height: 30px;
+      border: 1px solid rgba(212,175,55,0.5);
+      border-bottom: none;
+      border-radius: 30px 30px 0 0;
+      margin-top: -30px;
+      margin-bottom: 20px;
+    }
+
+    /* ── STRATEGY ────────────────────────── */
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2px;
+      margin-top: 40px;
+    }
+
+    .strategy-card {
+      background: var(--black-soft);
+      padding: 40px 32px;
+    }
+
+    .strategy-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 300;
+      color: rgba(212,175,55,0.12);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .strategy-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      color: var(--gold-light);
+      margin-bottom: 12px;
+    }
+
+    .strategy-card p {
+      font-size: 13px;
+      color: var(--grey-light);
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    /* ── SOCIAL MEDIA ────────────────────── */
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .social-card {
+      background: var(--black-soft);
+      padding: 32px;
+      border-radius: 2px;
+    }
+
+    .social-platform {
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: var(--gold-mid);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .social-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .social-card ul {
+      list-style: none;
+    }
+
+    .social-card ul li {
+      font-size: 12px;
+      color: var(--grey-light);
+      font-weight: 300;
+      padding: 5px 0;
+      display: flex;
+      gap: 8px;
+    }
+
+    .social-card ul li::before { content: '·'; color: var(--gold-mid); }
+
+    /* ── FOOTER ──────────────────────────── */
+    footer {
+      padding: 80px 5vw;
+      text-align: center;
+      background: #080808;
+      border-top: 1px solid rgba(212,175,55,0.1);
+    }
+
+    footer .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--gold-main);
+      letter-spacing: 12px;
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--grey-mid);
+      text-transform: uppercase;
+    }
+
+    .gold-text { color: var(--gold-main); }
+    .italic { font-style: italic; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════ -->
+<!-- HERO                                  -->
+<!-- ══════════════════════════════════════ -->
+<div class="hero">
+  <img class="hero-logo" src="assets/logo.svg" alt="BISOU Logo">
+  <p class="hero-subtitle">Brand Identity Guide — 2024</p>
+  <h1 class="hero-title">Bijoux plaqués or.<br><span>Fabriqués avec passion.</span></h1>
+  <div class="hero-divider"></div>
+  <p class="scroll-hint">↓ Explorer l'identité</p>
+</div>
+
+<hr class="full">
+
+<!-- ══════════════════════════════════════ -->
+<!-- 01 — BRAND ESSENCE                    -->
+<!-- ══════════════════════════════════════ -->
+<section>
+  <p class="section-label">01 — Essence de la marque</p>
+  <h2 class="section-title">Ce que <span>BISOU</span> représente</h2>
+  <div class="divider"></div>
+
+  <p style="font-size:15px; color:var(--grey-light); max-width:680px; font-weight:300; line-height:1.9; margin-bottom:48px;">
+    <strong style="color:var(--white);">BISOU</strong> est une marque de bijoux plaqués or accessible et désirable.
+    Elle célèbre les petits moments précieux — un geste d'amour, un cadeau sincère, une pièce portée chaque jour.
+    Notre promesse : <em style="color:var(--gold-light);">l'or pour tous, sans compromis sur l'élégance.</em>
+  </p>
+
+  <div class="essence-grid">
+    <div class="essence-card">
+      <span class="essence-icon">✦</span>
+      <h3>Vision</h3>
+      <p>Démocratiser le luxe doré. Permettre à chaque femme de se parer d'or sans dépenser une fortune, avec style et confiance.</p>
+    </div>
+    <div class="essence-card">
+      <span class="essence-icon">◈</span>
+      <h3>Mission</h3>
+      <p>Créer des bijoux plaqués or de qualité supérieure, soigneusement sélectionnés, livrés dans un écrin digne des grandes maisons.</p>
+    </div>
+    <div class="essence-card">
+      <span class="essence-icon">❋</span>
+      <h3>Valeurs</h3>
+      <p>Élégance accessible. Authenticité. Tendresse. Qualité sans prétention. L'or comme expression d'amour de soi.</p>
+    </div>
+    <div class="essence-card">
+      <span class="essence-icon">◇</span>
+      <h3>Personnalité</h3>
+      <p>Douce mais affirmée. Parisienne mais accessible. Romantique mais moderne. Précieuse sans être distante.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="full">
+
+<!-- ══════════════════════════════════════ -->
+<!-- 02 — NAMING                           -->
+<!-- ══════════════════════════════════════ -->
+<section>
+  <p class="section-label">02 — Nom de la marque</p>
+  <h2 class="section-title">Pourquoi <span>BISOU</span> ?</h2>
+  <div class="divider"></div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; max-width:900px;">
+    <div>
+      <h3 style="font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--gold-light); margin-bottom:16px; font-weight:400;">Analyse sémantique</h3>
+      <ul style="list-style:none;">
+        <li style="font-size:13px; color:var(--grey-light); padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.06);">🇫🇷 <strong style="color:var(--white);">Français</strong> — évoque le luxe, la douceur, Paris</li>
+        <li style="font-size:13px; color:var(--grey-light); padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.06);">💋 <strong style="color:var(--white);">Émotionnel</strong> — amour, tendresse, intimité</li>
+        <li style="font-size:13px; color:var(--grey-light); padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.06);">🔤 <strong style="color:var(--white);">Court & mémorable</strong> — 5 lettres, 2 syllabes</li>
+        <li style="font-size:13px; color:var(--grey-light); padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.06);">🌍 <strong style="color:var(--white);">International</strong> — compris en Europe & Afrique francophone</li>
+        <li style="font-size:13px; color:var(--grey-light); padding:10px 0;">✦ <strong style="color:var(--white);">Unique</strong> — rare dans l'univers bijouterie</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--gold-light); margin-bottom:16px; font-weight:400;">Tagline officielle</h3>
+      <div style="background:var(--black-soft); padding:32px; border-left:2px solid var(--gold-main); margin-bottom:16px;">
+        <p style="font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:300; color:var(--white); font-style:italic; margin-bottom:8px;">"L'or qui t'embrasse"</p>
+        <p style="font-size:11px; color:var(--grey-mid); letter-spacing:2px;">TAGLINE PRINCIPALE</p>
+      </div>
+      <div style="background:var(--black-soft); padding:24px; border-left:1px solid rgba(212,175,55,0.3);">
+        <p style="font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:300; color:var(--grey-light); font-style:italic; margin-bottom:8px;">"Chaque bijou, un baiser"</p>
+        <p style="font-size:11px; color:var(--grey-mid); letter-spacing:2px;">TAGLINE SECONDAIRE</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="full">
+
+<!-- ══════════════════════════════════════ -->
+<!-- 03 — LOGO                             -->
+<!-- ══════════════════════════════════════ -->
+<section>
+  <p class="section-label">03 — Logo & Identité visuelle</p>
+  <h2 class="section-title">Le <span>logo</span> BISOU</h2>
+  <div class="divider"></div>
+
+  <p style="font-size:13px; color:var(--grey-light); max-width:600px; font-weight:300; line-height:1.8; margin-bottom:40px;">
+    Le logo associe un <strong style="color:var(--white);">wordmark serif élégant</strong> au dégradé or signature,
+    une micro-icône de cœur discret, et la tagline en capitales espacées.
+    L'ensemble évoque le luxe accessible avec une touche romantique.
+  </p>
+
+  <div class="logo-grid">
+    <div class="logo-variant dark">
+      <img src="assets/logo.svg" alt="Logo fond sombre">
+      <span class="logo-variant-label">Version principale — fond sombre</span>
+    </div>
+    <div class="logo-variant light">
+      <!-- Logo light version with inline SVG -->
+      <svg viewBox="0 0 400 200" width="260" style="filter:drop-shadow(0 2px 8px rgba(0,0,0,0.15));">
+        <defs>
+          <linearGradient id="goldDark" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#8B6914"/>
+            <stop offset="50%" style="stop-color:#A8862E"/>
+            <stop offset="100%" style="stop-color:#7A5C0E"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="200" fill="#FDF6E3" rx="4"/>
+        <line x1="30" y1="60" x2="130" y2="60" stroke="#C9A84C" stroke-width="0.8" opacity="0.4"/>
+        <line x1="270" y1="60" x2="370" y2="60" stroke="#C9A84C" stroke-width="0.8" opacity="0.4"/>
+        <line x1="30" y1="140" x2="130" y2="140" stroke="#C9A84C" stroke-width="0.8" opacity="0.4"/>
+        <line x1="270" y1="140" x2="370" y2="140" stroke="#C9A84C" stroke-width="0.8" opacity="0.4"/>
+        <g transform="translate(148, 52) scale(0.55)">
+          <path d="M50,30 C50,18 38,8 25,8 C12,8 0,18 0,30 C0,42 25,65 25,65 C25,65 50,42 50,30 Z" fill="url(#goldDark)" opacity="0.9"/>
+        </g>
+        <text x="200" y="108" font-family="Georgia, serif" font-size="58" font-weight="400" letter-spacing="14" text-anchor="middle" fill="url(#goldDark)">BISOU</text>
+        <text x="200" y="136" font-family="Arial, sans-serif" font-size="9.5" font-weight="300" letter-spacing="5.5" text-anchor="middle" fill="#A8862E" opacity="0.75">L'OR QUI T'EMBRASSE</text>
+      </svg>
+      <span class="logo-variant-label" style="color:#888;">Version crème — fond clair</span>
+    </div>
+    <div class="logo-variant gold">
+      <!-- Logo gold version -->
+      <svg viewBox="0 0 400 200" width="260">
+        <rect width="400" height="200" fill="rgba(0,0,0,0.25)" rx="4"/>
+        <text x="200" y="108" font-family="Georgia, serif" font-size="58" font-weight="400" letter-spacing="14" text-anchor="middle" fill="#FFFFFF">BISOU</text>
+        <text x="200" y="136" font-family="Arial, sans-serif" font-size="9.5" font-weight="300" letter-spacing="5.5" text-anchor="middle" fill="rgba(255,255,255,0.75)">L'OR QUI T'EMBRASSE</text>
+      </svg>
+      <span class="logo-variant-label" style="color:rgba(0,0,0,0.5);">Version or — fond doré</span>
+    </div>
+  </div>
+
+  <div style="margin-top:40px; background:var(--black-soft); padding:40px; border-top:1px solid rgba(212,175,55,0.15);">
+    <h3 style="font-family:'Cormorant Garamond',serif; font-size:18px; color:var(--gold-light); margin-bottom:24px; font-weight:400;">Règles d'utilisation du logo</h3>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:24px;">
+      <div><p style="font-size:11px; letter-spacing:2px; color:var(--gold-mid); margin-bottom:8px;">ESPACE MINIMUM</p><p style="font-size:13px; color:var(--grey-light); font-weight:300;">Toujours laisser un espace libre équivalent à la hauteur du «O» autour du logo.</p></div>
+      <div><p style="font-size:11px; letter-spacing:2px; color:var(--gold-mid); margin-bottom:8px;">TAILLE MINIMUM</p><p style="font-size:13px; color:var(--grey-light); font-weight:300;">Ne jamais afficher le logo en dessous de 80px de largeur en digital, 25mm en print.</p></div>
+      <div><p style="font-size:11px; letter-spacing:2px; color:var(--gold-mid); margin-bottom:8px;">INTERDITS</p><p style="font-size:13px; color:var(--grey-light); font-weight:300;">Ne pas déformer, recolorer en dehors de la charte, ni ajouter d'effets non prévus.</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="full">
+
+<!-- ══════════════════════════════════════ -->
+<!-- 04 — COLORS                           -->
+<!-- ══════════════════════════════════════ -->
+<section>
+  <p class="section-label">04 — Palette de couleurs</p>
+  <h2 class="section-title">L'<span>identité chromatique</span></h2>
+  <div class="divider"></div>
+
+  <div class="color-grid">
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:linear-gradient(135deg, #F5E6A3, #D4AF37, #C9A84C, #A8862E);"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Or Signature</div>
+        <div class="swatch-hex">#D4AF37 · Principal</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#F5E6A3;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Or Lumière</div>
+        <div class="swatch-hex">#F5E6A3 · Highlight</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#A8862E;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Or Profond</div>
+        <div class="swatch-hex">#A8862E · Ombre</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#0D0D0D;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Noir Obsidian</div>
+        <div class="swatch-hex">#0D0D0D · Fond principal</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#1A1A1A;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Noir Velours</div>
+        <div class="swatch-hex">#1A1A1A · Fond secondaire</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#FDF6E3;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Crème Ivoire</div>
+        <div class="swatch-hex">#FDF6E3 · Fond clair</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#F2D7D5;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Rose Poudré</div>
+        <div class="swatch-hex">#F2D7D5 · Accent doux</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#AAAAAA;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Argent Texte</div>
+        <div class="swatch-hex">#AAAAAA · Corps de texte</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="full">
+
+<!-- ══════════════════════════════════════ -->
+<!-- 05 — TYPOGRAPHY                       -->
+<!-- ══════════════════════════════════════ -->
+<section>
+  <p class="section-label">05 — Typographie</p>
+  <h2 class="section-title">Les <span>caractères</span> de BISOU</h2>
+  <div class="divider"></div>
+
+  <div class="typo-block">
+    <p class="typo-meta">Police principale — Display & Titres</p>
+    <div class="typo-sample-display">Cormorant Garamond<br><em>Élégance intemporelle</em></div>
+    <p class="typo-sample-body" style="font-family:'Cormorant Garamond', serif; font-size:18px; font-weight:300; color:var(--grey-light);">
+      ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 &amp; «» ✦ ◇
+    </p>
+    <p style="font-size:11px; letter-spacing:2px; color:var(--grey-mid); margin-top:20px;">Poids utilisés : Light 300, Regular 400, Medium 500 — Normal & Italic</p>
+  </div>
+
+  <div class="typo-block" style="border-left-color:rgba(212,175,55,0.15);">
+    <p class="typo-meta">Police secondaire — Corps & Interface</p>
+    <div class="typo-sample-display" style="font-family:'Jost',sans-serif; font-size:clamp(24px,4vw,48px); font-weight:200;">Jost <span style="font-weight:400;">Sans Serif</span></div>
+    <p class="typo-sample-body">
+      ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 — navigation, descriptions, prix
+    </p>
+    <p style="font-size:11px; letter-spacing:2px; color:var(--grey-mid); margin-top:20px;">Poids utilisés : ExtraLight 200, Light 300, Regular 400, Medium 500</p>
+  </div>
+</section>
+
+<hr class="full">
+
+<!-- ══════════════════════════════════════ -->
+<!-- 06 — PRODUCTS                         -->
+<!-- ══════════════════════════════════════ -->
+<section>
+  <p class="section-label">06 — Gamme produits</p>
+  <h2 class="section-title">La collection <span>BISOU</span></h2>
+  <div class="divider"></div>
+
+  <p style="font-size:13px; color:var(--grey-light); max-width:680px; font-weight:300; line-height:1.9; margin-bottom:8px;">
+    Tous les bijoux sont en <strong style="color:var(--white);">acier inoxydable plaqué or 18 carats</strong>, importés de partenaires chinois certifiés.
+    Chaque pièce est testée pour la résistance à l'usure et l'absence de nickel.
+  </p>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <span class="product-icon">📿</span>
+      <h3>Colliers</h3>
+      <p>Chaînes fines, pendentifs cœur, chokers dorés. La signature BISOU au cou.</p>
+      <p class="product-price">12€ — 45€</p>
+    </div>
+    <div class="product-card">
+      <span class="product-icon">✦</span>
+      <h3>Bagues</h3>
+      <p>Anneaux empilables, solitaires, initiales. Portées seules ou en stack.</p>
+      <p class="product-price">8€ — 35€</p>
+    </div>
+    <div class="product-card">
+      <span class="product-icon">◎</span>
+      <h3>Boucles d'oreilles</h3>
+      <p>Créoles, puces, pendantes. Du minimaliste au statement piece.</p>
+      <p class="product-price">10€ — 40€</p>
+    </div>
+    <div class="product-card">
+      <span class="product-icon">〰</span>
+      <h3>Bracelets</h3>
+      <p>Joncs, chaînes, charm bracelets. À porter en superposition.</p>
+      <p class="product-price">10€ — 38€</p>
+    </div>
+    <div class="product-card">
+      <span class="product-icon">🎁</span>
+      <h3>Coffrets Cadeaux</h3>
+      <p>Sets curatés dans un écrin velours noir. Idéaux pour les fêtes et anniversaires.</p>
+      <p class="product-price">35€ — 80€</p>
+    </div>
+    <div class="product-card">
+      <span class="product-icon">🔒</span>
+      <h3>Éditions Limitées</h3>
+      <p>Collections capsules saisonnières. Saint-Valentin, Noël, été...</p>
+      <p class="product-price">20€ — 60€</p>
+    </div>
+  </div>
+</section>
+
+<hr class="full">
+
+<!-- ══════════════════════════════════════ -->
+<!-- 07 — TARGET AUDIENCE                  -->
+<!-- ══════════════════════════════════════ -->
+<section>
+  <p class="section-label">07 — Cible & Personas</p>
+  <h2 class="section-title">La cliente <span>BISOU</span></h2>
+  <div class="divider"></div>
+
+  <div class="audience-grid">
+    <div class="audience-persona">
+      <span class="persona-age">25</span>
+      <h3 class="persona-name">Léa</h3>
+      <p class="persona-tag">La Millennial Urbaine</p>
+      <ul class="persona-traits">
+        <li>25–34 ans, CSP moyenne-haute</li>
+        <li>Paris, Lyon, Bordeaux, Bruxelles</li>
+        <li>Active sur Instagram & TikTok</li>
+        <li>Mode & lifestyle : sa passion</li>
+        <li>Budget bijoux : 30–60€/mois</li>
+        <li>Achète des cadeaux pour ses amies</li>
+      </ul>
+    </div>
+    <div class="audience-persona">
+      <span class="persona-age">38</span>
+      <h3 class="persona-name">Nadia</h3>
+      <p class="persona-tag">La Femme Active</p>
+      <ul class="persona-traits">
+        <li>35–45 ans, revenus stables</li>
+        <li>Mère, professionnelle accomplie</li>
+        <li>Cherche qualité & rapport prix</li>
+        <li>Offre des cadeaux à ses proches</li>
+        <li>Budget : 50–120€ par achat</li>
+        <li>Fidèle à une marque qui la comprend</li>
+      </ul>
+    </div>
+    <div class="audience-persona">
+      <span class="persona-age">19</span>
+      <h3 class="persona-name">Inès</h3>
+      <p class="persona-tag">La Gen Z Tendance</p>
+      <ul class="persona-traits">
+        <li>18–24 ans, étudiante / 1er emploi</li>
+        <li>TikTok native, très influencée</li>
+        <li>Aime les stacks & layering</li>
+        <li>Budget serré mais achète souvent</li>
+        <li>Prix sensible : 10–30€ par pièce</li>
+        <li>Partage ses achats sur les réseaux</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="full">
+
+<!-- ══════════════════════════════════════ -->
+<!-- 08 — BRAND VOICE                      -->
+<!-- ══════════════════════════════════════ -->
+<section>
+  <p class="section-label">08 — Voix de la marque</p>
+  <h2 class="section-title">Comment <span>BISOU</span> parle</h2>
+  <div class="divider"></div>
+
+  <div class="voice-grid">
+    <div class="voice-card do">
+      <h3>✓ On dit</h3>
+      <ul class="voice-list">
+        <li><span>✦</span> "Offre-toi un éclat d'or ce matin."</li>
+        <li><span>✦</span> "Chaque bijou est un baiser que tu gardes."</li>
+        <li><span>✦</span> "Le luxe n'a plus besoin d'un grand budget."</li>
+        <li><span>✦</span> "Doux, précieux, tellement toi."</li>
+        <li><span>✦</span> Tutoiement chaleureux</li>
+        <li><span>✦</span> Formules poétiques courtes</li>
+        <li><span>✦</span> Langage inclusif & empowerment féminin</li>
+        <li><span>✦</span> Storytelling émotionnel</li>
+      </ul>
+    </div>
+    <div class="voice-card dont">
+      <h3>✗ On évite</h3>
+      <ul class="voice-list">
+        <li><span>✗</span> Termes techniques froids</li>
+        <li><span>✗</span> "Plaqué or de Chine" (valoriser le design)</li>
+        <li><span>✗</span> Langage corporatif ou pompeux</li>
+        <li><span>✗</span> Promesses démesurées</li>
+        <li><span>✗</span> Surenchère de promotions</li>
+        <li><span>✗</span> Emojis excessifs (max 1 par message)</li>
+        <li><span>✗</span> Copies de marques concurrentes</li>
+        <li><span>✗</span> Majuscules excessives</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="full">
+
+<!-- ══════════════════════════════════════ -->
+<!-- 09 — PACKAGING                        -->
+<!-- ══════════════════════════════════════ -->
+<section>
+  <p class="section-label">09 — Packaging</p>
+  <h2 class="section-title">L'expérience <span>unboxing</span></h2>
+  <div class="divider"></div>
+
+  <p style="font-size:13px; color:var(--grey-light); max-width:680px; font-weight:300; line-height:1.9; margin-bottom:8px;">
+    Le packaging fait partie intégrante de l'expérience BISOU. Chaque commande doit créer un moment de plaisir à l'ouverture.
+  </p>
+
+  <div class="packaging-mockup">
+    <div style="text-align:center;">
+      <div class="box-mockup">
+        <div class="box-logo-text">BISOU</div>
+        <div class="box-tagline-text">L'OR QUI T'EMBRASSE</div>
+      </div>
+      <p style="font-size:11px; color:var(--grey-mid); margin-top:16px; letter-spacing:2px;">BOITE BIJOU<br>Carton noir mat + dorure à chaud</p>
+    </div>
+
+    <div style="text-align:center;">
+      <div class="bag-mockup">
+        <div class="bag-handle"></div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--gold-main); letter-spacing:5px; margin-top:auto;">BISOU</div>
+        <div style="font-size:6px; letter-spacing:2px; color:var(--gold-mid); opacity:0.7;">L'OR QUI T'EMBRASSE</div>
+      </div>
+      <p style="font-size:11px; color:var(--grey-mid); margin-top:16px; letter-spacing:2px;">SAC CADEAU<br>Papier kraft noir + cordon doré</p>
+    </div>
+
+    <div style="max-width:280px;">
+      <h3 style="font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--gold-light); margin-bottom:20px; font-weight:400;">Éléments packaging</h3>
+      <ul style="list-style:none;">
+        <li style="font-size:13px; color:var(--grey-light); padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">✦ Boite rigide noire mat + logo doré à chaud</li>
+        <li style="font-size:13px; color:var(--grey-light); padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">✦ Insert velours noir pour maintenir le bijou</li>
+        <li style="font-size:13px; color:var(--grey-light); padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">✦ Carte message personnalisée manuscrite</li>
+        <li style="font-size:13px; color:var(--grey-light); padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">✦ Guide entretien bijoux plaqués or</li>
+        <li style="font-size:13px; color:var(--grey-light); padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">✦ Pétales de rose séchées (option premium)</li>
+        <li style="font-size:13px; color:var(--grey-light); padding:10px 0;">✦ Pochette anti-oxydation refermable</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="full">
+
+<!-- ══════════════════════════════════════ -->
+<!-- 10 — SOCIAL MEDIA                     -->
+<!-- ══════════════════════════════════════ -->
+<section>
+  <p class="section-label">10 — Stratégie réseaux sociaux</p>
+  <h2 class="section-title">BISOU sur les <span>réseaux</span></h2>
+  <div class="divider"></div>
+
+  <div class="social-grid">
+    <div class="social-card">
+      <p class="social-platform">Instagram @bisou.or</p>
+      <h3>Visual-first</h3>
+      <ul>
+        <li>Feed esthétique noir & or</li>
+        <li>Flat lays bijoux pro</li>
+        <li>Reels : unboxing & styling</li>
+        <li>Stories : coulisses & sondages</li>
+        <li>Collab micro-influenceurs</li>
+        <li>Fréquence : 5–7 posts/semaine</li>
+      </ul>
+    </div>
+    <div class="social-card">
+      <p class="social-platform">TikTok @bisou.or</p>
+      <h3>Viral & Authentique</h3>
+      <ul>
+        <li>GRWM avec bijoux BISOU</li>
+        <li>Comparatifs avant/après port</li>
+        <li>Duets avec clientes</li>
+        <li>Tendances bijoux saisonnières</li>
+        <li>Budget fashion challenges</li>
+        <li>Fréquence : 1–2 vidéos/jour</li>
+      </ul>
+    </div>
+    <div class="social-card">
+      <p class="social-platform">Pinterest @bisouor</p>
+      <h3>Inspiration & SEO</h3>
+      <ul>
+        <li>Tableaux thématiques (saisons, styles)</li>
+        <li>Infographies soins bijoux</li>
+        <li>Lookbooks cadeaux</li>
+        <li>Trafic organique vers boutique</li>
+        <li>Fréquence : 10–15 pins/semaine</li>
+      </ul>
+    </div>
+    <div class="social-card">
+      <p class="social-platform">Email Marketing</p>
+      <h3>Fidélisation</h3>
+      <ul>
+        <li>Newsletter mensuelle élégante</li>
+        <li>Offres exclusives abonnés</li>
+        <li>Séquence bienvenue 5 emails</li>
+        <li>Relance panier abandonné</li>
+        <li>Programme anniversaire client</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="full">
+
+<!-- ══════════════════════════════════════ -->
+<!-- 11 — BUSINESS STRATEGY                -->
+<!-- ══════════════════════════════════════ -->
+<section>
+  <p class="section-label">11 — Stratégie business</p>
+  <h2 class="section-title">Plan de <span>lancement</span></h2>
+  <div class="divider"></div>
+
+  <div style="background:var(--black-soft); padding:48px; margin-bottom:32px; border-left:2px solid var(--gold-main);">
+    <h3 style="font-family:'Cormorant Garamond',serif; font-size:22px; color:var(--white); margin-bottom:20px; font-weight:400;">Modèle économique</h3>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:32px;">
+      <div>
+        <p style="font-size:10px; letter-spacing:3px; color:var(--gold-mid); margin-bottom:8px;">COÛT D'ACHAT MOYEN</p>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:32px; color:var(--white); font-weight:300;">2–6€</p>
+        <p style="font-size:12px; color:var(--grey-light);">par pièce depuis la Chine</p>
+      </div>
+      <div>
+        <p style="font-size:10px; letter-spacing:3px; color:var(--gold-mid); margin-bottom:8px;">PRIX DE VENTE MOYEN</p>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:32px; color:var(--white); font-weight:300;">20–45€</p>
+        <p style="font-size:12px; color:var(--grey-light);">positionnement accessible</p>
+      </div>
+      <div>
+        <p style="font-size:10px; letter-spacing:3px; color:var(--gold-mid); margin-bottom:8px;">MARGE BRUTE</p>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:32px; color:var(--white); font-weight:300;">70–80%</p>
+        <p style="font-size:12px; color:var(--grey-light);">avant frais marketing</p>
+      </div>
+      <div>
+        <p style="font-size:10px; letter-spacing:3px; color:var(--gold-mid); margin-bottom:8px;">OBJECTIF AN 1</p>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:32px; color:var(--white); font-weight:300;">5 000+</p>
+        <p style="font-size:12px; color:var(--grey-light);">commandes traitées</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="strategy-grid">
+    <div class="strategy-card">
+      <div class="strategy-num">01</div>
+      <h3>Sourcing Chine</h3>
+      <p>Partenaires certifiés Alibaba Gold Supplier ou 1688.com. Tests qualité sur échantillons. Acier inox 316L + plaquage 18K 3–5 microns minimum.</p>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-num">02</div>
+      <h3>E-commerce D2C</h3>
+      <p>Boutique Shopify avec thème premium. Paiement CB, PayPal, Alma (3x sans frais). Livraison Colissimo + suivi. Retours 30 jours.</p>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-num">03</div>
+      <h3>Lancement Marketing</h3>
+      <p>Budget Meta Ads initial : 500€/mois. Micro-influenceurs (5k–50k) : gifting. UGC encouragé. Objectif ROAS 3x en mois 3.</p>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-num">04</div>
+      <h3>Marketplace</h3>
+      <p>Présence Amazon.fr + Etsy (bijoux artisanaux). Dépôt-vente en boutiques concept stores locaux. Pop-ups événementiels.</p>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-num">05</div>
+      <h3>Fidélisation</h3>
+      <p>Programme de points BISOU CLUB. -10% fidélité dès le 2e achat. Parrainage : 5€ pour chaque amie recommandée.</p>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-num">06</div>
+      <h3>Expansion</h3>
+      <p>Belgique & Suisse en mois 6. Maroc & Sénégal en mois 12. Collections personnalisées (gravure prénoms) an 2.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="full">
+
+<!-- ══════════════════════════════════════ -->
+<!-- FOOTER                                -->
+<!-- ══════════════════════════════════════ -->
+<footer>
+  <div class="footer-logo">BISOU</div>
+  <div style="width:60px; height:1px; background:linear-gradient(90deg,transparent,var(--gold-main),transparent); margin:20px auto;"></div>
+  <p style="margin-bottom:8px;">L'OR QUI T'EMBRASSE</p>
+  <p style="margin-top:24px; font-size:10px; color:var(--grey-dark);">© 2024 BISOU — Brand Identity Guide — Document Confidentiel</p>
+</footer>
+
+</body>
+</html>

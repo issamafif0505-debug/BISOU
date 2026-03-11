@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BISOU — UGC Studio Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --gold:#D4AF37;--gold-light:#F5E6A3;--gold-mid:#C9A84C;--gold-dark:#A8862E;
+            --black:#0D0D0D;--dark:#111;--card:#1A1A1A;--card2:#222;--border:#2A2A2A;
+            --gold-border:rgba(212,175,55,.2);--text:#E8E8E8;--muted:#888;
+            --cream:#FDF6E3;--rose:#F2D7D5;--green:#2ECC71;--red:#E74C3C;
+            --orange:#F39C12;--blue:#3498DB;--radius:14px;--radius-sm:8px;
+        }
+        body{font-family:'Jost',sans-serif;background:var(--black);color:var(--text);line-height:1.6;min-height:100vh}
+        header{position:sticky;top:0;z-index:100;background:var(--dark);border-bottom:1px solid var(--gold-border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(12px)}
+        .logo{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold);font-weight:600;letter-spacing:2px}
+        .logo span{display:block;font-family:'Jost',sans-serif;font-size:10px;color:var(--muted);letter-spacing:4px;text-transform:uppercase;font-weight:400}
+        .header-right{display:flex;align-items:center;gap:12px}
+        .live-badge{display:flex;align-items:center;gap:6px;background:rgba(46,204,113,.12);border:1px solid rgba(46,204,113,.3);padding:4px 12px;border-radius:20px;font-size:11px;color:var(--green);font-weight:500}
+        .live-dot{width:7px;height:7px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+        @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+        .date-badge{font-size:11px;color:var(--muted);background:var(--card);padding:4px 10px;border-radius:6px}
+        .container{max-width:1280px;margin:0 auto;padding:20px 24px 60px}
+        .tabs{display:flex;gap:4px;background:var(--card);border-radius:12px;padding:5px;margin-bottom:28px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+        .tab{flex:1;padding:10px 14px;border:none;background:transparent;color:var(--muted);font-family:'Jost',sans-serif;font-size:13px;font-weight:500;cursor:pointer;border-radius:8px;transition:all .25s;white-space:nowrap;min-width:fit-content}
+        .tab:hover{color:var(--text);background:var(--card2)}
+        .tab.active{background:var(--gold);color:var(--black);font-weight:600}
+        .tab-content{display:none}
+        .tab-content.active{display:block;animation:fadeIn .3s}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+        .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,36px);color:var(--gold);margin-bottom:6px;font-weight:600}
+        .section-sub{color:var(--muted);font-size:14px;margin-bottom:24px}
+        .gold-divider{width:60px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:28px}
+        .card{background:var(--card);border:1px solid var(--gold-border);border-radius:var(--radius);padding:24px;transition:all .3s}
+        .card:hover{border-color:rgba(212,175,55,.4);box-shadow:0 4px 24px rgba(212,175,55,.08)}
+        .card-title{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold);margin-bottom:12px;font-weight:600}
+        .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:24px}
+        .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+        .format-card{background:var(--card2);border:2px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;cursor:pointer;transition:all .3s}
+        .format-card:hover{border-color:var(--gold-dark);transform:translateY(-2px)}
+        .format-card.active{border-color:var(--gold);box-shadow:0 0 20px rgba(212,175,55,.15);background:rgba(212,175,55,.06)}
+        .format-icon{font-size:2.4rem;margin-bottom:8px}
+        .format-name{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);font-weight:600;margin-bottom:4px}
+        .format-duration{font-size:12px;color:var(--muted);background:var(--card);padding:2px 10px;border-radius:20px;display:inline-block}
+        .beat-editor{margin-top:24px}
+        .beat-row{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;padding:14px;background:var(--card2);border-radius:var(--radius-sm);border-left:3px solid var(--gold-dark)}
+        .beat-label{min-width:80px}
+        .beat-label strong{display:block;font-size:13px;color:var(--gold)}
+        .beat-label .time{font-size:11px;color:var(--muted);background:var(--card);padding:1px 8px;border-radius:10px;display:inline-block;margin-top:4px}
+        .beat-row textarea{flex:1;background:var(--black);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px;color:var(--text);font-family:'Jost',sans-serif;font-size:13px;resize:vertical;min-height:60px;line-height:1.5}
+        .beat-row textarea:focus{outline:none;border-color:var(--gold-dark)}
+        .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+        .form-group{display:flex;flex-direction:column;gap:4px}
+        .form-group.full{grid-column:1/-1}
+        .form-group label{font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;font-weight:500}
+        .form-group input,.form-group select,.form-group textarea{background:var(--card2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 14px;color:var(--text);font-family:'Jost',sans-serif;font-size:14px}
+        .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--gold-dark)}
+        .form-group textarea{resize:vertical;min-height:80px}
+        .form-group select{cursor:pointer}
+        .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border:none;border-radius:var(--radius-sm);font-family:'Jost',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:all .25s}
+        .btn-gold{background:var(--gold);color:var(--black)}
+        .btn-gold:hover{background:var(--gold-mid);transform:translateY(-1px)}
+        .btn-outline{background:transparent;border:1px solid var(--gold-border);color:var(--gold)}
+        .btn-outline:hover{border-color:var(--gold);background:rgba(212,175,55,.06)}
+        .btn-sm{padding:6px 14px;font-size:12px}
+        .btn-danger{background:rgba(231,76,60,.15);color:var(--red);border:1px solid rgba(231,76,60,.3)}
+        .btn-danger:hover{background:rgba(231,76,60,.25)}
+        .btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+        .script-preview{background:#0A0A0F;border:1px solid var(--border);border-radius:var(--radius-sm);padding:20px;margin-top:16px;white-space:pre-wrap;font-size:13px;line-height:1.8;color:var(--gold-light);font-family:'Jost',sans-serif;display:none}
+        .script-preview.visible{display:block}
+        .duration-bar{height:6px;background:var(--card2);border-radius:3px;margin-top:12px;overflow:hidden}
+        .duration-fill{height:100%;background:linear-gradient(90deg,var(--gold-dark),var(--gold));border-radius:3px;transition:width .5s}
+        .duration-text{font-size:12px;color:var(--muted);margin-top:6px;text-align:right}
+        table{width:100%;border-collapse:collapse;margin-top:12px}
+        th{text-align:left;padding:10px 12px;font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);border-bottom:1px solid var(--border);cursor:pointer;user-select:none}
+        th:hover{color:var(--gold)}
+        td{padding:10px 12px;font-size:13px;border-bottom:1px solid rgba(255,255,255,.04)}
+        tr:hover td{background:rgba(212,175,55,.03)}
+        .status{padding:3px 10px;border-radius:12px;font-size:11px;font-weight:500;display:inline-block}
+        .status-actif{background:rgba(46,204,113,.12);color:var(--green)}
+        .status-attente{background:rgba(243,156,18,.12);color:var(--orange)}
+        .status-archive{background:rgba(136,136,136,.12);color:var(--muted)}
+        .status-livre{background:rgba(46,204,113,.12);color:var(--green)}
+        .status-encours{background:rgba(52,152,219,.12);color:var(--blue)}
+        .status-paye{background:rgba(46,204,113,.12);color:var(--green)}
+        .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px}
+        .kpi-card{background:var(--card);border:1px solid var(--gold-border);border-radius:var(--radius);padding:20px;position:relative;overflow:hidden}
+        .kpi-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;border-radius:2px}
+        .kpi-card.blue::before{background:var(--blue)}
+        .kpi-card.green::before{background:var(--green)}
+        .kpi-card.gold::before{background:var(--gold)}
+        .kpi-card.orange::before{background:var(--orange)}
+        .kpi-label{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:8px}
+        .kpi-value{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--text);font-weight:600}
+        .kpi-sub{font-size:12px;color:var(--muted);margin-top:4px}
+        .chart-bar-container{margin-bottom:10px}
+        .chart-bar-label{font-size:12px;color:var(--muted);margin-bottom:4px;display:flex;justify-content:space-between}
+        .chart-bar{height:24px;background:var(--card2);border-radius:4px;overflow:hidden}
+        .chart-bar-fill{height:100%;border-radius:4px;transition:width .6s;display:flex;align-items:center;padding-left:8px;font-size:11px;color:var(--black);font-weight:600}
+        .calendar-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+        .calendar-header h3{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold)}
+        .calendar-nav{display:flex;gap:8px}
+        .calendar-nav button{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:6px 14px;border-radius:6px;cursor:pointer;font-family:'Jost',sans-serif}
+        .calendar-nav button:hover{border-color:var(--gold-dark)}
+        .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+        .cal-day-header{text-align:center;font-size:11px;color:var(--muted);padding:8px;text-transform:uppercase;letter-spacing:1px}
+        .cal-day{min-height:64px;background:var(--card2);border-radius:4px;padding:6px;cursor:pointer;transition:all .2s;position:relative}
+        .cal-day:hover{background:var(--card);border:1px solid var(--gold-border)}
+        .cal-day.other-month{opacity:.3}
+        .cal-day.today{border:1px solid var(--gold)}
+        .cal-day-num{font-size:12px;color:var(--muted);margin-bottom:4px}
+        .cal-dots{display:flex;gap:3px;flex-wrap:wrap}
+        .cal-dot{width:8px;height:8px;border-radius:50%}
+        .tool-card{background:var(--card);border:1px solid var(--gold-border);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:10px;transition:all .3s}
+        .tool-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(212,175,55,.1);border-color:rgba(212,175,55,.4)}
+        .tool-icon{font-size:2.2rem}
+        .tool-name{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);font-weight:600}
+        .tool-desc{font-size:13px;color:var(--text);line-height:1.5}
+        .tool-tip{font-size:12px;color:var(--gold-mid);font-style:italic;background:rgba(212,175,55,.06);padding:8px 12px;border-radius:6px;border-left:2px solid var(--gold-dark)}
+        .swatch-row{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
+        .swatch{width:48px;height:48px;border-radius:50%;border:2px solid var(--border);cursor:pointer;transition:all .2s;position:relative}
+        .swatch:hover{transform:scale(1.15);border-color:var(--gold)}
+        .swatch-label{font-size:10px;color:var(--muted);text-align:center;margin-top:4px}
+        .hashtag-container{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+        .hashtag{background:rgba(212,175,55,.08);border:1px solid var(--gold-border);padding:4px 12px;border-radius:20px;font-size:12px;color:var(--gold-light)}
+        .caption-result{background:var(--card2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;margin-bottom:12px}
+        .caption-text{font-size:14px;line-height:1.7;margin-bottom:10px;white-space:pre-wrap}
+        .cta-card{display:flex;align-items:center;gap:12px;background:var(--card2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 16px;margin-bottom:8px;transition:all .2s}
+        .cta-card:hover{border-color:var(--gold-border)}
+        .cta-emoji{font-size:1.4rem;min-width:30px;text-align:center}
+        .cta-text{flex:1;font-size:13px;line-height:1.5}
+        .platform-badges{display:flex;gap:4px}
+        .badge{padding:2px 8px;border-radius:10px;font-size:10px;font-weight:500}
+        .badge-tk{background:rgba(0,0,0,.3);color:#ff0050}
+        .badge-ig{background:rgba(193,53,132,.15);color:#c135e0}
+        .badge-fb{background:rgba(24,119,242,.15);color:#1877f2}
+        .badge-pin{background:rgba(230,0,35,.15);color:#e60023}
+        .hook-card{background:var(--card2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 16px;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+        .hook-text{font-size:13px;font-style:italic;color:var(--gold-light);flex:1}
+        .star-rating{display:inline-flex;gap:2px}
+        .star{cursor:pointer;font-size:18px;color:var(--border);transition:color .2s}
+        .star.filled{color:var(--gold)}
+        .star:hover{color:var(--gold-mid)}
+        .template-card{background:var(--card2);border:1px solid var(--border);border-radius:var(--radius);padding:18px;cursor:pointer;transition:all .3s}
+        .template-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 4px 16px rgba(212,175,55,.1)}
+        .template-card h4{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:17px;margin-bottom:6px}
+        .template-card p{font-size:12px;color:var(--muted);line-height:1.5}
+        .storyboard{display:flex;gap:12px;overflow-x:auto;padding:12px 0;-webkit-overflow-scrolling:touch}
+        .scene-box{min-width:200px;background:var(--card2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;border-top:3px solid var(--gold-dark);flex-shrink:0}
+        .scene-num{font-size:11px;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+        .scene-time{font-size:11px;color:var(--muted);margin-bottom:8px}
+        .scene-desc{font-size:12px;color:var(--text);line-height:1.5}
+        .scene-arrow{display:flex;align-items:center;color:var(--gold-dark);font-size:20px;flex-shrink:0}
+        .modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.7);z-index:200;display:none;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+        .modal-overlay.visible{display:flex}
+        .modal{background:var(--card);border:1px solid var(--gold-border);border-radius:var(--radius);padding:24px;max-width:420px;width:90%}
+        .modal h3{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:20px;margin-bottom:16px}
+        .copy-feedback{position:fixed;bottom:24px;right:24px;background:var(--green);color:var(--black);padding:10px 20px;border-radius:8px;font-size:13px;font-weight:500;z-index:300;display:none;animation:fadeIn .3s}
+        .brief-preview{background:#0A0A0F;border:1px solid var(--border);border-radius:var(--radius-sm);padding:24px;margin-top:16px;display:none;line-height:1.8;font-size:13px}
+        .brief-preview.visible{display:block}
+        .brief-preview h4{color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:18px;margin:16px 0 8px}
+        .brief-preview .bp-field{margin-bottom:6px}
+        .brief-preview .bp-label{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px}
+        .no-data{text-align:center;padding:40px;color:var(--muted);font-size:14px}
+        .checkbox-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+        .checkbox-row label{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text);cursor:pointer}
+        .checkbox-row input[type="checkbox"]{accent-color:var(--gold);width:16px;height:16px}
+        @media print{
+            @page{size:A4 portrait;margin:12mm 15mm}
+            body{background:#fff!important;color:#000!important}
+            header,.tabs,.no-print,.btn-row,.modal-overlay{display:none!important}
+            .tab-content{display:none!important}
+            #tab-briefs{display:block!important}
+            .brief-preview{display:block!important;background:#fff!important;border:1px solid #ccc!important;color:#000!important}
+            .brief-preview h4{color:#333!important}
+            .brief-preview .bp-label{color:#666!important}
+            .card{background:#fff!important;border:1px solid #ddd!important}
+        }
+        @media(max-width:1024px){.kpi-grid{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}.form-grid{grid-template-columns:1fr}}
+        @media(max-width:768px){.container{padding:16px 12px}.tabs{gap:2px;padding:4px}.tab{padding:8px 10px;font-size:12px}.kpi-grid{grid-template-columns:1fr 1fr}.grid-2{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.beat-row{flex-direction:column}.beat-label{min-width:auto;display:flex;gap:8px;align-items:center}.header-right{gap:6px}header{padding:10px 16px}.format-card{padding:14px}}
+        @media(max-width:480px){.kpi-grid{grid-template-columns:1fr}.calendar-header h3{font-size:16px}}
+        ::-webkit-scrollbar{width:6px;height:6px}
+        ::-webkit-scrollbar-track{background:var(--card)}
+        ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+        ::-webkit-scrollbar-thumb:hover{background:var(--muted)}
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">BISOU<span>UGC Studio Pro</span></div>
+    <div class="header-right">
+        <div class="live-badge"><div class="live-dot"></div>STUDIO</div>
+        <div class="date-badge" id="currentDate"></div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="tabs">
+        <button class="tab active" data-tab="studio" onclick="showTab('studio')">Studio</button>
+        <button class="tab" data-tab="briefs" onclick="showTab('briefs')">Briefs</button>
+        <button class="tab" data-tab="assets" onclick="showTab('assets')">Assets</button>
+        <button class="tab" data-tab="captions" onclick="showTab('captions')">Captions</button>
+        <button class="tab" data-tab="performance" onclick="showTab('performance')">Performance</button>
+        <button class="tab" data-tab="creators" onclick="showTab('creators')">Cr&#233;ateurs</button>
+    </div>
+
+    <!-- ==================== TAB 1: STUDIO ==================== -->
+    <div id="tab-studio" class="tab-content active">
+        <h2 class="section-title">Studio de Cr&#233;ation</h2>
+        <p class="section-sub">S&#233;lectionnez un format UGC, personnalisez le script beat par beat, g&#233;n&#233;rez et copiez.</p>
+        <div class="gold-divider"></div>
+
+        <div class="grid-3" id="formatGrid">
+            <div class="format-card active" onclick="selectFormat('unboxing')">
+                <div class="format-icon">&#x1F4E6;</div>
+                <div class="format-name">Unboxing Luxe</div>
+                <span class="format-duration">15-30s</span>
+            </div>
+            <div class="format-card" onclick="selectFormat('grwm')">
+                <div class="format-icon">&#x1F484;</div>
+                <div class="format-name">GRWM</div>
+                <span class="format-duration">20-45s</span>
+            </div>
+            <div class="format-card" onclick="selectFormat('avant-apres')">
+                <div class="format-icon">&#x2728;</div>
+                <div class="format-name">Avant / Apr&#232;s</div>
+                <span class="format-duration">15-25s</span>
+            </div>
+            <div class="format-card" onclick="selectFormat('showcase')">
+                <div class="format-icon">&#x1F3AC;</div>
+                <div class="format-name">Showcase Lifestyle</div>
+                <span class="format-duration">20-35s</span>
+            </div>
+            <div class="format-card" onclick="selectFormat('temoignage')">
+                <div class="format-icon">&#x1F4AC;</div>
+                <div class="format-name">T&#233;moignage Client</div>
+                <span class="format-duration">30-45s</span>
+            </div>
+            <div class="format-card" onclick="selectFormat('hook')">
+                <div class="format-icon">&#x1F3B5;</div>
+                <div class="format-name">Hook Tendance</div>
+                <span class="format-duration">8-15s</span>
+            </div>
+        </div>
+
+        <div class="card" id="scriptEditor">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:16px">
+                <h3 class="card-title" id="editorTitle">&#x1F3AC; Script &#8212; Unboxing Luxe</h3>
+                <div class="form-group" style="min-width:220px">
+                    <label>Produit BISOU</label>
+                    <select id="productSelect"></select>
+                </div>
+            </div>
+
+            <div class="beat-editor" id="beatContainer"></div>
+
+            <div class="duration-bar"><div class="duration-fill" id="durationFill" style="width:50%"></div></div>
+            <div class="duration-text" id="durationText">Dur&#233;e estim&#233;e : ~20s</div>
+
+            <div class="btn-row">
+                <button class="btn btn-gold" onclick="generateScript()">G&#233;n&#233;rer le Script</button>
+                <button class="btn btn-outline" onclick="resetBeats()">R&#233;initialiser</button>
+                <button class="btn btn-outline" id="copyScriptBtn" onclick="copyScript()" style="display:none">Copier le Script</button>
+            </div>
+
+            <pre class="script-preview" id="scriptPreview"></pre>
+        </div>
+    </div>
+
+    <!-- ==================== TAB 2: BRIEFS ==================== -->
+    <div id="tab-briefs" class="tab-content">
+        <h2 class="section-title">Briefs &amp; Storyboards</h2>
+        <p class="section-sub">Cr&#233;ez des briefs professionnels, utilisez des templates ou visualisez le storyboard.</p>
+        <div class="gold-divider"></div>
+
+        <h3 class="card-title" style="margin-bottom:16px">Templates rapides</h3>
+        <div class="grid-2" id="templateGrid">
+            <div class="template-card" onclick="fillBriefFromTemplate('new-collection')">
+                <h4>&#x1F31F; Lancement Nouvelle Collection</h4>
+                <p>Brief complet pour le lancement d'une nouvelle gamme de bijoux. Objectif ventes, format showcase lifestyle.</p>
+                <div style="margin-top:8px"><span class="badge badge-ig">IG</span> <span class="badge badge-tk">TK</span></div>
+            </div>
+            <div class="template-card" onclick="fillBriefFromTemplate('ramadan')">
+                <h4>&#x1F319; Promo Ramadan / Eid</h4>
+                <p>Campagne saisonni&#232;re orient&#233;e &#233;motion et cadeau. Hook tendance + t&#233;moignages clients.</p>
+                <div style="margin-top:8px"><span class="badge badge-tk">TK</span> <span class="badge badge-fb">FB</span></div>
+            </div>
+            <div class="template-card" onclick="fillBriefFromTemplate('mariee')">
+                <h4>&#x1F48D; Collection Mari&#233;e</h4>
+                <p>GRWM + showcase pour futures mari&#233;es. Mise en sc&#232;ne &#233;l&#233;gante, lumi&#232;re naturelle.</p>
+                <div style="margin-top:8px"><span class="badge badge-ig">IG</span> <span class="badge badge-pin">PIN</span></div>
+            </div>
+            <div class="template-card" onclick="fillBriefFromTemplate('everyday')">
+                <h4>&#x2615; Everyday Jewelry</h4>
+                <p>Bijoux du quotidien, ton casual et accessible. Avant/apr&#232;s styling + GRWM rapide.</p>
+                <div style="margin-top:8px"><span class="badge badge-tk">TK</span> <span class="badge badge-ig">IG</span></div>
+            </div>
+            <div class="template-card" onclick="fillBriefFromTemplate('gift')">
+                <h4>&#x1F381; Gift Guide / Coffret Cadeau</h4>
+                <p>Unboxing luxe orient&#233; id&#233;e cadeau. F&#234;te des M&#232;res, Saint-Valentin, anniversaires.</p>
+                <div style="margin-top:8px"><span class="badge badge-fb">FB</span> <span class="badge badge-ig">IG</span> <span class="badge badge-tk">TK</span></div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top:24px">
+            <h3 class="card-title">Cr&#233;er un Brief</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Objectif</label>
+                    <select id="briefObjectif">
+                        <option value="Ventes">Ventes</option>
+                        <option value="Engagement">Engagement</option>
+                        <option value="Notori&#233;t&#233;">Notori&#233;t&#233;</option>
+                        <option value="Trafic">Trafic</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Format UGC</label>
+                    <select id="briefFormat">
+                        <option value="Unboxing Luxe">Unboxing Luxe (15-30s)</option>
+                        <option value="GRWM">GRWM (20-45s)</option>
+                        <option value="Avant/Apr&#232;s">Avant/Apr&#232;s (15-25s)</option>
+                        <option value="Showcase Lifestyle">Showcase Lifestyle (20-35s)</option>
+                        <option value="T&#233;moignage Client">T&#233;moignage Client (30-45s)</option>
+                        <option value="Hook Tendance">Hook Tendance (8-15s)</option>
+                    </select>
+                </div>
+                <div class="form-group full">
+                    <label>Plateformes</label>
+                    <div class="checkbox-row">
+                        <label><input type="checkbox" id="pf-tiktok" checked> TikTok</label>
+                        <label><input type="checkbox" id="pf-instagram" checked> Instagram Reels</label>
+                        <label><input type="checkbox" id="pf-facebook"> Facebook</label>
+                        <label><input type="checkbox" id="pf-pinterest"> Pinterest</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Produit cible</label>
+                    <input type="text" id="briefProduit" placeholder="Ex: Collier Minimaliste Or">
+                </div>
+                <div class="form-group">
+                    <label>Budget (MAD)</label>
+                    <input type="number" id="briefBudget" placeholder="500">
+                </div>
+                <div class="form-group full">
+                    <label>Direction visuelle</label>
+                    <textarea id="briefDirection" placeholder="D&#233;crivez l'ambiance, le d&#233;cor, l'&#233;clairage, les couleurs..."></textarea>
+                </div>
+                <div class="form-group full">
+                    <label>Contraintes</label>
+                    <textarea id="briefContraintes" placeholder="Dur&#233;e max, mentions obligatoires, restrictions..."></textarea>
+                </div>
+            </div>
+            <div class="btn-row">
+                <button class="btn btn-gold" onclick="generateBrief()">G&#233;n&#233;rer le Brief</button>
+                <button class="btn btn-outline" onclick="exportBriefPDF()">Exporter PDF</button>
+                <button class="btn btn-outline" onclick="clearBriefForm()">Effacer</button>
+            </div>
+            <div class="brief-preview" id="briefPreview"></div>
+        </div>
+
+        <div class="card" style="margin-top:24px">
+            <h3 class="card-title">Storyboard visuel</h3>
+            <p style="font-size:13px;color:var(--muted);margin-bottom:16px">S&#233;lectionnez un format dans l'onglet Studio pour voir son storyboard ici.</p>
+            <div class="storyboard" id="storyboardContainer"></div>
+        </div>
+    </div>
+
+    <!-- ==================== TAB 3: ASSETS ==================== -->
+    <div id="tab-assets" class="tab-content">
+        <h2 class="section-title">Assets &amp; Outils</h2>
+        <p class="section-sub">Outils de production, assets de marque, et hashtags pr&#234;ts &#224; copier.</p>
+        <div class="gold-divider"></div>
+
+        <h3 class="card-title" style="margin-bottom:16px">Outils de production</h3>
+        <div class="grid-2">
+            <div class="tool-card">
+                <div class="tool-icon">&#x1F3A8;</div>
+                <div class="tool-name">Canva Video</div>
+                <div class="tool-desc">&#201;diteur vid&#233;o drag-and-drop avec templates premium et Brand Kit.</div>
+                <div class="tool-tip">Astuce : Cr&#233;ez un Brand Kit BISOU avec #D4AF37 (or) et #0D0D0D (noir)</div>
+                <a href="https://www.canva.com/video-editor/" target="_blank" class="btn btn-outline btn-sm">Ouvrir Canva</a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon">&#x2702;&#xFE0F;</div>
+                <div class="tool-name">Remove.bg</div>
+                <div class="tool-desc">Suppression de fond en un clic. Id&#233;al pour isoler les bijoux.</div>
+                <div class="tool-tip">Astuce : Exportez en PNG transparent pour superposer sur fond noir BISOU</div>
+                <a href="https://www.remove.bg/" target="_blank" class="btn btn-outline btn-sm">Ouvrir Remove.bg</a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon">&#x1F4DD;</div>
+                <div class="tool-name">VEED.io</div>
+                <div class="tool-desc">Sous-titres automatiques, traduction, effets texte professionnels.</div>
+                <div class="tool-tip">Astuce : Ajoutez des sous-titres en fran&#231;ais + arabe pour doubler votre audience</div>
+                <a href="https://www.veed.io/" target="_blank" class="btn btn-outline btn-sm">Ouvrir VEED</a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon">&#x1F4F7;</div>
+                <div class="tool-name">Pexels</div>
+                <div class="tool-desc">Photos et vid&#233;os libres de droits. Mannequins, lifestyle, d&#233;cors.</div>
+                <div class="tool-tip">Astuce : Recherchez &#171; gold jewelry &#187;, &#171; woman hands &#187;, &#171; luxury lifestyle &#187;</div>
+                <a href="https://www.pexels.com/" target="_blank" class="btn btn-outline btn-sm">Ouvrir Pexels</a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon">&#x1F4CC;</div>
+                <div class="tool-name">Pinterest</div>
+                <div class="tool-desc">Inspiration visuelle. Moodboards bijoux, styling, packaging luxe.</div>
+                <div class="tool-tip">Astuce : Cr&#233;ez un board &#171; BISOU UGC References &#187; pour centraliser vos inspirations</div>
+                <a href="https://www.pinterest.com/" target="_blank" class="btn btn-outline btn-sm">Ouvrir Pinterest</a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon">&#x1F3AC;</div>
+                <div class="tool-name">Flixier</div>
+                <div class="tool-desc">Montage vid&#233;o 100% navigateur. Rapide, l&#233;ger, sous-titres inclus.</div>
+                <div class="tool-tip">Astuce : Parfait pour des retouches rapides sans t&#233;l&#233;charger de logiciel</div>
+                <a href="https://flixier.com/" target="_blank" class="btn btn-outline btn-sm">Ouvrir Flixier</a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon">&#x1F4F1;</div>
+                <div class="tool-name">CapCut Web</div>
+                <div class="tool-desc">&#201;diteur natif TikTok. Templates tendance, effets viraux.</div>
+                <div class="tool-tip">Astuce : Utilisez les templates &#171; product showcase &#187; pour un rendu pro en 5 min</div>
+                <a href="https://www.capcut.com/" target="_blank" class="btn btn-outline btn-sm">Ouvrir CapCut</a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon">&#x1F3B6;</div>
+                <div class="tool-name">Epidemic Sound</div>
+                <div class="tool-desc">Musique libre de droits premium. Ambiances luxe, lo-fi, trending.</div>
+                <div class="tool-tip">Astuce : Filtrez par &#171; elegant &#187; ou &#171; luxury &#187; pour des vibes BISOU</div>
+                <a href="https://www.epidemicsound.com/" target="_blank" class="btn btn-outline btn-sm">Ouvrir Epidemic</a>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top:24px">
+            <h3 class="card-title">Brand Assets BISOU</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:12px">
+                <div>
+                    <h4 style="font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Palette de couleurs</h4>
+                    <div class="swatch-row">
+                        <div style="text-align:center"><div class="swatch" style="background:#D4AF37" onclick="copyColor('#D4AF37',this)"></div><div class="swatch-label">#D4AF37</div></div>
+                        <div style="text-align:center"><div class="swatch" style="background:#F5E6A3" onclick="copyColor('#F5E6A3',this)"></div><div class="swatch-label">#F5E6A3</div></div>
+                        <div style="text-align:center"><div class="swatch" style="background:#C9A84C" onclick="copyColor('#C9A84C',this)"></div><div class="swatch-label">#C9A84C</div></div>
+                        <div style="text-align:center"><div class="swatch" style="background:#A8862E" onclick="copyColor('#A8862E',this)"></div><div class="swatch-label">#A8862E</div></div>
+                        <div style="text-align:center"><div class="swatch" style="background:#0D0D0D;border-color:#333" onclick="copyColor('#0D0D0D',this)"></div><div class="swatch-label">#0D0D0D</div></div>
+                        <div style="text-align:center"><div class="swatch" style="background:#FDF6E3" onclick="copyColor('#FDF6E3',this)"></div><div class="swatch-label">#FDF6E3</div></div>
+                        <div style="text-align:center"><div class="swatch" style="background:#F2D7D5" onclick="copyColor('#F2D7D5',this)"></div><div class="swatch-label">#F2D7D5</div></div>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Typographies</h4>
+                    <p style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gold);margin-bottom:4px">Cormorant Garamond</p>
+                    <p style="font-size:12px;color:var(--muted);margin-bottom:12px">Titres, accroches &#8212; Light 300, Regular 400, SemiBold 600</p>
+                    <p style="font-family:'Jost',sans-serif;font-size:18px;color:var(--text);margin-bottom:4px">Jost Sans-Serif</p>
+                    <p style="font-size:12px;color:var(--muted)">Corps de texte, CTAs &#8212; Light 300, Regular 400, Medium 500</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top:24px">
+            <h3 class="card-title">Hashtags pr&#234;ts &#224; copier</h3>
+            <div style="margin-top:12px">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                    <span class="badge badge-tk">TikTok</span>
+                    <button class="btn btn-outline btn-sm" onclick="copyHashtags('tiktok')">Copier tout</button>
+                </div>
+                <div class="hashtag-container" id="hashtags-tiktok"></div>
+            </div>
+            <div style="margin-top:16px">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                    <span class="badge badge-ig">Instagram</span>
+                    <button class="btn btn-outline btn-sm" onclick="copyHashtags('instagram')">Copier tout</button>
+                </div>
+                <div class="hashtag-container" id="hashtags-instagram"></div>
+            </div>
+            <div style="margin-top:16px">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                    <span class="badge badge-fb">Facebook</span>
+                    <button class="btn btn-outline btn-sm" onclick="copyHashtags('facebook')">Copier tout</button>
+                </div>
+                <div class="hashtag-container" id="hashtags-facebook"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== TAB 4: CAPTIONS ==================== -->
+    <div id="tab-captions" class="tab-content">
+        <h2 class="section-title">Captions &amp; CTAs</h2>
+        <p class="section-sub">G&#233;n&#233;rez des captions percutantes, copiez des CTAs et hooks pr&#234;ts &#224; l'emploi.</p>
+        <div class="gold-divider"></div>
+
+        <div class="card">
+            <h3 class="card-title">G&#233;n&#233;rateur de Captions</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Produit</label>
+                    <input type="text" id="captionProduit" placeholder="Ex: Collier Minimaliste Or">
+                </div>
+                <div class="form-group">
+                    <label>Plateforme</label>
+                    <select id="captionPlatform">
+                        <option value="tiktok">TikTok</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="facebook">Facebook</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Langue</label>
+                    <select id="captionLang">
+                        <option value="fr">Fran&#231;ais</option>
+                        <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
+                        <option value="en">English</option>
+                        <option value="darija">Darija</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Ton</label>
+                    <select id="captionTone">
+                        <option value="luxe">Luxe</option>
+                        <option value="casual">Casual</option>
+                        <option value="urgence">Urgence</option>
+                        <option value="storytelling">Storytelling</option>
+                    </select>
+                </div>
+            </div>
+            <div class="btn-row">
+                <button class="btn btn-gold" onclick="generateCaptions()">G&#233;n&#233;rer 3 Variantes</button>
+            </div>
+            <div id="captionResults" style="margin-top:16px"></div>
+        </div>
+
+        <div class="card" style="margin-top:24px">
+            <h3 class="card-title">Biblioth&#232;que de CTAs</h3>
+            <h4 style="font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px">&#x1F6D2; Conversion</h4>
+            <div id="cta-conversion"></div>
+            <h4 style="font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:20px 0 8px">&#x23F0; Urgence</h4>
+            <div id="cta-urgence"></div>
+            <h4 style="font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:20px 0 8px">&#x1F465; Social Proof</h4>
+            <div id="cta-social"></div>
+            <h4 style="font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:20px 0 8px">&#x1F5D3;&#xFE0F; Saisonnier</h4>
+            <div id="cta-seasonal"></div>
+        </div>
+
+        <div class="card" style="margin-top:24px">
+            <h3 class="card-title">Biblioth&#232;que de Hooks</h3>
+            <p style="font-size:13px;color:var(--muted);margin-bottom:12px">Premi&#232;res phrases pour accrocher dans les 2 premi&#232;res secondes.</p>
+            <div id="hooksContainer"></div>
+        </div>
+    </div>
+
+    <!-- ==================== TAB 5: PERFORMANCE ==================== -->
+    <div id="tab-performance" class="tab-content">
+        <h2 class="section-title">Suivi Performance</h2>
+        <p class="section-sub">Trackez vos vid&#233;os, analysez les KPIs et planifiez votre contenu.</p>
+        <div class="gold-divider"></div>
+
+        <div class="kpi-grid">
+            <div class="kpi-card blue"><div class="kpi-label">Total Vues</div><div class="kpi-value" id="kpiVues">0</div><div class="kpi-sub">toutes vid&#233;os</div></div>
+            <div class="kpi-card green"><div class="kpi-label">Engagement Moyen</div><div class="kpi-value" id="kpiEngagement">0%</div><div class="kpi-sub">(likes+partages)/vues</div></div>
+            <div class="kpi-card gold"><div class="kpi-label">Meilleur Format</div><div class="kpi-value" id="kpiBestFormat">&#8212;</div><div class="kpi-sub">par ROI</div></div>
+            <div class="kpi-card orange"><div class="kpi-label">Revenu Total</div><div class="kpi-value" id="kpiRevenu">0 MAD</div><div class="kpi-sub">ventes g&#233;n&#233;r&#233;es</div></div>
+        </div>
+
+        <div class="card">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:12px">
+                <h3 class="card-title" style="margin:0">Tracker Vid&#233;os</h3>
+                <button class="btn btn-gold btn-sm" onclick="showAddVideoForm()">+ Ajouter</button>
+            </div>
+            <div id="addVideoForm" style="display:none;margin-bottom:16px;padding:16px;background:var(--card2);border-radius:var(--radius-sm)">
+                <div class="form-grid">
+                    <div class="form-group"><label>Titre</label><input type="text" id="vTitre" placeholder="Nom de la vid&#233;o"></div>
+                    <div class="form-group"><label>Format</label><select id="vFormat"><option>Unboxing</option><option>GRWM</option><option>Avant/Apr&#232;s</option><option>Showcase</option><option>T&#233;moignage</option><option>Hook</option></select></div>
+                    <div class="form-group"><label>Plateforme</label><select id="vPlatform"><option>TikTok</option><option>Instagram</option><option>Facebook</option></select></div>
+                    <div class="form-group"><label>Vues</label><input type="number" id="vVues" placeholder="0"></div>
+                    <div class="form-group"><label>Likes</label><input type="number" id="vLikes" placeholder="0"></div>
+                    <div class="form-group"><label>Partages</label><input type="number" id="vShares" placeholder="0"></div>
+                    <div class="form-group"><label>Clics</label><input type="number" id="vClics" placeholder="0"></div>
+                    <div class="form-group"><label>Ventes (MAD)</label><input type="number" id="vSales" placeholder="0"></div>
+                </div>
+                <div class="btn-row"><button class="btn btn-gold btn-sm" onclick="addVideo()">Sauvegarder</button><button class="btn btn-outline btn-sm" onclick="hideAddVideoForm()">Annuler</button></div>
+            </div>
+            <div style="overflow-x:auto">
+                <table>
+                    <thead><tr>
+                        <th onclick="sortVideos('titre')">Titre</th>
+                        <th onclick="sortVideos('format')">Format</th>
+                        <th onclick="sortVideos('platform')">Plat.</th>
+                        <th onclick="sortVideos('date')">Date</th>
+                        <th onclick="sortVideos('vues')">Vues</th>
+                        <th onclick="sortVideos('likes')">Likes</th>
+                        <th onclick="sortVideos('shares')">Part.</th>
+                        <th onclick="sortVideos('clics')">Clics</th>
+                        <th onclick="sortVideos('sales')">Ventes</th>
+                        <th>Action</th>
+                    </tr></thead>
+                    <tbody id="videoTableBody"></tbody>
+                </table>
+            </div>
+            <div id="videoNoData" class="no-data">Aucune vid&#233;o track&#233;e. Cliquez &#171; + Ajouter &#187; pour commencer.</div>
+        </div>
+
+        <div class="card" style="margin-top:24px">
+            <h3 class="card-title">Performance par Format</h3>
+            <div id="formatChart" style="margin-top:12px"></div>
+        </div>
+
+        <div class="card" style="margin-top:24px">
+            <div class="calendar-header">
+                <h3>Calendrier &#201;ditorial</h3>
+                <div class="calendar-nav">
+                    <button onclick="prevMonth()">&larr;</button>
+                    <span id="calMonthLabel" style="color:var(--gold);font-size:15px;min-width:140px;text-align:center"></span>
+                    <button onclick="nextMonth()">&rarr;</button>
+                </div>
+            </div>
+            <div class="cal-grid">
+                <div class="cal-day-header">Lun</div><div class="cal-day-header">Mar</div><div class="cal-day-header">Mer</div><div class="cal-day-header">Jeu</div><div class="cal-day-header">Ven</div><div class="cal-day-header">Sam</div><div class="cal-day-header">Dim</div>
+            </div>
+            <div class="cal-grid" id="calendarGrid"></div>
+        </div>
+    </div>
+
+    <!-- ==================== TAB 6: CREATORS ==================== -->
+    <div id="tab-creators" class="tab-content">
+        <h2 class="section-title">R&#233;seau Cr&#233;ateurs</h2>
+        <p class="section-sub">G&#233;rez vos cr&#233;ateurs UGC, collaborations et budget.</p>
+        <div class="gold-divider"></div>
+
+        <div class="card">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:12px">
+                <h3 class="card-title" style="margin:0">Base de donn&#233;es Cr&#233;ateurs</h3>
+                <button class="btn btn-gold btn-sm" onclick="showAddCreatorForm()">+ Ajouter</button>
+            </div>
+            <div id="addCreatorForm" style="display:none;margin-bottom:16px;padding:16px;background:var(--card2);border-radius:var(--radius-sm)">
+                <div class="form-grid">
+                    <div class="form-group"><label>Nom</label><input type="text" id="cNom" placeholder="Nom complet"></div>
+                    <div class="form-group"><label>Instagram</label><input type="text" id="cInsta" placeholder="@handle"></div>
+                    <div class="form-group"><label>Ville</label><select id="cVille"><option>Marrakech</option><option>Casablanca</option><option>Rabat</option><option>Tanger</option><option>F&#232;s</option><option>Agadir</option><option>Mekn&#232;s</option><option>Oujda</option><option>K&#233;nitra</option><option>T&#233;touan</option></select></div>
+                    <div class="form-group"><label>Followers</label><input type="number" id="cFollowers" placeholder="Ex: 15000"></div>
+                    <div class="form-group"><label>Sp&#233;cialit&#233;</label><select id="cSpec"><option>Mode</option><option>Beaut&#233;</option><option>Lifestyle</option><option>Luxe</option><option>Bijoux</option></select></div>
+                    <div class="form-group"><label>Statut</label><select id="cStatut"><option>Actif</option><option>En attente</option><option>Archiv&#233;</option></select></div>
+                </div>
+                <div class="btn-row"><button class="btn btn-gold btn-sm" onclick="addCreator()">Sauvegarder</button><button class="btn btn-outline btn-sm" onclick="hideAddCreatorForm()">Annuler</button></div>
+            </div>
+            <div style="overflow-x:auto">
+                <table>
+                    <thead><tr><th>Nom</th><th>Instagram</th><th>Ville</th><th>Followers</th><th>Sp&#233;cialit&#233;</th><th>Statut</th><th>Action</th></tr></thead>
+                    <tbody id="creatorTableBody"></tbody>
+                </table>
+            </div>
+            <div id="creatorNoData" class="no-data">Aucun cr&#233;ateur. Cliquez &#171; + Ajouter &#187; pour commencer.</div>
+        </div>
+
+        <div class="card" style="margin-top:24px">
+            <h3 class="card-title">Suivi Collaborations</h3>
+            <div style="display:flex;justify-content:flex-end;margin-bottom:12px"><button class="btn btn-outline btn-sm" onclick="showAddCollabForm()">+ Collab</button></div>
+            <div id="addCollabForm" style="display:none;margin-bottom:16px;padding:16px;background:var(--card2);border-radius:var(--radius-sm)">
+                <div class="form-grid">
+                    <div class="form-group"><label>Cr&#233;ateur</label><select id="colCreator"></select></div>
+                    <div class="form-group"><label>Brief</label><input type="text" id="colBrief" placeholder="Titre du brief"></div>
+                    <div class="form-group"><label>Deadline</label><input type="date" id="colDeadline"></div>
+                    <div class="form-group"><label>Statut</label><select id="colStatus"><option>Non commenc&#233;</option><option>En cours</option><option>Livr&#233;</option><option>R&#233;visions</option></select></div>
+                </div>
+                <div class="btn-row"><button class="btn btn-gold btn-sm" onclick="addCollab()">Sauvegarder</button><button class="btn btn-outline btn-sm" onclick="hideAddCollabForm()">Annuler</button></div>
+            </div>
+            <div style="overflow-x:auto">
+                <table>
+                    <thead><tr><th>Cr&#233;ateur</th><th>Brief</th><th>Deadline</th><th>Statut</th><th>Qualit&#233;</th><th>Action</th></tr></thead>
+                    <tbody id="collabTableBody"></tbody>
+                </table>
+            </div>
+            <div id="collabNoData" class="no-data">Aucune collaboration en cours.</div>
+        </div>
+
+        <div class="card" style="margin-top:24px">
+            <h3 class="card-title">Budget Cr&#233;ateurs</h3>
+            <div style="display:flex;justify-content:flex-end;margin-bottom:12px"><button class="btn btn-outline btn-sm" onclick="showAddBudgetForm()">+ D&#233;pense</button></div>
+            <div id="addBudgetForm" style="display:none;margin-bottom:16px;padding:16px;background:var(--card2);border-radius:var(--radius-sm)">
+                <div class="form-grid">
+                    <div class="form-group"><label>Cr&#233;ateur</label><select id="budCreator"></select></div>
+                    <div class="form-group"><label>Vid&#233;o</label><input type="text" id="budVideo" placeholder="Titre de la vid&#233;o"></div>
+                    <div class="form-group"><label>Montant (MAD)</label><input type="number" id="budAmount" placeholder="0"></div>
+                    <div class="form-group"><label>Statut</label><select id="budStatus"><option>En attente</option><option>Pay&#233;</option><option>Annul&#233;</option></select></div>
+                </div>
+                <div class="btn-row"><button class="btn btn-gold btn-sm" onclick="addBudgetEntry()">Sauvegarder</button><button class="btn btn-outline btn-sm" onclick="hideAddBudgetForm()">Annuler</button></div>
+            </div>
+            <div style="overflow-x:auto">
+                <table>
+                    <thead><tr><th>Cr&#233;ateur</th><th>Vid&#233;o</th><th>Montant</th><th>Statut</th><th>Action</th></tr></thead>
+                    <tbody id="budgetTableBody"></tbody>
+                </table>
+            </div>
+            <div id="budgetNoData" class="no-data">Aucune d&#233;pense enregistr&#233;e.</div>
+            <div style="margin-top:12px;text-align:right;font-size:14px;color:var(--gold)">Total : <strong id="budgetTotal">0 MAD</strong></div>
+        </div>
+    </div>
+
+</div><!-- end container -->
+
+<!-- Calendar Modal -->
+<div class="modal-overlay" id="calModal">
+    <div class="modal">
+        <h3>Planifier du contenu</h3>
+        <input type="hidden" id="calModalDate">
+        <div class="form-grid" style="margin-bottom:12px">
+            <div class="form-group"><label>Format</label><select id="calFormat"><option>Unboxing</option><option>GRWM</option><option>Avant/Apr&#232;s</option><option>Showcase</option><option>T&#233;moignage</option><option>Hook</option></select></div>
+            <div class="form-group"><label>Plateforme</label><select id="calPlatform"><option>TikTok</option><option>Instagram</option><option>Facebook</option></select></div>
+        </div>
+        <div class="btn-row">
+            <button class="btn btn-gold btn-sm" onclick="saveCalendarEntry()">Ajouter</button>
+            <button class="btn btn-outline btn-sm" onclick="closeCalModal()">Fermer</button>
+        </div>
+    </div>
+</div>
+
+<div class="copy-feedback" id="copyFeedback">Copi&#233; !</div>
+
+<script>
+// ========== DATA ==========
+const PRODUCTS = [
+    {name:'Collier Minimaliste Or',price:229,cat:'Colliers'},{name:'Cha\u00eene \u00c9paisse Or',price:349,cat:'Colliers'},
+    {name:'Collier D\u00e9licat Fin',price:199,cat:'Colliers'},{name:'Cha\u00eene Classique',price:279,cat:'Colliers'},
+    {name:'Collier Maille Plate',price:399,cat:'Colliers'},{name:'Bague Signature Or',price:179,cat:'Bagues'},
+    {name:'Chevali\u00e8re Or',price:299,cat:'Bagues'},{name:'Bague Empilable',price:149,cat:'Bagues'},
+    {name:'Bague Large Or',price:249,cat:'Bagues'},{name:'Bague Filigrane',price:189,cat:'Bagues'},
+    {name:'Cr\u00e9oles Or Classiques',price:159,cat:'Boucles'},{name:'Puces Discr\u00e8tes',price:139,cat:'Boucles'},
+    {name:'Boucles Pendantes',price:199,cat:'Boucles'},{name:'Hoops Chunky',price:219,cat:'Boucles'},
+    {name:'Bracelet Cha\u00eene Fine',price:189,cat:'Bracelets'},{name:'Bracelet Jonc',price:239,cat:'Bracelets'},
+    {name:'Bracelet Maille Or',price:269,cat:'Bracelets'},{name:'Bracelet Gourmette',price:219,cat:'Bracelets'},
+    {name:'Pack D\u00e9couverte',price:229,cat:'Packs'},{name:'Coffret Luxe',price:449,cat:'Packs'},
+    {name:'Duo Parfait',price:279,cat:'Packs'},{name:'Collection \u00c9dition Or 2024',price:599,cat:'\u00c9ditions'},
+    {name:'Set Marrakech',price:379,cat:'\u00c9ditions'}
+];
+
+const FORMATS = {
+    unboxing: {name:'Unboxing Luxe',duration:'15-30s',icon:'\ud83d\udce6',maxSec:30,
+        beats:[
+            {label:'Hook',time:'0-2s',text:'Gros plan sur les mains ouvrant un \u00e9crin noir BISOU. Texte overlay : \u00ab Mon nouveau bijou est arriv\u00e9... \u00bb'},
+            {label:'Setup',time:'2-8s',text:'Montrer le packaging dor\u00e9 BISOU, le papier de soie, la carte de remerciement personnalis\u00e9e. Ambiance ASMR.'},
+            {label:'Reveal',time:'8-18s',text:'Sortir le [PRODUIT] lentement. Gros plan sous lumi\u00e8re naturelle. Mouvement lent pour capturer les reflets or.'},
+            {label:'Proof',time:'18-25s',text:'Porter le bijou imm\u00e9diatement. Se regarder dans le miroir. R\u00e9action authentique de satisfaction.'},
+            {label:'CTA',time:'25-30s',text:'Texte overlay : \u00ab [PRODUIT] \u2014 [PRIX] MAD \u00bb + \u00ab Livraison partout au Maroc \u2022 Paiement \u00e0 la livraison \u00bb'}
+        ]},
+    grwm: {name:'GRWM',duration:'20-45s',icon:'\ud83d\udc84',maxSec:45,
+        beats:[
+            {label:'Hook',time:'0-3s',text:'Face cam\u00e9ra : \u00ab Pr\u00e9parez-vous avec moi pour [occasion] \u00bb. Background trending audio.'},
+            {label:'Setup',time:'3-10s',text:'Maquillage rapide + choix de tenue. Montrer le bijou BISOU pos\u00e9 sur la coiffeuse.'},
+            {label:'Styling',time:'10-25s',text:'Enfiler le [PRODUIT]. Montrer 2-3 combinaisons possibles. Superposer avec d\u2019autres pi\u00e8ces BISOU.'},
+            {label:'Proof',time:'25-35s',text:'Look final face miroir. Zoom sur le d\u00e9tail du bijou. Texte : \u00ab Plaqué or v\u00e9ritable, r\u00e9sistant \u00e0 l\u2019eau \u00bb'},
+            {label:'CTA',time:'35-45s',text:'Texte : \u00ab Lien en bio \u00bb ou \u00ab Envoyez-nous un WhatsApp pour commander \u00bb + prix MAD'}
+        ]},
+    'avant-apres': {name:'Avant / Apr\u00e8s',duration:'15-25s',icon:'\u2728',maxSec:25,
+        beats:[
+            {label:'Hook',time:'0-2s',text:'Split screen ou transition rapide. Texte : \u00ab Avant vs Apr\u00e8s... \u00bb Audio trending.'},
+            {label:'Avant',time:'2-7s',text:'Tenue simple sans accessoires. Expression neutre. \u00c9clairage plat.'},
+            {label:'Apr\u00e8s',time:'7-15s',text:'M\u00eame tenue AVEC le [PRODUIT] BISOU. \u00c9clairage chaud dor\u00e9. Sourire confiant. Mouvement l\u00e9ger.'},
+            {label:'D\u00e9tail',time:'15-20s',text:'Zoom macro sur le bijou. Reflets or. Texte overlay : \u00ab [PRODUIT] \u2014 [PRIX] MAD \u00bb'},
+            {label:'CTA',time:'20-25s',text:'\u00ab Transformez votre style \u00bb + \u00ab Paiement \u00e0 la livraison \u2022 Tout le Maroc \u00bb'}
+        ]},
+    showcase: {name:'Showcase Lifestyle',duration:'20-35s',icon:'\ud83c\udfac',maxSec:35,
+        beats:[
+            {label:'Hook',time:'0-3s',text:'Mouvement cin\u00e9matique lent. Main pos\u00e9e sur tasse de caf\u00e9 avec le [PRODUIT] visible. Lumi\u00e8re dorée.'},
+            {label:'Lifestyle',time:'3-12s',text:'S\u00e9quence lifestyle : marche dans la m\u00e9dina de Marrakech, terrasse de caf\u00e9, jardin. Bijou toujours visible.'},
+            {label:'D\u00e9tail',time:'12-22s',text:'Plans rapproch\u00e9s du bijou en rotation. D\u00e9tail du plaquage or. Gravure BISOU. Cha\u00eene qui brille au soleil.'},
+            {label:'Proof',time:'22-28s',text:'Texte overlay : \u00ab +5000 clientes satisfaites \u00bb + \u00ab Acier 316L plaqu\u00e9 or v\u00e9ritable \u00bb'},
+            {label:'CTA',time:'28-35s',text:'\u00ab Commandez sur WhatsApp \u00bb + \u00ab [PRIX] MAD \u2022 Livraison 24-48h \u00e0 Marrakech \u00bb'}
+        ]},
+    temoignage: {name:'T\u00e9moignage Client',duration:'30-45s',icon:'\ud83d\udcac',maxSec:45,
+        beats:[
+            {label:'Hook',time:'0-3s',text:'Face cam\u00e9ra, ton naturel : \u00ab Franchement, je ne m\u2019y attendais pas... \u00bb ou \u00ab Je dois vous parler de ce bijou \u00bb'},
+            {label:'Histoire',time:'3-15s',text:'Raconter comment elle a d\u00e9couvert BISOU. Pourquoi elle a command\u00e9. Premi\u00e8res impressions. Ton authentique et spontan\u00e9.'},
+            {label:'D\u00e9mo',time:'15-30s',text:'Montrer le [PRODUIT] port\u00e9. Zoom sur la qualit\u00e9. Comparer avec des bijoux fantaisie classiques. \u00ab Apr\u00e8s 3 mois, toujours comme neuf \u00bb'},
+            {label:'Verdict',time:'30-38s',text:'Recommandation sinc\u00e8re. Note sur 10. \u00ab Le meilleur rapport qualit\u00e9-prix que j\u2019ai trouv\u00e9 au Maroc \u00bb'},
+            {label:'CTA',time:'38-45s',text:'\u00ab Rejoignez les +5000 clientes BISOU \u00bb + \u00ab Lien en bio ou WhatsApp \u00bb + prix'}
+        ]},
+    hook: {name:'Hook Tendance',duration:'8-15s',icon:'\ud83c\udfb5',maxSec:15,
+        beats:[
+            {label:'Hook',time:'0-2s',text:'Sync avec trending audio. Mouvement rapide : main attrape le bijou ou bijou tombe au ralenti.'},
+            {label:'Flash',time:'2-5s',text:'3 quick cuts : bijou dans l\u2019\u00e9crin, bijou au poignet, bijou face cam\u00e9ra. 0.7s par plan.'},
+            {label:'Texte',time:'5-9s',text:'Texte overlay punch : \u00ab [PRODUIT] \u00bb + \u00ab Plaqu\u00e9 or v\u00e9ritable \u00bb en gros caract\u00e8res anim\u00e9s.'},
+            {label:'Prix',time:'9-12s',text:'Animation du prix : \u00ab [PRIX] MAD \u00bb avec effet zoom ou typewriter. Barre des anciens prix.'},
+            {label:'CTA',time:'12-15s',text:'Logo BISOU + \u00ab Lien en bio \u00bb ou \u00ab Commentez BISOU pour recevoir le lien \u00bb'}
+        ]}
+};
+
+const HASHTAGS = {
+    tiktok: ['#bijoux','#bijouxmaroc','#goldplated','#jewelrytiktok','#marrakech','#bijouxor','#foryou','#fyp','#trending','#moroccanstyle','#bisoubijoux','#plaqu\u00e9or','#fashion','#style','#luxeabordable','#codmaroc','#livraisonmaroc'],
+    instagram: ['#bijouxmaroc','#jewelrydesign','#goldplated','#marrakech','#bisoubijoux','#bijoux','#mode','#styleinspo','#moroccanfashion','#plaqu\u00e9or','#goldjewelry','#accessories','#ootd','#fashionstyle','#handmade'],
+    facebook: ['#BijouxMaroc','#BISOU','#Plaqu\u00e9Or','#Marrakech','#LivraisonMaroc','#PaiementALaLivraison','#BijouxOrAbordable','#ModeFemme','#Accessoires','#CadeauFemme']
+};
+
+const CTA_LIB = {
+    conversion: [
+        {text:'Commandez maintenant \u2014 Paiement \u00e0 la livraison partout au Maroc',emoji:'\ud83d\udecd\ufe0f'},
+        {text:'Livraison 24-48h \u00e0 Marrakech, Casablanca, Rabat, Tanger',emoji:'\ud83d\ude9a'},
+        {text:'Cliquez sur le lien en bio pour commander votre bijou BISOU',emoji:'\ud83d\udc47'},
+        {text:'Envoyez-nous un message WhatsApp pour commander directement',emoji:'\ud83d\udcf1'},
+        {text:'Ajoutez au panier \u2014 Frais de livraison offerts d\u00e8s 300 MAD',emoji:'\ud83c\udf81'}
+    ],
+    urgence: [
+        {text:'Stock limit\u00e9 \u2014 Plus que 5 pi\u00e8ces disponibles !',emoji:'\u26a0\ufe0f'},
+        {text:'Offre flash \u2014 -20% uniquement aujourd\u2019hui',emoji:'\u26a1'},
+        {text:'Derni\u00e8res pi\u00e8ces avant rupture de stock',emoji:'\ud83d\udd25'},
+        {text:'Cette offre expire dans 24h \u2014 Ne ratez pas !',emoji:'\u23f0'},
+        {text:'SOLD OUT 3 fois \u2014 Enfin de retour en stock limit\u00e9',emoji:'\ud83d\udea8'}
+    ],
+    social: [
+        {text:'Rejoignez +5000 clientes satisfaites au Maroc',emoji:'\ud83d\udc51'},
+        {text:'Not\u00e9 4.9/5 par nos clientes \u2014 D\u00e9couvrez pourquoi',emoji:'\u2b50'},
+        {text:'Le bijou le plus command\u00e9 de ce mois',emoji:'\ud83c\udfc6'},
+        {text:'Pourquoi 3 femmes sur 4 recommandent BISOU',emoji:'\ud83d\udc9b'},
+        {text:'Vu sur +200 cr\u00e9atrices de contenu au Maroc',emoji:'\ud83c\udf1f'}
+    ],
+    seasonal: [
+        {text:'Id\u00e9e cadeau Ramadan \u2014 Offrez du plaqu\u00e9 or v\u00e9ritable',emoji:'\ud83c\udf19'},
+        {text:'Sp\u00e9cial Eid \u2014 Coffret cadeau \u00e0 prix exceptionnel',emoji:'\u2728'},
+        {text:'Saint-Valentin \u2014 Le cadeau qu\u2019elle n\u2019oubliera jamais',emoji:'\u2764\ufe0f'},
+        {text:'F\u00eate des M\u00e8res \u2014 Parce qu\u2019elle le m\u00e9rite',emoji:'\ud83c\udf39'},
+        {text:'Collection \u00c9t\u00e9 \u2014 Bijoux waterproof pour la plage',emoji:'\u2600\ufe0f'},
+        {text:'Rentr\u00e9e \u2014 Commencez l\u2019ann\u00e9e avec style',emoji:'\ud83c\udf93'}
+    ]
+};
+
+const HOOKS = [
+    'POV: tu trouves LE bijou parfait \u00e0 moins de 300 MAD...',
+    'Attendez de voir cette transformation...',
+    'Personne ne croira que c\u2019est du plaqu\u00e9 or...',
+    'Ce bijou a chang\u00e9 mon style au quotidien',
+    'Je l\u2019ai command\u00e9 \u00e0 14h, il est arriv\u00e9 le lendemain...',
+    'Le bijou que toutes mes amies me demandent...',
+    'Test honn\u00eatet\u00e9 : bijou BISOU apr\u00e8s 3 mois de port quotidien',
+    'Quand tu re\u00e7ois ta commande BISOU et c\u2019est encore mieux que sur la photo',
+    'Ma collection de bijoux BISOU \u2014 de 0 \u00e0 10 pi\u00e8ces',
+    'Astuce styling : comment porter des bijoux or avec tout',
+    'Le secret des filles styl\u00e9es \u00e0 Marrakech...',
+    'J\u2019ai test\u00e9 le bijou le plus vendu au Maroc...',
+    'Pourquoi je ne porte plus que du BISOU...',
+    'R\u00e9action de mon copain quand il a vu ce bijou...',
+    'Bijou \u00e0 moins de 200 MAD qui fait riche...',
+    'Si tu cherches un cadeau, arr\u00eate de scroller...',
+    'On m\u2019a demand\u00e9 3 fois o\u00f9 j\u2019ai achet\u00e9 ce collier...',
+    'Le unboxing le plus satisfaisant...',
+    'Je n\u2019y croyais pas non plus au d\u00e9but...',
+    'Comment je stack mes bijoux BISOU chaque matin',
+    'Alert bijou : celui-l\u00e0 va \u00eatre sold out tr\u00e8s vite',
+    'La diff\u00e9rence entre bijou fantaisie et BISOU plaqu\u00e9 or'
+];
+
+const BRIEF_TEMPLATES = {
+    'new-collection': {objectif:'Ventes',format:'Showcase Lifestyle',platforms:['tiktok','instagram'],produit:'Nouvelle Collection',budget:'500',direction:'\u00c9clairage studio dor\u00e9, fond noir ou marbre. Mouvements lents et cin\u00e9matiques. Mettre en valeur les reflets du plaquage or. Ambiance luxe accessible.',contraintes:'Logo BISOU visible au d\u00e9but et \u00e0 la fin. Inclure le prix en MAD. Dur\u00e9e max 30s. Mentionner la livraison COD.'},
+    'ramadan': {objectif:'Ventes',format:'Hook Tendance',platforms:['tiktok','facebook'],produit:'Coffret Luxe',budget:'300',direction:'Ambiance chaleureuse, lumi\u00e8res tamisées, d\u00e9cor oriental subtil. Ton \u00e9motionnel : cadeau pour une personne ch\u00e8re.',contraintes:'Respecter le contexte religieux. Pas de musique forte. Sous-titres en arabe + fran\u00e7ais. Mentionner "id\u00e9e cadeau Ramadan".'},
+    'mariee': {objectif:'Notori\u00e9t\u00e9',format:'GRWM',platforms:['instagram','pinterest'],produit:'Set Marrakech',budget:'800',direction:'Lumi\u00e8re naturelle douce. Robe blanche ou caftan. Miroir dor\u00e9. Mouvement d\u00e9licat. Emotion du jour J. Bijoux superpos\u00e9s.',contraintes:'Montrer la polyvalence (caftan + robe moderne). Minimum 3 pi\u00e8ces BISOU visibles. Format vertical 9:16.'},
+    'everyday': {objectif:'Engagement',format:'Avant/Apr\u00e8s',platforms:['tiktok','instagram'],produit:'Cr\u00e9oles Or Classiques',budget:'200',direction:'Ton casual et accessible. D\u00e9cor quotidien (chambre, bureau, caf\u00e9). Tenue basique transform\u00e9e par le bijou.',contraintes:'Pas de mise en sc\u00e8ne trop \u00e9labor\u00e9e. Doit para\u00eetre naturel et spontan\u00e9. Inclure le prix. Audio tendance.'},
+    'gift': {objectif:'Ventes',format:'Unboxing Luxe',platforms:['facebook','instagram','tiktok'],produit:'Pack D\u00e9couverte',budget:'400',direction:'Unboxing ASMR. Gros plans sur le packaging. R\u00e9action de surprise. Id\u00e9al pour contenu "id\u00e9e cadeau".',contraintes:'Montrer la qualit\u00e9 du packaging. Mentionner "id\u00e9e cadeau". Inclure prix + livraison COD. Dur\u00e9e 20-30s.'}
+};
+
+const CAPTION_TEMPLATES = {
+    fr: {
+        luxe: ['\u2728 L\u2019\u00e9l\u00e9gance n\u2019a pas de prix... mais chez BISOU, elle est \u00e0 {PRIX} MAD.\n\n{PRODUIT} \u2014 Plaqu\u00e9 or v\u00e9ritable sur acier 316L.\nLivraison partout au Maroc.\n\n{HASHTAGS}','\ud83d\udc51 Quand le luxe devient accessible.\n\n{PRODUIT} par BISOU \u2014 {PRIX} MAD\nPaiement \u00e0 la livraison \u2022 Qualit\u00e9 garantie\n\n{HASHTAGS}','La beaut\u00e9 dans les d\u00e9tails. {PRODUIT} BISOU.\n\nOr v\u00e9ritable. Artisanat d\u2019exception. {PRIX} MAD.\nCommandez via le lien en bio \ud83d\udc47\n\n{HASHTAGS}'],
+        casual: ['Ce bijou tellement parfait que m\u00eame ma m\u00e8re veut le m\u00eame \ud83d\ude02\n\n{PRODUIT} \u2014 {PRIX} MAD seulement !\nLien en bio pour commander \ud83d\udc9b\n\n{HASHTAGS}','Non mais s\u00e9rieusement, regardez cette beaut\u00e9 \u2728\n\n{PRODUIT} par BISOU\n{PRIX} MAD \u2022 Livraison COD\n\n{HASHTAGS}','Mon nouveau bijou pr\u00e9f\u00e9r\u00e9 et je ne m\u2019en lasse pas !\n\n{PRODUIT} \u2014 {PRIX} MAD\nQui veut le m\u00eame ? \ud83d\ude0d\n\n{HASHTAGS}'],
+        urgence: ['\ud83d\udea8 ALERTE STOCK \u2014 {PRODUIT} bient\u00f4t \u00e9puis\u00e9 !\n\n{PRIX} MAD \u2022 Livraison express\nNe ratez pas cette pi\u00e8ce avant rupture.\n\n{HASHTAGS}','\u26a1 DERNI\u00c8RE CHANCE \u2014 {PRODUIT}\n\nPlus que quelques pi\u00e8ces en stock.\n{PRIX} MAD \u2022 Paiement \u00e0 la livraison\nCommandez MAINTENANT \ud83d\udc47\n\n{HASHTAGS}','\ud83d\udd25 Ce {PRODUIT} a \u00e9t\u00e9 sold out 3 fois.\nIl est enfin de retour \u2014 mais pas pour longtemps.\n\n{PRIX} MAD \u2022 COD Maroc\n\n{HASHTAGS}'],
+        storytelling: ['Il \u00e9tait une fois, \u00e0 Marrakech, un bijou qui a tout chang\u00e9...\n\n{PRODUIT} \u2014 n\u00e9 du savoir-faire et de la passion.\nPlaqu\u00e9 or v\u00e9ritable. {PRIX} MAD.\n\n{HASHTAGS}','Elle cherchait le bijou parfait depuis des mois. Puis elle a d\u00e9couvert BISOU.\n\n{PRODUIT} \u2014 {PRIX} MAD\nEt vous, quel sera votre bijou signature ?\n\n{HASHTAGS}','Chaque bijou BISOU raconte une histoire. Celle du {PRODUIT} commence avec vous.\n\n{PRIX} MAD \u2022 Livraison partout au Maroc\n\n{HASHTAGS}']
+    },
+    ar: {
+        luxe: ['\u2728 \u0627\u0644\u0623\u0646\u0627\u0642\u0629 \u0645\u0627 \u0639\u0646\u062f\u0647\u0627 \u062b\u0645\u0646... \u0628\u0633 \u0639\u0646\u062f BISOU \u0628 {PRIX} \u062f\u0631\u0647\u0645\n\n{PRODUIT} \u2014 \u0645\u0637\u0644\u064a \u0628\u0627\u0644\u0630\u0647\u0628 \u0627\u0644\u062d\u0642\u064a\u0642\u064a\n\u0627\u0644\u062a\u0648\u0635\u064a\u0644 \u0644\u062c\u0645\u064a\u0639 \u0623\u0646\u062d\u0627\u0621 \u0627\u0644\u0645\u063a\u0631\u0628\n\n{HASHTAGS}'],
+        casual: ['\u0647\u0627\u062f \u0627\u0644\u0628\u064a\u062c\u0648 \u062e\u0644\u0627\u0646\u064a \u0645\u0627\u0646\u0642\u062f\u0631\u0634 \u0646\u0628\u062f\u0644\u0648 \ud83d\ude0d\n\n{PRODUIT} \u2014 {PRIX} \u062f\u0631\u0647\u0645\n\u0627\u0644\u062f\u0641\u0639 \u0639\u0646\u062f \u0627\u0644\u0627\u0633\u062a\u0644\u0627\u0645\n\n{HASHTAGS}'],
+        urgence: ['\ud83d\udea8 \u0622\u062e\u0631 \u0627\u0644\u0642\u0637\u0639 \u2014 {PRODUIT}\n{PRIX} \u062f\u0631\u0647\u0645 \u2022 \u0627\u0637\u0644\u0628\u064a \u062f\u0627\u0628\u0627\n\n{HASHTAGS}'],
+        storytelling: ['\u0643\u0644 \u0628\u064a\u062c\u0648 BISOU \u0643\u064a\u062d\u0643\u064a \u0642\u0635\u0629... {PRODUIT} \u0642\u0635\u062a\u0648 \u0643\u062a\u0628\u062f\u0627 \u0645\u0639\u0627\u0643\n\n{PRIX} \u062f\u0631\u0647\u0645 \u2022 \u0627\u0644\u062a\u0648\u0635\u064a\u0644 \u0644\u0643\u0644\u0634\u064a \u0641\u0627\u0644\u0645\u063a\u0631\u0628\n\n{HASHTAGS}']
+    },
+    en: {
+        luxe: ['\u2728 When luxury meets affordability.\n\n{PRODUIT} by BISOU \u2014 {PRIX} MAD\nGenuine gold-plated \u2022 316L steel\nShipping across Morocco\n\n{HASHTAGS}'],
+        casual: ['Obsessed with my new BISOU piece! \ud83d\udc9b\n\n{PRODUIT} \u2014 only {PRIX} MAD\nCash on delivery \u2022 All Morocco\n\n{HASHTAGS}'],
+        urgence: ['\ud83d\udd25 Almost SOLD OUT \u2014 {PRODUIT}\n{PRIX} MAD \u2022 Order now before it\u2019s gone!\n\n{HASHTAGS}'],
+        storytelling: ['Every piece tells a story. The {PRODUIT} story starts with you.\n\n{PRIX} MAD \u2022 Free delivery in Morocco\n\n{HASHTAGS}']
+    },
+    darija: {
+        luxe: ['\u2728 \u0634\u064a \u062d\u0627\u062c\u0629 \u0632\u0648\u064a\u0646\u0629 \u0628\u0632\u0627\u0641... {PRODUIT} \u0645\u0646 BISOU\n\n{PRIX} \u062f\u0631\u0647\u0645 \u2022 \u0645\u0637\u0644\u064a \u0628\u0627\u0644\u0630\u0647\u0628 \u0627\u0644\u062d\u0642\u064a\u0642\u064a\n\u0627\u0644\u062f\u0641\u0639 \u0639\u0646\u062f \u0627\u0644\u0627\u0633\u062a\u0644\u0627\u0645 \ud83d\ude9a\n\n{HASHTAGS}'],
+        casual: ['\u0647\u0627\u062f \u0627\u0644\u0628\u064a\u062c\u0648 \u062e\u0644\u0627 \u0635\u062d\u0627\u0628\u0627\u062a\u064a \u0643\u0644\u0647\u0645 \u0643\u064a\u0633\u0648\u0644\u0648\u0646\u064a \u0639\u0644\u064a\u0647 \ud83d\ude02\n\n{PRODUIT} \u2014 {PRIX} \u062f\u0631\u0647\u0645\n\n{HASHTAGS}'],
+        urgence: ['\u062f\u063a\u064a\u0627 \u0627\u0637\u0644\u0628\u064a \u0642\u0628\u0644 \u0645\u0627 \u064a\u0633\u0627\u0644\u064a \ud83d\udea8 {PRODUIT}\n{PRIX} \u062f\u0631\u0647\u0645 \u2022 COD \n\n{HASHTAGS}'],
+        storytelling: ['\u0643\u0646\u062a \u0643\u0646\u0642\u0644\u0628 \u0639\u0644\u0649 \u0628\u064a\u062c\u0648 \u0632\u0648\u064a\u0646 \u0648 \u0644\u0642\u064a\u062a BISOU...\n\n{PRODUIT} \u2014 {PRIX} \u062f\u0631\u0647\u0645\n\u0627\u0644\u062a\u0648\u0635\u064a\u0644 \u0641 \u0643\u0644\u0634\u064a \u0641\u0627\u0644\u0645\u063a\u0631\u0628\n\n{HASHTAGS}']
+    }
+};
+
+const FORMAT_COLORS = {Unboxing:'#E74C3C',GRWM:'#9B59B6','Avant/Apr\u00e8s':'#3498DB',Showcase:'#2ECC71','T\u00e9moignage':'#F39C12',Hook:'#E91E63'};
+
+// ========== STATE ==========
+let currentFormat = 'unboxing';
+let calYear, calMonth;
+let videoSortCol = 'date', videoSortDir = -1;
+
+// ========== INIT ==========
+function init() {
+    const d = new Date();
+    document.getElementById('currentDate').textContent = d.toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'});
+    calYear = d.getFullYear(); calMonth = d.getMonth();
+
+    // Populate product select
+    const sel = document.getElementById('productSelect');
+    PRODUCTS.forEach(p => { const o = document.createElement('option'); o.value = p.name; o.textContent = `${p.name} \u2014 ${p.price} MAD`; sel.appendChild(o); });
+
+    // Hashtags
+    Object.keys(HASHTAGS).forEach(plat => {
+        const c = document.getElementById('hashtags-'+plat);
+        HASHTAGS[plat].forEach(h => { const s = document.createElement('span'); s.className='hashtag'; s.textContent=h; c.appendChild(s); });
+    });
+
+    // CTAs
+    renderCTAs('conversion','cta-conversion'); renderCTAs('urgence','cta-urgence');
+    renderCTAs('social','cta-social'); renderCTAs('seasonal','cta-seasonal');
+
+    // Hooks
+    const hc = document.getElementById('hooksContainer');
+    HOOKS.forEach(h => {
+        hc.innerHTML += `<div class="hook-card"><span class="hook-text">${h}</span><button class="btn btn-outline btn-sm" onclick="copyText('${h.replace(/'/g,"\\'")}',this)">Copier</button></div>`;
+    });
+
+    selectFormat('unboxing');
+    renderStoryboard();
+    loadAndRenderVideos();
+    renderCalendar();
+    loadAndRenderCreators();
+    loadAndRenderCollabs();
+    loadAndRenderBudget();
+    initTabFromURL();
+}
+
+// ========== TABS ==========
+function showTab(name) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelector(`.tab[data-tab="${name}"]`).classList.add('active');
+    document.getElementById('tab-'+name).classList.add('active');
+    if(name==='performance'){calculateKPIs();renderFormatChart();}
+    if(name==='briefs') renderStoryboard();
+}
+function initTabFromURL(){
+    const p = new URLSearchParams(window.location.search);
+    const t = p.get('tab');
+    const tabs = ['studio','briefs','assets','captions','performance','creators'];
+    if(t && tabs[parseInt(t)-1]) showTab(tabs[parseInt(t)-1]);
+}
+
+// ========== SCRIPT GENERATOR ==========
+function selectFormat(id) {
+    currentFormat = id;
+    document.querySelectorAll('.format-card').forEach(c=>c.classList.remove('active'));
+    event && event.target && event.target.closest('.format-card')?.classList.add('active');
+    if(!document.querySelector('.format-card.active')){
+        const idx = Object.keys(FORMATS).indexOf(id);
+        document.querySelectorAll('.format-card')[idx]?.classList.add('active');
+    }
+    const f = FORMATS[id];
+    document.getElementById('editorTitle').textContent = f.icon+' Script \u2014 '+f.name;
+    const bc = document.getElementById('beatContainer');
+    const prod = document.getElementById('productSelect').value;
+    bc.innerHTML = '';
+    f.beats.forEach((b,i) => {
+        const txt = b.text.replace('[PRODUIT]',prod).replace('[PRIX]',PRODUCTS.find(p=>p.name===prod)?.price||'???');
+        bc.innerHTML += `<div class="beat-row"><div class="beat-label"><strong>${b.label}</strong><span class="time">${b.time}</span></div><textarea id="beat${i}">${txt}</textarea></div>`;
+    });
+    updateDuration();
+    document.getElementById('scriptPreview').classList.remove('visible');
+    document.getElementById('copyScriptBtn').style.display='none';
+}
+function updateDuration(){
+    const f=FORMATS[currentFormat]; const pct=Math.min(100,(f.maxSec/60)*100);
+    document.getElementById('durationFill').style.width=pct+'%';
+    document.getElementById('durationText').textContent='Dur\u00e9e estim\u00e9e : ~'+f.maxSec+'s ('+f.duration+')';
+}
+function generateScript(){
+    const f=FORMATS[currentFormat]; const prod=document.getElementById('productSelect').value;
+    const price=PRODUCTS.find(p=>p.name===prod)?.price||'???';
+    let script = `\ud83c\udfac SCRIPT UGC \u2014 ${f.name}\n\ud83c\udfaf Produit : ${prod} (${price} MAD)\n\u23f1\ufe0f Dur\u00e9e : ${f.duration}\n${'='.repeat(40)}\n\n`;
+    f.beats.forEach((b,i)=>{
+        const txt=document.getElementById('beat'+i)?.value||b.text;
+        script+=`[${b.time}] ${b.label.toUpperCase()}\n${txt}\n\n`;
+    });
+    script+=`${'='.repeat(40)}\n\ud83d\udccd Marque : BISOU \u2014 Bijoux plaqu\u00e9 or\n\ud83c\uddf2\ud83c\udde6 Livraison : Tout le Maroc \u2022 COD`;
+    document.getElementById('scriptPreview').textContent=script;
+    document.getElementById('scriptPreview').classList.add('visible');
+    document.getElementById('copyScriptBtn').style.display='inline-flex';
+}
+function copyScript(){
+    const t=document.getElementById('scriptPreview').textContent;
+    copyText(t, document.getElementById('copyScriptBtn'));
+}
+function resetBeats(){ selectFormat(currentFormat); }
+
+// ========== BRIEFS ==========
+function fillBriefFromTemplate(id){
+    const t=BRIEF_TEMPLATES[id]; if(!t)return;
+    document.getElementById('briefObjectif').value=t.objectif;
+    document.getElementById('briefFormat').value=t.format;
+    document.getElementById('pf-tiktok').checked=t.platforms.includes('tiktok');
+    document.getElementById('pf-instagram').checked=t.platforms.includes('instagram');
+    document.getElementById('pf-facebook').checked=t.platforms.includes('facebook');
+    document.getElementById('pf-pinterest').checked=t.platforms.includes('pinterest');
+    document.getElementById('briefProduit').value=t.produit;
+    document.getElementById('briefBudget').value=t.budget;
+    document.getElementById('briefDirection').value=t.direction;
+    document.getElementById('briefContraintes').value=t.contraintes;
+    showTab('briefs');
+}
+function generateBrief(){
+    const plats=[];
+    if(document.getElementById('pf-tiktok').checked)plats.push('TikTok');
+    if(document.getElementById('pf-instagram').checked)plats.push('Instagram');
+    if(document.getElementById('pf-facebook').checked)plats.push('Facebook');
+    if(document.getElementById('pf-pinterest').checked)plats.push('Pinterest');
+    const bp=document.getElementById('briefPreview');
+    bp.innerHTML=`
+        <h4 style="margin-top:0">\ud83d\udccb BRIEF UGC \u2014 BISOU</h4>
+        <div class="bp-field"><span class="bp-label">Objectif</span><br>${document.getElementById('briefObjectif').value}</div>
+        <div class="bp-field"><span class="bp-label">Format</span><br>${document.getElementById('briefFormat').value}</div>
+        <div class="bp-field"><span class="bp-label">Plateformes</span><br>${plats.join(', ')||'Non sp\u00e9cifi\u00e9'}</div>
+        <div class="bp-field"><span class="bp-label">Produit</span><br>${document.getElementById('briefProduit').value||'Non sp\u00e9cifi\u00e9'}</div>
+        <div class="bp-field"><span class="bp-label">Budget</span><br>${document.getElementById('briefBudget').value||'0'} MAD</div>
+        <h4>Direction visuelle</h4>
+        <p>${document.getElementById('briefDirection').value||'Non sp\u00e9cifi\u00e9'}</p>
+        <h4>Contraintes</h4>
+        <p>${document.getElementById('briefContraintes').value||'Aucune'}</p>
+        <h4>Marque</h4>
+        <p>BISOU \u2014 Bijoux plaqu\u00e9 or v\u00e9ritable \u2022 Acier 316L \u2022 Marrakech, Maroc<br>Couleurs : #D4AF37 (or) + #0D0D0D (noir) \u2022 Polices : Cormorant Garamond + Jost</p>
+    `;
+    bp.classList.add('visible');
+}
+function exportBriefPDF(){ generateBrief(); setTimeout(()=>window.print(),300); }
+function clearBriefForm(){
+    ['briefProduit','briefBudget','briefDirection','briefContraintes'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('briefPreview').classList.remove('visible');
+}
+function renderStoryboard(){
+    const f=FORMATS[currentFormat]; const sc=document.getElementById('storyboardContainer');
+    sc.innerHTML='';
+    f.beats.forEach((b,i)=>{
+        if(i>0) sc.innerHTML+='<div class="scene-arrow">\u2192</div>';
+        sc.innerHTML+=`<div class="scene-box"><div class="scene-num">Sc\u00e8ne ${i+1}</div><div class="scene-time">${b.time}</div><div class="scene-desc">${b.text.substring(0,120)}${b.text.length>120?'...':''}</div></div>`;
+    });
+}
+
+// ========== CAPTIONS ==========
+function generateCaptions(){
+    const prod=document.getElementById('captionProduit').value||'Bijou BISOU';
+    const plat=document.getElementById('captionPlatform').value;
+    const lang=document.getElementById('captionLang').value;
+    const tone=document.getElementById('captionTone').value;
+    const price=PRODUCTS.find(p=>p.name===prod)?.price||'199';
+    const tags=HASHTAGS[plat]||HASHTAGS.instagram;
+    const pool=CAPTION_TEMPLATES[lang]?.[tone]||CAPTION_TEMPLATES.fr.luxe;
+    const rc=document.getElementById('captionResults');
+    rc.innerHTML='';
+    const used=new Set();
+    for(let i=0;i<3;i++){
+        let idx; do{idx=Math.floor(Math.random()*pool.length);}while(used.has(idx)&&used.size<pool.length);
+        used.add(idx);
+        const tpl=pool[idx%pool.length];
+        const caption=tpl.replace(/{PRODUIT}/g,prod).replace(/{PRIX}/g,price).replace(/{HASHTAGS}/g,tags.slice(0,8).join(' '));
+        rc.innerHTML+=`<div class="caption-result"><div class="caption-text">${caption}</div><button class="btn btn-outline btn-sm" onclick="copyText(\`${caption.replace(/`/g,"'")}\`,this)">Copier</button></div>`;
+    }
+}
+
+// ========== PERFORMANCE ==========
+function getVideos(){return JSON.parse(localStorage.getItem('bisou_ugc_videos')||'[]');}
+function saveVideos(v){localStorage.setItem('bisou_ugc_videos',JSON.stringify(v));}
+function loadAndRenderVideos(){renderVideoTable();calculateKPIs();renderFormatChart();}
+function showAddVideoForm(){document.getElementById('addVideoForm').style.display='block';}
+function hideAddVideoForm(){document.getElementById('addVideoForm').style.display='none';}
+function addVideo(){
+    const v=getVideos();
+    v.push({id:Date.now(),titre:document.getElementById('vTitre').value,format:document.getElementById('vFormat').value,
+        platform:document.getElementById('vPlatform').value,date:new Date().toISOString().split('T')[0],
+        vues:+document.getElementById('vVues').value||0,likes:+document.getElementById('vLikes').value||0,
+        shares:+document.getElementById('vShares').value||0,clics:+document.getElementById('vClics').value||0,
+        sales:+document.getElementById('vSales').value||0});
+    saveVideos(v); hideAddVideoForm(); renderVideoTable(); calculateKPIs(); renderFormatChart();
+    ['vTitre','vVues','vLikes','vShares','vClics','vSales'].forEach(id=>document.getElementById(id).value='');
+}
+function deleteVideo(id){const v=getVideos().filter(x=>x.id!==id);saveVideos(v);renderVideoTable();calculateKPIs();renderFormatChart();}
+function sortVideos(col){if(videoSortCol===col)videoSortDir*=-1;else{videoSortCol=col;videoSortDir=1;}renderVideoTable();}
+function renderVideoTable(){
+    const v=getVideos(); const tb=document.getElementById('videoTableBody');
+    document.getElementById('videoNoData').style.display=v.length?'none':'block';
+    v.sort((a,b)=>{const av=a[videoSortCol],bv=b[videoSortCol];return(av>bv?1:av<bv?-1:0)*videoSortDir;});
+    tb.innerHTML='';
+    v.forEach(r=>{
+        const roi=r.vues>0?((r.sales/r.vues)*100).toFixed(1):0;
+        tb.innerHTML+=`<tr><td>${r.titre}</td><td>${r.format}</td><td>${r.platform}</td><td>${r.date}</td><td>${r.vues.toLocaleString()}</td><td>${r.likes.toLocaleString()}</td><td>${r.shares.toLocaleString()}</td><td>${r.clics.toLocaleString()}</td><td>${r.sales.toLocaleString()} MAD</td><td><button class="btn btn-danger btn-sm" onclick="deleteVideo(${r.id})">X</button></td></tr>`;
+    });
+}
+function calculateKPIs(){
+    const v=getVideos(); const totalVues=v.reduce((s,r)=>s+r.vues,0);
+    const totalEng=v.reduce((s,r)=>s+r.likes+r.shares,0);
+    const totalRev=v.reduce((s,r)=>s+r.sales,0);
+    document.getElementById('kpiVues').textContent=totalVues.toLocaleString();
+    document.getElementById('kpiEngagement').textContent=totalVues>0?((totalEng/totalVues)*100).toFixed(1)+'%':'0%';
+    document.getElementById('kpiRevenu').textContent=totalRev.toLocaleString()+' MAD';
+    // Best format by ROI
+    const byF={}; v.forEach(r=>{if(!byF[r.format])byF[r.format]={sales:0,vues:0};byF[r.format].sales+=r.sales;byF[r.format].vues+=r.vues;});
+    let best='\u2014',bestRoi=0;
+    Object.entries(byF).forEach(([f,d])=>{const roi=d.vues>0?d.sales/d.vues:0;if(roi>bestRoi){bestRoi=roi;best=f;}});
+    document.getElementById('kpiBestFormat').textContent=best;
+}
+function renderFormatChart(){
+    const v=getVideos(); const byF={};
+    v.forEach(r=>{if(!byF[r.format])byF[r.format]=0;byF[r.format]+=r.vues;});
+    const maxV=Math.max(...Object.values(byF),1);
+    const ch=document.getElementById('formatChart');
+    if(!Object.keys(byF).length){ch.innerHTML='<div class="no-data">Ajoutez des vid\u00e9os pour voir le graphique</div>';return;}
+    ch.innerHTML='';
+    Object.entries(byF).forEach(([f,vues])=>{
+        const pct=(vues/maxV)*100;
+        const color=FORMAT_COLORS[f]||'var(--gold)';
+        ch.innerHTML+=`<div class="chart-bar-container"><div class="chart-bar-label"><span>${f}</span><span>${vues.toLocaleString()} vues</span></div><div class="chart-bar"><div class="chart-bar-fill" style="width:${pct}%;background:${color}">${pct>15?vues.toLocaleString():''}</div></div></div>`;
+    });
+}
+
+// ========== CALENDAR ==========
+function getCalendar(){return JSON.parse(localStorage.getItem('bisou_ugc_calendar')||'{}');}
+function saveCalendar(c){localStorage.setItem('bisou_ugc_calendar',JSON.stringify(c));}
+function renderCalendar(){
+    const months=['Janvier','F\u00e9vrier','Mars','Avril','Mai','Juin','Juillet','Ao\u00fbt','Septembre','Octobre','Novembre','D\u00e9cembre'];
+    document.getElementById('calMonthLabel').textContent=months[calMonth]+' '+calYear;
+    const grid=document.getElementById('calendarGrid');grid.innerHTML='';
+    const first=new Date(calYear,calMonth,1); const last=new Date(calYear,calMonth+1,0);
+    let startDay=(first.getDay()+6)%7;
+    const cal=getCalendar(); const today=new Date().toISOString().split('T')[0];
+    for(let i=0;i<startDay;i++) grid.innerHTML+='<div class="cal-day other-month"></div>';
+    for(let d=1;d<=last.getDate();d++){
+        const key=`${calYear}-${String(calMonth+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+        const isToday=key===today?'today':'';
+        const entries=cal[key]||[];
+        let dots='';entries.forEach(e=>{const c=FORMAT_COLORS[e.format]||'var(--gold)';dots+=`<div class="cal-dot" style="background:${c}" title="${e.format} - ${e.platform}"></div>`;});
+        grid.innerHTML+=`<div class="cal-day ${isToday}" onclick="openCalModal('${key}')"><div class="cal-day-num">${d}</div><div class="cal-dots">${dots}</div></div>`;
+    }
+}
+function prevMonth(){calMonth--;if(calMonth<0){calMonth=11;calYear--;}renderCalendar();}
+function nextMonth(){calMonth++;if(calMonth>11){calMonth=0;calYear++;}renderCalendar();}
+function openCalModal(date){document.getElementById('calModalDate').value=date;document.getElementById('calModal').classList.add('visible');}
+function closeCalModal(){document.getElementById('calModal').classList.remove('visible');}
+function saveCalendarEntry(){
+    const date=document.getElementById('calModalDate').value;
+    const cal=getCalendar(); if(!cal[date])cal[date]=[];
+    cal[date].push({format:document.getElementById('calFormat').value,platform:document.getElementById('calPlatform').value});
+    saveCalendar(cal);closeCalModal();renderCalendar();
+}
+
+// ========== CREATORS ==========
+function getCreators(){return JSON.parse(localStorage.getItem('bisou_ugc_creators')||'[]');}
+function saveCreators(c){localStorage.setItem('bisou_ugc_creators',JSON.stringify(c));}
+function showAddCreatorForm(){document.getElementById('addCreatorForm').style.display='block';}
+function hideAddCreatorForm(){document.getElementById('addCreatorForm').style.display='none';}
+function addCreator(){
+    const c=getCreators();
+    c.push({id:Date.now(),nom:document.getElementById('cNom').value,insta:document.getElementById('cInsta').value,
+        ville:document.getElementById('cVille').value,followers:+document.getElementById('cFollowers').value||0,
+        spec:document.getElementById('cSpec').value,statut:document.getElementById('cStatut').value});
+    saveCreators(c);hideAddCreatorForm();loadAndRenderCreators();
+    ['cNom','cInsta','cFollowers'].forEach(id=>document.getElementById(id).value='');
+}
+function deleteCreator(id){saveCreators(getCreators().filter(c=>c.id!==id));loadAndRenderCreators();}
+function loadAndRenderCreators(){
+    const c=getCreators(); const tb=document.getElementById('creatorTableBody');
+    document.getElementById('creatorNoData').style.display=c.length?'none':'block';
+    tb.innerHTML='';
+    c.forEach(r=>{
+        const sc=r.statut==='Actif'?'status-actif':r.statut==='En attente'?'status-attente':'status-archive';
+        tb.innerHTML+=`<tr><td>${r.nom}</td><td>${r.insta}</td><td>${r.ville}</td><td>${r.followers.toLocaleString()}</td><td>${r.spec}</td><td><span class="status ${sc}">${r.statut}</span></td><td><button class="btn btn-danger btn-sm" onclick="deleteCreator(${r.id})">X</button></td></tr>`;
+    });
+    // Update creator selects
+    const selects=['colCreator','budCreator'];
+    selects.forEach(sid=>{const s=document.getElementById(sid);if(!s)return;s.innerHTML='<option value="">S\u00e9lectionner</option>';c.forEach(r=>{s.innerHTML+=`<option value="${r.nom}">${r.nom}</option>`;});});
+}
+
+// ========== COLLABS ==========
+function getCollabs(){return JSON.parse(localStorage.getItem('bisou_ugc_collabs')||'[]');}
+function saveCollabs(c){localStorage.setItem('bisou_ugc_collabs',JSON.stringify(c));}
+function showAddCollabForm(){document.getElementById('addCollabForm').style.display='block';}
+function hideAddCollabForm(){document.getElementById('addCollabForm').style.display='none';}
+function addCollab(){
+    const c=getCollabs();
+    c.push({id:Date.now(),creator:document.getElementById('colCreator').value,brief:document.getElementById('colBrief').value,
+        deadline:document.getElementById('colDeadline').value,status:document.getElementById('colStatus').value,rating:0});
+    saveCollabs(c);hideAddCollabForm();loadAndRenderCollabs();
+}
+function deleteCollab(id){saveCollabs(getCollabs().filter(c=>c.id!==id));loadAndRenderCollabs();}
+function setCollabRating(id,rating){const c=getCollabs();const item=c.find(x=>x.id===id);if(item){item.rating=rating;saveCollabs(c);loadAndRenderCollabs();}}
+function loadAndRenderCollabs(){
+    const c=getCollabs();const tb=document.getElementById('collabTableBody');
+    document.getElementById('collabNoData').style.display=c.length?'none':'block';
+    tb.innerHTML='';
+    c.forEach(r=>{
+        const sc=r.status==='Livr\u00e9'?'status-livre':r.status==='En cours'?'status-encours':'status-attente';
+        let stars='';for(let i=1;i<=5;i++) stars+=`<span class="star ${i<=r.rating?'filled':''}" onclick="setCollabRating(${r.id},${i})">\u2605</span>`;
+        tb.innerHTML+=`<tr><td>${r.creator}</td><td>${r.brief}</td><td>${r.deadline}</td><td><span class="status ${sc}">${r.status}</span></td><td><div class="star-rating">${stars}</div></td><td><button class="btn btn-danger btn-sm" onclick="deleteCollab(${r.id})">X</button></td></tr>`;
+    });
+}
+
+// ========== BUDGET ==========
+function getBudget(){return JSON.parse(localStorage.getItem('bisou_ugc_budget')||'[]');}
+function saveBudget(b){localStorage.setItem('bisou_ugc_budget',JSON.stringify(b));}
+function showAddBudgetForm(){document.getElementById('addBudgetForm').style.display='block';}
+function hideAddBudgetForm(){document.getElementById('addBudgetForm').style.display='none';}
+function addBudgetEntry(){
+    const b=getBudget();
+    b.push({id:Date.now(),creator:document.getElementById('budCreator').value,video:document.getElementById('budVideo').value,
+        amount:+document.getElementById('budAmount').value||0,status:document.getElementById('budStatus').value});
+    saveBudget(b);hideAddBudgetForm();loadAndRenderBudget();
+}
+function deleteBudgetEntry(id){saveBudget(getBudget().filter(b=>b.id!==id));loadAndRenderBudget();}
+function loadAndRenderBudget(){
+    const b=getBudget();const tb=document.getElementById('budgetTableBody');
+    document.getElementById('budgetNoData').style.display=b.length?'none':'block';
+    tb.innerHTML='';let total=0;
+    b.forEach(r=>{
+        const sc=r.status==='Pay\u00e9'?'status-paye':r.status==='Annul\u00e9'?'status-archive':'status-attente';
+        if(r.status!=='Annul\u00e9')total+=r.amount;
+        tb.innerHTML+=`<tr><td>${r.creator}</td><td>${r.video}</td><td>${r.amount.toLocaleString()} MAD</td><td><span class="status ${sc}">${r.status}</span></td><td><button class="btn btn-danger btn-sm" onclick="deleteBudgetEntry(${r.id})">X</button></td></tr>`;
+    });
+    document.getElementById('budgetTotal').textContent=total.toLocaleString()+' MAD';
+}
+
+// ========== UTILS ==========
+function renderCTAs(cat,containerId){
+    const c=document.getElementById(containerId);
+    CTA_LIB[cat].forEach(cta=>{
+        c.innerHTML+=`<div class="cta-card"><div class="cta-emoji">${cta.emoji}</div><div class="cta-text">${cta.text}</div><button class="btn btn-outline btn-sm" onclick="copyText('${cta.text.replace(/'/g,"\\'")}',this)">Copier</button></div>`;
+    });
+}
+function copyText(text,btn){
+    navigator.clipboard.writeText(text).then(()=>{
+        const fb=document.getElementById('copyFeedback');fb.style.display='block';
+        setTimeout(()=>{fb.style.display='none';},1500);
+        if(btn){const orig=btn.textContent;btn.textContent='Copi\u00e9 !';btn.style.color='var(--green)';btn.style.borderColor='var(--green)';
+        setTimeout(()=>{btn.textContent=orig;btn.style.color='';btn.style.borderColor='';},2000);}
+    });
+}
+function copyColor(hex,el){copyText(hex,null);el.style.transform='scale(1.3)';setTimeout(()=>{el.style.transform='';},300);}
+function copyHashtags(platform){copyText(HASHTAGS[platform].join(' '),null);}
+
+// ========== START ==========
+init();
+</script>
+</body>
+</html>

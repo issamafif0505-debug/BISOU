@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BISOU — Stratégie de Lancement Maroc</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:        #C9A84C;
+      --gold-light:  #E2C97E;
+      --gold-dim:    #8A6E30;
+      --bg:          #0D0D0D;
+      --bg-card:     #141414;
+      --bg-elevated: #1A1A1A;
+      --border:      rgba(201,168,76,0.22);
+      --border-mid:  rgba(201,168,76,0.38);
+      --text-main:   #EDEDEA;
+      --text-muted:  #8C8C8A;
+      --text-dim:    #555553;
+      --red:         #C0392B;
+      --green:       #27AE60;
+      --sidebar-w:   280px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      position: fixed;
+      top: 0; left: 0;
+      width: var(--sidebar-w);
+      height: 100vh;
+      background: #0A0A0A;
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      z-index: 100;
+      overflow-y: auto;
+    }
+
+    .sidebar-brand {
+      padding: 2rem 1.8rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar-brand .bisou-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--gold);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    .sidebar-brand .bisou-tagline {
+      font-size: 0.68rem;
+      color: var(--text-dim);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+    }
+
+    .sidebar-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      padding: 1.5rem 1.8rem 0.5rem;
+    }
+
+    .sidebar nav { flex: 1; padding-bottom: 2rem; }
+
+    .sidebar nav a {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.62rem 1.8rem;
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: color 0.2s, background 0.2s;
+      border-left: 2px solid transparent;
+    }
+
+    .sidebar nav a:hover,
+    .sidebar nav a.active {
+      color: var(--gold-light);
+      background: rgba(201,168,76,0.06);
+      border-left-color: var(--gold);
+    }
+
+    .sidebar nav a .nav-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.85rem;
+      color: var(--gold-dim);
+      min-width: 1.2rem;
+    }
+
+    .sidebar-footer {
+      padding: 1.2rem 1.8rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .sidebar-footer .update-date {
+      font-size: 0.68rem;
+      color: var(--text-dim);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Main Content ── */
+    .main {
+      margin-left: var(--sidebar-w);
+      min-height: 100vh;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #0D0D0D 0%, #1A1208 50%, #0D0D0D 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 5rem 4rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--gold-dim);
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 300;
+      color: var(--gold-light);
+      line-height: 1.1;
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .meta-chip {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    .meta-chip .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      border: 1px solid var(--gold-dim);
+      background: transparent;
+      color: var(--gold-light);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+
+    .btn:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #000;
+    }
+
+    .btn-solid {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #000;
+    }
+
+    .btn-solid:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
+    /* ── Content Area ── */
+    .content {
+      padding: 3rem 4rem 5rem;
+      max-width: 960px;
+    }
+
+    /* ── Section ── */
+    .section {
+      margin-bottom: 5rem;
+      scroll-margin-top: 2rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: rgba(201,168,76,0.18);
+      line-height: 1;
+      min-width: 2.5rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--gold-light);
+      letter-spacing: 0.06em;
+      line-height: 1.2;
+    }
+
+    .section-title span {
+      display: block;
+      font-size: 0.65rem;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      margin-bottom: 0.3rem;
+    }
+
+    /* ── Subsections ── */
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      margin: 2.5rem 0 1rem;
+    }
+
+    h4 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 1.8rem 0 0.8rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    strong { color: var(--text-main); font-weight: 500; }
+
+    /* ── Tables ── */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border: 1px solid var(--border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+
+    thead tr {
+      background: rgba(201,168,76,0.08);
+    }
+
+    thead th {
+      padding: 0.85rem 1.1rem;
+      text-align: left;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1px solid var(--border-mid);
+      white-space: nowrap;
+    }
+
+    tbody td {
+      padding: 0.8rem 1.1rem;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tbody tr:last-child td { border-bottom: none; }
+
+    tbody tr:hover td { background: rgba(201,168,76,0.03); }
+
+    td:first-child { color: var(--text-main); font-weight: 500; }
+
+    .val-gold { color: var(--gold-light); font-weight: 600; }
+    .val-green { color: var(--green); }
+    .val-red { color: var(--red); }
+
+    /* ── Cards ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.2rem;
+      margin: 1.5rem 0;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 1.8rem;
+      position: relative;
+      transition: border-color 0.25s;
+    }
+
+    .card:hover { border-color: var(--gold-dim); }
+
+    .card-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: #000;
+      padding: 0.2rem 0.5rem;
+    }
+
+    .card-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--gold-light);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.04em;
+    }
+
+    .card-items {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      margin-bottom: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .card-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .price-original {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-decoration: line-through;
+    }
+
+    .price-bisou {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--gold);
+    }
+
+    .price-discount {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: 0.06em;
+    }
+
+    .card-margin {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      margin-top: 0.8rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .card-margin strong { color: var(--gold-dim); }
+
+    /* ── Financials Highlight ── */
+    .fin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    .fin-block {
+      background: var(--bg-card);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .fin-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 0.5rem;
+    }
+
+    .fin-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+
+    .fin-sub {
+      font-size: 0.65rem;
+      color: var(--text-dim);
+      margin-top: 0.3rem;
+    }
+
+    /* ── Phases ── */
+    .phases {
+      display: grid;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .phase {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold-dim);
+      padding: 1.5rem 1.8rem;
+    }
+
+    .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .phase-tag {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: rgba(201,168,76,0.12);
+      color: var(--gold);
+      padding: 0.2rem 0.6rem;
+      border: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .phase-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      color: var(--text-main);
+      letter-spacing: 0.03em;
+    }
+
+    .phase-body {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .phase-body li {
+      margin-left: 1.2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    /* ── Code/Template blocks ── */
+    .template-block {
+      background: #0A0A0A;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold-dim);
+      padding: 1.5rem 1.8rem;
+      margin: 1.2rem 0;
+      font-family: 'Inter', monospace;
+      font-size: 0.78rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .template-label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      margin-bottom: 0.8rem;
+    }
+
+    /* ── Checklist ── */
+    .checklist {
+      list-style: none;
+      display: grid;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .checklist li::before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      min-width: 14px;
+      border: 1px solid var(--gold-dim);
+      margin-top: 3px;
+    }
+
+    /* ── KPIs Row ── */
+    .kpi-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+
+    .kpi {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      padding: 0.8rem 1.2rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .kpi strong { color: var(--gold-light); display: block; font-size: 1rem; margin-bottom: 0.15rem; }
+
+    /* ── Divider ── */
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold-dim), transparent);
+      margin: 2rem 0;
+    }
+
+    /* ── Info box ── */
+    .info-box {
+      background: rgba(201,168,76,0.05);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .info-box strong { color: var(--gold-light); }
+
+    /* ── Hero Actions ── */
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* ── Footer ── */
+    .page-footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      background: #0A0A0A;
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: var(--gold);
+      letter-spacing: 0.2em;
+    }
+
+    .footer-meta {
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Mobile Hamburger ── */
+    .mobile-toggle {
+      display: none;
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 200;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 0.5rem 0.7rem;
+      cursor: pointer;
+      color: var(--gold);
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      :root { --sidebar-w: 0px; }
+
+      .sidebar {
+        transform: translateX(-100%);
+        width: 280px;
+        transition: transform 0.3s ease;
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+        width: 280px;
+      }
+
+      .mobile-toggle { display: block; }
+      .main { margin-left: 0; }
+      .hero { padding: 4rem 1.8rem 2.5rem; }
+      .content { padding: 2rem 1.8rem 4rem; }
+      .page-footer { padding: 2rem 1.8rem; }
+      .hero h1 { font-size: 2.4rem; }
+    }
+
+    @media (max-width: 580px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      .fin-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Mobile toggle -->
+<button class="mobile-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Menu">☰</button>
+
+<!-- ── SIDEBAR ── -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="bisou-logo">BISOU</div>
+    <div class="bisou-tagline">Stratégie Maroc · Confidentiel</div>
+  </div>
+
+  <p class="sidebar-label">Navigation</p>
+
+  <nav>
+    <a href="#s1" class="active"><span class="nav-num">01</span>Analyse Marché</a>
+    <a href="#s2"><span class="nav-num">02</span>Structure de Prix</a>
+    <a href="#s3"><span class="nav-num">03</span>Packs Marketing</a>
+    <a href="#s4"><span class="nav-num">04</span>Canaux de Vente</a>
+    <a href="#s5"><span class="nav-num">05</span>Logistique</a>
+    <a href="#s6"><span class="nav-num">06</span>Acquisition</a>
+    <a href="#s7"><span class="nav-num">07</span>Projections</a>
+    <a href="#s8"><span class="nav-num">08</span>Calendrier</a>
+    <a href="#s9"><span class="nav-num">09</span>Templates WhatsApp</a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="update-date">Dernière mise à jour : Mars 2026</div>
+  </div>
+</aside>
+
+<!-- ── MAIN ── -->
+<main class="main">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-eyebrow">Document confidentiel · BISOU Brand</div>
+    <h1>Stratégie de Lancement<br><em>Maroc</em></h1>
+    <p class="hero-sub">
+      Marrakech en premier — puis le Maroc entier. Feuille de route complète pour lancer BISOU sur le marché marocain: bijoux acier 316L plaqué or, positionnement luxe accessible, acquisition Instagram et WhatsApp.
+    </p>
+    <div class="hero-meta">
+      <div class="meta-chip"><span class="dot"></span>Acier inoxydable 316L plaqué or</div>
+      <div class="meta-chip"><span class="dot"></span>Lancement: Marrakech → Maroc → International</div>
+      <div class="meta-chip"><span class="dot"></span>Import Chine · 15-50 MAD/pièce</div>
+    </div>
+    <div class="hero-actions">
+      <button class="btn btn-solid" onclick="window.print()">
+        ⬇ Télécharger en PDF
+      </button>
+      <a href="#s1" class="btn">Lire la stratégie →</a>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- ── S1: ANALYSE MARCHÉ ── -->
+    <section class="section" id="s1">
+      <div class="section-header">
+        <div class="section-num">01</div>
+        <h2 class="section-title">
+          <span>Contexte</span>
+          Analyse Marché Marocain
+        </h2>
+      </div>
+
+      <h3>Marché bijoux fantaisie au Maroc</h3>
+
+      <div class="fin-grid">
+        <div class="fin-block">
+          <div class="fin-label">Taille marché estimée</div>
+          <div class="fin-value">1,2 Mrd</div>
+          <div class="fin-sub">MAD / an (bijoux fantaisie)</div>
+        </div>
+        <div class="fin-block">
+          <div class="fin-label">Croissance e-commerce</div>
+          <div class="fin-value">+25%</div>
+          <div class="fin-sub">par an depuis 2022</div>
+        </div>
+        <div class="fin-block">
+          <div class="fin-label">Utilisateurs WhatsApp</div>
+          <div class="fin-value">22 M+</div>
+          <div class="fin-sub">quasi-universelle au Maroc</div>
+        </div>
+        <div class="fin-block">
+          <div class="fin-label">Instagram Maroc</div>
+          <div class="fin-value">8,5 M</div>
+          <div class="fin-sub">utilisateurs actifs</div>
+        </div>
+        <div class="fin-block">
+          <div class="fin-label">Part bijoux fantaisie</div>
+          <div class="fin-value">35%</div>
+          <div class="fin-sub">du marché bijoux total</div>
+        </div>
+        <div class="fin-block">
+          <div class="fin-label">COD dominant</div>
+          <div class="fin-value">70-80%</div>
+          <div class="fin-sub">des achats en ligne</div>
+        </div>
+      </div>
+
+      <h4>Profil cible primaire</h4>
+      <div class="info-box">
+        <strong>Femmes 18-35 ans · Urbaines · Marrakech / Casablanca / Rabat</strong><br>
+        Revenus classe moyenne à aisée (3 500 – 15 000 MAD/mois). Très connectées — Instagram, TikTok, WhatsApp quotidien. Sensibles au branding "luxe accessible". Habituées aux achats COD. Comportement: découverte via Instagram Reels → commande via WhatsApp.
+      </div>
+
+      <h3>Analyse Concurrence Marrakech</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Concurrent</th>
+              <th>Forces</th>
+              <th>Faiblesses</th>
+              <th>Opportunité BISOU</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bijouteries Médina</td>
+              <td>Confiance, expérience, négociation</td>
+              <td>Prix élevés, pas de livraison, horaires limités</td>
+              <td>Prix 3-5x plus bas, rendu visuel identique</td>
+            </tr>
+            <tr>
+              <td>Vendors Instagram locaux</td>
+              <td>Présence déjà établie</td>
+              <td>Branding inexistant, pas de garantie, réponse lente</td>
+              <td>Branding luxe + garantie 6 mois + réponse &lt;1h</td>
+            </tr>
+            <tr>
+              <td>Jumia.ma</td>
+              <td>Trafic fort, COD inclus</td>
+              <td>Commission 15-25%, guerre des prix</td>
+              <td>Marge préservée via WhatsApp direct</td>
+            </tr>
+            <tr>
+              <td>Avito.ma</td>
+              <td>Trafic local fort</td>
+              <td>Image "seconde main", pas de branding</td>
+              <td>Présence passive pour redirection WhatsApp</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Pourquoi Marrakech en premier</h3>
+
+      <div class="phases">
+        <div class="phase">
+          <div class="phase-header">
+            <span class="phase-tag">01</span>
+            <div class="phase-title">Ville touristique internationale</div>
+          </div>
+          <div class="phase-body">Bouche à oreille qui dépasse les frontières. Potentiel de commandes depuis la France, Belgique et Canada dès le départ. Communauté expatriée française très active sur Instagram.</div>
+        </div>
+        <div class="phase">
+          <div class="phase-header">
+            <span class="phase-tag">02</span>
+            <div class="phase-title">Écosystème influenceurs accessible</div>
+          </div>
+          <div class="phase-body">Micro-influenceuses mode/lifestyle bien établies à des tarifs gifting inférieurs à Casablanca. Base de données plus facilement constituable.</div>
+        </div>
+        <div class="phase">
+          <div class="phase-header">
+            <span class="phase-tag">03</span>
+            <div class="phase-title">Marché mariage dominant</div>
+          </div>
+          <div class="phase-body">Marrakech est la capitale du mariage au Maroc. Forte demande en bijoux pour henna, cérémonie, réception — le Pack Mariée y trouve son audience naturelle.</div>
+        </div>
+        <div class="phase">
+          <div class="phase-header">
+            <span class="phase-tag">04</span>
+            <div class="phase-title">Moins saturé que Casablanca</div>
+          </div>
+          <div class="phase-body">La concurrence Instagram bijoux fantaisie y est moins intense, permettant de s'installer comme référence avant l'expansion nationale.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── S2: PRIX ── -->
+    <section class="section" id="s2">
+      <div class="section-header">
+        <div class="section-num">02</div>
+        <h2 class="section-title">
+          <span>Rentabilité</span>
+          Structure de Prix en MAD
+        </h2>
+      </div>
+
+      <h3>Coûts d'achat et de revient</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Produit</th>
+              <th>Coût achat (China)</th>
+              <th>Transport + Douane</th>
+              <th>Packaging BISOU</th>
+              <th>Coût total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bague simple</td>
+              <td>15-25 MAD</td>
+              <td>5 MAD</td>
+              <td>8 MAD</td>
+              <td class="val-gold">28-38 MAD</td>
+            </tr>
+            <tr>
+              <td>Collier fin</td>
+              <td>20-40 MAD</td>
+              <td>5 MAD</td>
+              <td>10 MAD</td>
+              <td class="val-gold">35-55 MAD</td>
+            </tr>
+            <tr>
+              <td>Créoles</td>
+              <td>15-30 MAD</td>
+              <td>5 MAD</td>
+              <td>8 MAD</td>
+              <td class="val-gold">28-43 MAD</td>
+            </tr>
+            <tr>
+              <td>Bracelet jonc</td>
+              <td>25-50 MAD</td>
+              <td>5 MAD</td>
+              <td>10 MAD</td>
+              <td class="val-gold">40-65 MAD</td>
+            </tr>
+            <tr>
+              <td>Coffret 3 pièces</td>
+              <td>60-100 MAD</td>
+              <td>10 MAD</td>
+              <td>25 MAD</td>
+              <td class="val-gold">95-135 MAD</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Prix de vente recommandés</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Produit</th>
+              <th>Prix de vente</th>
+              <th>Marge brute</th>
+              <th>Marge nette (après marketing)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bague simple</td>
+              <td class="val-gold">89 – 149 MAD</td>
+              <td class="val-green">75%</td>
+              <td class="val-green">50-60%</td>
+            </tr>
+            <tr>
+              <td>Collier fin</td>
+              <td class="val-gold">119 – 199 MAD</td>
+              <td class="val-green">78%</td>
+              <td class="val-green">55-65%</td>
+            </tr>
+            <tr>
+              <td>Créoles</td>
+              <td class="val-gold">89 – 139 MAD</td>
+              <td class="val-green">76%</td>
+              <td class="val-green">52-62%</td>
+            </tr>
+            <tr>
+              <td>Bracelet jonc</td>
+              <td class="val-gold">129 – 189 MAD</td>
+              <td class="val-green">74%</td>
+              <td class="val-green">50-60%</td>
+            </tr>
+            <tr>
+              <td>Pack 3 pièces</td>
+              <td class="val-gold">229 – 299 MAD</td>
+              <td class="val-green">72%</td>
+              <td class="val-green">48-58%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Stratégie de prix psychologique (Maroc)</h3>
+
+      <div class="kpi-row">
+        <div class="kpi"><strong>Finir en 9</strong>89, 99, 129, 199, 299 MAD</div>
+        <div class="kpi"><strong>Seuil livraison</strong>Gratuite dès 199 MAD</div>
+        <div class="kpi"><strong>WhatsApp Deal</strong>-10% si commande maintenant</div>
+        <div class="kpi"><strong>Prix barré</strong>Toujours afficher l'économie en %</div>
+      </div>
+
+      <div class="info-box">
+        <strong>Règle d'or:</strong> Chaque visuel doit afficher trois chiffres — prix original barré, prix BISOU en grand, et pourcentage d'économie. Ex: <em>389 MAD → <strong>229 MAD</strong> (-41%)</em>.
+      </div>
+    </section>
+
+    <!-- ── S3: PACKS ── -->
+    <section class="section" id="s3">
+      <div class="section-header">
+        <div class="section-num">03</div>
+        <h2 class="section-title">
+          <span>Offre commerciale</span>
+          Packs Marketing
+        </h2>
+      </div>
+
+      <p>Les packs sont le moteur de croissance BISOU. Ils augmentent le panier moyen, simplifient le choix et maximisent la marge nette par commande.</p>
+
+      <div class="cards-grid">
+
+        <div class="card">
+          <div class="card-name">Mini Starter</div>
+          <div class="card-items">Collier fin délicat<br>Créoles mini</div>
+          <div class="card-price-row">
+            <span class="price-original">208 MAD</span>
+            <span class="price-bisou">159 MAD</span>
+            <span class="price-discount">-24%</span>
+          </div>
+          <div class="card-margin">Marge nette: <strong>100-115 MAD</strong><br>Cible: 18-24 ans, 1er achat</div>
+        </div>
+
+        <div class="card">
+          <div class="card-badge">Bestseller</div>
+          <div class="card-name">Découverte</div>
+          <div class="card-items">Collier fin<br>Bague empilable<br>Créoles rondes</div>
+          <div class="card-price-row">
+            <span class="price-original">387 MAD</span>
+            <span class="price-bisou">229 MAD</span>
+            <span class="price-discount">-41%</span>
+          </div>
+          <div class="card-margin">Marge nette: <strong>130-145 MAD</strong><br>Cible: Polyvalent, bestseller</div>
+        </div>
+
+        <div class="card">
+          <div class="card-name">Cadeau</div>
+          <div class="card-items">Collier statement<br>Bracelet jonc<br>Emballage doré premium</div>
+          <div class="card-price-row">
+            <span class="price-original">398 MAD</span>
+            <span class="price-bisou">279 MAD</span>
+            <span class="price-discount">-30%</span>
+          </div>
+          <div class="card-margin">Marge nette: <strong>170-185 MAD</strong><br>Cible: Aïd, fête des mères, anniversaires</div>
+        </div>
+
+        <div class="card">
+          <div class="card-badge">Premium</div>
+          <div class="card-name">Mariée Marocaine</div>
+          <div class="card-items">Collier statement XL<br>Boucles chandelier<br>Bracelet jonc large<br>Bague cocktail</div>
+          <div class="card-price-row">
+            <span class="price-original">666 MAD</span>
+            <span class="price-bisou">449 MAD</span>
+            <span class="price-discount">-33%</span>
+          </div>
+          <div class="card-margin">Marge nette: <strong>270-295 MAD</strong><br>Cible: Mariées, henna, demoiselles d'honneur</div>
+        </div>
+
+      </div>
+
+      <div class="table-wrap" style="margin-top:2rem;">
+        <table>
+          <thead>
+            <tr>
+              <th>Pack</th>
+              <th>Prix de vente</th>
+              <th>Marge nette approx.</th>
+              <th>Cible principale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mini Starter</td>
+              <td class="val-gold">159 MAD</td>
+              <td class="val-green">100-115 MAD</td>
+              <td>18-24 ans, 1er achat</td>
+            </tr>
+            <tr>
+              <td>Découverte ★</td>
+              <td class="val-gold">229 MAD</td>
+              <td class="val-green">130-145 MAD</td>
+              <td>Bestseller polyvalent</td>
+            </tr>
+            <tr>
+              <td>Cadeau</td>
+              <td class="val-gold">279 MAD</td>
+              <td class="val-green">170-185 MAD</td>
+              <td>Fêtes, cadeaux</td>
+            </tr>
+            <tr>
+              <td>Mariée Marocaine</td>
+              <td class="val-gold">449 MAD</td>
+              <td class="val-green">270-295 MAD</td>
+              <td>Mariage, henna</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ── S4: CANAUX ── -->
+    <section class="section" id="s4">
+      <div class="section-header">
+        <div class="section-num">04</div>
+        <h2 class="section-title">
+          <span>Distribution</span>
+          Canaux de Vente Maroc
+        </h2>
+      </div>
+
+      <div class="phases">
+        <div class="phase" style="border-left-color: var(--gold);">
+          <div class="phase-header">
+            <span class="phase-tag" style="background:rgba(201,168,76,0.2);">PRIMAIRE</span>
+            <div class="phase-title">WhatsApp Business</div>
+          </div>
+          <div class="phase-body">
+            Canal de vente #1 au Maroc — 60-70% des ventes s'y passent. Numéro dédié +212 avec catalogue, réponse garantie &lt;1h, messages en français + darija. Groupe "BISOU VIP Marrakech" pour offres exclusives 24h en avance. Message de bienvenue automatique avec tous les packs et prix.
+          </div>
+        </div>
+
+        <div class="phase" style="border-left-color: #8A6E30;">
+          <div class="phase-header">
+            <span class="phase-tag">SECONDAIRE</span>
+            <div class="phase-title">Instagram @bisou.or</div>
+          </div>
+          <div class="phase-body">
+            Canal de découverte et de désir. 3 Reels/semaine + Stories quotidiennes. Règle: chaque Story doit avoir un prix visible OU un CTA "WhatsApp maintenant". Hashtags prioritaires: #bijoux_maroc #bijoux_marrakech #mariee_marocaine. Objectif: créer l'envie → envoyer vers WhatsApp.
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-header">
+            <span class="phase-tag">TERTIAIRE</span>
+            <div class="phase-title">Facebook Marketplace Maroc</div>
+          </div>
+          <div class="phase-body">
+            Très utilisé au Maroc (25-40 ans). Annonces géolocalisées Marrakech avec prix MAD. Titre type: "Collier plaqué or 316L — 119 MAD — Livraison 24h — COD". Toujours terminer par "Prix final sur WhatsApp: [numéro]".
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-header">
+            <span class="phase-tag">QUATERNAIRE</span>
+            <div class="phase-title">Jumia.ma / Avito.ma</div>
+          </div>
+          <div class="phase-body">
+            Présence passive pour la visibilité et le référencement. Redirection systématique vers WhatsApp. Ne pas dépendre de ces plateformes pour la marge (commissions 15-25%).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── S5: LOGISTIQUE ── -->
+    <section class="section" id="s5">
+      <div class="section-header">
+        <div class="section-num">05</div>
+        <h2 class="section-title">
+          <span>Opérations</span>
+          Logistique Maroc
+        </h2>
+      </div>
+
+      <h3>Livraison Marrakech (priorité)</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Transporteur</th>
+              <th>Tarif</th>
+              <th>Délai</th>
+              <th>Usage recommandé</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Amana (La Poste)</td>
+              <td class="val-gold">35-50 MAD</td>
+              <td>24-48h</td>
+              <td>Livraison standard, COD fiable</td>
+            </tr>
+            <tr>
+              <td>Glovo Marrakech</td>
+              <td class="val-gold">40-60 MAD</td>
+              <td>2-4h (same day)</td>
+              <td>Urgences, cadeaux anniversaire</td>
+            </tr>
+            <tr>
+              <td>Coursier privé local</td>
+              <td class="val-gold">30-50 MAD</td>
+              <td>Same day</td>
+              <td>Volume élevé, négociable</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Livraison Maroc entier (Mois 3+)</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Transporteur</th>
+              <th>Tarif</th>
+              <th>Délai</th>
+              <th>Couverture</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Amana Express</td>
+              <td class="val-gold">50-70 MAD</td>
+              <td>2-4 jours</td>
+              <td>Tout le Maroc</td>
+            </tr>
+            <tr>
+              <td>Chronopost Maroc</td>
+              <td class="val-gold">65-85 MAD</td>
+              <td>24-48h</td>
+              <td>Grandes villes</td>
+            </tr>
+            <tr>
+              <td>CTM (bus)</td>
+              <td class="val-gold">40-60 MAD</td>
+              <td>1-3 jours</td>
+              <td>Réseau CTM national</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Stratégie COD — Clé de succès Maroc</h3>
+
+      <div class="info-box">
+        <strong>Le COD n'est pas une contrainte — c'est un avantage concurrentiel.</strong><br>
+        Afficher "Paiement à la livraison disponible" en grand dans tous les visuels. Frais COD (10-15 MAD) absorbés dans le prix affiché — ne jamais les mentionner comme supplément. Toujours appeler le client avant expédition → réduit les retours de 40-60%. Taux de retour cible: &lt;15%.
+      </div>
+
+      <h3>Packaging BISOU</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Composant</th>
+              <th>Description</th>
+              <th>Coût estimé</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Coffret rigide doré</td>
+              <td>8x8x3cm, noir mat + logo BISOU doré</td>
+              <td>12-18 MAD</td>
+            </tr>
+            <tr>
+              <td>Pochette velours</td>
+              <td>Pour bagues/boucles isolées</td>
+              <td>4-6 MAD</td>
+            </tr>
+            <tr>
+              <td>Ruban satin doré</td>
+              <td>Pour fermer les coffrets cadeaux</td>
+              <td>2-3 MAD</td>
+            </tr>
+            <tr>
+              <td>Carte BISOU</td>
+              <td>"Prends soin de toi · Bisou" + instructions entretien</td>
+              <td>2-3 MAD</td>
+            </tr>
+            <tr>
+              <td>Papier de soie</td>
+              <td>Noir ou doré, emballer les bijoux</td>
+              <td>1-2 MAD</td>
+            </tr>
+            <tr>
+              <td><strong>Total packaging</strong></td>
+              <td></td>
+              <td class="val-gold"><strong>21-32 MAD</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin-top:0.5rem;">Le packaging BISOU est partagé spontanément sur Instagram et WhatsApp par les clientes. C'est du marketing gratuit — investir dans le packaging, c'est investir dans l'acquisition.</p>
+    </section>
+
+    <!-- ── S6: ACQUISITION ── -->
+    <section class="section" id="s6">
+      <div class="section-header">
+        <div class="section-num">06</div>
+        <h2 class="section-title">
+          <span>Go-To-Market</span>
+          Stratégie Acquisition Marrakech
+        </h2>
+      </div>
+
+      <div class="phases">
+
+        <div class="phase" style="border-left-color:var(--gold);">
+          <div class="phase-header">
+            <span class="phase-tag" style="background:rgba(201,168,76,0.2);">Phase 0 · Semaines 1-2</span>
+            <div class="phase-title">Fondations et Crédibilité</div>
+          </div>
+          <div class="phase-body">
+            <ul>
+              <li>15 photos produits professionnelles (fond noir + fond blanc)</li>
+              <li>5 Reels Instagram: unboxing, styling, avant/après, pack, coulisses</li>
+              <li>WhatsApp Business activé avec catalogue complet</li>
+              <li>Bio Instagram avec lien WhatsApp direct</li>
+              <li>Gifting 10 premières clientes (amies/famille/nano-influenceuses)</li>
+            </ul>
+            <br><strong style="color:var(--gold-dim);">Budget: 2 500 – 4 000 MAD</strong>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-header">
+            <span class="phase-tag">Phase 1 · Mois 1</span>
+            <div class="phase-title">Micro-Influenceurs Marrakech</div>
+          </div>
+          <div class="phase-body">
+            Cibler 20 micro-influenceuses Marrakech (5k-50k followers) — Mode, Beauté, Lifestyle, Mariages. Gifting produit (coût réel: 80-200 MAD). En échange: 1 Reel + 3 Stories + lien WhatsApp + code promo perso. ROI attendu: 10-30 commandes par influenceuse.<br><br>
+            <strong style="color:var(--gold-dim);">Budget: 2 000 – 4 000 MAD (gifting 20 influenceuses)</strong>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-header">
+            <span class="phase-tag">Phase 2 · Mois 2-3</span>
+            <div class="phase-title">Meta Ads Marrakech</div>
+          </div>
+          <div class="phase-body">
+            Budget: 500 → 1 000-2 000 MAD/semaine. Ciblage: Femmes 18-45 ans, Marrakech, intérêts bijoux/mode. Format: Vidéo 15s (Reels) + Image carrousel. CTA: "Envoyer un message" → WhatsApp direct. KPI cibles: CPM &lt;15 MAD · CTR &gt;2% · Coût par commande &lt;50 MAD.<br><br>
+            <strong style="color:var(--gold-dim);">Budget: 4 000 – 8 000 MAD (2 mois)</strong>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-header">
+            <span class="phase-tag">Phase 3 · Mois 4-6</span>
+            <div class="phase-title">Scale Maroc Entier</div>
+          </div>
+          <div class="phase-body">
+            Expansion: Casablanca → Rabat → Fès → Agadir → Tanger. Recruter 1 VA pour WhatsApp (2 000-3 500 MAD/mois). Programme d'affiliation: 10% sur chaque vente référée (Wafacash). Objectif Mois 6: 50 affiliées actives = 150-300 commandes/mois additionnelles.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── S7: PROJECTIONS ── -->
+    <section class="section" id="s7">
+      <div class="section-header">
+        <div class="section-num">07</div>
+        <h2 class="section-title">
+          <span>Business Plan</span>
+          Projections Financières
+        </h2>
+      </div>
+
+      <h3>Break-Even</h3>
+
+      <div class="fin-grid">
+        <div class="fin-block">
+          <div class="fin-label">Stock initial (200 pièces)</div>
+          <div class="fin-value" style="font-size:1.3rem;">3-6K</div>
+          <div class="fin-sub">MAD</div>
+        </div>
+        <div class="fin-block">
+          <div class="fin-label">Packaging (200 unités)</div>
+          <div class="fin-value" style="font-size:1.3rem;">1,5-2,5K</div>
+          <div class="fin-sub">MAD</div>
+        </div>
+        <div class="fin-block">
+          <div class="fin-label">Photos + Contenu</div>
+          <div class="fin-value" style="font-size:1.3rem;">500-1,5K</div>
+          <div class="fin-sub">MAD</div>
+        </div>
+        <div class="fin-block">
+          <div class="fin-label">Gifting influenceuses</div>
+          <div class="fin-value" style="font-size:1.3rem;">2-4K</div>
+          <div class="fin-sub">MAD</div>
+        </div>
+        <div class="fin-block">
+          <div class="fin-label">Investissement total</div>
+          <div class="fin-value">7-14K</div>
+          <div class="fin-sub">MAD</div>
+        </div>
+        <div class="fin-block">
+          <div class="fin-label">Break-even estimé</div>
+          <div class="fin-value">Mois 2</div>
+          <div class="fin-sub">~65-70 commandes nettes</div>
+        </div>
+      </div>
+
+      <h3>Scénario Conservateur — Marrakech (Mois 1-3)</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Mois</th>
+              <th>Commandes</th>
+              <th>Panier moyen</th>
+              <th>CA brut</th>
+              <th>CA net (retours -18%)</th>
+              <th>Marge nette (50%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mois 1</td>
+              <td>50</td>
+              <td>220 MAD</td>
+              <td>11 000 MAD</td>
+              <td>9 020 MAD</td>
+              <td class="val-green">4 510 MAD</td>
+            </tr>
+            <tr>
+              <td>Mois 2</td>
+              <td>100</td>
+              <td>220 MAD</td>
+              <td>22 000 MAD</td>
+              <td>18 040 MAD</td>
+              <td class="val-green">9 020 MAD</td>
+            </tr>
+            <tr>
+              <td>Mois 3</td>
+              <td>150</td>
+              <td>220 MAD</td>
+              <td>33 000 MAD</td>
+              <td>27 060 MAD</td>
+              <td class="val-green">13 530 MAD</td>
+            </tr>
+            <tr>
+              <td><strong>Total T1</strong></td>
+              <td><strong>300</strong></td>
+              <td></td>
+              <td class="val-gold"><strong>66 000 MAD</strong></td>
+              <td class="val-gold"><strong>54 120 MAD</strong></td>
+              <td class="val-green"><strong>27 060 MAD</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Scénario Optimiste — Maroc entier (Mois 4-6)</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Mois</th>
+              <th>Commandes</th>
+              <th>Panier moyen</th>
+              <th>CA brut</th>
+              <th>CA net (retours -12%)</th>
+              <th>Marge nette (45%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mois 4</td>
+              <td>300</td>
+              <td>250 MAD</td>
+              <td>75 000 MAD</td>
+              <td>66 000 MAD</td>
+              <td class="val-green">29 700 MAD</td>
+            </tr>
+            <tr>
+              <td>Mois 5</td>
+              <td>500</td>
+              <td>250 MAD</td>
+              <td>125 000 MAD</td>
+              <td>110 000 MAD</td>
+              <td class="val-green">49 500 MAD</td>
+            </tr>
+            <tr>
+              <td>Mois 6</td>
+              <td>800</td>
+              <td>250 MAD</td>
+              <td>200 000 MAD</td>
+              <td>176 000 MAD</td>
+              <td class="val-green">79 200 MAD</td>
+            </tr>
+            <tr>
+              <td><strong>Total T2</strong></td>
+              <td><strong>1 600</strong></td>
+              <td></td>
+              <td class="val-gold"><strong>400 000 MAD</strong></td>
+              <td class="val-gold"><strong>352 000 MAD</strong></td>
+              <td class="val-green"><strong>158 400 MAD</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="info-box" style="margin-top:2rem;">
+        <strong>Cap 12 mois:</strong> 2 à 4 millions MAD de CA annuel si exécution optimale. Marge nette cumulée 12 mois: 700 000 – 1 200 000 MAD.
+      </div>
+    </section>
+
+    <!-- ── S8: CALENDRIER ── -->
+    <section class="section" id="s8">
+      <div class="section-header">
+        <div class="section-num">08</div>
+        <h2 class="section-title">
+          <span>Planning</span>
+          Calendrier Opérationnel
+        </h2>
+      </div>
+
+      <h3>Semaine 1 — Fondations</h3>
+      <ul class="checklist">
+        <li>Commander stock initial: 200 pièces (50 bagues + 50 colliers + 50 créoles + 50 bracelets)</li>
+        <li>Commander packaging BISOU (coffrets, pochettes, cartes, rubans)</li>
+        <li>Créer numéro WhatsApp Business dédié +212</li>
+        <li>Configurer catalogue WhatsApp avec tous les packs et prix</li>
+        <li>Ouvrir compte Instagram @bisou.or — vérifier disponibilité</li>
+        <li>Créer compte Meta Business Manager</li>
+      </ul>
+
+      <h3>Semaines 2-3 — Contenu et Premiers Contacts</h3>
+      <ul class="checklist">
+        <li>Séance photo produits (15 photos minimum)</li>
+        <li>Filmer et monter 5 Reels (contenu Mois 1)</li>
+        <li>Identifier 30 micro-influenceuses Marrakech → contacter les 20 meilleures</li>
+        <li>Gifting 10 premières clientes en échange de témoignages + photos</li>
+        <li>Publier les 3 premiers Reels</li>
+        <li>Activer Stories quotidiennes</li>
+        <li>Tester le processus de livraison Amana en interne</li>
+      </ul>
+
+      <h3>Mois 2 — Accélération</h3>
+      <ul class="checklist">
+        <li>Lancer Meta Ads (budget test: 500 MAD/semaine)</li>
+        <li>Collecter 50+ avis clients</li>
+        <li>Analyser les données: quels packs se vendent le mieux?</li>
+        <li>Test marché Casablanca (5 livraisons test)</li>
+        <li>Identifier le transporteur prioritaire national</li>
+      </ul>
+
+      <h3>Mois 3-6 — Scale</h3>
+      <ul class="checklist">
+        <li>Optimiser Meta Ads (scaler les créatifs performants)</li>
+        <li>Recruter 1 VA pour WhatsApp (&gt;30 messages/jour)</li>
+        <li>Lancer programme d'affiliation (5 premières affiliées)</li>
+        <li>Expansion officielle: Casablanca, Rabat, Fès, Agadir</li>
+        <li>Renouveler stock selon données de vente réelles</li>
+        <li>Envisager site e-commerce Shopify Maroc</li>
+        <li>Analyser expansion internationale: France, Belgique, Canada</li>
+      </ul>
+    </section>
+
+    <!-- ── S9: TEMPLATES ── -->
+    <section class="section" id="s9">
+      <div class="section-header">
+        <div class="section-num">09</div>
+        <h2 class="section-title">
+          <span>Scripts</span>
+          Messages WhatsApp Templates
+        </h2>
+      </div>
+
+      <p>Ces templates sont prêts à copier-coller dans WhatsApp Business. Personnaliser les variables entre crochets [VARIABLE].</p>
+
+      <h3>Message de bienvenue automatique</h3>
+      <div class="template-label">Déclenché à chaque nouveau contact entrant</div>
+      <div class="template-block">🌟 Bienvenue chez BISOU! مرحبا بيك
+
+Bijoux plaqués or · Acier inoxydable 316L
+Livraison partout au Maroc · Paiement à la livraison ✨
+
+━━━━━━━━━━━━━━━━━━━━━
+NOS PACKS DU MOMENT:
+━━━━━━━━━━━━━━━━━━━━━
+⭐ PACK MINI STARTER: 159 MAD
+   Collier fin + Créoles
+
+💛 PACK DÉCOUVERTE: 229 MAD ← Bestseller
+   Collier + Bague + Créoles
+
+🎁 PACK CADEAU: 279 MAD
+   Collier + Bracelet + Emballage doré
+
+💍 PACK MARIÉE: 449 MAD
+   4 pièces complètes pour votre grand jour
+
+━━━━━━━━━━━━━━━━━━━━━
+✅ Livraison Marrakech: 24-48h
+✅ Paiement à la livraison (COD)
+✅ Garantie 6 mois anti-noircissement
+✅ Échange si insatisfaite
+
+Pour commander, tapez:
+"PACK [NOM DU PACK]"
+Ex: "PACK DÉCOUVERTE" 🛒</div>
+
+      <h3>Message de confirmation de commande</h3>
+      <div class="template-label">Envoyé après validation téléphonique</div>
+      <div class="template-block">✅ Commande BISOU confirmée! 🌟
+
+📦 Pack: [NOM DU PACK]
+💰 Montant: [PRIX] MAD
+📍 Adresse: [ADRESSE COMPLÈTE]
+📞 Contact: [NUMÉRO]
+
+🚚 Livraison estimée: 24-48h
+💳 Paiement: À la livraison
+
+Notre équipe vous appellera avant la livraison pour confirmer.
+Restez disponible sur ce numéro.
+
+Merci de choisir BISOU 💛
+"L'or qui t'embrasse"</div>
+
+      <h3>Message de suivi livraison</h3>
+      <div class="template-label">Envoyé le jour de l'expédition</div>
+      <div class="template-block">📦 Bonne nouvelle, [PRÉNOM]!
+
+Votre commande BISOU est en route!
+N° de suivi Amana: [NUMÉRO]
+
+Suivez votre colis: amana.ma
+
+Livraison prévue aujourd'hui ou demain avant 18h.
+En cas d'absence, le livreur vous contactera.
+
+Des questions? On est là 💛
+BISOU Team</div>
+
+      <h3>Message de relance (48h après vue non-commandée)</h3>
+      <div class="template-label">Relance douce pour les prospects inactifs</div>
+      <div class="template-block">Psst... 👀 [PRÉNOM]
+
+Tu as regardé nos bijoux hier 💛
+On n'a pas voulu te déranger, mais...
+
+Aujourd'hui uniquement:
+Pack Découverte à 199 MAD (au lieu de 229) 🔥
+
+Stocks limités à Marrakech.
+Tape "OUI" si tu veux réserver! 🛒</div>
+
+      <h3>Message avis client (J+3 après livraison)</h3>
+      <div class="template-label">Collecte de social proof</div>
+      <div class="template-block">Salam [PRÉNOM]! 🌟
+
+On espère que tes bijoux BISOU te plaisent!
+Tu peux nous aider?
+
+📸 Une petite photo de toi avec tes bijoux?
+⭐ Ton avis en 1 phrase sur la qualité?
+
+En échange: 15% de réduction sur ta prochaine commande 💛
+Code: [PRENOM]BISOU
+
+Merci du fond du cœur!
+BISOU Team ✨</div>
+
+      <h3>Invitation programme d'affiliation</h3>
+      <div class="template-label">Pour les clientes satisfaites (Mois 3+)</div>
+      <div class="template-block">💰 Rejoins la famille BISOU!
+
+Tu aimes nos bijoux?
+Gagne de l'argent en les recommandant!
+
+COMMENT ÇA MARCHE:
+1. Tu partages tes photos bijoux BISOU
+2. Tes amies commandent avec ton code [PRENOM]
+3. Tu reçois 10% de chaque vente sur Wafacash 💛
+
+Exemple: 10 commandes de 229 MAD = 229 MAD pour toi!
+
+Intéressée? Réponds "AFFILIATION" et on t'envoie ton kit complet 🚀</div>
+
+    </section>
+
+  </div><!-- /content -->
+
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    <div class="footer-brand">BISOU</div>
+    <div class="footer-meta">
+      Document confidentiel · Stratégie Maroc v1.0 · Dernière mise à jour : Mars 2026<br>
+      "L'or qui t'embrasse" · Bijoux acier 316L plaqué or
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('.section[id]');
+  const navLinks = document.querySelectorAll('.sidebar nav a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(section => observer.observe(section));
+
+  // Close sidebar when clicking a link on mobile
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.sidebar').classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>

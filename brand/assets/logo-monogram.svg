@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 120 120"
+     width="120" height="120"
+     role="img"
+     aria-label="BISOU monogram">
+
+  <defs>
+
+    <!-- ════════════════════════════════ -->
+    <!-- GRADIENTS                        -->
+    <!-- ════════════════════════════════ -->
+
+    <!-- Primary gold: diagonal sheen for ring borders -->
+    <linearGradient id="m_goldSheen" x1="0" y1="0" x2="1" y2="1"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#F5E6A3"/>
+      <stop offset="25%"  stop-color="#D4AF37"/>
+      <stop offset="52%"  stop-color="#C9A84C"/>
+      <stop offset="78%"  stop-color="#A8862E"/>
+      <stop offset="100%" stop-color="#7A5C0E"/>
+    </linearGradient>
+
+    <!-- Gold ring sweep — rotated for outer ring -->
+    <linearGradient id="m_ringOuter" x1="0" y1="0" x2="1" y2="1"
+                    gradientUnits="userSpaceOnUse"
+                    x2="120" y2="120">
+      <stop offset="0%"   stop-color="#F5E6A3"/>
+      <stop offset="20%"  stop-color="#D4AF37"/>
+      <stop offset="45%"  stop-color="#C9A84C"/>
+      <stop offset="72%"  stop-color="#A8862E"/>
+      <stop offset="100%" stop-color="#7A5C0E"/>
+    </linearGradient>
+
+    <!-- Inner ring — slightly different angle -->
+    <linearGradient id="m_ringInner" x1="120" y1="0" x2="0" y2="120"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#7A5C0E"/>
+      <stop offset="30%"  stop-color="#A8862E"/>
+      <stop offset="55%"  stop-color="#D4AF37"/>
+      <stop offset="78%"  stop-color="#F5E6A3"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+
+    <!-- Radial gold for center motif -->
+    <radialGradient id="m_goldRadial" cx="42%" cy="32%" r="65%"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#F5E6A3"/>
+      <stop offset="30%"  stop-color="#D4AF37"/>
+      <stop offset="65%"  stop-color="#A8862E"/>
+      <stop offset="100%" stop-color="#7A5C0E"/>
+    </radialGradient>
+
+    <!-- Shimmer overlay for center motif -->
+    <radialGradient id="m_shimmer" cx="30%" cy="22%" r="60%"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#FFFBE8" stop-opacity="0.70"/>
+      <stop offset="40%"  stop-color="#F5E6A3" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#D4AF37"  stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Background glow radial -->
+    <radialGradient id="m_bgGlow" cx="50%" cy="50%" r="50%"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#2A1A00" stop-opacity="0.75"/>
+      <stop offset="50%"  stop-color="#1A1200" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#0D0D0D"  stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Arc text gradient -->
+    <linearGradient id="m_textGrad" x1="0" y1="0" x2="1" y2="0"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#A8862E"/>
+      <stop offset="40%"  stop-color="#D4AF37"/>
+      <stop offset="60%"  stop-color="#F5E6A3"/>
+      <stop offset="100%" stop-color="#A8862E"/>
+    </linearGradient>
+
+    <!-- Sparkle dot gradient -->
+    <radialGradient id="m_sparkGrad" cx="50%" cy="30%" r="60%"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#FFFBE8"/>
+      <stop offset="55%"  stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#7A5C0E"/>
+    </radialGradient>
+
+    <!-- Facet light for heart diamond hybrid -->
+    <linearGradient id="m_facetLight" x1="0" y1="0" x2="1" y2="1"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#FFFBE8" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#D4AF37"  stop-opacity="0.20"/>
+    </linearGradient>
+
+    <!-- ════════════════════════════════ -->
+    <!-- FILTERS                          -->
+    <!-- ════════════════════════════════ -->
+
+    <!-- Center motif glow -->
+    <filter id="m_centerGlow" x="-25%" y="-25%" width="150%" height="150%"
+            color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blurA"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.8" result="blurB"/>
+      <feColorMatrix in="blurA" type="matrix"
+        values="1.3 0.8 0   0 0.1
+                0.8 0.6 0   0 0.03
+                0   0   0   0 0
+                0   0   0   0.75 0" result="haloA"/>
+      <feColorMatrix in="blurB" type="matrix"
+        values="1.6 1.2 0.2 0 0.05
+                1.1 0.9 0.1 0 0.02
+                0   0   0   0 0
+                0   0   0   0.6 0" result="haloB"/>
+      <feMerge>
+        <feMergeNode in="haloA"/>
+        <feMergeNode in="haloB"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Ring glow filter -->
+    <filter id="m_ringGlow" x="-8%" y="-8%" width="116%" height="116%"
+            color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1.2 0.8 0 0 0.08
+                0.8 0.6 0 0 0.02
+                0   0   0 0 0
+                0   0   0 0.6 0" result="tinted"/>
+      <feMerge>
+        <feMergeNode in="tinted"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Arc text glow -->
+    <filter id="m_textGlow" x="-10%" y="-50%" width="120%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Path for curved "BISOU" text arc along bottom -->
+    <!-- Arc: center (60,60), radius 43, from ~200° to ~340° -->
+    <path id="m_arcBottom"
+          d="M 22.7,78.5
+             A 43,43 0 0 1 97.3,78.5"
+          fill="none"/>
+
+    <!-- Path for optional top arc text -->
+    <path id="m_arcTop"
+          d="M 22,60
+             A 38,38 0 0 1 98,60"
+          fill="none"/>
+
+  </defs>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- BACKGROUND                                  -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Square background clipped to circle -->
+  <rect width="120" height="120" fill="#0D0D0D"/>
+
+  <!-- Circular background with glow -->
+  <circle cx="60" cy="60" r="59" fill="#0D0D0D"/>
+  <circle cx="60" cy="60" r="52" fill="url(#m_bgGlow)"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- DOUBLE RING BORDER                          -->
+  <!-- Outer thin gold ring + gap + inner ring     -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Outer ring glow (wide soft halo) -->
+  <circle cx="60" cy="60" r="56"
+          fill="none"
+          stroke="url(#m_ringOuter)"
+          stroke-width="2.5"
+          opacity="0.25"
+          filter="url(#m_ringGlow)"/>
+
+  <!-- Outer ring — primary border -->
+  <circle cx="60" cy="60" r="56"
+          fill="none"
+          stroke="url(#m_ringOuter)"
+          stroke-width="0.9"
+          opacity="0.92"/>
+
+  <!-- Gap space: r=54 to r=52 (left intentionally empty) -->
+
+  <!-- Inner ring — thinner, subtler -->
+  <circle cx="60" cy="60" r="52"
+          fill="none"
+          stroke="url(#m_ringInner)"
+          stroke-width="0.5"
+          opacity="0.70"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 12 O'CLOCK SPARKLE ORNAMENT                 -->
+  <!-- 3 dots of decreasing size + rays            -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Center sparkle dot (largest, top) -->
+  <circle cx="60" cy="4.5" r="2.2"
+          fill="url(#m_sparkGrad)" opacity="0.95"/>
+  <!-- Left flanking dot (medium) -->
+  <circle cx="53.5" cy="6.8" r="1.4"
+          fill="url(#m_sparkGrad)" opacity="0.82"/>
+  <!-- Right flanking dot (medium) -->
+  <circle cx="66.5" cy="6.8" r="1.4"
+          fill="url(#m_sparkGrad)" opacity="0.82"/>
+
+  <!-- Sparkle rays from center dot -->
+  <!-- Vertical ray up -->
+  <line x1="60" y1="1.0" x2="60" y2="2.5"
+        stroke="#F5E6A3" stroke-width="0.5" opacity="0.80"/>
+  <!-- Horizontal rays -->
+  <line x1="56.8" y1="4.5" x2="58.2" y2="4.5"
+        stroke="#F5E6A3" stroke-width="0.4" opacity="0.65"/>
+  <line x1="61.8" y1="4.5" x2="63.2" y2="4.5"
+        stroke="#F5E6A3" stroke-width="0.4" opacity="0.65"/>
+  <!-- Diagonal rays -->
+  <line x1="57.8" y1="2.3" x2="58.6" y2="3.1"
+        stroke="#F5E6A3" stroke-width="0.35" opacity="0.50"/>
+  <line x1="62.2" y1="2.3" x2="61.4" y2="3.1"
+        stroke="#F5E6A3" stroke-width="0.35" opacity="0.50"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CENTER MOTIF: Stylized heart-diamond hybrid  -->
+  <!-- Pure SVG cubic bezier paths — no emoji       -->
+  <!-- Combines heart curves with gem facet angles  -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <g transform="translate(60, 55)" filter="url(#m_centerGlow)">
+
+    <!-- === HEART-DIAMOND HYBRID SHAPE === -->
+    <!--
+      Upper heart lobes with faceted top edges,
+      converging to a sharp pavilion point below.
+      Cubic beziers for smooth luxury curves.
+    -->
+
+    <!-- Main body: heart lobes + sharp lower point -->
+    <path d="
+      M 0,-6
+      C 0,-14 -10,-18 -16,-14
+      C -22,-10 -20,-2 -14,4
+      C -9,9 -4,15 0,22
+      C 4,15 9,9 14,4
+      C 20,-2 22,-10 16,-14
+      C 10,-18 0,-14 0,-6
+      Z"
+          fill="url(#m_goldRadial)"/>
+
+    <!-- Left upper lobe dark facet — depth shadow -->
+    <path d="
+      M 0,-6
+      C 0,-14 -10,-18 -16,-14
+      C -22,-10 -20,-2 -14,4
+      L -5,6
+      Z"
+          fill="#3E2005" opacity="0.42"/>
+
+    <!-- Right upper lobe highlight facet -->
+    <path d="
+      M 0,-6
+      C 0,-14 10,-18 16,-14
+      C 22,-10 20,-2 14,4
+      L 5,6
+      Z"
+          fill="url(#m_facetLight)" opacity="0.42"/>
+
+    <!-- Central division facet — bright highlight running down -->
+    <path d="M 0,-6 L 5,6 L 0,22 L -5,6 Z"
+          fill="url(#m_facetLight)" opacity="0.30"/>
+
+    <!-- Top cleft highlight dot -->
+    <circle cx="0" cy="-6" r="1.5"
+            fill="#FFFBE8" opacity="0.90"/>
+
+    <!-- Upper left lobe highlight sweep -->
+    <path d="
+      M -16,-14
+      C -20,-10 -18,-4 -12,2
+      C -10,-2 -8,-8 -6,-12
+      Z"
+          fill="#FFFBE8" opacity="0.30"/>
+
+    <!-- Shimmer overlay on heart body -->
+    <path d="
+      M 0,-6
+      C 0,-14 -10,-18 -16,-14
+      C -22,-10 -20,-2 -14,4
+      C -9,9 -4,15 0,22
+      C 4,15 9,9 14,4
+      C 20,-2 22,-10 16,-14
+      C 10,-18 0,-14 0,-6
+      Z"
+          fill="url(#m_shimmer)"/>
+
+    <!-- === DIAMOND CROWN points at top of lobes === -->
+    <!-- Left lobe crown facet point -->
+    <path d="M -16,-14 L -19,-18 L -12,-16 Z"
+          fill="url(#m_sparkGrad)" opacity="0.70"/>
+    <!-- Right lobe crown facet point -->
+    <path d="M 16,-14 L 19,-18 L 12,-16 Z"
+          fill="url(#m_sparkGrad)" opacity="0.70"/>
+
+    <!-- Pavilion lower sparkle tip -->
+    <circle cx="0" cy="22" r="1.0"
+            fill="#D4AF37" opacity="0.85"/>
+
+  </g>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- BISOU — curved arc text along bottom        -->
+  <!-- Small spaced caps following circle curve    -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Arc text glow layer -->
+  <g filter="url(#m_textGlow)" opacity="0.55">
+    <text
+      font-family="'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+      font-size="7.5"
+      font-weight="300"
+      letter-spacing="5.5"
+      fill="url(#m_textGrad)">
+      <textPath href="#m_arcBottom" startOffset="50%"
+                text-anchor="middle">BISOU</textPath>
+    </text>
+  </g>
+
+  <!-- Arc text main layer -->
+  <text
+    font-family="'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+    font-size="7.5"
+    font-weight="300"
+    letter-spacing="5.5"
+    fill="url(#m_textGrad)">
+    <textPath href="#m_arcBottom" startOffset="50%"
+              text-anchor="middle">BISOU</textPath>
+  </text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SMALL SEPARATOR DOTS flanking arc text      -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Left separator diamond on arc -->
+  <polygon points="20,82 22,85 20,88 18,85"
+           fill="url(#m_sparkGrad)" opacity="0.75"/>
+  <!-- Right separator diamond on arc -->
+  <polygon points="100,82 102,85 100,88 98,85"
+           fill="url(#m_sparkGrad)" opacity="0.75"/>
+
+</svg>

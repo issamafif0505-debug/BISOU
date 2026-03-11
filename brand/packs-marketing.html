@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BISOU — Nos Coffrets d'Or | Bijoux Marrakech</title>
+  <meta name="description" content="Découvrez les coffrets bijoux BISOU à Marrakech. Acier inoxydable 316L plaqué or, hypoallergénique. Livraison 24-48h, paiement à la livraison." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       ROOT & RESET
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:        #D4AF37;
+      --gold-light:  #F5E6A3;
+      --gold-deep:   #A8862E;
+      --gold-mid:    #C9A84C;
+      --black:       #0D0D0D;
+      --cream:       #FDF6E3;
+      --rose:        #F2D7D5;
+      --grey:        #AAAAAA;
+      --grey-dark:   #1A1A1A;
+      --grey-mid:    #222222;
+      --whatsapp:    #25D366;
+      --whatsapp-dk: #128C7E;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--grey);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ============================================================
+       TYPOGRAPHY HELPERS
+    ============================================================ */
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 6px;
+      color: var(--gold-mid);
+      text-transform: uppercase;
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      color: var(--gold-light);
+      line-height: 1.1;
+    }
+
+    .gold-text {
+      background: linear-gradient(135deg, #F5E6A3, #D4AF37, #A8862E);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5vw;
+    }
+
+    section {
+      padding: 80px 5vw;
+    }
+
+    /* ============================================================
+       ANIMATIONS
+    ============================================================ */
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+      50%       { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 20px rgba(212,175,55,0.3); }
+      50%       { text-shadow: 0 0 40px rgba(212,175,55,0.7), 0 0 80px rgba(212,175,55,0.3); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-8px); }
+    }
+
+    @keyframes badgePop {
+      0%   { transform: scale(0.8) rotate(-3deg); opacity: 0; }
+      100% { transform: scale(1) rotate(-3deg); opacity: 1; }
+    }
+
+    .animate-fade-up {
+      animation: fadeUp 0.8s ease both;
+    }
+
+    /* ============================================================
+       NAVBAR STRIP
+    ============================================================ */
+    .nav-strip {
+      background: var(--grey-mid);
+      border-bottom: 1px solid rgba(212,175,55,0.15);
+      padding: 12px 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      background: linear-gradient(135deg, #F5E6A3, #D4AF37, #A8862E);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-cta {
+      background: var(--whatsapp);
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      padding: 8px 18px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      animation: pulse 2.5s ease-in-out infinite;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover { background: var(--whatsapp-dk); }
+
+    /* ============================================================
+       1. HERO SECTION
+    ============================================================ */
+    .hero {
+      background: var(--black);
+      padding: 100px 5vw 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 40% at 50% 0%, rgba(212,175,55,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 80% 80%, rgba(212,175,55,0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.3);
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      padding: 8px 20px;
+      border-radius: 50px;
+      margin-bottom: 32px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(52px, 9vw, 110px);
+      line-height: 1;
+      letter-spacing: -2px;
+      background: linear-gradient(135deg, #F5E6A3 0%, #D4AF37 50%, #A8862E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 24px;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(13px, 2vw, 16px);
+      font-weight: 300;
+      color: var(--grey);
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+
+    .hero-subtitle span {
+      color: var(--gold-mid);
+    }
+
+    .trust-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 24px;
+      animation: fadeUp 0.7s 0.3s ease both;
+    }
+
+    .trust-item {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--gold-light);
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .trust-item::before {
+      content: '✓';
+      color: var(--whatsapp);
+      font-weight: 700;
+    }
+
+    .hero-deco {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, var(--black));
+      pointer-events: none;
+    }
+
+    /* ============================================================
+       2. WHY OUR JEWELS (CREAM BACKGROUND)
+    ============================================================ */
+    .why-section {
+      background: var(--cream);
+      padding: 80px 5vw;
+    }
+
+    .why-section .section-label { color: var(--gold-deep); }
+    .why-section .section-title { color: #3a2f0b; }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .why-card {
+      background: #fff;
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+
+    .why-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(212,175,55,0.15);
+      border-color: rgba(212,175,55,0.5);
+    }
+
+    .why-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 24px;
+    }
+
+    .why-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: #2a1f00;
+      margin-bottom: 12px;
+    }
+
+    .why-card p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       3. PACKS SECTION
+    ============================================================ */
+    .packs-section {
+      background: var(--black);
+      padding: 80px 5vw;
+    }
+
+    .packs-section .section-title {
+      font-size: clamp(36px, 5vw, 56px);
+      margin-bottom: 12px;
+    }
+
+    .packs-intro {
+      font-size: 15px;
+      color: var(--grey);
+      margin-bottom: 60px;
+    }
+
+    .packs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* Pack card base */
+    .pack-card {
+      background: var(--grey-mid);
+      border: 1px solid rgba(212,175,55,0.15);
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .pack-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 80px rgba(212,175,55,0.18);
+      border-color: rgba(212,175,55,0.55);
+    }
+
+    /* Featured / Bestseller card */
+    .pack-card.featured {
+      border-color: rgba(212,175,55,0.4);
+      transform: scale(1.03);
+      box-shadow: 0 16px 60px rgba(212,175,55,0.15);
+    }
+
+    .pack-card.featured:hover {
+      transform: scale(1.03) translateY(-8px);
+      box-shadow: 0 32px 100px rgba(212,175,55,0.28);
+    }
+
+    .pack-card-top {
+      position: relative;
+      padding: 32px 28px 24px;
+      background: linear-gradient(160deg, rgba(212,175,55,0.08) 0%, transparent 60%);
+    }
+
+    /* Badge */
+    .pack-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      animation: badgePop 0.5s 0.4s ease both;
+    }
+
+    .pack-badge.bestseller {
+      background: linear-gradient(135deg, #F5E6A3, #D4AF37);
+      color: #0D0D0D;
+    }
+
+    .pack-badge.cadeau {
+      background: linear-gradient(135deg, #F2D7D5, #e8a4a0);
+      color: #3a0a08;
+    }
+
+    .pack-badge.mariee {
+      background: linear-gradient(135deg, #c9b8ff, #9b7fff);
+      color: #1a0050;
+    }
+
+    .pack-badge.starter {
+      background: linear-gradient(135deg, #b8f0c8, #4caf80);
+      color: #002210;
+    }
+
+    /* Pack SVG illustration */
+    .pack-illustration {
+      width: 100%;
+      max-width: 220px;
+      margin: 0 auto 24px;
+      display: block;
+    }
+
+    .pack-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .pack-desc {
+      font-size: 13px;
+      color: var(--grey);
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .pack-note {
+      font-size: 12px;
+      color: var(--gold-mid);
+      background: rgba(212,175,55,0.08);
+      border-left: 2px solid var(--gold);
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 12px;
+    }
+
+    /* Items list */
+    .pack-items {
+      padding: 0 28px;
+      border-top: 1px solid rgba(212,175,55,0.1);
+      padding-top: 20px;
+      margin: 0 0 20px;
+    }
+
+    .pack-item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 13px;
+    }
+
+    .pack-item-row:last-child { border-bottom: none; }
+
+    .item-name {
+      color: #ccc;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .item-name::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .item-price-strike {
+      color: #666;
+      text-decoration: line-through;
+      font-size: 12px;
+    }
+
+    /* Pricing block */
+    .pack-pricing {
+      padding: 20px 28px 28px;
+      background: rgba(0,0,0,0.25);
+    }
+
+    .pack-value-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 8px;
+    }
+
+    .pack-price-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 300;
+      line-height: 1;
+      background: linear-gradient(135deg, #F5E6A3, #D4AF37, #A8862E);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s linear infinite;
+      margin-bottom: 4px;
+    }
+
+    .pack-price-currency {
+      font-size: 20px;
+      vertical-align: super;
+    }
+
+    .pack-savings {
+      display: inline-block;
+      background: rgba(37,211,102,0.15);
+      color: var(--whatsapp);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+
+    /* WhatsApp button */
+    .btn-whatsapp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: var(--whatsapp);
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      padding: 15px 20px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      animation: pulse 2.5s ease-in-out infinite;
+      transition: background 0.2s, transform 0.2s;
+      margin-bottom: 10px;
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dk);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: block;
+      text-align: center;
+      font-size: 12px;
+      color: var(--gold-mid);
+      letter-spacing: 1px;
+      padding: 8px;
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 50px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(212,175,55,0.08);
+      color: var(--gold-light);
+    }
+
+    /* Featured star accent */
+    .featured-accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #D4AF37, #F5E6A3, #D4AF37, transparent);
+    }
+
+    /* ============================================================
+       4. HOW TO ORDER
+    ============================================================ */
+    .how-section {
+      background: var(--grey-mid);
+      padding: 80px 5vw;
+      text-align: center;
+    }
+
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px;
+      margin: 56px 0 60px;
+    }
+
+    .how-step {
+      position: relative;
+    }
+
+    .step-number {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(212,175,55,0.2), rgba(212,175,55,0.05));
+      border: 1px solid rgba(212,175,55,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--gold);
+    }
+
+    .how-step h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--gold-light);
+      margin-bottom: 10px;
+    }
+
+    .how-step p {
+      font-size: 14px;
+      color: var(--grey);
+      line-height: 1.7;
+    }
+
+    .how-connector {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .how-steps {
+        position: relative;
+      }
+      .how-step:not(:last-child)::after {
+        content: '→';
+        position: absolute;
+        top: 22px;
+        right: -24px;
+        color: rgba(212,175,55,0.3);
+        font-size: 24px;
+      }
+    }
+
+    .how-step-icon {
+      margin: 0 auto 16px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .btn-whatsapp-hero {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--whatsapp);
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      padding: 20px 48px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      animation: pulse 2.5s ease-in-out infinite;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-whatsapp-hero:hover {
+      background: var(--whatsapp-dk);
+      transform: translateY(-3px);
+    }
+
+    /* ============================================================
+       5. TESTIMONIALS (CREAM)
+    ============================================================ */
+    .testimonials-section {
+      background: var(--cream);
+      padding: 80px 5vw;
+    }
+
+    .testimonials-section .section-label { color: var(--gold-deep); }
+    .testimonials-section .section-title { color: #3a2f0b; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin-top: 48px;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px 28px;
+      border: 1px solid rgba(212,175,55,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 50px rgba(212,175,55,0.12);
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 16px;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-text {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #F5E6A3, #D4AF37);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: #3a2f0b;
+      flex-shrink: 0;
+    }
+
+    .author-info strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: #2a1f00;
+    }
+
+    .author-info span {
+      font-size: 12px;
+      color: #888;
+      letter-spacing: 0.5px;
+    }
+
+    /* Verified badge */
+    .verified {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 10px;
+      color: var(--whatsapp);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-top: 8px;
+    }
+
+    /* ============================================================
+       6. FAQ (DARK)
+    ============================================================ */
+    .faq-section {
+      background: var(--black);
+      padding: 80px 5vw;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 48px auto 0;
+    }
+
+    /* Pure CSS accordion */
+    .faq-item {
+      border-bottom: 1px solid rgba(212,175,55,0.15);
+    }
+
+    .faq-item input[type="checkbox"] {
+      display: none;
+    }
+
+    .faq-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 0;
+      cursor: pointer;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--gold-light);
+      transition: color 0.2s;
+      gap: 16px;
+    }
+
+    .faq-label:hover { color: var(--gold); }
+
+    .faq-arrow {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .faq-arrow svg {
+      transition: transform 0.3s;
+    }
+
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+    }
+
+    .faq-content-inner {
+      padding: 0 0 22px;
+      font-size: 14px;
+      color: var(--grey);
+      line-height: 1.8;
+    }
+
+    .faq-item input:checked ~ .faq-label .faq-arrow {
+      background: rgba(212,175,55,0.2);
+      transform: rotate(180deg);
+    }
+
+    .faq-item input:checked ~ .faq-content {
+      max-height: 400px;
+    }
+
+    .faq-content-inner strong {
+      color: var(--gold-mid);
+    }
+
+    /* ============================================================
+       7. FOOTER
+    ============================================================ */
+    .footer {
+      background: #080808;
+      border-top: 1px solid rgba(212,175,55,0.12);
+      padding: 60px 5vw 40px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 300;
+      letter-spacing: 6px;
+      background: linear-gradient(135deg, #F5E6A3, #D4AF37, #A8862E);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-style: italic;
+      color: var(--gold-mid);
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+    }
+
+    .footer-desc {
+      font-size: 13px;
+      color: #666;
+      max-width: 300px;
+      line-height: 1.7;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-end;
+    }
+
+    .footer-link-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--grey);
+      transition: color 0.2s;
+    }
+
+    .footer-link-item:hover { color: var(--gold-light); }
+
+    .footer-link-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.04);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-copyright {
+      font-size: 12px;
+      color: #444;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-quality {
+      font-size: 11px;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-quality-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 768px) {
+      section { padding: 60px 5vw; }
+
+      .hero { padding: 70px 5vw 60px; }
+
+      .hero-title {
+        font-size: clamp(44px, 13vw, 72px);
+        letter-spacing: -1px;
+      }
+
+      .trust-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .packs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pack-card.featured {
+        transform: scale(1);
+        order: -1;
+      }
+
+      .pack-card.featured:hover {
+        transform: translateY(-8px);
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-links {
+        align-items: flex-start;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .how-step:not(:last-child)::after {
+        display: none;
+      }
+
+      .nav-strip {
+        padding: 10px 5vw;
+      }
+
+      .nav-cta {
+        font-size: 11px;
+        padding: 7px 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .pack-price-main {
+        font-size: 44px;
+      }
+
+      .pack-name {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR STRIP
+  ============================================================ -->
+  <nav class="nav-strip">
+    <div class="nav-logo">BISOU</div>
+    <a href="https://wa.me/212600000000?text=Bonjour%2C%20je%20veux%20commander%20un%20pack%20BISOU" class="nav-cta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Commander
+    </a>
+  </nav>
+
+  <!-- ============================================================
+       1. HERO SECTION
+  ============================================================ -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span>🇲🇦</span>
+      DISPONIBLE À MARRAKECH
+    </div>
+
+    <h1 class="hero-title">Nos Coffrets<br />d'Or</h1>
+
+    <p class="hero-subtitle">
+      <span>Acier inoxydable plaqué or</span> · Anti-allergique · Ne noircit jamais
+    </p>
+
+    <div class="trust-bar">
+      <span class="trust-item">Livraison Marrakech 24-48h</span>
+      <span class="trust-item">Paiement à la livraison</span>
+      <span class="trust-item">Retour 7 jours</span>
+      <span class="trust-item">Garantie 6 mois</span>
+    </div>
+
+    <div class="hero-deco"></div>
+  </section>
+
+  <!-- ============================================================
+       2. WHY OUR JEWELS
+  ============================================================ -->
+  <section class="why-section">
+    <div style="max-width:1200px;margin:0 auto;text-align:center;">
+      <span class="section-label">Notre Promesse</span>
+      <h2 class="section-title" style="font-size:clamp(32px,4vw,48px);">Pourquoi choisir BISOU ?</h2>
+    </div>
+
+    <div class="why-grid" style="max-width:1200px;margin:48px auto 0;">
+
+      <!-- Acier 316L -->
+      <div class="why-card">
+        <svg class="why-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="4 2"/>
+          <path d="M32 12 L36 22 L48 22 L38 29 L42 40 L32 34 L22 40 L26 29 L16 22 L28 22 Z" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linejoin="round"/>
+          <circle cx="32" cy="32" r="6" fill="none" stroke="#F5E6A3" stroke-width="1"/>
+          <circle cx="32" cy="32" r="2" fill="#D4AF37"/>
+        </svg>
+        <h3>Acier 316L</h3>
+        <p>Le même acier que les instruments chirurgicaux. Résistant à l'eau, à la sueur, à l'usure quotidienne. Une qualité professionnelle portée chaque jour.</p>
+      </div>
+
+      <!-- Plaqué or -->
+      <div class="why-card">
+        <svg class="why-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="20" width="44" height="28" rx="4" stroke="#D4AF37" stroke-width="1.5"/>
+          <rect x="10" y="20" width="44" height="8" rx="4" fill="rgba(212,175,55,0.15)" stroke="#D4AF37" stroke-width="1.5"/>
+          <path d="M22 16 Q32 10 42 16" stroke="#F5E6A3" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M25 16 Q32 12 39 16" stroke="#D4AF37" stroke-width="1" fill="none" stroke-linecap="round"/>
+          <rect x="26" y="29" width="12" height="10" rx="2" stroke="#D4AF37" stroke-width="1.2"/>
+          <path d="M32 29 V39" stroke="#D4AF37" stroke-width="1.2"/>
+        </svg>
+        <h3>Plaqué or</h3>
+        <p>Couche d'or véritable appliquée sur acier par procédé galvanique. Brillance durable, prix accessible. Tout le luxe de l'or, sans le prix de l'or.</p>
+      </div>
+
+      <!-- Anti-allergique -->
+      <div class="why-card">
+        <svg class="why-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32 8 C32 8 14 18 14 34 C14 43.9 22.1 52 32 52 C41.9 52 50 43.9 50 34 C50 18 32 8 32 8Z" stroke="#D4AF37" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M23 34 L29 40 L41 28" stroke="#F5E6A3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M19 26 Q32 14 45 26" stroke="rgba(212,175,55,0.3)" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+        </svg>
+        <h3>Anti-allergique</h3>
+        <p>Zéro nickel. Zéro réaction. Parfait pour les peaux sensibles. Nos bijoux sont certifiés hypoallergéniques — portez-les jour et nuit sans inquiétude.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. LES 4 PACKS
+  ============================================================ -->
+  <section class="packs-section">
+    <div style="max-width:1200px;margin:0 auto;text-align:center;">
+      <span class="section-label">Collection Coffrets</span>
+      <h2 class="section-title">Nos Packs Exclusifs</h2>
+      <p class="packs-intro">Chaque coffret est conçu pour sublimer votre style — au quotidien, pour offrir, ou pour les grandes occasions.</p>
+    </div>
+
+    <div class="packs-grid" style="max-width:1200px;margin:0 auto;">
+
+      <!-- ===== PACK 1 : DÉCOUVERTE (BESTSELLER / FEATURED) ===== -->
+      <div class="pack-card featured">
+        <div class="featured-accent"></div>
+
+        <div class="pack-card-top">
+          <span class="pack-badge bestseller">⭐ Bestseller</span>
+
+          <!-- SVG Illustration: collier + bague + créoles -->
+          <svg class="pack-illustration" viewBox="0 0 220 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Collier fin -->
+            <path d="M40 30 Q110 60 180 30" stroke="#D4AF37" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <circle cx="110" cy="60" r="6" fill="none" stroke="#F5E6A3" stroke-width="1.5"/>
+            <circle cx="110" cy="60" r="2.5" fill="#D4AF37"/>
+            <!-- Chaine -->
+            <path d="M40 30 Q30 50 40 70" stroke="#D4AF37" stroke-width="1.2" fill="none" stroke-dasharray="3 2"/>
+            <path d="M180 30 Q190 50 180 70" stroke="#D4AF37" stroke-width="1.2" fill="none" stroke-dasharray="3 2"/>
+            <!-- Bague empilable -->
+            <ellipse cx="75" cy="125" rx="22" ry="8" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+            <ellipse cx="75" cy="120" rx="22" ry="8" stroke="#F5E6A3" stroke-width="1" fill="rgba(212,175,55,0.05)"/>
+            <!-- Créoles -->
+            <path d="M148 100 Q168 100 168 120 Q168 140 148 140" stroke="#D4AF37" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <circle cx="148" cy="100" r="2.5" fill="#D4AF37"/>
+            <path d="M155 105 Q171 105 171 122 Q171 140 155 140" stroke="rgba(212,175,55,0.3)" stroke-width="1" fill="none" stroke-linecap="round"/>
+            <!-- Reflets -->
+            <circle cx="168" cy="120" r="1.5" fill="#F5E6A3" opacity="0.7"/>
+            <circle cx="110" cy="55" r="1" fill="#F5E6A3" opacity="0.8"/>
+          </svg>
+
+          <h3 class="pack-name">Pack Découverte</h3>
+          <p class="pack-desc">L'essentiel du style BISOU en un seul coffret</p>
+        </div>
+
+        <ul class="pack-items">
+          <li class="pack-item-row">
+            <span class="item-name">1 Collier fin</span>
+            <span class="item-price-strike">149 MAD</span>
+          </li>
+          <li class="pack-item-row">
+            <span class="item-name">1 Bague empilable</span>
+            <span class="item-price-strike">99 MAD</span>
+          </li>
+          <li class="pack-item-row">
+            <span class="item-name">1 Paire créoles</span>
+            <span class="item-price-strike">119 MAD</span>
+          </li>
+        </ul>
+
+        <div class="pack-pricing">
+          <div class="pack-value-row">
+            <span>Valeur totale</span>
+            <span>367 MAD</span>
+          </div>
+          <div class="pack-price-main"><span class="pack-price-currency">MAD</span> 229</div>
+          <div class="pack-savings">Vous économisez 138 MAD — 38% de réduction</div>
+
+          <a href="checkout-cod.html?pack=Pack+D%C3%A9couverte&prix=229" class="btn-whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Commander sur WhatsApp
+          </a>
+          <a href="#packs" class="btn-secondary">Voir le détail</a>
+        </div>
+      </div>
+
+      <!-- ===== PACK 2 : CADEAU ===== -->
+      <div class="pack-card">
+        <div class="pack-card-top">
+          <span class="pack-badge cadeau">🎁 Cadeau Idéal</span>
+
+          <!-- SVG Illustration: collier statement + bracelet jonc + boîte cadeau -->
+          <svg class="pack-illustration" viewBox="0 0 220 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Collier statement -->
+            <path d="M30 25 Q110 55 190 25" stroke="#D4AF37" stroke-width="1.8" fill="none"/>
+            <!-- Pendentif statement -->
+            <polygon points="110,55 120,75 110,85 100,75" fill="none" stroke="#F5E6A3" stroke-width="1.5"/>
+            <circle cx="110" cy="70" r="3" fill="#D4AF37"/>
+            <!-- Bracelet jonc -->
+            <ellipse cx="70" cy="130" rx="28" ry="10" stroke="#D4AF37" stroke-width="2" fill="none"/>
+            <ellipse cx="70" cy="126" rx="28" ry="10" stroke="rgba(212,175,55,0.4)" stroke-width="1" fill="none"/>
+            <!-- Boîte cadeau -->
+            <rect x="140" y="105" width="50" height="38" rx="3" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+            <rect x="140" y="105" width="50" height="12" rx="3" fill="rgba(212,175,55,0.1)" stroke="#D4AF37" stroke-width="1.5"/>
+            <path d="M165 105 V143" stroke="#D4AF37" stroke-width="1"/>
+            <path d="M165 105 Q158 95 155 89 Q160 93 165 97" stroke="#F5E6A3" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            <path d="M165 105 Q172 95 175 89 Q170 93 165 97" stroke="#F5E6A3" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          </svg>
+
+          <h3 class="pack-name">Pack Cadeau</h3>
+          <p class="pack-desc">Le coffret parfait à offrir — déjà emballé</p>
+          <div class="pack-note">Emballage cadeau doré inclus ✓</div>
+        </div>
+
+        <ul class="pack-items">
+          <li class="pack-item-row">
+            <span class="item-name">1 Collier statement</span>
+            <span class="item-price-strike">199 MAD</span>
+          </li>
+          <li class="pack-item-row">
+            <span class="item-name">1 Bracelet jonc</span>
+            <span class="item-price-strike">149 MAD</span>
+          </li>
+          <li class="pack-item-row">
+            <span class="item-name">Coffret emballage cadeau</span>
+            <span class="item-price-strike">50 MAD</span>
+          </li>
+        </ul>
+
+        <div class="pack-pricing">
+          <div class="pack-value-row">
+            <span>Valeur totale</span>
+            <span>398 MAD</span>
+          </div>
+          <div class="pack-price-main"><span class="pack-price-currency">MAD</span> 279</div>
+          <div class="pack-savings">Vous économisez 119 MAD — 30% de réduction</div>
+
+          <a href="checkout-cod.html?pack=Pack+Cadeau&prix=279" class="btn-whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Commander sur WhatsApp
+          </a>
+          <a href="#packs" class="btn-secondary">Voir le détail</a>
+        </div>
+      </div>
+
+      <!-- ===== PACK 3 : TRIO MARIÉE ===== -->
+      <div class="pack-card">
+        <div class="pack-card-top">
+          <span class="pack-badge mariee">💍 Exclusif Mariage</span>
+
+          <!-- SVG Illustration: collier + boucles chandelier + bracelet + bague cocktail -->
+          <svg class="pack-illustration" viewBox="0 0 220 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Collier statement élaboré -->
+            <path d="M30 20 Q110 50 190 20" stroke="#D4AF37" stroke-width="1.8" fill="none"/>
+            <!-- Pendentif floral -->
+            <circle cx="110" cy="52" r="10" fill="none" stroke="#F5E6A3" stroke-width="1.5"/>
+            <circle cx="110" cy="52" r="4" fill="#D4AF37" opacity="0.6"/>
+            <path d="M110 42 L110 38 M118 46 L121 43 M120 54 L124 54 M116 62 L119 65 M110 64 L110 68 M104 62 L101 65 M100 54 L96 54 M102 46 L99 43" stroke="#D4AF37" stroke-width="1" stroke-linecap="round"/>
+            <!-- Boucle chandelier gauche -->
+            <circle cx="42" cy="90" r="4" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+            <path d="M38 94 L32 110 M42 94 L42 110 M46 94 L52 110" stroke="#D4AF37" stroke-width="1.2"/>
+            <circle cx="32" cy="112" r="2.5" fill="#D4AF37"/>
+            <circle cx="42" cy="112" r="2.5" fill="#F5E6A3"/>
+            <circle cx="52" cy="112" r="2.5" fill="#D4AF37"/>
+            <!-- Bracelet luxe -->
+            <path d="M80 140 Q130 130 160 140 Q130 150 80 140Z" fill="none" stroke="#D4AF37" stroke-width="1.8"/>
+            <circle cx="100" cy="138" r="2" fill="#D4AF37"/>
+            <circle cx="120" cy="135" r="2" fill="#F5E6A3"/>
+            <circle cx="140" cy="138" r="2" fill="#D4AF37"/>
+            <!-- Bague cocktail -->
+            <ellipse cx="180" cy="100" rx="16" ry="7" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+            <polygon points="180,82 186,92 180,96 174,92" fill="none" stroke="#F5E6A3" stroke-width="1.2"/>
+            <circle cx="180" cy="89" r="3" fill="rgba(212,175,55,0.5)"/>
+          </svg>
+
+          <h3 class="pack-name">Pack Trio Mariée</h3>
+          <p class="pack-desc">Pour briller lors des plus belles fêtes de la vie</p>
+          <div class="pack-note">Parfait pour fiançailles, mariage, soirée de henna ✓</div>
+        </div>
+
+        <ul class="pack-items">
+          <li class="pack-item-row">
+            <span class="item-name">1 Collier statement</span>
+            <span class="item-price-strike">249 MAD</span>
+          </li>
+          <li class="pack-item-row">
+            <span class="item-name">1 Paire boucles chandelier</span>
+            <span class="item-price-strike">189 MAD</span>
+          </li>
+          <li class="pack-item-row">
+            <span class="item-name">1 Bracelet luxe</span>
+            <span class="item-price-strike">179 MAD</span>
+          </li>
+          <li class="pack-item-row">
+            <span class="item-name">1 Bague cocktail</span>
+            <span class="item-price-strike">139 MAD</span>
+          </li>
+        </ul>
+
+        <div class="pack-pricing">
+          <div class="pack-value-row">
+            <span>Valeur totale</span>
+            <span>756 MAD</span>
+          </div>
+          <div class="pack-price-main"><span class="pack-price-currency">MAD</span> 449</div>
+          <div class="pack-savings">Vous économisez 307 MAD — 41% de réduction</div>
+
+          <a href="checkout-cod.html?pack=Pack+Trio+Mari%C3%A9e&prix=449" class="btn-whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Commander sur WhatsApp
+          </a>
+          <a href="#packs" class="btn-secondary">Voir le détail</a>
+        </div>
+      </div>
+
+      <!-- ===== PACK 4 : MINI STARTER ===== -->
+      <div class="pack-card">
+        <div class="pack-card-top">
+          <span class="pack-badge starter">🌟 Idéal pour débuter</span>
+
+          <!-- SVG Illustration: collier fin + créoles mini -->
+          <svg class="pack-illustration" viewBox="0 0 220 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Collier fin simple -->
+            <path d="M50 35 Q110 65 170 35" stroke="#D4AF37" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <!-- Pendentif simple -->
+            <circle cx="110" cy="65" r="8" fill="none" stroke="#F5E6A3" stroke-width="1.5"/>
+            <circle cx="110" cy="65" r="3" fill="#D4AF37"/>
+            <!-- Chaîne fins -->
+            <path d="M50 35 Q44 55 50 75" stroke="#D4AF37" stroke-width="1" fill="none" stroke-dasharray="2 2"/>
+            <path d="M170 35 Q176 55 170 75" stroke="#D4AF37" stroke-width="1" fill="none" stroke-dasharray="2 2"/>
+            <!-- Créoles mini x2 -->
+            <!-- Gauche -->
+            <path d="M72 115 Q90 115 90 130 Q90 145 72 145" stroke="#D4AF37" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <circle cx="72" cy="115" r="2.5" fill="#D4AF37"/>
+            <!-- Droite -->
+            <path d="M140 115 Q158 115 158 130 Q158 145 140 145" stroke="#D4AF37" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <circle cx="140" cy="115" r="2.5" fill="#D4AF37"/>
+            <!-- Reflets -->
+            <circle cx="90" cy="130" r="1.5" fill="#F5E6A3" opacity="0.8"/>
+            <circle cx="158" cy="130" r="1.5" fill="#F5E6A3" opacity="0.8"/>
+            <!-- Étoiles déco -->
+            <path d="M110 100 L112 106 L118 106 L113 110 L115 116 L110 112 L105 116 L107 110 L102 106 L108 106 Z" fill="rgba(212,175,55,0.3)" stroke="#D4AF37" stroke-width="0.5"/>
+          </svg>
+
+          <h3 class="pack-name">Pack Mini Starter</h3>
+          <p class="pack-desc">Le point d'entrée parfait dans l'univers BISOU</p>
+          <div class="pack-note">Le pack parfait pour découvrir BISOU ✓</div>
+        </div>
+
+        <ul class="pack-items">
+          <li class="pack-item-row">
+            <span class="item-name">1 Collier fin</span>
+            <span class="item-price-strike">149 MAD</span>
+          </li>
+          <li class="pack-item-row">
+            <span class="item-name">1 Paire créoles mini</span>
+            <span class="item-price-strike">89 MAD</span>
+          </li>
+        </ul>
+
+        <div class="pack-pricing">
+          <div class="pack-value-row">
+            <span>Valeur totale</span>
+            <span>238 MAD</span>
+          </div>
+          <div class="pack-price-main"><span class="pack-price-currency">MAD</span> 159</div>
+          <div class="pack-savings">Vous économisez 79 MAD — 33% de réduction</div>
+
+          <a href="checkout-cod.html?pack=Pack+Mini+Starter&prix=159" class="btn-whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Commander sur WhatsApp
+          </a>
+          <a href="#packs" class="btn-secondary">Voir le détail</a>
+        </div>
+      </div>
+
+    </div><!-- /packs-grid -->
+  </section>
+
+  <!-- ============================================================
+       4. COMMENT COMMANDER
+  ============================================================ -->
+  <section class="how-section" id="commander">
+    <div style="max-width:1200px;margin:0 auto;">
+      <span class="section-label" style="text-align:center;display:block;">Simple & Rapide</span>
+      <h2 class="section-title" style="font-size:clamp(32px,4vw,52px);text-align:center;">Comment commander ?</h2>
+
+      <div class="how-steps">
+
+        <!-- Étape 1 -->
+        <div class="how-step">
+          <!-- SVG icône : sélection -->
+          <svg class="how-step-icon" width="56" height="56" viewBox="0 0 56 56" fill="none">
+            <circle cx="28" cy="28" r="27" stroke="rgba(212,175,55,0.3)" stroke-width="1"/>
+            <rect x="16" y="16" width="10" height="10" rx="2" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+            <rect x="16" y="30" width="10" height="10" rx="2" fill="none" stroke="rgba(212,175,55,0.4)" stroke-width="1"/>
+            <rect x="30" y="16" width="10" height="10" rx="2" fill="none" stroke="rgba(212,175,55,0.4)" stroke-width="1"/>
+            <rect x="30" y="30" width="10" height="10" rx="2" fill="none" stroke="rgba(212,175,55,0.4)" stroke-width="1"/>
+            <path d="M17.5 21 L19.5 23 L22.5 19" stroke="#F5E6A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="step-number">1</div>
+          <h3>Choisissez votre pack</h3>
+          <p>Sélectionnez le coffret qui vous convient : Découverte, Cadeau, Mariée ou Starter.</p>
+        </div>
+
+        <!-- Étape 2 -->
+        <div class="how-step">
+          <!-- SVG icône : WhatsApp message -->
+          <svg class="how-step-icon" width="56" height="56" viewBox="0 0 56 56" fill="none" style="animation-delay:0.3s">
+            <circle cx="28" cy="28" r="27" stroke="rgba(212,175,55,0.3)" stroke-width="1"/>
+            <path d="M14 20 Q14 16 18 16 L38 16 Q42 16 42 20 L42 32 Q42 36 38 36 L30 36 L24 42 L24 36 L18 36 Q14 36 14 32 Z" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M19 22 L37 22 M19 27 L31 27" stroke="#D4AF37" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <div class="step-number">2</div>
+          <h3>Commandez via WhatsApp</h3>
+          <p>Envoyez-nous un message avec le nom de votre pack et votre adresse à Marrakech ou au Maroc.</p>
+        </div>
+
+        <!-- Étape 3 -->
+        <div class="how-step">
+          <!-- SVG icône : livraison -->
+          <svg class="how-step-icon" width="56" height="56" viewBox="0 0 56 56" fill="none" style="animation-delay:0.6s">
+            <circle cx="28" cy="28" r="27" stroke="rgba(212,175,55,0.3)" stroke-width="1"/>
+            <rect x="12" y="22" width="22" height="16" rx="2" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+            <path d="M34 26 L42 26 L45 32 L45 38 L34 38 Z" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linejoin="round"/>
+            <circle cx="19" cy="40" r="3" fill="none" stroke="#F5E6A3" stroke-width="1.5"/>
+            <circle cx="38" cy="40" r="3" fill="none" stroke="#F5E6A3" stroke-width="1.5"/>
+            <path d="M24 30 L20 30" stroke="rgba(212,175,55,0.5)" stroke-width="1" stroke-linecap="round"/>
+            <path d="M24 33 L17 33" stroke="rgba(212,175,55,0.5)" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+          <div class="step-number">3</div>
+          <h3>Livraison & paiement</h3>
+          <p>Recevez votre coffret sous 24-48h à Marrakech. Payez uniquement à la réception — zéro risque.</p>
+        </div>
+
+      </div><!-- /how-steps -->
+
+      <div style="text-align:center;">
+        <a href="https://wa.me/212600000000?text=Bonjour%2C%20je%20veux%20commander%20un%20Pack%20BISOU%20%F0%9F%92%8D" class="btn-whatsapp-hero">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Commander maintenant sur WhatsApp — +212 6XX XXX XXX
+        </a>
+        <p style="margin-top:16px;font-size:12px;color:#666;letter-spacing:0.5px;">Réponse en moins de 2h · Disponible 7j/7</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. AVIS CLIENTS MARRAKECH
+  ============================================================ -->
+  <section class="testimonials-section">
+    <div style="max-width:1200px;margin:0 auto;text-align:center;">
+      <span class="section-label">Avis Clients</span>
+      <h2 class="section-title" style="font-size:clamp(32px,4vw,48px);">Ce que disent nos clientes</h2>
+      <p style="font-size:14px;color:#777;margin-top:8px;">Vraies clientes · Marrakech &amp; tout le Maroc</p>
+    </div>
+
+    <div class="testimonials-grid" style="max-width:1200px;margin:48px auto 0;">
+
+      <!-- Avis 1 -->
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"J'ai commandé le pack découverte, livré le lendemain. Qualité incroyable pour le prix ! Les bijoux sont exactement comme sur les photos, le doré est magnifique."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">F</div>
+          <div class="author-info">
+            <strong>Fatima Z.</strong>
+            <span>Marrakech — Médina</span>
+            <div class="verified">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Achat vérifié
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Avis 2 -->
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Le pack cadeau pour ma sœur était parfait, l'emballage est magnifique. Elle a adoré ! Je vais commander pour moi aussi. Livraison rapide à Guéliz."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div class="author-info">
+            <strong>Aicha B.</strong>
+            <span>Guéliz, Marrakech</span>
+            <div class="verified">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Achat vérifié
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Avis 3 -->
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Je porte les bijoux tous les jours depuis 3 mois, aucune réaction allergique, aucun noircissement. Pour quelqu'un à la peau sensible comme moi, c'est rare. Je recommande !"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">L</div>
+          <div class="author-info">
+            <strong>Leila M.</strong>
+            <span>Hivernage, Marrakech</span>
+            <div class="verified">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Achat vérifié
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Stats bar -->
+    <div style="max-width:800px;margin:48px auto 0;background:#fff;border-radius:16px;padding:32px 28px;border:1px solid rgba(212,175,55,0.2);display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;text-align:center;">
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;background:linear-gradient(135deg,#D4AF37,#A8862E);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">4.9</div>
+        <div style="font-size:12px;color:#888;margin-top:4px;">Note moyenne</div>
+        <div style="color:#D4AF37;font-size:13px;margin-top:2px;">★★★★★</div>
+      </div>
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;background:linear-gradient(135deg,#D4AF37,#A8862E);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">500+</div>
+        <div style="font-size:12px;color:#888;margin-top:4px;">Clientes satisfaites</div>
+      </div>
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;background:linear-gradient(135deg,#D4AF37,#A8862E);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">24h</div>
+        <div style="font-size:12px;color:#888;margin-top:4px;">Délai livraison Marrakech</div>
+      </div>
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;background:linear-gradient(135deg,#D4AF37,#A8862E);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">6M</div>
+        <div style="font-size:12px;color:#888;margin-top:4px;">Garantie offerte</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       6. FAQ MAROC
+  ============================================================ -->
+  <section class="faq-section">
+    <div style="max-width:1200px;margin:0 auto;text-align:center;">
+      <span class="section-label">Questions Fréquentes</span>
+      <h2 class="section-title" style="font-size:clamp(32px,4vw,52px);">FAQ Maroc</h2>
+    </div>
+
+    <div class="faq-container">
+
+      <!-- Q1 -->
+      <div class="faq-item">
+        <input type="checkbox" id="faq1" />
+        <label for="faq1" class="faq-label">
+          Ces bijoux sont-ils en or véritable ?
+          <span class="faq-arrow">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4L6 8L10 4" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </label>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            Non, et c'est un avantage. Nos bijoux sont en <strong>acier inoxydable 316L plaqué or</strong> — la même qualité d'acier que les instruments chirurgicaux, recouvert d'une couche d'or véritable par procédé galvanique.<br /><br />
+            Contrairement aux bijoux fantaisie ordinaires (en zinc ou alliages bon marché), l'acier 316L <strong>ne rouille pas, ne noircit pas, ne provoque aucune allergie</strong>. Et contrairement aux bijoux en or massif, le prix est accessible à toutes. C'est le meilleur des deux mondes.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="faq-item">
+        <input type="checkbox" id="faq2" />
+        <label for="faq2" class="faq-label">
+          Livrez-vous en dehors de Marrakech ?
+          <span class="faq-arrow">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4L6 8L10 4" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </label>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            Oui ! Nous livrons dans <strong>tout le Maroc</strong>.<br /><br />
+            - Marrakech : livraison sous <strong>24-48h</strong><br />
+            - Casablanca, Rabat, Fès, Agadir... : <strong>2-3 jours</strong> via Amana ou CTM<br />
+            - Autres villes : <strong>3-5 jours ouvrables</strong><br /><br />
+            Les frais de livraison sont offerts sur tous les packs. Paiement à la livraison disponible partout.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="faq-item">
+        <input type="checkbox" id="faq3" />
+        <label for="faq3" class="faq-label">
+          Comment payer ?
+          <span class="faq-arrow">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4L6 8L10 4" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </label>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            Nous acceptons le <strong>paiement à la livraison (COD)</strong> dans tout le Maroc — vous payez uniquement quand vous recevez votre commande et que vous êtes satisfaite.<br /><br />
+            Vous n'avez pas besoin de carte bancaire, pas de virement en avance. Commandez via WhatsApp, recevez, inspectez, puis payez. C'est aussi simple que ça.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="faq-item">
+        <input type="checkbox" id="faq4" />
+        <label for="faq4" class="faq-label">
+          Quelle est la garantie ?
+          <span class="faq-arrow">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4L6 8L10 4" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </label>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            Tous nos coffrets sont couverts par une <strong>garantie de 6 mois</strong> contre les défauts de fabrication.<br /><br />
+            Si vous n'êtes pas satisfaite pour quelque raison que ce soit, vous disposez de <strong>7 jours après réception</strong> pour retourner votre commande et obtenir un remboursement complet ou un échange. Aucune question posée.<br /><br />
+            Notre priorité : votre satisfaction totale.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="faq-item">
+        <input type="checkbox" id="faq5" />
+        <label for="faq5" class="faq-label">
+          Les bijoux vont-ils noircir avec le temps ?
+          <span class="faq-arrow">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4L6 8L10 4" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </label>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            <strong>Non.</strong> C'est précisément pourquoi nous utilisons l'acier inoxydable 316L plutôt que les métaux bas de gamme.<br /><br />
+            L'acier 316L est <strong>100% résistant à la corrosion, à l'oxydation et au noircissement</strong>. Vous pouvez le porter à la mer, dans la douche, en transpirant — il gardera son éclat doré.<br /><br />
+            Un seul conseil : évitez le contact prolongé avec les produits chimiques agressifs (eau de javel, parfums concentrés directement dessus). Un entretien simple avec un chiffon doux et vos bijoux seront comme neufs indéfiniment.
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /faq-container -->
+  </section>
+
+  <!-- ============================================================
+       7. FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <div>
+        <div class="footer-logo">BISOU</div>
+        <p class="footer-tagline">L'or qui t'embrasse</p>
+        <p class="footer-desc">Bijoux en acier inoxydable 316L plaqué or. Hypoallergénique, résistant, élégant. Conçu pour la femme marocaine moderne.</p>
+        <div style="margin-top:24px;display:flex;gap:12px;">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--gold);"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:rgba(212,175,55,0.4);"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:rgba(212,175,55,0.2);"></div>
+        </div>
+      </div>
+
+      <div class="footer-links">
+
+        <a href="https://wa.me/212600000000" class="footer-link-item">
+          <span class="footer-link-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </span>
+          +212 6XX XXX XXX
+        </a>
+
+        <a href="https://instagram.com/bisou.or" class="footer-link-item">
+          <span class="footer-link-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.8" fill="#D4AF37"/>
+            </svg>
+          </span>
+          @bisou.or
+        </a>
+
+        <a href="mailto:contact@bisou-or.ma" class="footer-link-item">
+          <span class="footer-link-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M2 7l10 7 10-7"/>
+            </svg>
+          </span>
+          contact@bisou-or.ma
+        </a>
+
+        <a href="#" class="footer-link-item">
+          <span class="footer-link-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+          </span>
+          Marrakech, Maroc
+        </a>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom" style="max-width:1200px;margin:40px auto 0;">
+      <p class="footer-copyright">© 2024 BISOU Marrakech · Tous droits réservés</p>
+      <div class="footer-quality">
+        <div class="footer-quality-dot"></div>
+        Acier 316L certifié
+        <div class="footer-quality-dot"></div>
+        Plaqué or galvanique
+        <div class="footer-quality-dot"></div>
+        Fait pour durer
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

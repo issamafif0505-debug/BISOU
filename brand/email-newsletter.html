@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Templates Email BISOU — Prêts à utiliser</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* =============================================
+       PAGE SHELL — BISOU EMAIL TEMPLATE VIEWER
+    ============================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:      #D4AF37;
+      --gold-lt:   #F0D87A;
+      --gold-dk:   #A88B20;
+      --dark:      #0D0D0D;
+      --dark-soft: #1A1A1A;
+      --cream:     #FDF6E3;
+      --cream-dk:  #F0E6C8;
+      --wa:        #25D366;
+      --wa-dk:     #1DA851;
+      --grey:      #888888;
+    }
+
+    body {
+      background: var(--dark);
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      min-height: 100vh;
+    }
+
+    /* ---- Top header ---- */
+    .page-header {
+      text-align: center;
+      padding: 48px 24px 32px;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .page-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .page-sub {
+      font-size: 14px;
+      color: var(--grey);
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    /* ---- Badges ---- */
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 20px 24px 0;
+    }
+
+    .badge {
+      background: #1e1e1e;
+      border: 1px solid #2d2d2d;
+      color: #b0b0b0;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+
+    .badge.gold { border-color: var(--gold); color: var(--gold); }
+
+    /* ---- Tab navigation ---- */
+    .tabs-nav {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      padding: 40px 24px 0;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid #2a2a2a;
+      color: var(--grey);
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      cursor: pointer;
+      transition: color 0.25s, border-color 0.25s;
+    }
+
+    .tab-btn:hover { color: #ccc; }
+
+    .tab-btn.active {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    /* ---- Tab panels ---- */
+    .tab-panel { display: none; padding: 40px 24px 60px; }
+    .tab-panel.active { display: block; }
+
+    /* ---- Preview layout ---- */
+    .preview-wrapper {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .preview-col { display: flex; flex-direction: column; gap: 12px; }
+
+    .preview-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--grey);
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .preview-frame {
+      background: #fff;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+      position: relative;
+    }
+
+    .preview-frame.desktop { width: 600px; }
+    .preview-frame.mobile  { width: 375px; }
+
+    /* Scale mobile to fit narrow screens */
+    @media (max-width: 1100px) {
+      .preview-frame.desktop { width: min(600px, calc(100vw - 48px)); }
+      .preview-frame.mobile  { display: none; }
+    }
+
+    /* =============================================
+       EMAIL 1 — WELCOME  (cream, chaleureux)
+    ============================================= */
+
+    /* shared table resets applied inline */
+
+    .e1-wrap { background: #FDF6E3; }
+
+    /* header */
+    .e1-header {
+      background: #0D0D0D;
+      padding: 28px 40px;
+      text-align: center;
+    }
+    .e1-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 8px;
+      color: #D4AF37;
+      display: block;
+    }
+    .e1-tagline {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: #888;
+      text-transform: uppercase;
+      margin-top: 4px;
+      display: block;
+    }
+
+    /* preheader */
+    .e1-prehead {
+      background: #F5E6A3;
+      text-align: center;
+      padding: 10px 24px;
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      color: #6B5500;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    /* hero */
+    .e1-hero {
+      background: linear-gradient(135deg, #FDF6E3 0%, #F5E6A3 100%);
+      padding: 52px 48px 44px;
+      text-align: center;
+      border-bottom: 1px solid #E8D9A0;
+    }
+    .e1-hero-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #A88B20;
+      margin-bottom: 16px;
+    }
+    .e1-hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      font-weight: 600;
+      color: #0D0D0D;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .e1-hero-sub {
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      color: #5a5030;
+      line-height: 1.7;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    /* body text */
+    .e1-body { padding: 40px 48px; background: #FDF6E3; }
+
+    .e1-founder-intro {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #E8D9A0;
+    }
+    .e1-founder-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #D4AF37, #A88B20);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      color: #fff;
+      font-weight: 700;
+    }
+    .e1-founder-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #0D0D0D;
+    }
+    .e1-founder-role {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      color: #A88B20;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .e1-p {
+      font-family: 'Jost', sans-serif;
+      font-size: 15px;
+      color: #2c2310;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .e1-highlight {
+      background: #F5E6A3;
+      border-left: 3px solid #D4AF37;
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: #5a3e00;
+      line-height: 1.5;
+    }
+
+    /* product card */
+    .e1-product {
+      background: #0D0D0D;
+      border-radius: 4px;
+      margin: 0 48px;
+      overflow: hidden;
+    }
+    .e1-product-inner { padding: 32px 36px; }
+    .e1-prod-badge {
+      background: #D4AF37;
+      color: #0D0D0D;
+      font-family: 'Jost', sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+    .e1-prod-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .e1-prod-desc {
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      color: #888;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .e1-prod-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: #D4AF37;
+      margin-bottom: 4px;
+    }
+    .e1-prod-cod {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      color: #555;
+      letter-spacing: 0.5px;
+    }
+    .e1-items-list {
+      margin: 16px 0 24px;
+      padding: 0;
+      list-style: none;
+    }
+    .e1-items-list li {
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      color: #aaa;
+      padding: 4px 0;
+    }
+    .e1-items-list li::before {
+      content: '◆ ';
+      color: #D4AF37;
+      font-size: 8px;
+      vertical-align: middle;
+    }
+
+    /* CTAs */
+    .e1-cta-wrap { padding: 28px 48px 36px; background: #FDF6E3; text-align: center; }
+    .e1-cta-wa {
+      display: inline-block;
+      background: #25D366;
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 16px 40px;
+      border-radius: 3px;
+      text-decoration: none;
+      width: 100%;
+      max-width: 360px;
+    }
+    .e1-cta-sub {
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      color: #A88B20;
+      margin-top: 10px;
+    }
+
+    /* trust */
+    .e1-trust {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 20px 48px;
+      border-top: 1px solid #E8D9A0;
+      background: #FDF6E3;
+    }
+    .e1-trust-item {
+      text-align: center;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      color: #888;
+    }
+    .e1-trust-icon { font-size: 20px; display: block; margin-bottom: 4px; }
+
+    /* footer */
+    .e1-footer {
+      background: #0D0D0D;
+      padding: 28px 40px;
+      text-align: center;
+    }
+    .e1-footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      letter-spacing: 5px;
+      color: #D4AF37;
+      margin-bottom: 10px;
+    }
+    .e1-footer-addr {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      color: #555;
+      line-height: 1.8;
+    }
+    .e1-footer-links {
+      margin-top: 14px;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+    }
+    .e1-footer-links a { color: #666; text-decoration: none; margin: 0 8px; }
+
+    /* =============================================
+       EMAIL 2 — PROMO FLASH  (noir, or)
+    ============================================= */
+
+    .e2-wrap { background: #0D0D0D; }
+
+    .e2-top-strip {
+      background: #D4AF37;
+      text-align: center;
+      padding: 10px 24px;
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #0D0D0D;
+    }
+
+    .e2-header {
+      background: #0D0D0D;
+      padding: 32px 40px 20px;
+      text-align: center;
+      border-bottom: 1px solid #1e1e1e;
+    }
+    .e2-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 8px;
+      color: #D4AF37;
+    }
+
+    .e2-alarm {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+      padding: 40px 48px;
+      text-align: center;
+      border-bottom: 1px solid #222;
+    }
+    .e2-alarm-icon { font-size: 40px; margin-bottom: 12px; }
+    .e2-alarm-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px;
+      font-weight: 700;
+      color: #D4AF37;
+      line-height: 1.1;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .e2-alarm-sub {
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      color: #666;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* countdown */
+    .e2-countdown {
+      background: #111;
+      padding: 28px 48px;
+      border-bottom: 1px solid #222;
+    }
+    .e2-countdown-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #555;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .e2-timer {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      align-items: center;
+    }
+    .e2-unit {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 4px;
+      padding: 12px 8px;
+      min-width: 64px;
+      text-align: center;
+    }
+    .e2-unit-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #D4AF37;
+      line-height: 1;
+      display: block;
+    }
+    .e2-unit-lab {
+      font-family: 'Jost', sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #444;
+      display: block;
+      margin-top: 4px;
+    }
+    .e2-sep {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      color: #333;
+      line-height: 1;
+      align-self: flex-start;
+      margin-top: 8px;
+    }
+
+    /* product highlight */
+    .e2-product {
+      padding: 40px 48px;
+      background: #0D0D0D;
+    }
+    .e2-prod-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #D4AF37;
+      margin-bottom: 10px;
+    }
+    .e2-prod-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+      line-height: 1.15;
+    }
+    .e2-prod-desc {
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .e2-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+    .e2-price-now {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 700;
+      color: #D4AF37;
+      line-height: 1;
+    }
+    .e2-price-was {
+      font-family: 'Jost', sans-serif;
+      font-size: 20px;
+      color: #444;
+      text-decoration: line-through;
+    }
+    .e2-saving {
+      background: #D4AF37;
+      color: #0D0D0D;
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 6px 14px;
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+
+    /* mock image placeholder */
+    .e2-img-placeholder {
+      background: linear-gradient(135deg, #1a1a1a 0%, #222 50%, #1a1a1a 100%);
+      border: 1px solid #2a2a2a;
+      border-radius: 4px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .e2-img-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 20px,
+        rgba(212,175,55,0.04) 20px,
+        rgba(212,175,55,0.04) 40px
+      );
+    }
+    .e2-img-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      color: #D4AF37;
+      letter-spacing: 4px;
+      opacity: 0.6;
+      position: relative;
+    }
+
+    /* arguments */
+    .e2-args {
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-radius: 4px;
+      padding: 24px 28px;
+      margin: 0 0 28px;
+    }
+    .e2-arg-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #1e1e1e;
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      color: #ccc;
+    }
+    .e2-arg-item:last-child { border-bottom: none; }
+    .e2-arg-check {
+      width: 22px;
+      height: 22px;
+      background: rgba(212,175,55,0.15);
+      border: 1px solid #D4AF37;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: #D4AF37;
+    }
+
+    /* CTA */
+    .e2-cta-wrap { padding: 0 48px 28px; text-align: center; }
+    .e2-cta-main {
+      display: block;
+      background: linear-gradient(135deg, #D4AF37 0%, #A88B20 100%);
+      color: #0D0D0D;
+      font-family: 'Jost', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 20px 40px;
+      border-radius: 3px;
+      text-decoration: none;
+      margin-bottom: 12px;
+    }
+    .e2-stock {
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      color: #555;
+      margin-top: 10px;
+    }
+    .e2-stock strong { color: #D4AF37; }
+
+    /* guarantee bar */
+    .e2-guarantee {
+      background: #111;
+      border-top: 1px solid #1e1e1e;
+      padding: 20px 48px;
+      text-align: center;
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      color: #444;
+      letter-spacing: 0.5px;
+    }
+
+    /* footer */
+    .e2-footer {
+      background: #080808;
+      padding: 28px 40px;
+      text-align: center;
+      border-top: 1px solid #1a1a1a;
+    }
+    .e2-footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      letter-spacing: 5px;
+      color: #D4AF37;
+      opacity: 0.6;
+      margin-bottom: 10px;
+    }
+    .e2-footer-text {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      color: #333;
+      line-height: 1.8;
+    }
+    .e2-footer-text a { color: #444; text-decoration: none; }
+
+    /* =============================================
+       EMAIL 3 — RELANCE PANIER  (cream doux)
+    ============================================= */
+
+    .e3-wrap { background: #FDF6E3; }
+
+    .e3-header {
+      background: #FDF6E3;
+      padding: 28px 40px 24px;
+      text-align: center;
+      border-bottom: 2px solid #E8D9A0;
+    }
+    .e3-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 8px;
+      color: #0D0D0D;
+    }
+    .e3-logo span { color: #D4AF37; }
+    .e3-tagline {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #A88B20;
+      margin-top: 4px;
+    }
+
+    /* notification bar */
+    .e3-notif {
+      background: #F5E6A3;
+      border-left: 0;
+      padding: 12px 40px;
+      text-align: center;
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      color: #6B5500;
+    }
+
+    /* product placeholder */
+    .e3-product-preview {
+      margin: 32px 48px;
+      background: linear-gradient(160deg, #F5E6A3 0%, #EDD87A 100%);
+      border-radius: 6px;
+      padding: 36px 32px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .e3-product-preview::after {
+      content: '';
+      position: absolute;
+      top: -20px; right: -20px;
+      width: 100px; height: 100px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+    }
+    .e3-prod-img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #D4AF37;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 1;
+    }
+    .e3-prod-info { position: relative; z-index: 1; }
+    .e3-prod-info-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #A88B20;
+      margin-bottom: 6px;
+    }
+    .e3-prod-info-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #0D0D0D;
+      margin-bottom: 4px;
+    }
+    .e3-prod-info-price {
+      font-family: 'Jost', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #5a3e00;
+    }
+
+    /* hero text */
+    .e3-hero { padding: 36px 48px; background: #FDF6E3; }
+    .e3-hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: #0D0D0D;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .e3-hero-text {
+      font-family: 'Jost', sans-serif;
+      font-size: 15px;
+      color: #3d3020;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    /* reassurance bloc */
+    .e3-reassure {
+      background: #0D0D0D;
+      border-radius: 6px;
+      margin: 0 48px 32px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .e3-reassure-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+    .e3-reassure-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #D4AF37;
+      margin-bottom: 4px;
+    }
+    .e3-reassure-text {
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      color: #888;
+      line-height: 1.5;
+    }
+
+    /* CTA */
+    .e3-cta-wrap { padding: 0 48px 32px; text-align: center; }
+    .e3-cta-main {
+      display: block;
+      background: #0D0D0D;
+      color: #D4AF37;
+      font-family: 'Jost', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 18px 40px;
+      border-radius: 3px;
+      text-decoration: none;
+      border: 2px solid #D4AF37;
+      margin-bottom: 16px;
+    }
+    .e3-cta-wa {
+      display: block;
+      background: #25D366;
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 40px;
+      border-radius: 3px;
+      text-decoration: none;
+    }
+
+    /* PS bloc */
+    .e3-ps {
+      margin: 0 48px 28px;
+      padding: 20px 24px;
+      background: #FFF9ED;
+      border-radius: 4px;
+      border: 1px solid #E8D9A0;
+    }
+    .e3-ps-text {
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      color: #5a4020;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    /* footer */
+    .e3-footer {
+      background: #1a1508;
+      padding: 24px 40px;
+      text-align: center;
+    }
+    .e3-footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      letter-spacing: 5px;
+      color: #D4AF37;
+      margin-bottom: 8px;
+    }
+    .e3-footer-text {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      color: #555;
+      line-height: 1.8;
+    }
+    .e3-footer-text a { color: #666; text-decoration: none; }
+
+    /* =============================================
+       MOBILE RESPONSIVE TWEAKS (inside previews)
+    ============================================= */
+    .mobile .e1-hero,
+    .mobile .e1-body,
+    .mobile .e1-cta-wrap,
+    .mobile .e1-trust,
+    .mobile .e1-header,
+    .mobile .e1-footer,
+    .mobile .e1-product-inner,
+    .mobile .e2-alarm,
+    .mobile .e2-product,
+    .mobile .e2-cta-wrap,
+    .mobile .e2-args,
+    .mobile .e2-countdown,
+    .mobile .e2-guarantee,
+    .mobile .e2-footer,
+    .mobile .e2-header,
+    .mobile .e3-hero,
+    .mobile .e3-reassure,
+    .mobile .e3-cta-wrap,
+    .mobile .e3-ps,
+    .mobile .e3-footer,
+    .mobile .e3-header {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+    .mobile .e1-product { margin-left: 20px !important; margin-right: 20px !important; }
+    .mobile .e3-product-preview { margin-left: 20px !important; margin-right: 20px !important; }
+    .mobile .e3-reassure { margin-left: 20px !important; margin-right: 20px !important; flex-direction: column; gap: 8px; }
+    .mobile .e3-ps { margin-left: 20px !important; margin-right: 20px !important; }
+    .mobile .e1-hero-title { font-size: 28px !important; }
+    .mobile .e2-alarm-headline { font-size: 30px !important; }
+    .mobile .e2-timer { gap: 6px; }
+    .mobile .e2-unit { min-width: 52px; padding: 10px 4px; }
+    .mobile .e2-unit-num { font-size: 28px; }
+    .mobile .e3-product-preview { flex-direction: column; text-align: center; }
+    .mobile .e1-trust { flex-direction: column; gap: 14px; }
+    .mobile .e2-price-now { font-size: 38px; }
+    .mobile .e3-hero-title { font-size: 26px; }
+    .mobile .e1-founder-intro { flex-direction: column; text-align: center; }
+    .mobile .e2-args { padding: 16px 16px; }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <p class="page-logo">BISOU — Bijoux Marrakech</p>
+    <h1 class="page-title">Templates Email BISOU</h1>
+    <p class="page-sub">Prêts à utiliser · HTML table-based · Compatible tous clients email</p>
+  </header>
+
+  <!-- BADGES -->
+  <div class="badges">
+    <span class="badge gold">Compatible Gmail ✓</span>
+    <span class="badge gold">Compatible Outlook ✓</span>
+    <span class="badge gold">Mobile responsive ✓</span>
+    <span class="badge">Table-based layout</span>
+    <span class="badge">3 templates inclus</span>
+  </div>
+
+  <!-- TABS NAVIGATION -->
+  <nav class="tabs-nav">
+    <button class="tab-btn active" onclick="showTab('tab1', this)">✉ Email 1 — Bienvenue</button>
+    <button class="tab-btn" onclick="showTab('tab2', this)">⚡ Email 2 — Offre Flash</button>
+    <button class="tab-btn" onclick="showTab('tab3', this)">🛒 Email 3 — Relance</button>
+  </nav>
+
+  <!-- ==========================================
+       TAB 1 — WELCOME EMAIL
+  =========================================== -->
+  <div id="tab1" class="tab-panel active">
+    <div class="preview-wrapper">
+
+      <!-- DESKTOP PREVIEW -->
+      <div class="preview-col">
+        <p class="preview-label">Desktop — 600px</p>
+        <div class="preview-frame desktop">
+          <div class="e1-wrap">
+
+            <!-- Header -->
+            <div class="e1-header">
+              <span class="e1-logo">BISOU</span>
+              <span class="e1-tagline">Bijoux plaqués or · Marrakech</span>
+            </div>
+
+            <!-- Pre-header banner -->
+            <div class="e1-prehead">
+              ✨ &nbsp;Bienvenue dans la famille BISOU &nbsp;✨
+            </div>
+
+            <!-- Hero -->
+            <div class="e1-hero">
+              <p class="e1-hero-eyebrow">NOUVEAU MEMBRE</p>
+              <h1 class="e1-hero-title">Tu fais maintenant partie<br>de la famille BISOU 💛</h1>
+              <p class="e1-hero-sub">Merci de nous avoir rejoints. Tu as fait le premier pas vers des bijoux qui illuminent chaque journée.</p>
+            </div>
+
+            <!-- Body -->
+            <div class="e1-body">
+
+              <div class="e1-founder-intro">
+                <div class="e1-founder-avatar">S</div>
+                <div>
+                  <div class="e1-founder-name">Salma, Fondatrice BISOU</div>
+                  <div class="e1-founder-role">Marrakech, Maroc</div>
+                </div>
+              </div>
+
+              <p class="e1-p">BISOU est né à Marrakech avec une idée simple : pourquoi le luxe devrait-il être réservé à quelques-unes ? Je voulais créer des bijoux qui se portent chaque jour, qui résistent au temps — et qui font tourner les têtes.</p>
+
+              <div class="e1-highlight">
+                "Nos bijoux sont en acier 316L plaqué or — pour que tu portes le luxe chaque jour, sans compromis sur la qualité."
+              </div>
+
+              <p class="e1-p">Ta première commande, tu paies à la livraison. Aucun risque, aucune carte bancaire nécessaire. Tu reçois ton colis, tu l'ouvres, tu l'aimes — et seulement là, tu paies. C'est notre promesse.</p>
+
+              <p class="e1-p">Nous livrons partout au Maroc en 2 à 4 jours. Et si pour une raison quelconque tu n'es pas satisfaite, on arrange ça ensemble — toujours.</p>
+
+            </div>
+
+            <!-- Product Card -->
+            <div class="e1-product">
+              <div class="e1-product-inner">
+                <span class="e1-prod-badge">Notre coup de coeur</span>
+                <div class="e1-prod-name">Pack Découverte</div>
+                <div class="e1-prod-desc">La sélection idéale pour commencer ton aventure BISOU. Collier + boucles + bracelet, plaqués or 18K.</div>
+                <div class="e1-prod-price">229 MAD</div>
+                <div class="e1-prod-cod">Paiement à la livraison · Livraison 2–4 jours</div>
+                <ul class="e1-items-list">
+                  <li>1 collier fin plaqué or</li>
+                  <li>1 paire de boucles d'oreilles</li>
+                  <li>1 bracelet ajustable</li>
+                  <li>Emballage cadeau offert</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="e1-cta-wrap">
+              <a href="https://wa.me/212600000000" class="e1-cta-wa">📲 Commander sur WhatsApp</a>
+              <p class="e1-cta-sub">Réponds simplement à cet email · Disponible 7j/7</p>
+            </div>
+
+            <!-- Trust icons -->
+            <div class="e1-trust">
+              <div class="e1-trust-item">
+                <span class="e1-trust-icon">🛡️</span>
+                Anti-allergique<br>certifié
+              </div>
+              <div class="e1-trust-item">
+                <span class="e1-trust-icon">📦</span>
+                Paiement à<br>la livraison
+              </div>
+              <div class="e1-trust-item">
+                <span class="e1-trust-icon">⭐</span>
+                Garanti<br>6 mois
+              </div>
+              <div class="e1-trust-item">
+                <span class="e1-trust-icon">🚚</span>
+                Livraison<br>Maroc entier
+              </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="e1-footer">
+              <div class="e1-footer-logo">BISOU</div>
+              <div class="e1-footer-addr">
+                Marrakech, Maroc<br>
+                contact@bisou.ma · +212 6 00 000 000
+              </div>
+              <div class="e1-footer-links">
+                <a href="#">Se désabonner</a>
+                <a href="#">Politique de confidentialité</a>
+                <a href="#">Instagram</a>
+              </div>
+            </div>
+
+          </div><!-- /e1-wrap -->
+        </div><!-- /desktop frame -->
+      </div>
+
+      <!-- MOBILE PREVIEW -->
+      <div class="preview-col">
+        <p class="preview-label">Mobile — 375px</p>
+        <div class="preview-frame mobile">
+          <div class="e1-wrap">
+
+            <div class="e1-header">
+              <span class="e1-logo">BISOU</span>
+              <span class="e1-tagline">Bijoux plaqués or · Marrakech</span>
+            </div>
+
+            <div class="e1-prehead">✨ Bienvenue dans la famille BISOU ✨</div>
+
+            <div class="e1-hero" style="padding:36px 20px 32px;">
+              <p class="e1-hero-eyebrow">NOUVEAU MEMBRE</p>
+              <h1 class="e1-hero-title" style="font-size:26px;">Tu fais maintenant partie de la famille BISOU 💛</h1>
+              <p class="e1-hero-sub">Merci de nous avoir rejoints. Tu as fait le premier pas vers des bijoux qui illuminent chaque journée.</p>
+            </div>
+
+            <div class="e1-body" style="padding:28px 20px;">
+              <div class="e1-founder-intro" style="flex-direction:column;text-align:center;gap:10px;">
+                <div class="e1-founder-avatar">S</div>
+                <div>
+                  <div class="e1-founder-name">Salma, Fondatrice BISOU</div>
+                  <div class="e1-founder-role">Marrakech, Maroc</div>
+                </div>
+              </div>
+              <p class="e1-p">BISOU est né à Marrakech avec une idée simple : pourquoi le luxe devrait-il être réservé à quelques-unes ?</p>
+              <div class="e1-highlight">"Nos bijoux sont en acier 316L plaqué or — pour que tu portes le luxe chaque jour."</div>
+              <p class="e1-p">Ta première commande, tu paies à la livraison. Aucun risque, aucune carte bancaire nécessaire.</p>
+            </div>
+
+            <div class="e1-product" style="margin:0 20px;">
+              <div class="e1-product-inner">
+                <span class="e1-prod-badge">Notre coup de coeur</span>
+                <div class="e1-prod-name">Pack Découverte</div>
+                <div class="e1-prod-price">229 MAD</div>
+                <div class="e1-prod-cod">Paiement à la livraison</div>
+              </div>
+            </div>
+
+            <div class="e1-cta-wrap" style="padding:24px 20px;">
+              <a href="#" class="e1-cta-wa">📲 Commander sur WhatsApp</a>
+            </div>
+
+            <div class="e1-trust" style="padding:16px 20px;flex-direction:column;gap:12px;">
+              <div class="e1-trust-item">🛡️ Anti-allergique certifié</div>
+              <div class="e1-trust-item">📦 Paiement à la livraison</div>
+              <div class="e1-trust-item">⭐ Garanti 6 mois</div>
+            </div>
+
+            <div class="e1-footer" style="padding:20px;">
+              <div class="e1-footer-logo">BISOU</div>
+              <div class="e1-footer-addr">Marrakech, Maroc</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /preview-wrapper -->
+  </div>
+
+  <!-- ==========================================
+       TAB 2 — PROMO FLASH EMAIL
+  =========================================== -->
+  <div id="tab2" class="tab-panel">
+    <div class="preview-wrapper">
+
+      <!-- DESKTOP PREVIEW -->
+      <div class="preview-col">
+        <p class="preview-label">Desktop — 600px</p>
+        <div class="preview-frame desktop">
+          <div class="e2-wrap">
+
+            <!-- Top strip -->
+            <div class="e2-top-strip">
+              OFFRE EXCLUSIVE — BISOU VIP SEULEMENT
+            </div>
+
+            <!-- Header -->
+            <div class="e2-header">
+              <div class="e2-logo">BISOU</div>
+            </div>
+
+            <!-- Alarm hero -->
+            <div class="e2-alarm">
+              <div class="e2-alarm-icon">⏰</div>
+              <div class="e2-alarm-headline">OFFRE FLASH</div>
+              <div class="e2-alarm-headline" style="font-size:28px;margin-top:0;">48H SEULEMENT</div>
+              <div class="e2-alarm-sub">Ce weekend uniquement · Prix jamais vu</div>
+            </div>
+
+            <!-- Countdown -->
+            <div class="e2-countdown">
+              <div class="e2-countdown-label">L'offre se termine dans</div>
+              <div class="e2-timer">
+                <div class="e2-unit">
+                  <span class="e2-unit-num">47</span>
+                  <span class="e2-unit-lab">Heures</span>
+                </div>
+                <span class="e2-sep">:</span>
+                <div class="e2-unit">
+                  <span class="e2-unit-num">23</span>
+                  <span class="e2-unit-lab">Minutes</span>
+                </div>
+                <span class="e2-sep">:</span>
+                <div class="e2-unit">
+                  <span class="e2-unit-num">59</span>
+                  <span class="e2-unit-lab">Secondes</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product -->
+            <div class="e2-product">
+              <p class="e2-prod-eyebrow">Le bijou du moment</p>
+              <h2 class="e2-prod-name">Pack Mariée — Collection Premium</h2>
+              <p class="e2-prod-desc">Le pack le plus complet de BISOU. Parfait pour les grandes occasions — mariages, fêtes, soirées. Collier statement, boucles dorées, bracelet et bague assortis.</p>
+
+              <!-- Mock product image -->
+              <div class="e2-img-placeholder">
+                <span class="e2-img-text">✦ PACK MARIÉE ✦</span>
+              </div>
+
+              <div class="e2-price-row">
+                <span class="e2-price-now">449 MAD</span>
+                <span class="e2-price-was">756 MAD</span>
+              </div>
+              <div class="e2-saving">Vous économisez 307 MAD ce weekend</div>
+
+              <!-- Arguments -->
+              <div class="e2-args">
+                <div class="e2-arg-item">
+                  <div class="e2-arg-check">✓</div>
+                  <span><strong style="color:#fff;">Anti-allergique</strong> — Acier 316L plaqué or 18K, peau sensible bienvenus</span>
+                </div>
+                <div class="e2-arg-item">
+                  <div class="e2-arg-check">✓</div>
+                  <span><strong style="color:#fff;">COD</strong> — Paiement à la livraison, aucune carte bancaire nécessaire</span>
+                </div>
+                <div class="e2-arg-item">
+                  <div class="e2-arg-check">✓</div>
+                  <span><strong style="color:#fff;">Garanti 6 mois</strong> — On remplace si problème, sans condition</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="e2-cta-wrap">
+              <a href="https://wa.me/212600000000" class="e2-cta-main">Je veux ce pack →</a>
+              <p class="e2-stock">⚠️ Seulement <strong>15 packs</strong> disponibles à ce prix</p>
+            </div>
+
+            <!-- Guarantee -->
+            <div class="e2-guarantee">
+              🔒 &nbsp;Paiement sécurisé COD · Livraison 2–4 jours partout au Maroc · Satisfaction garantie
+            </div>
+
+            <!-- Footer -->
+            <div class="e2-footer">
+              <div class="e2-footer-logo">BISOU</div>
+              <div class="e2-footer-text">
+                Marrakech, Maroc &nbsp;·&nbsp; contact@bisou.ma<br>
+                <a href="#">Se désabonner</a> &nbsp;·&nbsp; <a href="#">Politique de confidentialité</a>
+              </div>
+            </div>
+
+          </div><!-- /e2-wrap -->
+        </div>
+      </div>
+
+      <!-- MOBILE PREVIEW -->
+      <div class="preview-col">
+        <p class="preview-label">Mobile — 375px</p>
+        <div class="preview-frame mobile">
+          <div class="e2-wrap">
+
+            <div class="e2-top-strip" style="font-size:10px;">OFFRE VIP — BISOU</div>
+            <div class="e2-header" style="padding:20px;">
+              <div class="e2-logo">BISOU</div>
+            </div>
+
+            <div class="e2-alarm" style="padding:28px 20px;">
+              <div class="e2-alarm-icon">⏰</div>
+              <div class="e2-alarm-headline" style="font-size:30px;">OFFRE FLASH</div>
+              <div class="e2-alarm-headline" style="font-size:20px;margin-top:0;">48H SEULEMENT</div>
+              <div class="e2-alarm-sub">Ce weekend uniquement</div>
+            </div>
+
+            <div class="e2-countdown" style="padding:20px;">
+              <div class="e2-countdown-label">L'offre se termine dans</div>
+              <div class="e2-timer">
+                <div class="e2-unit" style="min-width:52px;padding:10px 4px;">
+                  <span class="e2-unit-num" style="font-size:28px;">47</span>
+                  <span class="e2-unit-lab">Heures</span>
+                </div>
+                <span class="e2-sep">:</span>
+                <div class="e2-unit" style="min-width:52px;padding:10px 4px;">
+                  <span class="e2-unit-num" style="font-size:28px;">23</span>
+                  <span class="e2-unit-lab">Min</span>
+                </div>
+                <span class="e2-sep">:</span>
+                <div class="e2-unit" style="min-width:52px;padding:10px 4px;">
+                  <span class="e2-unit-num" style="font-size:28px;">59</span>
+                  <span class="e2-unit-lab">Sec</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="e2-product" style="padding:28px 20px;">
+              <p class="e2-prod-eyebrow">Le bijou du moment</p>
+              <h2 class="e2-prod-name" style="font-size:24px;">Pack Mariée — Collection Premium</h2>
+              <div class="e2-img-placeholder" style="height:140px;">
+                <span class="e2-img-text" style="font-size:16px;">✦ PACK MARIÉE ✦</span>
+              </div>
+              <div class="e2-price-row">
+                <span class="e2-price-now" style="font-size:38px;">449 MAD</span>
+                <span class="e2-price-was" style="font-size:16px;">756 MAD</span>
+              </div>
+              <div class="e2-saving">Économisez 307 MAD</div>
+              <div class="e2-args" style="padding:16px;">
+                <div class="e2-arg-item"><div class="e2-arg-check">✓</div> Anti-allergique</div>
+                <div class="e2-arg-item"><div class="e2-arg-check">✓</div> Paiement COD</div>
+                <div class="e2-arg-item"><div class="e2-arg-check">✓</div> Garanti 6 mois</div>
+              </div>
+            </div>
+
+            <div class="e2-cta-wrap" style="padding:0 20px 20px;">
+              <a href="#" class="e2-cta-main">Je veux ce pack →</a>
+              <p class="e2-stock">⚠️ Seulement <strong>15 packs</strong> disponibles</p>
+            </div>
+
+            <div class="e2-footer" style="padding:20px;">
+              <div class="e2-footer-logo">BISOU</div>
+              <div class="e2-footer-text">Marrakech, Maroc</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================
+       TAB 3 — RELANCE PANIER EMAIL
+  =========================================== -->
+  <div id="tab3" class="tab-panel">
+    <div class="preview-wrapper">
+
+      <!-- DESKTOP PREVIEW -->
+      <div class="preview-col">
+        <p class="preview-label">Desktop — 600px</p>
+        <div class="preview-frame desktop">
+          <div class="e3-wrap">
+
+            <!-- Header -->
+            <div class="e3-header">
+              <div class="e3-logo">BIS<span>✦</span>U</div>
+              <div class="e3-tagline">Bijoux plaqués or · Marrakech · Maroc</div>
+            </div>
+
+            <!-- Notification -->
+            <div class="e3-notif">
+              💛 &nbsp;Tu as laissé quelque chose derrière toi...
+            </div>
+
+            <!-- Product preview card -->
+            <div class="e3-product-preview">
+              <div class="e3-prod-img">💍</div>
+              <div class="e3-prod-info">
+                <div class="e3-prod-info-label">Ton bijou préféré</div>
+                <div class="e3-prod-info-name">Pack Essentiel BISOU</div>
+                <div class="e3-prod-info-price">159 MAD &nbsp;<span style="font-size:13px;color:#A88B20;font-weight:400;">Paiement à la livraison</span></div>
+              </div>
+            </div>
+
+            <!-- Hero text -->
+            <div class="e3-hero">
+              <h1 class="e3-hero-title">Ton bijou préféré t'attend encore 💛</h1>
+              <p class="e3-hero-text">On a vu que tu t'étais intéressée à nos bijoux, et on voulait juste te faire signe avant que ce pack parte chez quelqu'un d'autre.</p>
+              <p class="e3-hero-text">Pas de pression — mais sache que des centaines de femmes au Maroc portent déjà ces bijoux chaque jour. Et elles adorent ça.</p>
+              <p class="e3-hero-text">La bonne nouvelle ? Tu ne prends aucun risque financier. Tu paies seulement quand le colis est entre tes mains.</p>
+            </div>
+
+            <!-- Reassurance bloc -->
+            <div class="e3-reassure">
+              <div class="e3-reassure-icon">🛡️</div>
+              <div>
+                <div class="e3-reassure-title">Paiement à la livraison — zéro risque</div>
+                <div class="e3-reassure-text">Tu ne paies que quand tu reçois et vérifies ton colis. Si ce n'est pas ce que tu attendais, tu n'es pas obligée de garder. C'est notre engagement.</div>
+              </div>
+            </div>
+
+            <!-- CTAs -->
+            <div class="e3-cta-wrap">
+              <a href="#" class="e3-cta-main">Finaliser ma commande</a>
+              <a href="https://wa.me/212600000000" class="e3-cta-wa">📲 Commander via WhatsApp</a>
+            </div>
+
+            <!-- PS -->
+            <div class="e3-ps">
+              <p class="e3-ps-text"><strong>P.S.</strong> — Des questions sur les bijoux, les tailles, ou la livraison ? Réponds directement à cet email ou écris-nous sur WhatsApp. On répond en moins de 2h, 7j/7. On est là pour toi. 💛</p>
+            </div>
+
+            <!-- Footer -->
+            <div class="e3-footer">
+              <div class="e3-footer-logo">BISOU</div>
+              <div class="e3-footer-text">
+                Marrakech, Maroc &nbsp;·&nbsp; contact@bisou.ma<br>
+                <a href="#">Se désabonner</a> &nbsp;·&nbsp; <a href="#">Politique de confidentialité</a> &nbsp;·&nbsp; <a href="#">Instagram</a>
+              </div>
+            </div>
+
+          </div><!-- /e3-wrap -->
+        </div>
+      </div>
+
+      <!-- MOBILE PREVIEW -->
+      <div class="preview-col">
+        <p class="preview-label">Mobile — 375px</p>
+        <div class="preview-frame mobile">
+          <div class="e3-wrap">
+
+            <div class="e3-header" style="padding:20px;">
+              <div class="e3-logo">BIS<span>✦</span>U</div>
+              <div class="e3-tagline">Marrakech · Maroc</div>
+            </div>
+
+            <div class="e3-notif">💛 Tu as laissé quelque chose...</div>
+
+            <div class="e3-product-preview" style="margin:20px;flex-direction:column;text-align:center;gap:16px;">
+              <div class="e3-prod-img" style="margin:0 auto;">💍</div>
+              <div class="e3-prod-info">
+                <div class="e3-prod-info-label">Ton bijou préféré</div>
+                <div class="e3-prod-info-name">Pack Essentiel BISOU</div>
+                <div class="e3-prod-info-price">159 MAD</div>
+              </div>
+            </div>
+
+            <div class="e3-hero" style="padding:24px 20px;">
+              <h1 class="e3-hero-title" style="font-size:26px;">Ton bijou préféré t'attend encore 💛</h1>
+              <p class="e3-hero-text">On a vu que tu t'étais intéressée à nos bijoux. Tu ne prends aucun risque — tu paies seulement à la livraison.</p>
+            </div>
+
+            <div class="e3-reassure" style="margin:0 20px 24px;flex-direction:column;gap:10px;">
+              <div class="e3-reassure-icon">🛡️</div>
+              <div>
+                <div class="e3-reassure-title">Paiement à la livraison</div>
+                <div class="e3-reassure-text">Tu ne paies que quand tu reçois ton colis.</div>
+              </div>
+            </div>
+
+            <div class="e3-cta-wrap" style="padding:0 20px 24px;">
+              <a href="#" class="e3-cta-main">Finaliser ma commande</a>
+              <a href="#" class="e3-cta-wa">📲 WhatsApp</a>
+            </div>
+
+            <div class="e3-ps" style="margin:0 20px 20px;">
+              <p class="e3-ps-text"><strong>P.S.</strong> — Des questions ? Réponds à cet email ou WhatsApp. On répond en moins de 2h 💛</p>
+            </div>
+
+            <div class="e3-footer" style="padding:20px;">
+              <div class="e3-footer-logo">BISOU</div>
+              <div class="e3-footer-text">Marrakech, Maroc</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =============================================
+       JAVASCRIPT — Tab switcher
+  ============================================== -->
+  <script>
+    function showTab(id, btn) {
+      document.querySelectorAll('.tab-panel').forEach(function(p) {
+        p.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(function(b) {
+        b.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

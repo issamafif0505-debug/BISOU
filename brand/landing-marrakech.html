@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BISOU Bijoux — Bijoux plaqués or acier chirurgical 316L. Livraison Marrakech 24-48h. Paiement à la livraison. À partir de 159 MAD.">
+<title>BISOU Bijoux · Marrakech · Livraison 24h · Paiement à la livraison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   BISOU — LANDING MARRAKECH
+   Design System: Dark Luxury × Gold × WhatsApp Green
+   ============================================================ */
+
+:root {
+  --black:      #0D0D0D;
+  --gold:       #D4AF37;
+  --gold-light: #F5E6A3;
+  --gold-mid:   #C9A84C;
+  --cream:      #FDF6E3;
+  --rose:       #F2D7D5;
+  --green-wa:   #25D366;
+  --green-wa-dark: #128C7E;
+  --white:      #FFFFFF;
+  --grey-soft:  #1A1A1A;
+  --grey-mid:   #2C2C2C;
+  --text-muted: #888888;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Jost', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── TYPOGRAPHY ── */
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; }
+h1 { font-size: clamp(2.8rem, 10vw, 5.5rem); }
+h2 { font-size: clamp(2rem, 7vw, 3.5rem); }
+h3 { font-size: clamp(1.4rem, 5vw, 2rem); }
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ── UTILITIES ── */
+.gold-text   { color: var(--gold); }
+.cream-text  { color: var(--cream); }
+.center      { text-align: center; }
+.section-pad { padding: 80px 20px; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes pulse-wa {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70%       { box-shadow: 0 0 0 14px transparent; }
+}
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+  70%       { box-shadow: 0 0 0 12px transparent; }
+}
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes blink-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ======================================================
+   STICKY TOP BAR
+   ====================================================== */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--green-wa);
+  color: var(--white);
+  text-align: center;
+  padding: 10px 16px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+}
+.top-bar span { display: inline-block; margin: 0 6px; opacity: 0.85; }
+.top-bar strong { opacity: 1; font-weight: 500; }
+
+/* ======================================================
+   SECTION 1 — HERO
+   ====================================================== */
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px 100px;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,175,55,0.08) 0%, transparent 70%), var(--black);
+}
+
+/* Decorative gold lines background */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(212,175,55,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,175,55,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212,175,55,0.12);
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 100px;
+  padding: 6px 18px;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--gold-light);
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.hero-brand {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 18vw, 9rem);
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 8px;
+  animation: fadeInUp 0.7s ease 0.1s both;
+  background: linear-gradient(135deg, var(--gold-mid), var(--gold-light), var(--gold), var(--gold-mid));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 0.7s ease 0.1s both, gradient-shift 4s ease infinite;
+}
+
+.hero-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.1rem, 4vw, 1.7rem);
+  color: var(--gold-light);
+  opacity: 0.8;
+  margin-bottom: 18px;
+  animation: fadeInUp 0.7s ease 0.2s both;
+}
+
+.hero-sub {
+  font-size: clamp(0.82rem, 2.5vw, 1rem);
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 36px;
+  animation: fadeInUp 0.7s ease 0.3s both;
+}
+.hero-sub span {
+  color: var(--gold);
+  opacity: 0.9;
+}
+
+.hero-price {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 8vw, 4rem);
+  font-weight: 500;
+  color: var(--gold);
+  margin-bottom: 8px;
+  animation: fadeInUp 0.7s ease 0.35s both;
+}
+.hero-price small {
+  font-size: 0.45em;
+  font-family: var(--font-body);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: var(--gold-light);
+  opacity: 0.7;
+  vertical-align: middle;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 32px;
+  animation: fadeInUp 0.7s ease 0.45s both;
+  width: 100%;
+  max-width: 360px;
+}
+
+/* Primary WhatsApp CTA */
+.btn-wa-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--green-wa);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 18px 36px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  animation: pulse-wa 2.2s ease infinite;
+  transition: transform 0.2s, background 0.2s;
+}
+.btn-wa-primary:hover { background: var(--green-wa-dark); transform: scale(1.03); }
+.btn-wa-primary svg  { flex-shrink: 0; }
+
+/* Secondary outlined */
+.btn-gold-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  padding: 15px 36px;
+  border-radius: 50px;
+  border: 1px solid rgba(212,175,55,0.5);
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  transition: background 0.25s, border-color 0.25s, transform 0.2s;
+}
+.btn-gold-outline:hover {
+  background: rgba(212,175,55,0.08);
+  border-color: var(--gold);
+  transform: scale(1.02);
+}
+
+/* Urgency bar */
+.urgency-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,80,50,0.1);
+  border: 1px solid rgba(255,80,50,0.3);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #FF8C70;
+  margin-bottom: 24px;
+  animation: fadeInUp 0.7s ease 0.5s both;
+}
+.urgency-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #FF5030;
+  animation: blink-dot 1.2s ease infinite;
+  flex-shrink: 0;
+}
+
+/* Social proof stars */
+.hero-social-proof {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  animation: fadeInUp 0.7s ease 0.6s both;
+  letter-spacing: 0.04em;
+}
+.stars { color: var(--gold); letter-spacing: 1px; margin-right: 4px; }
+
+/* Gold separator line */
+.gold-line {
+  width: 60px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 24px auto;
+}
+
+/* ======================================================
+   SECTION 2 — PRODUITS
+   ====================================================== */
+.products {
+  padding: 80px 20px;
+  background: var(--black);
+  position: relative;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 48px;
+}
+
+.product-card {
+  background: var(--grey-soft);
+  border: 1px solid rgba(212,175,55,0.12);
+  border-radius: 16px;
+  padding: 28px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.product-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(212,175,55,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.product-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(212,175,55,0.45);
+  box-shadow: 0 12px 40px rgba(212,175,55,0.15);
+}
+
+.product-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+.badge-best  { background: var(--gold); color: var(--black); }
+.badge-new   { background: #4A90D9; color: var(--white); }
+.badge-promo {
+  background: linear-gradient(135deg, #FF6B35, #FF3366);
+  color: var(--white);
+}
+
+.product-icon {
+  width: 90px; height: 90px;
+  margin-bottom: 18px;
+  animation: float 3.5s ease-in-out infinite;
+}
+.product-card:nth-child(2) .product-icon { animation-delay: 0.4s; }
+.product-card:nth-child(3) .product-icon { animation-delay: 0.8s; }
+.product-card:nth-child(4) .product-icon { animation-delay: 1.2s; }
+.product-card:nth-child(5) .product-icon { animation-delay: 1.6s; }
+
+.product-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.product-price-old {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  margin-bottom: 14px;
+}
+.shimmer-price {
+  background: linear-gradient(90deg, var(--gold) 25%, var(--gold-light) 50%, var(--gold) 75%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 2s linear infinite;
+}
+
+.btn-card-wa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  background: var(--green-wa);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 11px 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: auto;
+}
+.btn-card-wa:hover { background: var(--green-wa-dark); transform: scale(1.03); }
+
+/* Pack card special */
+.product-card.pack-card {
+  border-color: rgba(212,175,55,0.35);
+  background: linear-gradient(160deg, #1A1500 0%, var(--grey-soft) 100%);
+  grid-column: span 1;
+}
+@media (min-width: 640px) { .product-card.pack-card { grid-column: span 2; } }
+
+/* ======================================================
+   SECTION 3 — POURQUOI BISOU (fond crème)
+   ====================================================== */
+.trust {
+  padding: 80px 20px;
+  background: var(--cream);
+  color: var(--black);
+}
+.trust h2 { color: var(--black); }
+.trust .section-label { color: var(--gold-mid); }
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.trust-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.trust-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+
+.trust-icon {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(212,175,55,0.05));
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.trust-card h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+.trust-card p {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.65;
+}
+
+/* ======================================================
+   SECTION 4 — AVIS CLIENTS
+   ====================================================== */
+.reviews {
+  padding: 80px 20px;
+  background: #0A0A0A;
+}
+
+.reviews-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.reviews-score {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(212,175,55,0.08);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 100px;
+  padding: 12px 28px;
+  margin-bottom: 24px;
+}
+.reviews-score-num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--gold);
+}
+.reviews-score-stars { font-size: 1.2rem; color: var(--gold); }
+.reviews-score-label { font-size: 0.82rem; color: var(--text-muted); }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* WhatsApp-style review cards */
+.review-card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.review-card:hover { transform: translateY(-4px); }
+
+.review-header {
+  background: #1A1A1A;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #222;
+}
+.review-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-mid), var(--gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--black);
+  flex-shrink: 0;
+}
+.review-meta { flex: 1; }
+.review-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+.review-city { font-size: 0.75rem; color: var(--text-muted); }
+.review-stars { font-size: 0.8rem; color: var(--gold); }
+
+.review-bubble {
+  margin: 16px;
+  background: #1E3320;
+  border-radius: 4px 14px 14px 14px;
+  padding: 14px 16px;
+  position: relative;
+}
+.review-bubble::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -8px;
+  border-width: 0 8px 8px 0;
+  border-style: solid;
+  border-color: transparent #1E3320 transparent transparent;
+}
+.review-bubble p {
+  font-size: 0.88rem;
+  color: #DDD;
+  line-height: 1.55;
+}
+
+.review-footer {
+  padding: 8px 16px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.review-date { font-size: 0.72rem; color: var(--text-muted); }
+.review-verified {
+  font-size: 0.7rem;
+  color: var(--green-wa);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ======================================================
+   SECTION 5 — COMMENT ÇA MARCHE
+   ====================================================== */
+.how {
+  padding: 80px 20px;
+  background: var(--black);
+  text-align: center;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 48px auto;
+  max-width: 560px;
+  position: relative;
+}
+.steps::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 52px;
+  bottom: 52px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--gold), rgba(212,175,55,0.1));
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 20px 0;
+  text-align: left;
+}
+
+.step-num {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--grey-soft);
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: background 0.3s, transform 0.3s;
+}
+.step:hover .step-num { background: var(--gold); color: var(--black); transform: scale(1.1); }
+
+.step-content h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--cream);
+  margin-bottom: 6px;
+}
+.step-content p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
+
+.how-cta {
+  margin-top: 8px;
+}
+
+/* ======================================================
+   SECTION 6 — OFFRE LIMITÉE
+   ====================================================== */
+.offer {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1A1200, #0D0A00, #1A1200);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.offer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(212,175,55,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.offer-label {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold-mid), var(--gold-light));
+  color: var(--black);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 7px 20px;
+  border-radius: 100px;
+  margin-bottom: 28px;
+}
+
+.offer-price-block {
+  margin: 24px 0;
+}
+.offer-price-old {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  margin-bottom: 6px;
+}
+.offer-price-new {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 12vw, 5.5rem);
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+}
+.offer-price-new span { font-size: 0.4em; vertical-align: top; margin-top: 0.6em; display: inline-block; }
+
+.offer-includes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 320px;
+  margin: 28px auto;
+  text-align: left;
+}
+.offer-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--cream);
+}
+.offer-check {
+  width: 22px; height: 22px;
+  background: linear-gradient(135deg, var(--gold-mid), var(--gold));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.offer-deadline {
+  font-size: 0.82rem;
+  color: #FF8C70;
+  margin: 20px 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* ======================================================
+   SECTION 7 — FAQ
+   ====================================================== */
+.faq {
+  padding: 80px 20px;
+  background: var(--grey-soft);
+}
+
+.faq-list {
+  max-width: 700px;
+  margin: 48px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: var(--grey-mid);
+  border: 1px solid rgba(212,175,55,0.12);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.faq-item summary {
+  padding: 20px 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--cream);
+  list-style: none;
+  user-select: none;
+  transition: color 0.2s;
+}
+.faq-item summary:hover { color: var(--gold); }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-arrow {
+  color: var(--gold);
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+details[open] .faq-arrow { transform: rotate(45deg); }
+.faq-answer {
+  padding: 0 24px 20px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  border-top: 1px solid rgba(212,175,55,0.08);
+  padding-top: 16px;
+}
+
+/* ======================================================
+   FOOTER
+   ====================================================== */
+.footer {
+  padding: 48px 20px 120px;
+  background: #080808;
+  text-align: center;
+  border-top: 1px solid rgba(212,175,55,0.1);
+}
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.footer-tagline {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  margin-bottom: 28px;
+  font-style: italic;
+  font-family: var(--font-display);
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--gold); }
+.footer-sep { color: rgba(212,175,55,0.3); }
+
+.footer-insta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  margin-bottom: 28px;
+  transition: color 0.2s;
+}
+.footer-insta:hover { color: var(--gold); }
+
+.footer-copy {
+  font-size: 0.72rem;
+  color: #444;
+  letter-spacing: 0.05em;
+}
+
+/* ======================================================
+   STICKY BOTTOM BAR (mobile WhatsApp CTA)
+   ====================================================== */
+.sticky-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--green-wa);
+  z-index: 999;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+}
+.sticky-bottom a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  width: 100%;
+  max-width: 400px;
+}
+.sticky-bottom-sub {
+  font-size: 0.72rem;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+/* ======================================================
+   RESPONSIVE — MOBILE FIRST
+   ====================================================== */
+@media (max-width: 480px) {
+  h1 { font-size: 3.2rem; }
+  h2 { font-size: 2rem; }
+  .section-pad { padding: 60px 16px; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .product-card { padding: 20px 14px 18px; }
+  .product-icon { width: 70px; height: 70px; }
+  .trust-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .steps { margin: 40px auto; }
+  .steps::before { left: 24px; }
+  .step-num { width: 48px; height: 48px; font-size: 1.2rem; }
+  .footer { padding: 40px 16px 110px; }
+}
+
+@media (max-width: 360px) {
+  .products-grid { grid-template-columns: 1fr; }
+  .hero-brand { font-size: 3.5rem; }
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+  .hero-cta-group { flex-direction: row; max-width: 520px; }
+  .btn-wa-primary, .btn-gold-outline { width: auto; min-width: 220px; }
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
+  .trust-grid { grid-template-columns: repeat(4, 1fr); }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .products-grid { grid-template-columns: repeat(5, 1fr); }
+  .reviews-grid { grid-template-columns: repeat(4, 1fr); }
+  .product-card.pack-card { grid-column: span 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- ======================================================
+     STICKY TOP BAR
+     ====================================================== -->
+<div class="top-bar">
+  <strong>📱 Commandez via WhatsApp</strong>
+  <span>·</span>
+  <strong>🚚 Livraison Marrakech 24-48h</strong>
+  <span>·</span>
+  <strong>💵 Paiement à la livraison ✓</strong>
+</div>
+
+<!-- ======================================================
+     SECTION 1 — HERO
+     ====================================================== -->
+<section class="hero">
+  <div class="hero-badge">
+    🇲🇦 Marrakech &nbsp;·&nbsp; مراكش &nbsp;·&nbsp; Livraison Express
+  </div>
+
+  <div class="hero-brand">BISOU</div>
+  <div class="hero-tagline">L'or qui t'embrasse</div>
+
+  <p class="hero-sub">
+    <span>Bijoux plaqués or</span> &nbsp;·&nbsp;
+    Acier chirurgical 316L &nbsp;·&nbsp;
+    Anti-allergique
+  </p>
+
+  <div class="gold-line"></div>
+
+  <div class="hero-price">
+    <small>À partir de</small> 159 MAD
+  </div>
+
+  <div class="urgency-bar">
+    <span class="urgency-dot"></span>
+    🔥 12 packs restants · Offre limitée ce mois-ci
+  </div>
+
+  <div class="hero-cta-group">
+    <a href="checkout-cod.html" class="btn-wa-primary">
+      <!-- WhatsApp SVG icon -->
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+      Commander sur WhatsApp
+    </a>
+    <a href="#produits" class="btn-gold-outline">
+      Voir nos packs &rarr;
+    </a>
+  </div>
+
+  <div class="hero-social-proof">
+    <span class="stars">★★★★★</span>
+    +200 clientes satisfaites à Marrakech
+  </div>
+</section>
+
+<!-- ======================================================
+     SECTION 2 — PRODUITS STAR
+     ====================================================== -->
+<section class="products section-pad" id="produits">
+  <div class="container">
+    <div class="center">
+      <span class="section-label">Nos créations</span>
+      <h2 class="gold-text">Bijoux <em>vedettes</em></h2>
+      <p style="color:var(--text-muted);font-size:.88rem;margin-top:12px;max-width:480px;margin-inline:auto;">
+        Acier chirurgical 316L plaqué or · Anti-oxydation · Paiement à la livraison
+      </p>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- 1 — Collier Lune Fine -->
+      <div class="product-card">
+        <span class="product-badge badge-best">Bestseller</span>
+        <svg class="product-icon" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="45" cy="52" r="22" stroke="#D4AF37" stroke-width="2" fill="none"/>
+          <path d="M45 30 C55 30 62 38 62 52 C62 66 55 74 45 74 C55 74 62 66 62 52 C62 38 55 30 45 30Z" fill="rgba(212,175,55,0.15)" stroke="#D4AF37" stroke-width="1.5"/>
+          <line x1="45" y1="8" x2="45" y2="30" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="45" cy="8" r="3" fill="#D4AF37"/>
+          <circle cx="45" cy="5" r="1.5" fill="#F5E6A3"/>
+        </svg>
+        <div class="product-name">Collier Lune Fine</div>
+        <div class="product-price">139 MAD</div>
+        <a href="checkout-cod.html?produit=Collier+Lune+Fine&prix=139" class="btn-card-wa">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Commander
+        </a>
+      </div>
+
+      <!-- 2 — Créoles Dorées -->
+      <div class="product-card">
+        <span class="product-badge badge-new">Nouveau</span>
+        <svg class="product-icon" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="32" cy="48" rx="16" ry="16" stroke="#D4AF37" stroke-width="2.5" fill="none"/>
+          <ellipse cx="58" cy="48" rx="16" ry="16" stroke="#D4AF37" stroke-width="2.5" fill="none"/>
+          <circle cx="32" cy="32" r="3" fill="#D4AF37"/>
+          <circle cx="58" cy="32" r="3" fill="#D4AF37"/>
+          <path d="M29 32 Q20 32 16 40" stroke="#D4AF37" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M61 32 Q70 32 74 40" stroke="#D4AF37" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <circle cx="32" cy="48" r="8" fill="rgba(212,175,55,0.1)"/>
+          <circle cx="58" cy="48" r="8" fill="rgba(212,175,55,0.1)"/>
+        </svg>
+        <div class="product-name">Créoles Dorées</div>
+        <div class="product-price">99 MAD</div>
+        <a href="checkout-cod.html?produit=Cr%C3%A9oles+Dor%C3%A9es&prix=99" class="btn-card-wa">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Commander
+        </a>
+      </div>
+
+      <!-- 3 — Bague Empilable -->
+      <div class="product-card">
+        <svg class="product-icon" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="45" cy="50" rx="26" ry="9" stroke="#D4AF37" stroke-width="2" fill="none"/>
+          <ellipse cx="45" cy="44" rx="26" ry="9" stroke="#D4AF37" stroke-width="2" fill="rgba(212,175,55,0.08)"/>
+          <ellipse cx="45" cy="38" rx="26" ry="9" stroke="#D4AF37" stroke-width="1.5" fill="rgba(212,175,55,0.05)"/>
+          <ellipse cx="45" cy="32" rx="26" ry="9" stroke="#C9A84C" stroke-width="1" fill="rgba(201,168,76,0.05)"/>
+        </svg>
+        <div class="product-name">Bague Empilable</div>
+        <div class="product-price">89 MAD</div>
+        <a href="checkout-cod.html?produit=Bague+Empilable&prix=89" class="btn-card-wa">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Commander
+        </a>
+      </div>
+
+      <!-- 4 — Bracelet Jonc -->
+      <div class="product-card">
+        <svg class="product-icon" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="45" cy="52" rx="28" ry="10" stroke="#D4AF37" stroke-width="2.5" fill="none"/>
+          <path d="M17 52 Q17 24 45 24 Q73 24 73 52" stroke="#D4AF37" stroke-width="2.5" fill="none"/>
+          <circle cx="45" cy="24" r="4" fill="#D4AF37"/>
+          <ellipse cx="45" cy="52" rx="20" ry="7" fill="rgba(212,175,55,0.1)"/>
+        </svg>
+        <div class="product-name">Bracelet Jonc</div>
+        <div class="product-price">129 MAD</div>
+        <a href="checkout-cod.html?produit=Bracelet+Jonc&prix=129" class="btn-card-wa">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Commander
+        </a>
+      </div>
+
+      <!-- 5 — PACK DÉCOUVERTE -->
+      <div class="product-card pack-card">
+        <span class="product-badge badge-promo">Promo -38%</span>
+        <svg class="product-icon" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:110px;height:110px;">
+          <!-- Collier -->
+          <circle cx="45" cy="38" r="14" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+          <line x1="45" y1="24" x2="45" y2="14" stroke="#D4AF37" stroke-width="1.5"/>
+          <circle cx="45" cy="14" r="2.5" fill="#D4AF37"/>
+          <!-- Bague -->
+          <ellipse cx="28" cy="68" rx="10" ry="3.5" stroke="#F5E6A3" stroke-width="1.5" fill="none"/>
+          <path d="M18 68 Q18 56 28 56 Q38 56 38 68" stroke="#F5E6A3" stroke-width="1.5" fill="none"/>
+          <!-- Créoles -->
+          <circle cx="62" cy="64" r="9" stroke="#C9A84C" stroke-width="2" fill="none"/>
+          <circle cx="62" cy="55" r="2" fill="#C9A84C"/>
+          <!-- Stars -->
+          <text x="76" y="22" font-size="9" fill="#D4AF37">✦</text>
+          <text x="8" y="28" font-size="7" fill="#F5E6A3">✦</text>
+          <text x="70" y="45" font-size="6" fill="#C9A84C">✦</text>
+        </svg>
+        <div class="product-name">Pack Découverte</div>
+        <div style="display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap;">
+          <div class="product-price-old">367 MAD</div>
+          <div class="product-price shimmer-price">229 MAD</div>
+        </div>
+        <p style="font-size:.78rem;color:var(--text-muted);margin-bottom:14px;">Collier + Bague + Créoles + Livraison offerte</p>
+        <a href="checkout-cod.html?pack=Pack+D%C3%A9couverte&prix=229" class="btn-card-wa" style="background:linear-gradient(135deg,#FF6B35,#FF3366);animation:pulse-wa 2s ease infinite;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Je veux ce pack !
+        </a>
+      </div>
+
+    </div><!-- /products-grid -->
+
+    <!-- Trust reminder below products -->
+    <div style="text-align:center;margin-top:36px;display:flex;flex-wrap:wrap;justify-content:center;gap:20px;">
+      <span style="font-size:.8rem;color:var(--text-muted);display:flex;align-items:center;gap:6px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Paiement à la livraison
+      </span>
+      <span style="font-size:.8rem;color:var(--text-muted);display:flex;align-items:center;gap:6px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Livraison Marrakech 24-48h
+      </span>
+      <span style="font-size:.8rem;color:var(--text-muted);display:flex;align-items:center;gap:6px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Retour gratuit 7 jours
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     SECTION 3 — POURQUOI BISOU
+     ====================================================== -->
+<section class="trust section-pad">
+  <div class="container">
+    <div class="center">
+      <span class="section-label" style="color:var(--gold-mid);">Nos garanties</span>
+      <h2 style="color:var(--black);">Pourquoi choisir <em style="color:var(--gold-mid);">BISOU</em> ?</h2>
+      <p style="color:#666;font-size:.88rem;margin-top:12px;max-width:480px;margin-inline:auto;">
+        Pas de l'or véritable — mais bien mieux que les bijoux fantaisie classiques.
+      </p>
+    </div>
+
+    <div class="trust-grid">
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3>Acier 316L</h3>
+        <p>Acier chirurgical de qualité médicale. Résistant à l'eau, à la sueur et à la chaleur. Aucune oxydation.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <h3>Plaqué or</h3>
+        <p>Brillance garantie 6 mois minimum avec port quotidien. Couleur dorée riche et uniforme, sans virage.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8">
+            <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+            <path d="M8 12l3 3 5-5"/>
+          </svg>
+        </div>
+        <h3>Sans nickel</h3>
+        <p>Certifié hypoallergénique. Idéal pour les peaux sensibles. Zéro réaction allergique garantie.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8">
+            <rect x="1" y="3" width="15" height="13" rx="1"/>
+            <path d="M16 8h4l3 3v5h-7V8z"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </div>
+        <h3>Livraison rapide</h3>
+        <p>Marrakech en 24h · Tout le Maroc en 3-5 jours · Paiement à la livraison (COD) disponible partout.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     SECTION 4 — AVIS CLIENTS
+     ====================================================== -->
+<section class="reviews section-pad">
+  <div class="container">
+    <div class="reviews-header">
+      <div class="reviews-score">
+        <div class="reviews-score-num">4.9</div>
+        <div>
+          <div class="reviews-score-stars">★★★★★</div>
+          <div class="reviews-score-label">200+ avis vérifiés</div>
+        </div>
+      </div>
+      <h2>Ce que disent <em>nos clientes</em></h2>
+      <p style="color:var(--text-muted);font-size:.88rem;margin-top:10px;">Vraies commandes · Vraies clientes · Marrakech et tout le Maroc</p>
+    </div>
+
+    <div class="reviews-grid">
+
+      <!-- Avis 1 -->
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">N</div>
+          <div class="review-meta">
+            <div class="review-name">Nadia</div>
+            <div class="review-city">Marrakech · Médina</div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <div class="review-bubble">
+          <p>"Reçu le lendemain, qualité vraiment top. Je reviens commander !"</p>
+        </div>
+        <div class="review-footer">
+          <span class="review-date">Il y a 3 jours</span>
+          <span class="review-verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Achat vérifié
+          </span>
+        </div>
+      </div>
+
+      <!-- Avis 2 -->
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#C9A84C,#F5E6A3);">S</div>
+          <div class="review-meta">
+            <div class="review-name">Samia</div>
+            <div class="review-city">Marrakech · Guéliz</div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <div class="review-bubble">
+          <p>"Mes amies pensaient que c'était de l'or véritable 😍 Je suis trop contente de mon achat !"</p>
+        </div>
+        <div class="review-footer">
+          <span class="review-date">Il y a 1 semaine</span>
+          <span class="review-verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Achat vérifié
+          </span>
+        </div>
+      </div>
+
+      <!-- Avis 3 -->
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#2C5364,#203A43);">K</div>
+          <div class="review-meta">
+            <div class="review-name">Karim</div>
+            <div class="review-city">Marrakech · M'hamid</div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <div class="review-bubble">
+          <p>"Cadeau parfait pour l'anniversaire de ma femme. L'emballage est vraiment luxe, elle a adoré !"</p>
+        </div>
+        <div class="review-footer">
+          <span class="review-date">Il y a 2 semaines</span>
+          <span class="review-verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Achat vérifié
+          </span>
+        </div>
+      </div>
+
+      <!-- Avis 4 -->
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#8E5A9A,#6B3FA0);">Z</div>
+          <div class="review-meta">
+            <div class="review-name">Zineb</div>
+            <div class="review-city">Marrakech · Hivernage</div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <div class="review-bubble">
+          <p>"Je porte depuis 3 mois, pas de réaction, pas de noircissement. Parfait pour peau sensible !"</p>
+        </div>
+        <div class="review-footer">
+          <span class="review-date">Il y a 1 mois</span>
+          <span class="review-verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Achat vérifié
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     SECTION 5 — COMMENT ÇA MARCHE
+     ====================================================== -->
+<section class="how section-pad">
+  <div class="container">
+    <div class="center">
+      <span class="section-label">Simple comme bonjour</span>
+      <h2>Comment <em>commander</em> ?</h2>
+      <p style="color:var(--text-muted);font-size:.88rem;margin-top:12px;">
+        3 étapes · Paiement à la livraison · Zéro risque
+      </p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>📱 Envoyez un WhatsApp</h3>
+          <p>Dites-nous quel bijou ou pack vous voulez. Notre équipe répond en moins de 30 minutes.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>📍 Donnez votre adresse</h3>
+          <p>À Marrakech ou dans tout le Maroc. On gère la livraison directement chez vous.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>📦 Payez à la réception</h3>
+          <p>24-48h à Marrakech · 3-5 jours pour le reste du Maroc. Vous payez cash à la livraison. Aucun risque.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="how-cta center">
+      <a href="checkout-cod.html" class="btn-wa-primary" style="display:inline-flex;max-width:360px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        📲 COMMANDER MAINTENANT
+      </a>
+      <p style="font-size:.75rem;color:var(--text-muted);margin-top:12px;">wa.me/212600000000 · Paiement à la livraison ✓</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     SECTION 6 — OFFRE LIMITÉE
+     ====================================================== -->
+<section class="offer section-pad" id="offre">
+  <div class="container" style="max-width:680px;position:relative;z-index:1;">
+    <div class="center">
+      <div class="offer-label">⚡ Offre Spéciale Lancement Marrakech</div>
+      <h2 style="color:var(--gold-light);margin-bottom:8px;">Pack Découverte</h2>
+      <p style="color:var(--text-muted);font-size:.88rem;">La combinaison parfaite pour découvrir BISOU</p>
+
+      <div class="offer-price-block">
+        <div class="offer-price-old">Prix normal : 367 MAD</div>
+        <div class="offer-price-new"><span>MAD</span> 229</div>
+        <div style="display:inline-block;background:rgba(255,80,50,0.2);color:#FF8C70;font-size:.78rem;padding:4px 14px;border-radius:100px;margin-top:10px;">
+          Économisez 138 MAD · -38%
+        </div>
+      </div>
+
+      <div class="offer-includes">
+        <div class="offer-item">
+          <div class="offer-check">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          Collier Lune Fine (valeur : 139 MAD)
+        </div>
+        <div class="offer-item">
+          <div class="offer-check">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          Bague Empilable (valeur : 89 MAD)
+        </div>
+        <div class="offer-item">
+          <div class="offer-check">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          Créoles Dorées (valeur : 99 MAD)
+        </div>
+        <div class="offer-item">
+          <div class="offer-check" style="background:linear-gradient(135deg,#25D366,#128C7E);">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          Livraison GRATUITE à Marrakech
+        </div>
+        <div class="offer-item">
+          <div class="offer-check" style="background:linear-gradient(135deg,#25D366,#128C7E);">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          Paiement à la livraison ✓
+        </div>
+      </div>
+
+      <div class="offer-deadline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Cette offre prend fin le 31 mars 2026
+      </div>
+
+      <a href="checkout-cod.html?pack=Pack+D%C3%A9couverte&prix=229" class="btn-wa-primary" style="display:inline-flex;max-width:380px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Je veux ce Pack — 229 MAD
+      </a>
+      <p style="font-size:.75rem;color:var(--text-muted);margin-top:14px;opacity:.7;">
+        💵 Paiement à la livraison · 🚚 24-48h à Marrakech · ↩ Retour gratuit 7 jours
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     SECTION 7 — FAQ
+     ====================================================== -->
+<section class="faq section-pad">
+  <div class="container">
+    <div class="center" style="margin-bottom:0;">
+      <span class="section-label">Vos questions</span>
+      <h2>Questions <em>fréquentes</em></h2>
+    </div>
+
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>
+          C'est de l'or véritable ?
+          <span class="faq-arrow">+</span>
+        </summary>
+        <div class="faq-answer">
+          Non — et c'est une qualité ! Nos bijoux sont en acier inoxydable chirurgical 316L plaqué or. Bien meilleur que les bijoux fantaisie classiques : résistant à l'eau et à la sueur, durable, hypoallergénique, et un rendu doré bluffant. Honnêteté et qualité, c'est la promesse BISOU.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Comment payer ?
+          <span class="faq-arrow">+</span>
+        </summary>
+        <div class="faq-answer">
+          Paiement à la livraison (cash, COD). Vous recevez votre colis, vous vérifiez, vous payez. Disponible dans tout le Maroc. Aucun virement bancaire, aucune carte nécessaire. C'est aussi simple que ça.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Et si je ne suis pas satisfait·e ?
+          <span class="faq-arrow">+</span>
+        </summary>
+        <div class="faq-answer">
+          Retour gratuit sous 7 jours, remboursement complet. Contactez-nous sur WhatsApp et on s'occupe de tout. Votre satisfaction est notre priorité — sans conditions.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Les bijoux résistent-ils à l'eau ?
+          <span class="faq-arrow">+</span>
+        </summary>
+        <div class="faq-answer">
+          Oui ! L'acier chirurgical 316L est naturellement résistant à l'eau, à la sueur et à la chaleur. Vous pouvez porter vos bijoux BISOU à la plage, sous la douche, et en été marocain. Brillance garantie 6 mois minimum.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Livrez-vous dans tout le Maroc ?
+          <span class="faq-arrow">+</span>
+        </summary>
+        <div class="faq-answer">
+          Absolument. Marrakech en 24-48h, et tout le Maroc en 3 à 5 jours ouvrés. Paiement à la livraison disponible partout. Commandez via WhatsApp et on vous confirme le délai exact selon votre ville.
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Final WhatsApp CTA in FAQ -->
+    <div class="center" style="margin-top:48px;">
+      <p style="color:var(--text-muted);font-size:.88rem;margin-bottom:20px;">Une autre question ? On répond en moins de 30 minutes.</p>
+      <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%91%8B%20J'ai%20une%20question%20!" class="btn-wa-primary" style="display:inline-flex;max-width:320px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Nous écrire sur WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     FOOTER
+     ====================================================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-logo">BISOU</div>
+    <div class="footer-tagline">L'or qui t'embrasse</div>
+
+    <div class="footer-links">
+      <a href="https://wa.me/212600000000">WhatsApp</a>
+      <span class="footer-sep">·</span>
+      <a href="https://instagram.com/bisou.or" target="_blank" rel="noopener">Instagram</a>
+      <span class="footer-sep">·</span>
+      <a href="#produits">Nos bijoux</a>
+      <span class="footer-sep">·</span>
+      <a href="#offre">Pack Découverte</a>
+    </div>
+
+    <a href="https://instagram.com/bisou.or" class="footer-insta" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+      </svg>
+      @bisou.or
+    </a>
+
+    <div class="gold-line"></div>
+
+    <p style="font-size:.78rem;color:var(--text-muted);margin-bottom:10px;">
+      🚚 Livraison dans tout le Maroc &nbsp;·&nbsp; 💵 Paiement à la livraison &nbsp;·&nbsp; ↩ Retour 7 jours
+    </p>
+    <p class="footer-copy">&copy; 2026 BISOU Bijoux · Marrakech, Maroc · Acier 316L plaqué or</p>
+  </div>
+</footer>
+
+<!-- ======================================================
+     STICKY BOTTOM BAR (mobile)
+     ====================================================== -->
+<div class="sticky-bottom">
+  <a href="checkout-cod.html">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+    <div>
+      <div>Commander maintenant</div>
+      <div class="sticky-bottom-sub">Paiement à la livraison · 24-48h Marrakech</div>
+    </div>
+  </a>
+</div>
+
+</body>
+</html>
