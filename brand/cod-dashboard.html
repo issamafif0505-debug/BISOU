@@ -1770,7 +1770,7 @@ function calcROI() {
 
   container.innerHTML = `
     <div class="kpi-card gold"><div class="kpi-label">Profit / Jour</div><div class="kpi-value" style="color:${profitColor}">${Math.round(dailyProfit)} MAD</div><div class="kpi-sub">${Math.round(dailyDelivered)} livraisons confirmées</div></div>
-    <div class="kpi-card green"><div class="kpi-label">Profit / Mois</div><div class="kpi-value" style="color:${profitColor}">${Math.round(monthlyProfit).toLocaleString('fr-FR')} MAD</div><div class="kpi-sub">Soit ${Math.round(monthlyProfit/10).toLocaleString('fr-FR')} EUR</div></div>
+    <div class="kpi-card green"><div class="kpi-label">Profit / Mois</div><div class="kpi-value" style="color:${profitColor}">${Math.round(monthlyProfit).toLocaleString('fr-FR')} MAD</div><div class="kpi-sub">Soit ${Math.round(monthlyProfit/10).toLocaleString('fr-FR')} DHS</div></div>
     <div class="kpi-card blue"><div class="kpi-label">ROI Publicité</div><div class="kpi-value" style="color:var(--blue)">${Math.round(roi)}%</div><div class="kpi-sub">Return on Ad Spend</div></div>
   `;
 
