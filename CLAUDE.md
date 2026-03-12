@@ -1,13 +1,13 @@
-# BISOU Maroc — Projet E-commerce COD Complet
+# ÔRIYA Maroc — Projet E-commerce COD Complet
 
 ## Vue d'ensemble
-BISOU est une marque de bijoux plaqué or marocaine avec un écosystème e-commerce COD (contre-remboursement) complet de **14 modules HTML**. Le projet est entièrement construit en HTML/CSS/JS vanilla sans framework.
+ÔRIYA est une marque de bijoux plaqué or marocaine avec un écosystème e-commerce COD (contre-remboursement) complet de **14 modules HTML**. Le projet est entièrement construit en HTML/CSS/JS vanilla sans framework.
 
 ## Déploiement
-- **GitHub** : https://github.com/issamafif0505-debug/BISOU
-- **HF Space** : https://issam0505-bisou-maroc-dashboard.static.hf.space/index.html
+- **GitHub** : https://github.com/issamafif0505-debug/BISOU (nom du dépôt inchangé)
+- **HF Space** : à redéployer sous le nom ÔRIYA
 - **Jeton HF** : stocké dans la mémoire locale Claude (pas dans le dépôt)
-- **ID HF Space** : `issam0505/BISOU-Maroc-Dashboard`
+- **ID HF Space** : à créer (`issam0505/ORIYA-Maroc-Dashboard`)
 
 ## Architecture
 
@@ -21,7 +21,7 @@ BISOU est une marque de bijoux plaqué or marocaine avec un écosystème e-comme
 
 ### Arborescence des fichiers
 ```
-BISOU/
+BISOU/                                 # Nom du dépôt (marque : ÔRIYA)
 ├── CLAUDE.md                          # Ce fichier — documentation projet
 ├── brand/
 │   ├── index.html                     # Page centrale (14 cartes modules)
@@ -49,15 +49,15 @@ BISOU/
 │   ├── # ── Backend / Configuration ──
 │   ├── google-apps-script.js          # Google Apps Script (doPost/doGet pour Google Sheets)
 │   ├── writer.js                      # Fichier stub (console.log(42))
-│   ├── SETUP-BISOU.md                 # Guide de configuration Google Sheets en 3 étapes
+│   ├── SETUP-ÔRIYA.md                 # Guide de configuration Google Sheets en 3 étapes
 │   │
 │   ├── # ── Documentation Stratégie ──
 │   ├── brand-strategy.md              # Stratégie de marque
 │   ├── strategie-maroc.md             # Stratégie de lancement Maroc
 │   ├── maroc-market-intel.md          # Veille marché Maroc
-│   ├── bisou-instagram-strategy.md    # Stratégie Instagram
-│   ├── bisou-facebook-strategy.md     # Stratégie Facebook
-│   ├── bisou-tiktok-strategy.md       # Stratégie TikTok
+│   ├── oriya-instagram-strategy.md    # Stratégie Instagram
+│   ├── oriya-facebook-strategy.md     # Stratégie Facebook
+│   ├── oriya-tiktok-strategy.md       # Stratégie TikTok
 │   ├── whatsapp-strategy.md           # Stratégie WhatsApp Business
 │   ├── instagram-30days.md            # Plan Instagram 30 jours
 │   ├── instagram-content-assets.md    # Ressources contenu Instagram
@@ -142,18 +142,18 @@ Bijoux plaqué or — prix 139 à 599 MAD — catégories : Colliers, Bagues, Bo
 - `doPost(e)` : reçoit les commandes, génère un identifiant (`CMD-001`, `CMD-002`…)
 - `doGet(e)` : retourne toutes les commandes en JSON
 - 13 colonnes : N° CMD, Date, Prénom, Nom, Téléphone, Ville, Adresse, Produit, Prix MAD, Note, Statut, Livreur, Payé
-- Configuration manuelle via `SETUP-BISOU.md` (3 étapes)
+- Configuration manuelle via `SETUP-ÔRIYA.md` (3 étapes)
 
 ### Clés localStorage
 ```
-bisou_orders          # Commandes COD (tableau JSON)
-bisou_ugc_videos      # Vidéos Studio UGC
-bisou_ugc_calendar    # Calendrier UGC
-bisou_ugc_creators    # Profils créateurs
-bisou_ugc_collabs     # Données collaborations
-bisou_ugc_budget      # Suivi budget UGC
-BISOU_WEBHOOK_URL     # URL Google Apps Script (configuration admin)
-BISOU_SHEET_ID        # Identifiant Google Sheet (configuration admin)
+oriya_orders          # Commandes COD (tableau JSON)
+oriya_ugc_videos      # Vidéos Studio UGC
+oriya_ugc_calendar    # Calendrier UGC
+oriya_ugc_creators    # Profils créateurs
+oriya_ugc_collabs     # Données collaborations
+oriya_ugc_budget      # Suivi budget UGC
+ORIYA_WEBHOOK_URL     # URL Google Apps Script (configuration admin)
+ORIYA_SHEET_ID        # Identifiant Google Sheet (configuration admin)
 ```
 
 ## Conventions de développement
@@ -162,17 +162,17 @@ BISOU_SHEET_ID        # Identifiant Google Sheet (configuration admin)
 1. **HTML monolithique** : tout le CSS dans `<style>`, tout le JS dans `<script>` — un seul fichier par module
 2. **Pas de dépendances externes** sauf Google Fonts CDN
 3. **Système de design cohérent** : doré (#D4AF37) sur noir (#0D0D0D), toujours
-4. **Clés localStorage** préfixées `bisou_` (minuscule) ou `BISOU_` (configuration)
+4. **Clés localStorage** préfixées `oriya_` (minuscule) ou `ORIYA_` (configuration)
 5. **Lectures localStorage sûres** : toujours `JSON.parse(localStorage.getItem(...) || '[]')` avec valeur par défaut
 
 ### Patrons JavaScript courants
 ```javascript
 // Lecture sûre du localStorage
-const data = JSON.parse(localStorage.getItem('bisou_orders') || '[]');
+const data = JSON.parse(localStorage.getItem('oriya_orders') || '[]');
 
 // Patron getter/setter (Studio UGC)
-function getVideos() { return JSON.parse(localStorage.getItem('bisou_ugc_videos') || '[]'); }
-function saveVideos(v) { localStorage.setItem('bisou_ugc_videos', JSON.stringify(v)); }
+function getVideos() { return JSON.parse(localStorage.getItem('oriya_ugc_videos') || '[]'); }
+function saveVideos(v) { localStorage.setItem('oriya_ugc_videos', JSON.stringify(v)); }
 
 // Accès aux éléments du DOM
 document.getElementById('id');
@@ -193,7 +193,7 @@ el.classList.toggle('open');
 
 ### Panneau d'administration
 - Accès via `?admin=1` dans l'URL
-- Permet de configurer BISOU_WEBHOOK_URL et BISOU_SHEET_ID
+- Permet de configurer ORIYA_WEBHOOK_URL et ORIYA_SHEET_ID
 
 ## Git
 - **Branche principale** : `master`
@@ -208,5 +208,5 @@ el.classList.toggle('open');
 
 ## Tâches restantes
 - [ ] Remplacer `212600000000` par le vrai numéro WhatsApp dans tous les fichiers (31+ occurrences)
-- [ ] Configurer Google Sheets via SETUP-BISOU.md (configuration manuelle)
+- [ ] Configurer Google Sheets via SETUP-ÔRIYA.md (configuration manuelle)
 - [ ] `brand/writer.js` est un fichier stub (`console.log(42)`) — à implémenter ou supprimer

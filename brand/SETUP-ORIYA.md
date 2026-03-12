@@ -1,4 +1,4 @@
-# BISOU COD — Guide d'installation Google Sheets
+# ÔRIYA COD — Guide d'installation Google Sheets
 
 **Temps estimé : 10 minutes**
 
@@ -8,7 +8,7 @@
 
 1. Aller sur [sheets.google.com](https://sheets.google.com)
 2. Cliquer sur **+ Nouveau** (ou le bouton "+" en bas a gauche)
-3. Nommer le fichier : **BISOU Commandes**
+3. Nommer le fichier : **ÔRIYA Commandes**
 4. Copier l'**ID du Sheet** depuis l'URL :
 
 ```
@@ -28,7 +28,7 @@ Exemple d'ID : `1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms`
 3. Supprimer tout le code par defaut dans l'editeur
 4. Coller **l'integralite** du contenu du fichier `google-apps-script.js` (dans le dossier `brand/`)
 5. Cliquer sur **Enregistrer** (icone disquette ou Ctrl+S)
-6. Nommer le projet : **BISOU COD**
+6. Nommer le projet : **ÔRIYA COD**
 
 ### Deployer le script :
 
@@ -36,7 +36,7 @@ Exemple d'ID : `1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms`
 8. Choisir **Nouveau deploiement**
 9. Cliquer sur l'icone engrenage a cote de "Selectionner le type" → **Application Web**
 10. Configurer :
-    - Description : `BISOU COD v1`
+    - Description : `ÔRIYA COD v1`
     - Executer en tant que : **Moi** (votre compte Google)
     - Acces : **Tout le monde** (important pour que HF puisse appeler le script)
 11. Cliquer sur **Deployer**
@@ -45,13 +45,13 @@ Exemple d'ID : `1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms`
 
 ---
 
-## Etape 3 : Configurer BISOU
+## Etape 3 : Configurer ÔRIYA
 
 ### Sur la page de commande (checkout-cod.html) :
 
 1. Ouvrir dans le navigateur :
    ```
-   https://issam0505-bisou-maroc-dashboard.static.hf.space/checkout-cod.html?admin=1
+   https://issam0505-oriya-maroc-dashboard.static.hf.space/checkout-cod.html?admin=1
    ```
 2. Un panneau "Configuration Google Sheets" apparait en bas de page
 3. Coller l'**URL Apps Script** dans le champ prevu
@@ -62,7 +62,7 @@ Exemple d'ID : `1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms`
 
 6. Ouvrir dans le navigateur :
    ```
-   https://issam0505-bisou-maroc-dashboard.static.hf.space/cod-dashboard.html?admin=1
+   https://issam0505-oriya-maroc-dashboard.static.hf.space/cod-dashboard.html?admin=1
    ```
 7. Un panneau "Configuration Google Sheets" apparait en haut de page
 8. Coller l'**URL Apps Script** dans le premier champ
@@ -76,11 +76,11 @@ Exemple d'ID : `1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms`
 ## Comment voir les commandes
 
 ### Depuis votre telephone :
-- Ouvrir l'app **Google Sheets** → trouver "BISOU Commandes"
+- Ouvrir l'app **Google Sheets** → trouver "ÔRIYA Commandes"
 - Les colonnes : N° CMD | Date | Prenom | Nom | Telephone | Ville | Adresse | Produit | Prix MAD | Note | Statut | Livreur | Paye
 
 ### Depuis le PC :
-- Aller sur [sheets.google.com](https://sheets.google.com) → "BISOU Commandes"
+- Aller sur [sheets.google.com](https://sheets.google.com) → "ÔRIYA Commandes"
 - Ou ouvrir `cod-dashboard.html?admin=1` sur HF et cliquer "Charger depuis Sheets"
 
 ### Via WhatsApp Business :
@@ -130,4 +130,4 @@ Client remplit checkout-cod.html
 
 ---
 
-*BISOU — Marrakech, Maroc — 2026*
+*ÔRIYA — Marrakech, Maroc — 2026*

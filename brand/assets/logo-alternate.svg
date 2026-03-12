@@ -4,7 +4,7 @@
      viewBox="0 0 500 180"
      width="500" height="180"
      role="img"
-     aria-label="BISOU — L'or qui t'embrasse">
+     aria-label="ÔRIYA — L'or qui t'embrasse">
 
   <defs>
 
@@ -333,7 +333,7 @@
   </g>
 
   <!-- ══════════════════════════════════════════════ -->
-  <!-- WORDMARK: BISOU                                -->
+  <!-- WORDMARK: ÔRIYA                                -->
   <!-- Serif letterforms, wide-tracked, gold gradient -->
   <!-- Glow layer beneath, shimmer layer on top       -->
   <!-- ══════════════════════════════════════════════ -->
@@ -347,7 +347,7 @@
       font-size="70"
       font-weight="400"
       letter-spacing="16"
-      fill="url(#goldSheen)">BISOU</text>
+      fill="url(#goldSheen)">ÔRIYA</text>
   </g>
 
   <!-- Main wordmark — diagonal gold sweep fill -->
@@ -358,7 +358,7 @@
     font-size="70"
     font-weight="400"
     letter-spacing="16"
-    fill="url(#goldSweep)">BISOU</text>
+    fill="url(#goldSweep)">ÔRIYA</text>
 
   <!-- Shimmer overlay — radial highlight on letterforms -->
   <text
@@ -369,7 +369,7 @@
     font-weight="400"
     letter-spacing="16"
     fill="url(#goldShimmer)"
-    opacity="0.80">BISOU</text>
+    opacity="0.80">ÔRIYA</text>
 
   <!-- ══════════════════════════════════════════════ -->
   <!-- BOTTOM RULE — below wordmark, above tagline    -->

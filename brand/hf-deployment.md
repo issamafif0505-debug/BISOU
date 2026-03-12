@@ -1,6 +1,6 @@
 # DEPLOYMENT GUIDE — Hugging Face Spaces
 
-Guide complet pour déployer le dashboard BISOU Maroc sur Hugging Face Spaces en 10 étapes simples.
+Guide complet pour déployer le dashboard ÔRIYA Maroc sur Hugging Face Spaces en 10 étapes simples.
 
 ---
 
@@ -28,14 +28,14 @@ Remplir les informations suivantes :
 
 | Champ | Valeur |
 |-------|--------|
-| **Space name** | `bisou-maroc-launch` |
+| **Space name** | `oriya-maroc-launch` |
 | **License** | Open Licence |
 | **Select Space SDK** | **Static HTML** (IMPORTANT) |
 | **Private/Public** | Public |
 
 Exemple :
 ```
-Space name: bisou-maroc-launch
+Space name: oriya-maroc-launch
 License: openrail
 Space SDK: Static HTML [TRÈS IMPORTANT]
 Visibility: Public
@@ -54,8 +54,8 @@ Visibility: Public
 
 ### Méthode 2 : Via Git (avancé)
 ```bash
-git clone https://huggingface.co/spaces/YourUsername/bisou-maroc-launch
-cd bisou-maroc-launch
+git clone https://huggingface.co/spaces/YourUsername/oriya-maroc-launch
+cd oriya-maroc-launch
 cp /chemin/vers/hf-app.html index.html
 git add index.html
 git commit -m "Initial dashboard upload"
@@ -73,7 +73,7 @@ git push
 
 ### Ton URL sera :
 ```
-https://huggingface.co/spaces/YourUsername/bisou-maroc-launch
+https://huggingface.co/spaces/YourUsername/oriya-maroc-launch
 ```
 
 Remplace `YourUsername` par ton vrai username Hugging Face.
@@ -107,14 +107,14 @@ Par ton vrai numéro WhatsApp Maroc (format international) :
 ## ✅ ÉTAPE 7 : Personnaliser email & contact
 
 Remplacer également :
-- `contact@bisou-or.ma` → Ton email réel
+- `contact@oriya.ma` → Ton email réel
 - Tous les textes `+212 6XX XXX XXX` → Ton vrai numéro
 
 ### Localiser dans le HTML :
 ```html
 <!-- FOOTER -->
 <p>📱 <a href="https://wa.me/212600000000">WhatsApp : +212 6XX XXX XXX</a></p>
-<p>📧 <a href="mailto:contact@bisou-or.ma">Email : contact@bisou-or.ma</a></p>
+<p>📧 <a href="mailto:contact@oriya.ma">Email : contact@oriya.ma</a></p>
 ```
 
 ---
@@ -129,7 +129,7 @@ Une fois publié :
 4. **Vérifier les couleurs** : Gold doit être visible, dark background
 
 ### Navigation test :
-- [ ] Navbar logo "BISOU" visible
+- [ ] Navbar logo "ÔRIYA" visible
 - [ ] Liens nav cliquables
 - [ ] Section Packs s'affiche bien
 - [ ] Section KPIs colorée (gold background)
@@ -144,7 +144,7 @@ Une fois publié :
 Une fois validé, ton URL publique est :
 
 ```
-https://huggingface.co/spaces/YourUsername/bisou-maroc-launch
+https://huggingface.co/spaces/YourUsername/oriya-maroc-launch
 ```
 
 Partager sur :
@@ -179,12 +179,12 @@ Partager sur :
 Avant de partager largement :
 
 - [ ] Compte HF créé et actif
-- [ ] Space créé avec nom `bisou-maroc-launch`
+- [ ] Space créé avec nom `oriya-maroc-launch`
 - [ ] SDK : **Static HTML** (pas Streamlit/Gradio)
 - [ ] Fichier `index.html` uploadé et visible
 - [ ] Lien public généré
 - [ ] Numéro WhatsApp actualisé (+212XXXXXXXXX)
-- [ ] Email actualisé (contact@bisou-or.ma)
+- [ ] Email actualisé (contact@oriya.ma)
 - [ ] Tested sur desktop/tablet/mobile
 - [ ] Tous les boutons cliquables
 - [ ] Affichage correct (pas de déformation)
@@ -269,6 +269,6 @@ Une fois le Space en ligne :
 **Dashboard créé le** : 2024-2025
 **Framework** : HTML/CSS statique
 **Hébergement** : Hugging Face Spaces (Gratuit)
-**Propriétaire** : BISOU — L'or qui t'embrasse
+**Propriétaire** : ÔRIYA — L'or qui t'embrasse
 
 🎉 **Bon lancement au Maroc !**

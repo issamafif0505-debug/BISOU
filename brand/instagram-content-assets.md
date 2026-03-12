@@ -1,4 +1,4 @@
-# INSTAGRAM CONTENT ASSETS — BISOU MAROC
+# INSTAGRAM CONTENT ASSETS — ÔRIYA MAROC
 ## 30 Idées de Contenu + Caption Templates
 
 ---
@@ -19,13 +19,13 @@
 **Visual Description:**
 - Slide 1: Pack Découverte hero shot (all 4 products arranged beautifully)
 - Slide 2: Individual product close-up (Collier Lune Fine)
-- Slide 3: Price comparison (competitor prices vs BISOU)
+- Slide 3: Price comparison (competitor prices vs ÔRIYA)
 - Slide 4: Benefits graphic (icons + text)
 - Slide 5: CTA (WhatsApp icon + link)
 
 **Caption Template:**
 ```
-🌟 BIENVENUE CHEZ BISOU 🌟
+🌟 BIENVENUE CHEZ ÔRIYA 🌟
 
 L'or qui t'embrasse... sans le prix de l'or!
 
@@ -39,12 +39,12 @@ Découvrez nos bijoux plaqués or en acier chirurgical 316L:
 
 Lien en bio → Commander via WhatsApp 📱
 
-#BISOU #BijouxMarrakech #BijouPlaquéOr #AccesLuxury
+#ÔRIYA #BijouxMarrakech #BijouPlaquéOr #AccesLuxury
 ```
 
 **Alt Caption (shorter):**
 ```
-Welcome to BISOU! ✨
+Welcome to ÔRIYA! ✨
 
 Where affordable meets luxury.
 
@@ -120,7 +120,7 @@ Swipe up to order → Link in bio 📱
 
 C'est nos VRAIES clientes du Maroc 🇲🇦
 
-Si tu as aussi un avis: tag-nous avec #BISOU 📸
+Si tu as aussi un avis: tag-nous avec #ÔRIYA 📸
 
 Pack Découverte: 229 MAD (Lien en bio)
 ```
@@ -195,7 +195,7 @@ Essaie avec le PACK DÉCOUVERTE! 229 MAD 🎁
 ```
 De la maison au bureau, avec style 🌟
 
-Elle porte ses bijoux BISOU TOUS LES JOURS.
+Elle porte ses bijoux ÔRIYA TOUS LES JOURS.
 
 Pourquoi? Parce que:
 ✓ Légers (tu oublies que tu les portes)
@@ -260,7 +260,7 @@ COMMANDER: Lien en bio 📱
 **Format:** Story polls + Feed post
 **Visual Description:**
 - Story: "Which is YOUR favorite?" with 4 product options
-- Story: Multiple choice poll "What do you love most about BISOU?"
+- Story: Multiple choice poll "What do you love most about ÔRIYA?"
 - Feed post: Compilation of responses + invitation to tag friends
 
 **Caption Template:**
@@ -277,7 +277,7 @@ D) Boucles d'oreilles 👂
 
 Les votes gagnants dictent notre prochaine collection!
 
-Tag une copine qui DOIT découvrir BISOU 👇
+Tag une copine qui DOIT découvrir ÔRIYA 👇
 ```
 
 **Engagement Tactics:**
@@ -290,7 +290,7 @@ Tag une copine qui DOIT découvrir BISOU 👇
 **Question Ideas:**
 - "Which color should we launch next?"
 - "Would you buy [new product idea]?"
-- "How do you wear your BISOU jewelry?"
+- "How do you wear your ÔRIYA jewelry?"
 - "What's your jewelry must-have?"
 - "Rings or necklaces?"
 
@@ -371,7 +371,7 @@ Le résultat?
 ✨ Parfait pour tous les styles
 ✨ Aucun noeud (promise!)
 
-Nos colliers BISOU sont parfaits pour layering.
+Nos colliers ÔRIYA sont parfaits pour layering.
 Pourquoi? Ils sont légers = pas de douleur au cou!
 
 Montre-nous ton combo! 📸
@@ -393,7 +393,7 @@ Montre-nous ton combo! 📸
 **Format:** Carousel (2 slides)
 **Visual Description:**
 - Slide 1: Person wearing plain white t-shirt (no jewelry)
-- Slide 2: Same person, same outfit, with BISOU jewelry
+- Slide 2: Same person, same outfit, with ÔRIYA jewelry
 
 **Caption Template:**
 ```
@@ -402,7 +402,7 @@ AVANT vs APRÈS: Le pouvoir des bijoux 💎
 Même tenue. Différent niveau de style!
 
 Slide 1: Juste un t-shirt blanc
-Slide 2: T-shirt blanc + bijoux BISOU
+Slide 2: T-shirt blanc + bijoux ÔRIYA
 
 La transformation? Instantanée! ✨
 
@@ -481,15 +481,15 @@ Qualité = prix abordable. C'est notre promesse 💙
 ```
 NOTRE HÉROÏNE: FATIMA 🌟
 
-"BISOU est devenu mon marque préférée parce que c'est la seule qui ne me fait pas réagir. Je le porte tous les jours sans culpabilité!"
+"ÔRIYA est devenu mon marque préférée parce que c'est la seule qui ne me fait pas réagir. Je le porte tous les jours sans culpabilité!"
 
 Fatima, Marrakech
 Cliente depuis 3 mois
 
-❤️ MERCI Fatima d'avoir confiance en BISOU!
+❤️ MERCI Fatima d'avoir confiance en ÔRIYA!
 
 Si tu as une histoire comme celle-ci:
-📸 Tag-nous avec #BISOU
+📸 Tag-nous avec #ÔRIYA
 Ou DM-nous directement!
 
 Pack Découverte si tu veux essayer: 229 MAD
@@ -497,7 +497,7 @@ Pack Découverte si tu veux essayer: 229 MAD
 
 **Customer Spotlight Process:**
 1. Identify happy customers (check comments, DMs)
-2. DM them: "We'd love to feature you! Do you have a photo with BISOU jewelry?"
+2. DM them: "We'd love to feature you! Do you have a photo with ÔRIYA jewelry?"
 3. Get permission + quote
 4. Design quote graphic
 5. Post with their permission
@@ -557,7 +557,7 @@ Mets en panier (Lien en bio) 📱
 
 **Format:** Multiple story polls + Carousel feed post
 **Visual Description:**
-- Story 1: "Most common question about BISOU" graphic
+- Story 1: "Most common question about ÔRIYA" graphic
 - Story 2: Answer graphic
 - Story 3: Poll "What's YOUR burning question?"
 - Feed post: Compilation of top Q&As
@@ -656,7 +656,7 @@ Commander avec message personnalisé: Lien en bio 📱
 **Format:** Reel
 **Visual Description:**
 ```
-0-3s: Hands opening BISOU box (top view)
+0-3s: Hands opening ÔRIYA box (top view)
 3-7s: Pulling out tissue paper (reveal)
 7-12s: Seeing products for first time (smile/reaction)
 12-15s: Trying on jewelry (necklace or ring)
@@ -665,7 +665,7 @@ Commander avec message personnalisé: Lien en bio 📱
 
 **Caption Template:**
 ```
-UNBOXING BISOU ✨
+UNBOXING ÔRIYA ✨
 
 Le moment où tu ouvres ton colis...
 Et c'est encore plus beau qu'en photo! 📦
@@ -679,7 +679,7 @@ Ce que tu vas trouver:
 C'est ça que nos clientes aiment:
 "Ça vaut 500 MAD, pas 229 MAD!"
 
-Rejoins la famille BISOU!
+Rejoins la famille ÔRIYA!
 Commande aujourd'hui (Lien en bio) 📱
 ```
 
@@ -698,7 +698,7 @@ Commande aujourd'hui (Lien en bio) 📱
 
 **Format:** Carousel (5 slides - different customer photos)
 **Visual Description:**
-- Each slide: Customer photo wearing BISOU jewelry with their name/location tagged
+- Each slide: Customer photo wearing ÔRIYA jewelry with their name/location tagged
 
 **Caption Template:**
 ```
@@ -706,7 +706,7 @@ VOUS ÊTES LES MEILLEURES 💙
 
 Ces photos? C'est vous, nos vraies clientes!
 
-Chaque jour, des filles comme toi découvrent BISOU
+Chaque jour, des filles comme toi découvrent ÔRIYA
 Et chaque jour, on reçoit vos photos 📸
 
 Ce qu'on aime?
@@ -715,17 +715,17 @@ Ce qu'on aime?
 ✓ Votre confiance dans nos produits
 ✓ Votre soutien
 
-MERCI de faire partie de la famille BISOU! 🌟
+MERCI de faire partie de la famille ÔRIYA! 🌟
 
 Vous aussi, envoyez vos photos!
-→ Hashtag #BISOU dans vos posts
+→ Hashtag #ÔRIYA dans vos posts
 → Ou DM-nous directement
 
 Si on reposte votre photo, on vous envoie un cadeau! 🎁
 ```
 
 **UGC Collection Strategy:**
-1. Create a hashtag campaign #BISOU
+1. Create a hashtag campaign #ÔRIYA
 2. Encourage customers to tag you in their posts
 3. Set up a "feature me" incentive (free product, discount)
 4. Repost best UGC weekly
@@ -773,7 +773,7 @@ Slide 3: LE LOOK MEETING CLIENT
 - Pas de bracelets (déconcentre)
 → Vous = fiable & sérieuse
 
-Les bijoux BISOU sont parfaits pour le bureau:
+Les bijoux ÔRIYA sont parfaits pour le bureau:
 ✓ Légers = pas de fatigue
 ✓ Discrets mais chics
 ✓ Durables = portez-les quotidiennement
@@ -795,7 +795,7 @@ Lien en bio pour commander 📱
 **Format:** Story sequence + Feed post
 **Visual Description:**
 - Stories: Montage of getting ready (morning routine, makeup, outfit selection, jewelry)
-- Feed post: Final look with BISOU jewelry
+- Feed post: Final look with ÔRIYA jewelry
 
 **Caption Template:**
 ```
@@ -803,7 +803,7 @@ WEEKEND APPROCHE! 🎉
 
 Dimanche, c'est date night? Café avec les copines? Marché?
 
-Quoi que tu fasses, porte tes bijoux BISOU.
+Quoi que tu fasses, porte tes bijoux ÔRIYA.
 
 Pourquoi?
 ✓ Ils changent ton mood
@@ -1037,7 +1037,7 @@ Prix: 89 MAD ONLY!
 ET BONUS?
 → Commandez cette semaine = -15% sur le second produit!
 
-Première fois chez BISOU?
+Première fois chez ÔRIYA?
 → Combo parfait: Bague + Collier (208 MAD au lieu de 228)
 
 Commander: Lien en bio 📱
@@ -1061,7 +1061,7 @@ Dites-nous: Aimez-vous ce design? 👇
 **Visual Description:**
 - Slide 1: "Minimalism" title + definition with visual
 - Slide 2: Outfit example (before and after minimalism)
-- Slide 3: BISOU collection for minimalists
+- Slide 3: ÔRIYA collection for minimalists
 
 **Caption Template:**
 ```
@@ -1160,7 +1160,7 @@ Commandez votre favori: Lien en bio 📱
 
 On crée quelque chose de SPÉCIAL pour vous...
 
-HINT: Ça s'appelle BISOU VIP 👑
+HINT: Ça s'appelle ÔRIYA VIP 👑
 
 Si vous êtes clientes fidèles (ou prochaines clientes):
 → Vous devez ABSOLUMENT écouter demain!
@@ -1199,24 +1199,24 @@ Dimanche, 6pm, soyez là! 📲
 
 **Caption Template:**
 ```
-🎊 BISOU VIP EST ICI! 🎊
+🎊 ÔRIYA VIP EST ICI! 🎊
 
 Après un mois avec vous, on dit MERCI.
 
-Introducing: LE PROGRAMME BISOU VIP 👑
+Introducing: LE PROGRAMME ÔRIYA VIP 👑
 
 Comment ça marche:
 
 Slide 1: COMMENT REJOINDRE?
 C'est SIMPLE:
-✓ Achetez 1 produit BISOU = Vous êtes IN!
+✓ Achetez 1 produit ÔRIYA = Vous êtes IN!
 ✓ Ou reply "VIP" en DM
 
 Slide 2: LES BENEFITS
 ✓ -10% sur TOUS les produits
 ✓ Early access aux nouveaux produits (48h avant public)
 ✓ 1 surpris gratuit par mois
-✓ Invitations aux événements BISOU
+✓ Invitations aux événements ÔRIYA
 
 Slide 3: PALIERS DE RÉCOMPENSES
 - Bronze (1 achat): -10%
@@ -1230,7 +1230,7 @@ Slide 4: CE QUE NOS VIPs DISENT
 Slide 5: REJOIGNEZ NOUS!
 "VIP" → DM ← Cliquez!
 
-Merci de faire BISOU ce que c'est 💙
+Merci de faire ÔRIYA ce que c'est 💙
 ```
 
 **VIP Program Structure:**
@@ -1252,8 +1252,8 @@ Montage sequence:
 - Unboxing moments
 - Testimonials from customers
 - Product photos
-- Customer wearing BISOU jewelry
-- Team behind BISOU
+- Customer wearing ÔRIYA jewelry
+- Team behind ÔRIYA
 - Sales numbers/stats popping up
 - Final frame: "THANK YOU - See you in month 2!"
 ```
@@ -1275,7 +1275,7 @@ Mais surtout?
 ✓ Une COMMUNAUTÉ
 
 On n'est pas juste un brand.
-On est une FAMILLE BISOU 💙
+On est une FAMILLE ÔRIYA 💙
 
 Et ça ne fait que commencer...
 
@@ -1319,7 +1319,7 @@ Le mois prochain = PLUS BIG:
 🎁 Concours ÉNORME (à gagner: 1,000 MAD de produits!)
 💍 5 nouveaux designs exclusifs
 🌟 Événement live Instagram (questions/réponses en direct)
-📸 Photo contest: Montrez vos looks BISOU
+📸 Photo contest: Montrez vos looks ÔRIYA
 🎊 "Jour du lancement" avec -30% sur tout!
 
 Plus vous rejoignez, plus on grandit ensemble!
@@ -1358,7 +1358,7 @@ Price: [PRICE] MAD
 
 Link in bio to order 📱
 
-#BISOU #BisoMaroc
+#ÔRIYA #BisoMaroc
 ```
 
 ## Template 2: Educational/How-To
@@ -1374,7 +1374,7 @@ Result?
 ✨ [Result benefit 2]
 ✨ [Result benefit 3]
 
-Try with BISOU! Lien en bio 📱
+Try with ÔRIYA! Lien en bio 📱
 ```
 
 ## Template 3: Testimonial
@@ -1386,7 +1386,7 @@ Try with BISOU! Lien en bio 📱
 
 [Why this matters to us]
 
-Join the BISOU family! Lien en bio 📱
+Join the ÔRIYA family! Lien en bio 📱
 ```
 
 ## Template 4: Limited Offer
@@ -1455,5 +1455,5 @@ Your opinion shapes our next collection! 💙
 ---
 
 Created: March 2026
-Designer: Social Media Strategist for BISOU Maroc
+Designer: Social Media Strategist for ÔRIYA Maroc
 Format: Ready-to-adapt caption templates + visual briefs

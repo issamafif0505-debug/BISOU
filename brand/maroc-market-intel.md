@@ -1,4 +1,4 @@
-# MAROC MARKET INTELLIGENCE — BISOU
+# MAROC MARKET INTELLIGENCE — ÔRIYA
 ## Rapport Stratégique Bijouterie Fantaisie au Maroc
 ### Document Confidentiel | Mars 2026
 
@@ -56,7 +56,7 @@ Le secteur bijouterie (tous segments confondus) représente **5-6% du marché re
 
 **Population Marrakech** : ~920,000 habitants | **Agglomération** : ~1.4M
 
-**Segment cible BISOU** :
+**Segment cible ÔRIYA** :
 - Âge : 18-45 ans (femmes à 75%, hommes 25%)
 - Classe sociale : Classe moyenne à classe moyenne-supérieure
 - Localisation : Médina, Gueliz, Hivernage, Agdal
@@ -77,7 +77,7 @@ Le secteur bijouterie (tous segments confondus) représente **5-6% du marché re
 | Cadre/Manager | 10,000-15,000 MAD | 800-1,500 MAD | 1-2x par mois |
 | Entrepreneures (restaurant, e-commerce) | 8,000-20,000 MAD | 600-1,500 MAD | 1x par mois |
 
-**AOV (Average Order Value) estimé à Marrakech** : 280-400 MAD pour BISOU (accessible luxury)
+**AOV (Average Order Value) estimé à Marrakech** : 280-400 MAD pour ÔRIYA (accessible luxury)
 **Budget annuel bijoux par segment** : 2,000-8,000 MAD (vs Paris 3,000-12,000 EUR)
 
 ### 2.3 Comportement d'achat : Online vs Physique
@@ -291,7 +291,7 @@ Le secteur bijouterie (tous segments confondus) représente **5-6% du marché re
 - **Promos** : Coded discount links (Instagram → WhatsApp), "Buy 2 Get 1 Free"
 - **Engagement** : TikTok à 22K, Reels avec trending audio, collaborations micro-influencers
 
-### 4.2 Lacunes identifiées (Opportunities pour BISOU)
+### 4.2 Lacunes identifiées (Opportunities pour ÔRIYA)
 
 1. **Aucun positioning "hypoallergenic + luxury"** : Tous ciblent soit price soit prestige, pas "healthy luxury"
 2. **Pas de subscription/membership model** : Accumulation points, VIP early access
@@ -368,7 +368,7 @@ Le secteur bijouterie (tous segments confondus) représente **5-6% du marché re
 
 ---
 
-## 6. OPPORTUNITÉS BISOU — POSITIONING & STRATEGY
+## 6. OPPORTUNITÉS ÔRIYA — POSITIONING & STRATEGY
 
 ### 6.1 Positioning Gap : "Healthy Luxury"
 
@@ -376,7 +376,7 @@ Le secteur bijouterie (tous segments confondus) représente **5-6% du marché re
 - Luxury (Zahara) = prestige + prix élevé, pas fokus santé
 - Mass market (Yasmine) = trend + volume, quality questions
 
-**BISOU positioning** :
+**ÔRIYA positioning** :
 **"Bijoux sans culpabilité" — Acier 316L hypoallergique, designs premium, prix accessibles**
 
 **Unique Selling Points** :
@@ -406,7 +406,7 @@ Le secteur bijouterie (tous segments confondus) représente **5-6% du marché re
 **Strategy** :
 - Collection bohème (teintes chaudes : terracotta, or, bronze)
 - Pack "Soirée Aïd" : bagues + colliers + boucles
-- Gift cards promotion : "Offrez BISOU" (format digital WhatsApp friendly)
+- Gift cards promotion : "Offrez ÔRIYA" (format digital WhatsApp friendly)
 - Influencer partnerships : 5-8 micro-influencers (5K-15K followers) × 500 MAD chacun
 
 **Cible** : Amis/collègues qui s'offrent des cadeaux
@@ -493,7 +493,7 @@ Le secteur bijouterie (tous segments confondus) représente **5-6% du marché re
 - Coordination logistique complexe
 - Returns complexes : Coût client (~25 MAD aller-retour)
 
-**Mitigation BISOU** :
+**Mitigation ÔRIYA** :
 - Contrat direct Amana (20 MAD/colis, économies d'échelle à 200+ colis/mois)
 - Offrir 1 return gratuite (premium positioning)
 - Local pickup Marrakech (hub fulfillment)
@@ -595,7 +595,7 @@ Le secteur bijouterie (tous segments confondus) représente **5-6% du marché re
 ### 8.6 Dashboard Mensuel (Template)
 
 ```
-📊 BISOU MARRAKECH — KPI DASHBOARD (Février 2026)
+📊 ÔRIYA MARRAKECH — KPI DASHBOARD (Février 2026)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ACQUISITION
@@ -697,7 +697,7 @@ NEXT ACTIONS
 
 ### 10.1 3 Actions immédiate (Semaine 1-7)
 
-#### Action 1 : Créer "BISOU Marrakech" identité + visual system
+#### Action 1 : Créer "ÔRIYA Marrakech" identité + visual system
 **Timeline** : Jours 1-5
 **Execution** :
 - Logo minimaliste (couronne + bijou stylisé)
@@ -738,7 +738,7 @@ NEXT ACTIONS
 **Timeline** : Semaine 2-3
 **Execution** :
 - Identifier 15-20 micro-influencers (5K-30K followers, beauté/lifestyle Marrakech)
-- Approche via DM : "Collaboration BISOU, produit gratuit + 500 MAD"
+- Approche via DM : "Collaboration ÔRIYA, produit gratuit + 500 MAD"
 - Briefing : 2 posts + 4 stories sur 2 semaines
 - Tracking : Link tracking (Instagram→WhatsApp), promo codes
 
@@ -760,7 +760,7 @@ NEXT ACTIONS
 **Timeline** : Semaine 1-2, puis ongoing
 **Execution** :
 - Créer 5-email sequence (email + WhatsApp duplicate) :
-  1. Welcome : "Bienvenue BISOU" + 10% discount
+  1. Welcome : "Bienvenue ÔRIYA" + 10% discount
   2. Education : "Acier 316L : pourquoi c'est différent"
   3. Social proof : "250+ clients satisfaits"
   4. Urgency : "Aïd arrive, collection limitée"
@@ -895,7 +895,7 @@ NEXT ACTIONS
 
 Le marché marocain de la bijouterie fantaisie est à un **inflection point**. La croissance e-commerce (+25% YoY), la dominance WhatsApp (85% des ventes), et l'émergence TikTok créent un écosystème unique où une marque peut croître exponentiellement en 6 mois avec la bonne stratégie.
 
-**BISOU's Positioning** — "Hypoallergenic premium accessible" — comble une lacune majeure (32% des femmes marrakechies ont sensibilité nickel). Aucun competitor ne communique dessus.
+**ÔRIYA's Positioning** — "Hypoallergenic premium accessible" — comble une lacune majeure (32% des femmes marrakechies ont sensibilité nickel). Aucun competitor ne communique dessus.
 
 **Fenêtres critiques** : Aïd al-Fitr (Avril +45%), Aïd al-Adha (Juin +40%), Saison mariages (Sept-Oct +25%).
 
@@ -955,6 +955,6 @@ Le marché marocain de la bijouterie fantaisie est à un **inflection point**. L
 ---
 
 **Document préparé** : Mars 2026
-**Confidentiel — BISOU Internal Use Only**
+**Confidentiel — ÔRIYA Internal Use Only**
 **Next review** : Mai 2026 (post-Aïd al-Fitr data)
 

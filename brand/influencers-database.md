@@ -1,4 +1,4 @@
-# INFLUENCERS DATABASE — BISOU MAROC
+# INFLUENCERS DATABASE — ÔRIYA MAROC
 
 ## Critères de sélection
 - **Followers**: 1k-100k (nano + micro)
@@ -34,7 +34,7 @@
 - Affiliate link: wa.me/212612345678?fatima20
 
 **Outreach Message** :
-"Salam Fatima! 👋 On adore ton style avec les bijoux. BISOU crée des bijoux plaqués or pour les femmes marocaines. On aimerait collaborer avec toi et t'envoyer nos collections. Intéressée? 💎"
+"Salam Fatima! 👋 On adore ton style avec les bijoux. ÔRIYA crée des bijoux plaqués or pour les femmes marocaines. On aimerait collaborer avec toi et t'envoyer nos collections. Intéressée? 💎"
 
 **KPI Targets** :
 - Expected reach: 15,000-20,000 impressions
@@ -63,7 +63,7 @@
 - Durée: 2-3 semaines
 
 **Outreach Message** :
-"Salam Aicha! ✨ On suit ta beauté depuis longtemps. BISOU te propose une collaboration exclusive avec nos bijoux accessibles. Ça te tente? On peut discuter sur WhatsApp 📱"
+"Salam Aicha! ✨ On suit ta beauté depuis longtemps. ÔRIYA te propose une collaboration exclusive avec nos bijoux accessibles. Ça te tente? On peut discuter sur WhatsApp 📱"
 
 **KPI Targets** :
 - Expected reach: 12,000-18,000 impressions
@@ -440,7 +440,7 @@
 - Affiliate link: wa.me/212612345678?meryem25
 
 **Outreach Message** :
-"Salam Meryem! 👋 On adore ta vision fashion. BISOU crée des bijoux luxe accessibles pour les femmes marocaines. On te propose une collaboration exclusive avec contenu flexible. Intéressée? 💎✨"
+"Salam Meryem! 👋 On adore ta vision fashion. ÔRIYA crée des bijoux luxe accessibles pour les femmes marocaines. On te propose une collaboration exclusive avec contenu flexible. Intéressée? 💎✨"
 
 **KPI Targets** :
 - Expected reach: 65,000-85,000 impressions
@@ -762,7 +762,7 @@
 - Reach potentiel: 400,000-500,000 impressions
 
 **Outreach Message** :
-"Salam Fatima! 👋 BISOU vous propose une collaboration premium. Nos bijoux plaqués or combinent luxe et accessibilité. Nous admirons ton impact sur la mode marocaine. Disponible pour une discussion? 💎✨"
+"Salam Fatima! 👋 ÔRIYA vous propose une collaboration premium. Nos bijoux plaqués or combinent luxe et accessibilité. Nous admirons ton impact sur la mode marocaine. Disponible pour une discussion? 💎✨"
 
 **KPI Targets** :
 - Expected reach: 380,000-480,000 impressions
@@ -916,7 +916,7 @@ ROI Net (après frais produits ~30%): 450-500%
 **Quand l'utiliser**: Nano influencers sans budget direct
 
 **Format**
-- Envoyer 1-3 produits BISOU (700-1,200 MAD value)
+- Envoyer 1-3 produits ÔRIYA (700-1,200 MAD value)
 - Aucun paiement direct
 - Contenu attendu: 1-3 posts + 5-7 stories
 - Durée: 2-3 semaines
@@ -960,7 +960,7 @@ ROI Net (après frais produits ~30%): 450-500%
 3. Signature accord simple (email)
 4. Paiement 50% avant contenu
 5. Créateur produit contenu
-6. Validation contenu par BISOU
+6. Validation contenu par ÔRIYA
 7. Paiement 50% après publication
 8. Tracking 4 semaines
 
@@ -1034,7 +1034,7 @@ Salam [Créateur]! 👋
 
 On adore ce que tu fais avec [ta niche]!
 
-Chez BISOU, on crée des bijoux plaqués or accessibles
+Chez ÔRIYA, on crée des bijoux plaqués or accessibles
 pour les femmes marocaines qui veulent du luxe sans le prix.
 
 On aimerait t'envoyer nos dernières collections
@@ -1046,24 +1046,24 @@ pas de timing strict.
 
 Ça t'intéresse? 💎✨
 
-BISOU Team
+ÔRIYA Team
 ```
 
 ### Template 2: PAID COLLAB (Micro)
 ```
 Format: Email ou DM Instagram
 
-Sujet: Proposition de collaboration BISOU x [Créateur]
+Sujet: Proposition de collaboration ÔRIYA x [Créateur]
 
 Salam [Créateur],
 
 On a suivi ton parcours et on adore ta vision [fashion/beauty/lifestyle].
 
-BISOU crée des bijoux luxe accessibles pour les femmes marocaines.
+ÔRIYA crée des bijoux luxe accessibles pour les femmes marocaines.
 
 On te propose une collaboration:
 
-📦 Produits BISOU gratuits (1,000 MAD value)
+📦 Produits ÔRIYA gratuits (1,000 MAD value)
 💰 Paiement de collaboration: 1,000 MAD
 📸 Contenu flexible:
    - 4-5 photos posts
@@ -1077,7 +1077,7 @@ Timeline: [Flexible/Spécifique]
 Intéressée? On peut en discuter sur WhatsApp 📱
 
 Merci!
-BISOU Team
+ÔRIYA Team
 ```
 
 ### Template 3: AFFILIATE ONLY
@@ -1089,7 +1089,7 @@ Salam [Créateur],
 Proposition rapide:
 
 Qu'est-ce que tu en penses si tu partages
-les bijoux BISOU avec ton audience?
+les bijoux ÔRIYA avec ton audience?
 
 Commission: 7% sur chaque vente générée
 Lien unique: wa.me/212612345678?[creator_code]
@@ -1099,7 +1099,7 @@ Tu peux partager quand tu veux.
 
 Intéressée? 💎
 
-BISOU
+ÔRIYA
 ```
 
 ---
@@ -1198,10 +1198,10 @@ Sheet 5: MONTHLY SUMMARY
 
 ## PARTNERSHIP AGREEMENT
 
-### ACCORD DE COLLABORATION — BISOU × [CRÉATEUR]
+### ACCORD DE COLLABORATION — ÔRIYA × [CRÉATEUR]
 
 **Entre** :
-- BISOU Maroc (Vendeur de bijoux plaqués or)
+- ÔRIYA Maroc (Vendeur de bijoux plaqués or)
 - [Prénom NOM] @[handle] (Influencer/Créateur contenu)
 
 **Périod de collaboration**: [DD/MM/YYYY] à [DD/MM/YYYY]
@@ -1218,7 +1218,7 @@ Sheet 5: MONTHLY SUMMARY
 **Produits Gratuits**
 - Valeur: [500-2,000 MAD selon tier]
 - Articles: [Spécifier les produits]
-- Livraison: Aux frais de BISOU
+- Livraison: Aux frais de ÔRIYA
 
 **Affiliate Commission (Optional)**
 - Commission: [5-10%] par vente générée
@@ -1233,12 +1233,12 @@ Sheet 5: MONTHLY SUMMARY
 - [ ] [4-6] Posts feed (photos/vidéo)
 - [ ] [8-12] Stories (try-ons, unboxing, reviews)
 - [ ] [1-2] Reels (vidéo créatif 15-60s)
-- [ ] [Mention dans captions: "Collaboration avec @bisoumaroc"]
-- [ ] [Lien affiliate ou "BISOU" dans bio]
+- [ ] [Mention dans captions: "Collaboration avec @oriyamaroc"]
+- [ ] [Lien affiliate ou "ÔRIYA" dans bio]
 
 **Approbation Contenu**
 - Créateur: Liberté créative complète
-- BISOU: Droit de demander modifications si:
+- ÔRIYA: Droit de demander modifications si:
   - Contenu sensible ou offensant
   - Qualité très basse (blurry, bad lighting)
   - Misinformation sur produits
@@ -1253,8 +1253,8 @@ Sheet 5: MONTHLY SUMMARY
 ### 3. DROITS D'UTILISATION
 
 **Contenu Créateur**
-- BISOU peut réutiliser les posts du créateur:
-  - Sur feed BISOU
+- ÔRIYA peut réutiliser les posts du créateur:
+  - Sur feed ÔRIYA
   - En Instagram Stories/Reels
   - Sur WhatsApp Business
   - En publicité (mention créateur)
@@ -1269,10 +1269,10 @@ Sheet 5: MONTHLY SUMMARY
 
 ### 4. PERFORMANCE EXPECTATIONS
 
-**Pour BISOU**
+**Pour ÔRIYA**
 - Atteindre [X] impressions
 - Générer [X]% engagement rate
-- Diriger [X] clics vers Instagram BISOU
+- Diriger [X] clics vers Instagram ÔRIYA
 
 **Pour Créateur**
 - Publier contenu de qualité
@@ -1283,14 +1283,14 @@ Sheet 5: MONTHLY SUMMARY
 
 ### 5. TERMINATION
 
-**BISOU** peut canceler si:
+**ÔRIYA** peut canceler si:
 - Créateur ne publie rien après 3 semaines
 - Contenu est plagié ou bas quality
 - Créateur promeut produits controversés/dangereux
 
 **Créateur** peut canceler si:
-- BISOU ne paie pas après 30 jours
-- BISOU demande contenu inapproprié
+- ÔRIYA ne paie pas après 30 jours
+- ÔRIYA demande contenu inapproprié
 - Accord complètement différent de signature
 
 ---
@@ -1305,7 +1305,7 @@ Sheet 5: MONTHLY SUMMARY
 
 ### 7. SIGNATURES
 
-**BISOU**
+**ÔRIYA**
 - Signature: _________________________
 - Nom: ____________________________
 - Date: ________ / ________ / ________
@@ -1337,7 +1337,7 @@ Salam [Prénom]! 👋
 
 On adore ton style avec [les bijoux/la beauté/le lifestyle].
 
-Chez BISOU, on crée des bijoux plaqués or accessibles
+Chez ÔRIYA, on crée des bijoux plaqués or accessibles
 pour les femmes marocaines qui veulent du luxe sans prix.
 
 On aimerait t'envoyer nos nouvelles collections
@@ -1349,7 +1349,7 @@ tu peux partager avec tes followers 💎
 Intéressée? ✨
 
 Merci!
-BISOU Team
+ÔRIYA Team
 ```
 
 ### Template 2: Follow-up (After 5 days)
@@ -1364,24 +1364,24 @@ te plairait et à ton audience!
 Lien DM si tu veux discuter 👇
 
 Merci!
-BISOU
+ÔRIYA
 ```
 
 ### Template 3: Micro Influencer Email
 ```
-Sujet: Collaboration BISOU x [Handle]
+Sujet: Collaboration ÔRIYA x [Handle]
 
 Salam [Prénom],
 
 J'ai suivi ton content depuis quelques mois
 et je suis fan de ta vision [fashion/beauty].
 
-Chez BISOU, on crée des bijoux plaqués or luxe
+Chez ÔRIYA, on crée des bijoux plaqués or luxe
 mais accessibles pour les marocaines.
 
 Je te propose une collaboration:
 
-📦 Produits BISOU gratuits (1,500 MAD)
+📦 Produits ÔRIYA gratuits (1,500 MAD)
 💰 Paiement: 1,200 MAD
 📸 Contenu: Posts + Stories + Reel
 📊 Affiliate: 7% per sale
@@ -1390,16 +1390,16 @@ Je te propose une collaboration:
 
 Merci!
 [Ton nom]
-BISOU
+ÔRIYA
 ```
 
 ### Template 4: Macro Influencer Email
 ```
-Sujet: Collaboration Premium — BISOU Maroc
+Sujet: Collaboration Premium — ÔRIYA Maroc
 
 Salam [Prénom],
 
-BISOU est une marque de bijoux luxe accessibles
+ÔRIYA est une marque de bijoux luxe accessibles
 fondée pour les femmes marocaines.
 
 On adore ton impact et ta crédibilité
@@ -1407,7 +1407,7 @@ dans la scène fashion/lifestyle marocaine.
 
 Je vous propose une collaboration ambassador:
 
-🎁 Produits BISOU premium (2,000 MAD+)
+🎁 Produits ÔRIYA premium (2,000 MAD+)
 💰 Paiement: 3,000-4,000 MAD
 📸 Contenu: Photos + Stories + Reel
 🤝 Partenariat long-terme possible
@@ -1416,7 +1416,7 @@ On peut en discuter?
 
 Respectueusement,
 [Ton nom]
-BISOU
+ÔRIYA
 ```
 
 ### Template 5: Affiliate Offer
@@ -1424,7 +1424,7 @@ BISOU
 Salam [Prénom],
 
 Proposition rapide: Tu veux gagner de l'argent
-en recommandant les bijoux BISOU?
+en recommandant les bijoux ÔRIYA?
 
 🔗 Lien unique: wa.me/212612345678?[code]
 💰 Commission: 7% par vente
@@ -1433,7 +1433,7 @@ en recommandant les bijoux BISOU?
 
 Intéressée?
 
-BISOU
+ÔRIYA
 ```
 
 ---
@@ -1533,7 +1533,7 @@ BISOU
 - Comment analysis
 
 **8. Audience Growth**
-- BISOU followers gained per collab
+- ÔRIYA followers gained per collab
 - Website clicks from each creator
 - Saved followers (via stories)
 
@@ -1639,7 +1639,7 @@ BISOU
 
 ## CONCLUSION
 
-Cette base de données représente une stratégie influencer marketing complète et réaliste pour BISOU Maroc.
+Cette base de données représente une stratégie influencer marketing complète et réaliste pour ÔRIYA Maroc.
 
 **Key Success Factors:**
 1. Sélection rigoureuse créateurs (vérifier audience réelle)
@@ -1660,5 +1660,5 @@ Cette base de données représente une stratégie influencer marketing complète
 
 ---
 
-*Base de données créée pour BISOU Maroc — Mars 2026*
+*Base de données créée pour ÔRIYA Maroc — Mars 2026*
 *Dernière mise à jour: 06/03/2026*

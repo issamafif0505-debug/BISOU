@@ -1,4 +1,4 @@
-# INSTAGRAM CALENDAR — BISOU MAROC (30 JOURS)
+# INSTAGRAM CALENDAR — ÔRIYA MAROC (30 JOURS)
 
 ## Semaine 1 — LANCEMENT & AWARENESS
 
@@ -7,7 +7,7 @@
 **Visuel** : Pack Découverte hero shot
 **Caption** :
 ```
-🌟 BIENVENUE CHEZ BISOU 🌟
+🌟 BIENVENUE CHEZ ÔRIYA 🌟
 
 L'or qui t'embrasse... sans le prix de l'or!
 
@@ -21,7 +21,7 @@ Découvrez nos bijoux plaqués or en acier chirurgical 316L:
 
 Lien en bio → Commander via WhatsApp 📱
 
-#BISOU #BijouxMarrakech #BijouPlaquéOr #AccesLuxury
+#ÔRIYA #BijouxMarrakech #BijouPlaquéOr #AccesLuxury
 ```
 **Hashtags** : #BijouMarrakech #PlaquéOr #AcierInoxydable #Luxe #MarrakechFashion #BijouFantaisie #SansNickel #LOrQuiTembrasse #BisoMaroc #AccessoriesMaroc #FashionMaroc #GoldPlated #StainlessSteel #JewelryDesign #ShopMaroc #ReelsMaroc #MarrakechGirl #FemmesMaroc #TrendingNow
 **CTA** : "Link in bio - Order on WhatsApp"
@@ -66,12 +66,12 @@ Swipe up to order → Link in bio 📱
 
 C'est nos VRAIES clientes du Maroc 🇲🇦
 
-Si tu as aussi un avis: tag-nous avec #BISOU 📸
+Si tu as aussi un avis: tag-nous avec #ÔRIYA 📸
 
 Pack Découverte: 229 MAD (Lien en bio)
 ```
-**Hashtags** : #TestimonialMaroc #RealCustomers #CustomerLove #Verified #BisoMaroc #BijouMarrakech #CommunityFirst #TrustBisou #MarocBusiness #LocalLove #SupportLocal #Review #RealTalk #FashionCommunity #JewelryLove
-**CTA** : "Tag us with your BISOU story!"
+**Hashtags** : #TestimonialMaroc #RealCustomers #CustomerLove #Verified #BisoMaroc #BijouMarrakech #CommunityFirst #TrustÔriya #MarocBusiness #LocalLove #SupportLocal #Review #RealTalk #FashionCommunity #JewelryLove
+**CTA** : "Tag us with your ÔRIYA story!"
 **Posting Time** : 12:00 PM
 **Expected Reach** : 600-1200
 
@@ -96,7 +96,7 @@ Le secret? La règle 2-3-1:
 Essaie avec le PACK DÉCOUVERTE! 229 MAD 🎁
 ```
 **Hashtags** : #StyleTips #FashionAdvice #JewelryTutorial #StylingGuide #FashionBlog #EducationalContent #TipsAndTricks #AccessoryGame #FashionHelp #BeautyTips #LifestyleGuide #SmartShopping #BisoMaroc #FemmesMaroc #MarrakechStyle
-**CTA** : "Try this combo with BISOU!"
+**CTA** : "Try this combo with ÔRIYA!"
 **Posting Time** : 10:00 AM
 **Expected Reach** : 700-1300
 
@@ -104,12 +104,12 @@ Essaie avec le PACK DÉCOUVERTE! 229 MAD 🎁
 
 ### Jour 5 (Vendredi) — Lifestyle Content
 **Format** : Reel (20s)
-**Visuel** : Girl wearing BISOU doing daily activities (coffee, work, shopping)
+**Visuel** : Girl wearing ÔRIYA doing daily activities (coffee, work, shopping)
 **Caption** :
 ```
 De la maison au bureau, avec style 🌟
 
-Elle porte ses bijoux BISOU TOUS LES JOURS.
+Elle porte ses bijoux ÔRIYA TOUS LES JOURS.
 
 Pourquoi? Parce que:
 ✓ Légers (tu oublies que tu les portes)
@@ -149,7 +149,7 @@ Quantités limitées!
 
 COMMANDER: Lien en bio 📱
 ```
-**Hashtags** : #FlashSale #WeekendOffer #LimitedTime #PromoBisou #ShopNow #DealOfTheDay #SaveMoney #SmartShopping #MarocShopping #OnlineShop #ECommerce #ShoesDeals #BisoMaroc #BuyNow #LastChance
+**Hashtags** : #FlashSale #WeekendOffer #LimitedTime #PromoÔriya #ShopNow #DealOfTheDay #SaveMoney #SmartShopping #MarocShopping #OnlineShop #ECommerce #ShoesDeals #BisoMaroc #BuyNow #LastChance
 **CTA** : "Order before it's gone!"
 **Posting Time** : 10:00 AM
 **Expected Reach** : 1200-2000
@@ -173,7 +173,7 @@ D) Boucles d'oreilles 👂
 
 Les votes gagnants dictent notre prochaine collection!
 
-Tag une copine qui DOIT découvrir BISOU 👇
+Tag une copine qui DOIT découvrir ÔRIYA 👇
 ```
 **Hashtags** : #CommunityFirst #YourOpinionMatters #FollowTheVote #CommunityLove #InteractiveContent #EngagementPost #BisoMaroc #AskMe #PollTime #CommunityDriven #FeedbackWelcome #CustomerFirst #BijouxMarrakech #JewelryPoll #VotesNeeded
 **CTA** : "Vote in the polls! Tag a friend!"
@@ -231,7 +231,7 @@ Le résultat?
 ✨ Parfait pour tous les styles
 ✨ Aucun noeud (promise!)
 
-Nos colliers BISOU sont parfaits pour layering.
+Nos colliers ÔRIYA sont parfaits pour layering.
 Pourquoi? Ils sont légers = pas de douleur au cou!
 
 Montre-nous ton combo! 📸
@@ -245,7 +245,7 @@ Montre-nous ton combo! 📸
 
 ### Jour 10 (Mercredi) — Before/After Styling
 **Format** : Carousel (2 slides - before/after)
-**Visuel** : Same outfit without & with BISOU jewelry
+**Visuel** : Same outfit without & with ÔRIYA jewelry
 **Caption** :
 ```
 AVANT vs APRÈS: Le pouvoir des bijoux 💎
@@ -253,7 +253,7 @@ AVANT vs APRÈS: Le pouvoir des bijoux 💎
 Même tenue. Différent niveau de style!
 
 Slide 1: Juste un t-shirt blanc
-Slide 2: T-shirt blanc + bijoux BISOU
+Slide 2: T-shirt blanc + bijoux ÔRIYA
 
 La transformation? Instantanée! ✨
 
@@ -307,26 +307,26 @@ Qualité = prix abordable. C'est notre promesse 💙
 
 ### Jour 12 (Vendredi) — Customer Spotlight
 **Format** : Story + Feed Post (Carousel 2 slides)
-**Visuel** : Customer photo wearing BISOU + quote graphic
+**Visuel** : Customer photo wearing ÔRIYA + quote graphic
 **Caption** :
 ```
 NOTRE HÉROÏNE: FATIMA 🌟
 
-"BISOU est devenu mon marque préférée parce que c'est la seule qui ne me fait pas réagir. Je le porte tous les jours sans culpabilité!"
+"ÔRIYA est devenu mon marque préférée parce que c'est la seule qui ne me fait pas réagir. Je le porte tous les jours sans culpabilité!"
 
 Fatima, Marrakech
 Cliente depuis 3 mois
 
-❤️ MERCI Fatima d'avoir confiance en BISOU!
+❤️ MERCI Fatima d'avoir confiance en ÔRIYA!
 
 Si tu as une histoire comme celle-ci:
-📸 Tag-nous avec #BISOU
+📸 Tag-nous avec #ÔRIYA
 Ou DM-nous directement!
 
 Pack Découverte si tu veux essayer: 229 MAD
 ```
 **Hashtags** : #CustomerSpotlight #CustomerStory #RealPeople #RealReviews #BisoMaroc #CommunityLove #CustomerTestimonial #SkinFriendly #HappyCustomer #FaithfulCustomer #LocalSupport #MarrakechBusiness #SmallBusiness #SupportLocal #BijouxMarrakech
-**CTA** : "Share your BISOU story!"
+**CTA** : "Share your ÔRIYA story!"
 **Posting Time** : 3:00 PM
 **Expected Reach** : 800-1400
 
@@ -429,10 +429,10 @@ Commander avec message personnalisé: Lien en bio 📱
 
 ### Jour 16 (Mardi) — Reel: Unboxing Experience
 **Format** : Reel (20s)
-**Visuel** : Opening BISOU package, trying on jewelry, smile
+**Visuel** : Opening ÔRIYA package, trying on jewelry, smile
 **Caption** :
 ```
-UNBOXING BISOU ✨
+UNBOXING ÔRIYA ✨
 
 Le moment où tu ouvres ton colis...
 Et c'est encore plus beau qu'en photo! 📦
@@ -446,7 +446,7 @@ Ce que tu vas trouver:
 C'est ça que nos clientes aiment:
 "Ça vaut 500 MAD, pas 229 MAD!"
 
-Rejoins la famille BISOU!
+Rejoins la famille ÔRIYA!
 Commande aujourd'hui (Lien en bio) 📱
 ```
 **Hashtags** : #UnboxingVideo #UnboxingExperience #ProductUnboxing #ReelsMaroc #TrendingVideo #ASMR #UnboxingASMR #OnlineUnboxing #ShoppingVideo #ProductReview #BisoMaroc #ExcitingMoment #UnboxMe #FirstImpression #ProductQuality
@@ -458,14 +458,14 @@ Commande aujourd'hui (Lien en bio) 📱
 
 ### Jour 17 (Mercredi) — User Generated Content
 **Format** : Carousel (5 slides - different customers)
-**Visuel** : Customer photos with BISOU jewelry
+**Visuel** : Customer photos with ÔRIYA jewelry
 **Caption** :
 ```
 VOUS ÊTES LES MEILLEURES 💙
 
 Ces photos? C'est vous, nos vraies clientes!
 
-Chaque jour, des filles comme toi découvrent BISOU
+Chaque jour, des filles comme toi découvrent ÔRIYA
 Et chaque jour, on reçoit vos photos 📸
 
 Ce qu'on aime?
@@ -474,16 +474,16 @@ Ce qu'on aime?
 ✓ Votre confiance dans nos produits
 ✓ Votre soutien
 
-MERCI de faire partie de la famille BISOU! 🌟
+MERCI de faire partie de la famille ÔRIYA! 🌟
 
 Vous aussi, envoyez vos photos!
-→ Hashtag #BISOU dans vos posts
+→ Hashtag #ÔRIYA dans vos posts
 → Ou DM-nous directement
 
 Si on reposte votre photo, on vous envoie un cadeau! 🎁
 ```
 **Hashtags** : #UserGeneratedContent #UGC #RealCustomers #CustomerSpotlight #CommunityLove #BisoMaroc #FeatureUs #ShowYourStyle #YouAreBeautiful #CustomerPhotos #RealPeople #CommunityFirst #SocialProof #BijouxMarrakech #FashionCommunity
-**CTA** : "Tag us with #BISOU!"
+**CTA** : "Tag us with #ÔRIYA!"
 **Posting Time** : 12:00 PM
 **Expected Reach** : 900-1500
 
@@ -517,7 +517,7 @@ Slide 3: LE LOOK MEETING CLIENT
 - Pas de bracelets (déconcentre)
 → Vous = fiable & sérieuse
 
-Les bijoux BISOU sont parfaits pour le bureau:
+Les bijoux ÔRIYA sont parfaits pour le bureau:
 ✓ Légers = pas de fatigue
 ✓ Discrets mais chics
 ✓ Durables = portez-les quotidiennement
@@ -533,14 +533,14 @@ Lien en bio pour commander 📱
 
 ### Jour 19 (Vendredi) — Weekend Plans Content
 **Format** : Story + Feed Post
-**Visuel** : Girl getting ready for weekend with BISOU jewelry
+**Visuel** : Girl getting ready for weekend with ÔRIYA jewelry
 **Caption** :
 ```
 WEEKEND APPROCHE! 🎉
 
 Dimanche, c'est date night? Café avec les copines? Marché?
 
-Quoi que tu fasses, porte tes bijoux BISOU.
+Quoi que tu fasses, porte tes bijoux ÔRIYA.
 
 Pourquoi?
 ✓ Ils changent ton mood
@@ -723,7 +723,7 @@ Prix: 89 MAD ONLY!
 ET BONUS?
 → Commandez cette semaine = -15% sur le second produit!
 
-Première fois chez BISOU?
+Première fois chez ÔRIYA?
 → Combo parfait: Bague + Collier (208 MAD au lieu de 228)
 
 Commander: Lien en bio 📱
@@ -819,7 +819,7 @@ Commandez votre favori: Lien en bio 📱
 
 On crée quelque chose de SPÉCIAL pour vous...
 
-HINT: Ça s'appelle BISOU VIP 👑
+HINT: Ça s'appelle ÔRIYA VIP 👑
 
 Si vous êtes clientes fidèles (ou prochaines clientes):
 → Vous devez ABSOLUMENT écouter demain!
@@ -848,24 +848,24 @@ Dimanche, 6pm, soyez là! 📲
 **Visuel** : VIP program details, benefits, how to join
 **Caption** :
 ```
-🎊 BISOU VIP EST ICI! 🎊
+🎊 ÔRIYA VIP EST ICI! 🎊
 
 Après un mois avec vous, on dit MERCI.
 
-Introducing: LE PROGRAMME BISOU VIP 👑
+Introducing: LE PROGRAMME ÔRIYA VIP 👑
 
 Comment ça marche:
 
 Slide 1: COMMENT REJOINDRE?
 C'est SIMPLE:
-✓ Achetez 1 produit BISOU = Vous êtes IN!
+✓ Achetez 1 produit ÔRIYA = Vous êtes IN!
 ✓ Ou reply "VIP" en DM
 
 Slide 2: LES BENEFITS
 ✓ -10% sur TOUS les produits
 ✓ Early access aux nouveaux produits (48h avant public)
 ✓ 1 surpris gratuit par mois
-✓ Invitations aux événements BISOU
+✓ Invitations aux événements ÔRIYA
 
 Slide 3: PALIERS DE RÉCOMPENSES
 - Bronze (1 achat): -10%
@@ -879,7 +879,7 @@ Slide 4: CE QUE NOS VIPs DISENT
 Slide 5: REJOIGNEZ NOUS!
 "VIP" → DM ← Cliquez!
 
-Merci de faire BISOU ce que c'est 💙
+Merci de faire ÔRIYA ce que c'est 💙
 ```
 **Hashtags** : #BisoVIP #LoyaltyProgram #VIPMember #ExclusiveOffer #BisoMaroc #CommunityFirst #RewardedLoyalty #SpecialTreatment #JoinNow #MemberPerks #VIPBenefits #FaithfulCustomers #FamilyFirst #ThankYou #WelcomeToTheClub
 **CTA** : "Reply VIP to join!"
@@ -908,7 +908,7 @@ Mais surtout?
 ✓ Une COMMUNAUTÉ
 
 On n'est pas juste un brand.
-On est une FAMILLE BISOU 💙
+On est une FAMILLE ÔRIYA 💙
 
 Et ça ne fait que commencer...
 
@@ -944,7 +944,7 @@ Le mois prochain = PLUS BIG:
 🎁 Concours ÉNORME (à gagner: 1,000 MAD de produits!)
 💍 5 nouveaux designs exclusifs
 🌟 Événement live Instagram (questions/réponses en direct)
-📸 Photo contest: Montrez vos looks BISOU
+📸 Photo contest: Montrez vos looks ÔRIYA
 🎊 "Jour du lancement" avec -30% sur tout!
 
 Plus vous rejoignez, plus on grandit ensemble!
@@ -978,7 +978,7 @@ P.S: Thank you a million times! 💙
 ## HASHTAG STRATEGY
 
 ### Brand Hashtags (Always use):
-#BISOU #BijouBISOU #BisoMaroc #LOrQuiTembrasse
+#ÔRIYA #BijouÔRIYA #BisoMaroc #LOrQuiTembrasse
 
 ### Category Hashtags (15-20 per post):
 #BijouPlaquéOr #AcierInoxydable #SansNickel #BijouFantaisie #JewelryDesign #StatementJewelry #FineJewelry #MinimalistJewelry #AccessoriesMaroc #FashionMaroc #GoldJewelry #GoldPlated #SurgicalSteel #ChirurgicalSteel #Hypoallergenic #HealthyChoice #SkinfriendlyJewelry #JewelryTrend
@@ -1089,7 +1089,7 @@ P.S: Thank you a million times! 💙
 ---
 
 **Created:** March 2026
-**Brand:** BISOU Maroc
+**Brand:** ÔRIYA Maroc
 **Duration:** 30 Days (Month 1 Launch)
 **Target Audience:** Women 18-35, Morocco, Fashion & Accessory lovers
 **Expected Reach:** 5,000+ monthly | Expected Sales: 100+ products

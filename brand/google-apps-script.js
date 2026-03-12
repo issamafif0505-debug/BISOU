@@ -1,13 +1,13 @@
 /**
  * ============================================================
- *  BISOU COD — Google Apps Script
+ *  ÔRIYA COD — Google Apps Script
  *  À coller dans script.google.com (nouveau projet)
  * ============================================================
  *
  *  INSTALLATION :
  *  1. Aller sur https://script.google.com → Nouveau projet
  *  2. Coller l'intégralité de ce fichier dans l'éditeur
- *  3. Enregistrer (Ctrl+S) → Nommer le projet "BISOU COD"
+ *  3. Enregistrer (Ctrl+S) → Nommer le projet "ÔRIYA COD"
  *  4. Déployer → Nouveau déploiement
  *       Type : Application Web
  *       Exécuter en tant que : Moi
@@ -138,7 +138,7 @@ function doGet(e) {
 
     } else {
       // Action inconnue — retourner un ping de santé
-      return buildResponse({ success: true, status: 'BISOU COD Apps Script en ligne', version: '1.0' });
+      return buildResponse({ success: true, status: 'ÔRIYA COD Apps Script en ligne', version: '1.0' });
     }
 
   } catch (err) {

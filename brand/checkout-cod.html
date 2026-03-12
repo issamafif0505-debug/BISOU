@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BISOU — Finaliser ma commande</title>
+  <title>ÔRIYA — Finaliser ma commande</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
@@ -579,7 +579,7 @@
 
   <!-- ─── HEADER ─────────────────────────────────────────────────── -->
   <header class="site-header">
-    <a href="#" class="logo">BISOU</a>
+    <a href="#" class="logo">ÔRIYA</a>
     <p class="header-subtitle">Finaliser ma commande</p>
   </header>
 
@@ -813,12 +813,12 @@
 
   <!-- ─── FOOTER ───────────────────────────────────────────────────── -->
   <footer class="site-footer">
-    <span class="footer-brand">© 2026 BISOU · Marrakech, Maroc</span>
+    <span class="footer-brand">© 2026 ÔRIYA · Marrakech, Maroc</span>
     <span class="footer-sub">Livraison COD partout au Maroc</span>
   </footer>
 
   <!-- ─── PANNEAU ADMIN (visible seulement via ?admin=1) ────────────── -->
-  <div id="bisou-admin-panel" style="display:none; background-color:#111; border-top:2px solid #D4AF37; padding:28px 20px;">
+  <div id="oriya-admin-panel" style="display:none; background-color:#111; border-top:2px solid #D4AF37; padding:28px 20px;">
     <div style="max-width:680px; margin:0 auto;">
       <p style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:#D4AF37; letter-spacing:0.15em; margin-bottom:4px;">Configuration Google Sheets</p>
       <p style="font-size:0.7rem; color:#888; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:20px;">Panneau d'administration — accès restreint</p>
@@ -1060,7 +1060,7 @@
       const note       = noteRaw || 'Aucune';
 
       const message =
-`🛍️ NOUVELLE COMMANDE BISOU
+`🛍️ NOUVELLE COMMANDE ÔRIYA
 
 📦 Produit : ${nomProduit}
 💰 Prix : ${prix} MAD — PAIEMENT À LA LIVRAISON
@@ -1071,7 +1071,7 @@
 🏠 Adresse : ${adresse}
 📝 Note : ${note}
 
-✅ Commande confirmée — En attente de validation BISOU`;
+✅ Commande confirmée — En attente de validation ÔRIYA`;
 
       return message;
     }
@@ -1104,7 +1104,7 @@
       };
 
       // ── Google Sheets : fire-and-forget (n'attend pas la réponse)
-      const webhookUrl = localStorage.getItem('BISOU_WEBHOOK_URL');
+      const webhookUrl = localStorage.getItem('ORIYA_WEBHOOK_URL');
       if (webhookUrl && webhookUrl.trim() !== '') {
         fetch(webhookUrl, {
           method: 'POST',
@@ -1112,7 +1112,7 @@
           body: JSON.stringify(orderData)
         }).catch(function () {
           // Erreur silencieuse — ne pas bloquer WhatsApp
-          console.warn('[BISOU] Envoi Google Sheets échoué (non bloquant)');
+          console.warn('[ÔRIYA] Envoi Google Sheets échoué (non bloquant)');
         });
       }
 
@@ -1134,11 +1134,11 @@
       // Afficher le panneau admin si ?admin=1 dans l'URL
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get('admin') === '1') {
-        const adminPanel = document.getElementById('bisou-admin-panel');
+        const adminPanel = document.getElementById('oriya-admin-panel');
         if (adminPanel) {
           adminPanel.style.display = 'block';
           // Pré-remplir avec la valeur sauvegardée
-          const savedUrl = localStorage.getItem('BISOU_WEBHOOK_URL') || '';
+          const savedUrl = localStorage.getItem('ORIYA_WEBHOOK_URL') || '';
           const adminInput = document.getElementById('admin-webhook-url');
           if (adminInput) adminInput.value = savedUrl;
         }
@@ -1170,11 +1170,11 @@
 
       if (!url) {
         // Effacer la config
-        localStorage.removeItem('BISOU_WEBHOOK_URL');
+        localStorage.removeItem('ORIYA_WEBHOOK_URL');
         statusEl.textContent = 'Configuration effacée.';
         statusEl.style.color = '#F39C12';
       } else {
-        localStorage.setItem('BISOU_WEBHOOK_URL', url);
+        localStorage.setItem('ORIYA_WEBHOOK_URL', url);
         statusEl.textContent = 'URL sauvegardée avec succes.';
         statusEl.style.color = '#2ECC71';
       }

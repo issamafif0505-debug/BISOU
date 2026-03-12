@@ -1,4 +1,4 @@
-# WHATSAPP BUSINESS STRATEGY — BISOU MAROC
+# WHATSAPP BUSINESS STRATEGY — ÔRIYA MAROC
 
 ## 1. SETUP TECHNIQUE
 
@@ -11,7 +11,7 @@
 
 **Installation étapes**
 1. Télécharger WhatsApp Business App (gratuit)
-2. Créer profil professionnel avec logo BISOU
+2. Créer profil professionnel avec logo ÔRIYA
 3. Ajouter description, horaires, lien site web
 4. Configurer réponses automatiques
 5. Activer catalogue produits
@@ -77,7 +77,7 @@ PACK MINI (159 MAD) 💫 Économique
 - Setup : 2-3 heures
 - Lien : botpress.com
 
-**Option 2 : Typebot (Recommandé pour BISOU)**
+**Option 2 : Typebot (Recommandé pour ÔRIYA)**
 - Avantage : Visual workflow builder, pas de code
 - Coût : Gratuit jusqu'à 500 contacts
 - Setup : 1-2 heures
@@ -96,7 +96,7 @@ PACK MINI (159 MAD) 💫 Économique
 - Coût : Gratuit
 - Limitation : Moins customizable
 
-**RECOMMANDATION BISOU** : Combiner Typebot (chatbot) + Make.com (workflows)
+**RECOMMANDATION ÔRIYA** : Combiner Typebot (chatbot) + Make.com (workflows)
 
 ### D. Réponses Automatisées & Templates
 
@@ -125,7 +125,7 @@ Ajouter ces templates :
 ### A. Message de Bienvenue (1er contact)
 
 ```
-🌟 Bienvenue chez BISOU! 🌟
+🌟 Bienvenue chez ÔRIYA! 🌟
 
 ✨ Bijoux plaqués or · Acier inoxydable 316L
 💫 Anti-allergique · Garantie 6 mois
@@ -196,7 +196,7 @@ Questions ? Demandez ! 💬
 ```
 ✅ COMMANDE CONFIRMÉE ✅
 
-Merci de choisir BISOU! 💛
+Merci de choisir ÔRIYA! 💛
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -219,7 +219,7 @@ Téléphone : [NUMERO]
 
 📞 Notre livreur vous appellera avant arrivée
 💛 Paiement à la réception uniquement
-🎁 Emballage luxe + Carte BISOU inclus
+🎁 Emballage luxe + Carte ÔRIYA inclus
 
 Numéro suivi : [NUMERO]
 Gardez ce message pour réclamations
@@ -277,7 +277,7 @@ Retour 7 jours : GRATUIT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ✨ BONUS : Commande maintenant =
-   Surprise BISOU dans le colis! 🎁
+   Surprise ÔRIYA dans le colis! 🎁
 
 👉 Réponds OUI avant minuit! ⏰
 ```
@@ -285,7 +285,7 @@ Retour 7 jours : GRATUIT
 ### F. Message Post-Livraison (Survey & Review)
 
 ```
-📦 Tu as reçu ta commande BISOU! 🌟
+📦 Tu as reçu ta commande ÔRIYA! 🌟
 
 Comment ça va ? 😍
 
@@ -296,7 +296,7 @@ On aimerait vraiment ton avis :
 ⭐ Qualité du produit
 ⭐ Emballage
 ⭐ Livraison
-⭐ Expérience BISOU
+⭐ Expérience ÔRIYA
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -305,7 +305,7 @@ On aimerait vraiment ton avis :
 Partage une PHOTO + TON AVIS
 = 10% RÉDUCTION sur ta prochaine commande!
 
-#BISOU #Marrakech #Bijoux #Acier316L
+#ÔRIYA #Marrakech #Bijoux #Acier316L
 
 (Envoie ta photo en répondant à ce message!)
 
@@ -343,7 +343,7 @@ On veut vraiment te rendre heureuse! 💛
 ### H. Message Promotion Flash (Limited Time)
 
 ```
-🔥 PROMO FLASH BISOU! 🔥
+🔥 PROMO FLASH ÔRIYA! 🔥
 
 Aujourd'hui SEULEMENT 24h!
 
@@ -369,7 +369,7 @@ Stock limité : [XX articles] en stock
 ### I. Message Invitation Parrainage
 
 ```
-👯 TU AIMES BISOU? Partage l'amour! 💛
+👯 TU AIMES ÔRIYA? Partage l'amour! 💛
 
 Parraine une amie et GAGNEZ tous les deux!
 
@@ -400,7 +400,7 @@ Mais on sera là demain ! ☀️
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-⏰ Horaires BISOU :
+⏰ Horaires ÔRIYA :
    Lun-Dim : 7h00 - 22h00
    (on ne ferme JAMAIS le weekend!)
 
@@ -411,7 +411,7 @@ On te répond en priorité demain matin 🚀
 
 En attendant :
 ✓ Vois notre catalogue (ci-dessus)
-✓ Demande à Chatbot BISOU (IA) 🤖
+✓ Demande à Chatbot ÔRIYA (IA) 🤖
 ✓ Commande à tout moment via WhatsApp
 
 Merci de ta patience! 💛
@@ -489,7 +489,7 @@ Bonne nuit! 💤 À demain! 💛
 TRIGGER : Customer sends ANY message
    ↓
 STEP 1: Send Welcome Message
-   └→ "🌟 Bienvenue chez BISOU..."
+   └→ "🌟 Bienvenue chez ÔRIYA..."
    └→ Display Catalog Link
    └→ Add to CRM as "New Lead"
    ↓
@@ -571,7 +571,7 @@ STEP 4: Post-Delivery Immediate (+2h after delivery)
    └→ Option to rate experience
    ↓
 STEP 5: Survey & Review Request (+24h after delivery)
-   └→ Send: "Comment tu trouves BISOU?"
+   └→ Send: "Comment tu trouves ÔRIYA?"
    └→ 5-star rating request
    └→ Photo challenge (10% off next order)
    ↓
@@ -827,7 +827,7 @@ Cost Per Acquisition (CPA) via WhatsApp
 **Weekly Report (Every Monday)**
 
 ```
-📊 BISOU WHATSAPP - WEEKLY REPORT
+📊 ÔRIYA WHATSAPP - WEEKLY REPORT
 Period: [DATE] - [DATE]
 
 VOLUME METRICS
@@ -882,7 +882,7 @@ NEXT WEEK FOCUS
 ❓ "C'est de l'or véritable?"
 ✓ Réponse :
 
-"Excellente question! BISOU n'utilise PAS d'or massif (trop cher!).
+"Excellente question! ÔRIYA n'utilise PAS d'or massif (trop cher!).
 On utilise l'acier inoxydable 316L
 👉 Plaqué OR 18K sur la surface
 
@@ -903,7 +903,7 @@ Certifié sans nickel pour peaux sensibles 💛"
 
 "Pas de souci! 😊
 
-BISOU = 100% CERTIFIÉ SANS NICKEL ✓
+ÔRIYA = 100% CERTIFIÉ SANS NICKEL ✓
 
 Acier 316L = L'acier le PLUS hypoallergénique au monde
 Utilisé dans:
@@ -926,7 +926,7 @@ Essaye sans risque! 💛"
 ❓ "Ça va ternir comment?"
 ✓ Réponse :
 
-"Bonne question! Voici la durée de vie BISOU:
+"Bonne question! Voici la durée de vie ÔRIYA:
 
 ✓ Premiers 6 mois : Brillant comme neuf (garanti!)
 ✓ 6-12 mois : Reste brilliant (entretien simple)
@@ -943,7 +943,7 @@ Pire cas = Ternissement léger
 Coût polish professionnel : 50 MAD
 
 Comparé à or massif à 2000 MAD
-→ BISOU reste LE meilleur rapport qualité/prix! 💛"
+→ ÔRIYA reste LE meilleur rapport qualité/prix! 💛"
 ```
 
 ### B. Payment & Delivery Questions
@@ -952,7 +952,7 @@ Comparé à or massif à 2000 MAD
 ❓ "Comment payer? Vous acceptez Maroc Telecom?"
 ✓ Réponse :
 
-"Simple! Chez BISOU, on accepte UN SEUL mode:
+"Simple! Chez ÔRIYA, on accepte UN SEUL mode:
 
 💛 PAIEMENT À LA LIVRAISON = No frais supplémentaires
 
@@ -982,7 +982,7 @@ Des questions sur le paiement? Demande! 💬"
 
 🟢 MARRAKECH : Livraison GRATUITE
    ├─ Délai : 24-48h
-   ├─ Service : BISOU personnel
+   ├─ Service : ÔRIYA personnel
    ├─ Appel avant arrivée : ✓ Oui
    └─ Frais : 0 MAD
 
@@ -1033,7 +1033,7 @@ Astuce: Si tu commandes 2 packs pour amies Casablanca
 ❓ "Garantie combien de temps? Et si c'est cassé?"
 ✓ Réponse :
 
-"Excellente protection chez BISOU! 💛
+"Excellente protection chez ÔRIYA! 💛
 
 GARANTIE OFFICIELLE:
 ├─ Durée : 6 MOIS
@@ -1068,7 +1068,7 @@ On protège l'achat complètement! 🛡️"
 Pourquoi c'est important:
 - 10% de la population mondiale allergique au nickel
 - Provoque démangeaisons, rougeurs, réactions cutanées
-- BISOU refuse de causer ça! 💛
+- ÔRIYA refuse de causer ça! 💛
 
 Notre certification:
 ✓ Acier 316L (le plus pur du marché)
@@ -1122,7 +1122,7 @@ PACK DÉCOUVERTE (229 MAD) ⭐ BESTSELLER
 ├─ Emballage : Luxe standard
 ├─ Occasion : Usage quotidien
 ├─ Vibe : 'Je teste d'abord'
-└─ Meilleur pour : Première commande BISOU
+└─ Meilleur pour : Première commande ÔRIYA
 
 PACK CADEAU (279 MAD) 🎁
 ├─ Contenu : Collier + Boucles + Bracelet + Bague (4 pièces)
@@ -1254,7 +1254,7 @@ PRIORITY 3 - NORMAL (Respond < 4 hours)
 
 PRIORITY 4 - LOW (Respond < 24 hours)
 ├─ Follow-up surveys
-├─ Out of scope questions (not BISOU related)
+├─ Out of scope questions (not ÔRIYA related)
 ├─ Spam/random messages
 ├─ After-hours inquiries
 └─ ROUTING: → Chatbot or next morning
@@ -1277,7 +1277,7 @@ PRIORITY 4 - LOW (Respond < 24 hours)
     RESPONSE MESSAGE:
     "Je suis vraiment désolé du problème!
      Je comprends ta frustration.
-     Un manager BISOU prend ça en charge immédiatement."
+     Un manager ÔRIYA prend ça en charge immédiatement."
          ↓
     GATHER INFO:
     1. Quel est LE PROBLÈME exactement?
@@ -1510,7 +1510,7 @@ PRIORITY 4 - LOW (Respond < 24 hours)
 ### A. Daily Operations
 
 ```
-☑️  DAILY BISOU WHATSAPP CHECKLIST
+☑️  DAILY ÔRIYA WHATSAPP CHECKLIST
 
 MORNING (7h00)
 ☐ Open WhatsApp Business App
@@ -1554,7 +1554,7 @@ WEEKLY (Every Sunday)
 ### B. Content Calendar (Monthly)
 
 ```
-📅 BISOU WHATSAPP CONTENT CALENDAR
+📅 ÔRIYA WHATSAPP CONTENT CALENDAR
 
 WEEK 1 - Welcome & Education
 ├─ Day 1 (Mon): New followers welcome message
@@ -1681,7 +1681,7 @@ Test Timeline:
 ### A. Referral Program (Word of Mouth)
 
 ```
-👥 REFERRAL PROGRAM - BISOU FRIENDS
+👥 REFERRAL PROGRAM - ÔRIYA FRIENDS
 
 HOW IT WORKS:
 ├─ Customer A refers Friend B
@@ -1691,7 +1691,7 @@ HOW IT WORKS:
 
 MESSAGING (Send to existing customers):
 
-"👯 TU AIMES BISOU? Partage l'amour! 💛
+"👯 TU AIMES ÔRIYA? Partage l'amour! 💛
 
 Parraine une amie et GAGNEZ tous les deux!
 
@@ -1729,7 +1729,7 @@ GOALS:
 🎁 SEASONAL CAMPAIGN CALENDAR
 
 VALENTINE'S DAY (Feb 1-14)
-├─ Message: "Offre-lui BISOU pour la St Valentin"
+├─ Message: "Offre-lui ÔRIYA pour la St Valentin"
 ├─ Product: Pack Cadeau (perfect gift angle)
 ├─ Offer: +Free gift wrapping (no cost)
 ├─ Promo: "Livraison GRATUITE si avant 13 Feb"
@@ -1737,7 +1737,7 @@ VALENTINE'S DAY (Feb 1-14)
 └─ Expected boost: +300-400% orders that week
 
 MOTHER'S DAY (May)
-├─ Message: "Les mamans adorent BISOU!"
+├─ Message: "Les mamans adorent ÔRIYA!"
 ├─ Product: Pack Découverte (everyday elegance)
 ├─ Offer: Personalized card (free writing)
 ├─ Promo: "10% off if ordered before May 18"
@@ -1745,7 +1745,7 @@ MOTHER'S DAY (May)
 └─ Expected boost: +250% orders
 
 WEDDINGS (Year-round, peak June-Sept)
-├─ Message: "Mariée? BISOU a le pack parfait 💍"
+├─ Message: "Mariée? ÔRIYA a le pack parfait 💍"
 ├─ Product: Pack Mariée (premium positioning)
 ├─ Offer: Custom engraving on packaging
 ├─ Promo: "Bulk orders for bridal party = 20% off"
@@ -1769,7 +1769,7 @@ NEW YEAR (Dec 26-Jan 10)
 └─ Expected boost: +500% (high season)
 
 RAMADAN (Varies)
-├─ Message: "Ramadan Kareem! Celebrate BISOU"
+├─ Message: "Ramadan Kareem! Celebrate ÔRIYA"
 ├─ Product: Pack Découverte (gift to self)
 ├─ Offer: Early morning delivery (special for iftar)
 ├─ Promo: "20% off if order before Iftar"
@@ -1777,7 +1777,7 @@ RAMADAN (Varies)
 └─ Expected boost: +400% during month
 
 AID (Post-Ramadan)
-├─ Message: "Aid Mubarak! BISOU te gâte! 🎉"
+├─ Message: "Aid Mubarak! ÔRIYA te gâte! 🎉"
 ├─ Product: Pack Cadeau (gift giving)
 ├─ Offer: Free gift for kids (bracelet)
 ├─ Promo: "Commande 200+ MAD = Livraison gratuite"
@@ -1791,7 +1791,7 @@ AID (Post-Ramadan)
 👥 CUSTOMER SEGMENTS & PERSONALIZED MESSAGING
 
 SEGMENT 1: NEW CUSTOMERS (First 7 days)
-├─ Behavior: Just discovered BISOU
+├─ Behavior: Just discovered ÔRIYA
 ├─ Goal: Convert to first purchase
 ├─ Messaging: Educational, non-pushy
 ├─ Message: "Découvrez nos 4 packs bestsellers"
@@ -1804,7 +1804,7 @@ SEGMENT 2: REPEAT CUSTOMERS (2+ purchases)
 ├─ Goal: Increase AOV & frequency
 ├─ Messaging: Exclusive access, VIP treatment
 ├─ Message: "Nos VIP customers first access!"
-├─ Frequency: 2x/week (they like BISOU!)
+├─ Frequency: 2x/week (they like ÔRIYA!)
 ├─ Offer: Early access to new products
 └─ CTA: Upgrade to premium pack
 
@@ -1821,7 +1821,7 @@ SEGMENT 4: INACTIVE CUSTOMERS (60+ days no purchase)
 ├─ Behavior: Purchased once, disappeared
 ├─ Goal: Re-engage with NEW offer
 ├─ Messaging: "Ça te manque? On a nouveau!"
-├─ Message: "BISOU a lancé [NEW PRODUCT]"
+├─ Message: "ÔRIYA a lancé [NEW PRODUCT]"
 ├─ Frequency: 1x per 30 days (don't spam!)
 ├─ Offer: "Come back discount: 25% off"
 └─ CTA: "Ready to try something new?"
@@ -1830,10 +1830,10 @@ SEGMENT 5: BRAND AMBASSADORS (Top 10% customers)
 ├─ Behavior: High repeat, recommend to others
 ├─ Goal: Activate for referrals & testimonials
 ├─ Messaging: Community, belonging, rewards
-├─ Message: "You're BISOU VIP! Here's special access"
+├─ Message: "You're ÔRIYA VIP! Here's special access"
 ├─ Frequency: Personalized, 1x/week
 ├─ Offer: Exclusive designs, first-to-launch
-├─ CTA: "Share your story with @BISOU"
+├─ CTA: "Share your story with @ÔRIYA"
 
 SEGMENTATION IMPLEMENTATION:
 ├─ Tool: Make.com or Google Sheets
@@ -2000,7 +2000,7 @@ FIXES:
 COPY THIS & FILL IN EVERY SUNDAY:
 
 ═══════════════════════════════════════════════════════
-BISOU WHATSAPP - WEEK OF [DATE]
+ÔRIYA WHATSAPP - WEEK OF [DATE]
 ═══════════════════════════════════════════════════════
 
 VOLUME
@@ -2063,7 +2063,7 @@ _________________________________
 ```
 TEMPLATE 1 - WELCOME MESSAGE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🌟 Bienvenue chez BISOU! 🌟
+🌟 Bienvenue chez ÔRIYA! 🌟
 
 ✨ Bijoux plaqués or · Acier inoxydable 316L
 💫 Anti-allergique · Garantie 6 mois
@@ -2137,7 +2137,7 @@ Partage une PHOTO = 10% de réduction prochaine! 📸
 ## CONCLUSION & QUICK START CHECKLIST
 
 ```
-✅ WHATSAPP BUSINESS LAUNCH CHECKLIST - BISOU MAROC
+✅ WHATSAPP BUSINESS LAUNCH CHECKLIST - ÔRIYA MAROC
 
 WEEK 1: SETUP (3-4 hours)
 ☐ Download WhatsApp Business App
@@ -2197,12 +2197,12 @@ FINAL TIPS:
 ═══════════════════════════════════════════════════════
 
 QUESTIONS? Keep this document handy!
-Good luck BISOU! 💛✨
+Good luck ÔRIYA! 💛✨
 ```
 
 ---
 
-**End of WHATSAPP BUSINESS STRATEGY — BISOU MAROC**
+**End of WHATSAPP BUSINESS STRATEGY — ÔRIYA MAROC**
 
 *Last Updated: 2026-03-06*
 *Version: 1.0 - Initial Comprehensive Guide*

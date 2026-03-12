@@ -1,4 +1,4 @@
-# 📱 STRATÉGIE TIKTOK - BISOU ✨
+# 📱 STRATÉGIE TIKTOK - ÔRIYA ✨
 ## Bijoux Plaqués Or | Maroc 💛
 
 ---
@@ -7,14 +7,14 @@
 
 ### Version Optimisée (150 chars max):
 ```
-BISOU ✨💛 | Bijoux Plaqués Or 🌟 Maroc
+ÔRIYA ✨💛 | Bijoux Plaqués Or 🌟 Maroc
 Style. Elegance. Affordable ✓
 👇 Link in bio pour tes commandes
 ```
 
 ### Variante 2 (Plus casual darija):
 ```
-BISOU💛✨ | Dzaj b7al Hollywood 😎
+ÔRIYA💛✨ | Dzaj b7al Hollywood 😎
 Bijoux plaqués or Maroc 🇲🇦
 Save this → link in bio w3a
 ```
@@ -43,22 +43,22 @@ Save this → link in bio w3a
 | 9 | "Bounce" (Trending Dance) | Afrique | Energy, fun, meme-worthy | TikTok Discover |
 | 10 | "Glow Up Anthem" | Global | Transformation, before/after | TikTok viral sounds |
 
-### Comment Adapter à BISOU:
+### Comment Adapter à ÔRIYA:
 
 **Template 1: Trend Participation**
-- Sound + GRWM + BISOU reveal
-- "Getting ready with BISOU... khedma dyal 5 dirhams w ta3jeb?" 😂
+- Sound + GRWM + ÔRIYA reveal
+- "Getting ready with ÔRIYA... khedma dyal 5 dirhams w ta3jeb?" 😂
 - *Hook en français + execution en darija = algorithm loves local creators*
 
 **Template 2: Unboxing Ritual**
 - Sound transition (0-3sec transition, 3-15sec unboxing)
-- "Tliqa jadida kat3ad f box... à BISOU price 🤯"
+- "Tliqa jadida kat3ad f box... à ÔRIYA price 🤯"
 - Durée: 15sec MAX (hooks attention)
 
 **Template 3: Educational/Style**
 - Soft background sound (low volume)
 - Ton voix en voice-over darija
-- "Titre dyal video + How to layer with BISOU"
+- "Titre dyal video + How to layer with ÔRIYA"
 
 ---
 
@@ -99,21 +99,21 @@ Save this → link in bio w3a
 #MoroccanStyle
 #AfricanJewelry
 #TokMaroc
-#BISOUMaroc
-#BISOUBijoux
+#ÔRIYAMaroc
+#ÔRIYABijoux
 #JewelryUnder500
 ```
 
-### D. HASHTAG CUSTOM BISOU (À créer + amplifier)
+### D. HASHTAG CUSTOM ÔRIYA (À créer + amplifier)
 ```
-#BISOU ✨
-#BISOUMaroc 💛
-#WearBISOUWithMe (Challenge)
-#BISOUStyle
-#BISOUGirlLogic
-#BISOUMoment
-#JeSuisBISOUgirl
-#BISOUAesthetic
+#ÔRIYA ✨
+#ÔRIYAMaroc 💛
+#WearÔRIYAWithMe (Challenge)
+#ÔRIYAStyle
+#ÔRIYAGirlLogic
+#ÔRIYAMoment
+#JeSuisÔRIYAgirl
+#ÔRIYAAesthetic
 ```
 
 ### E. TRENDING HASHTAGS (Check weekly)
@@ -127,9 +127,9 @@ Caption example:
 "Getting ready for... something special 💛✨
 .
 .
-#BISOU #BISOUMaroc #JewelryTok #Maroc
+#ÔRIYA #ÔRIYAMaroc #JewelryTok #Maroc
 #FYP #ForYou #MoroccanStyle #StyleTok
-#WearBISOUWithMe #TikTok #Viral
+#WearÔRIYAWithMe #TikTok #Viral
 #AffordableFashion #JewelryAddict"
 ```
 
@@ -145,24 +145,24 @@ Caption example:
 - **Type:** Lifestyle + Trend Participation
 - **Duration:** 30sec
 - **Sound recommandé:** "It Girl Energy" ou "Essence"
-- **Format:** GRWM with BISOU
+- **Format:** GRWM with ÔRIYA
 - **Hook (0-3sec):** "Khassek shine kif l7jar... let me show you how 💛" [*montre ton cou vide*]
 - **Content (3-28sec):**
   - Skincare rapid transition
   - Makeup quick routine
   - Getting dressed (camera on outfit)
-  - BISOU jewelry reveal moment (slow-mo si possible)
+  - ÔRIYA jewelry reveal moment (slow-mo si possible)
   - Final look: Pose, smile, wink
-- **Closing (28-30sec):** "And that's the BISOU effect ✨ Link in bio ghaddak."
-- **CTA:** "DM us your GRWM + BISOU 💛"
-- **Hashtags:** #GRWM #BISOUMaroc #ItGirlEnergy #MoroccanStyle
+- **Closing (28-30sec):** "And that's the ÔRIYA effect ✨ Link in bio ghaddak."
+- **CTA:** "DM us your GRWM + ÔRIYA 💛"
+- **Hashtags:** #GRWM #ÔRIYAMaroc #ItGirlEnergy #MoroccanStyle
 
 **Caption Darija:**
 ```
 Getting ready kif Hollywood...
 Lakan magoun 😂💛
 
-Daba tliqa BISOU w tbanin
+Daba tliqa ÔRIYA w tbanin
 b7al milli kat7abbik ma3a
 Khassak shine? Commande hnaaa⬇️
 ```
@@ -184,15 +184,15 @@ Khassak shine? Commande hnaaa⬇️
   - Put on wrist/neck
   - Reaction: "Wahhh katqol l9ima 3000?" 😂
 - **Closing (12-15sec):**
-  - Text: "BISOU. Worth it. 💛✨"
+  - Text: "ÔRIYA. Worth it. 💛✨"
   - QR code or "Link in bio" flash
 
 **CTA:** Save + Comment "I want this 😍" → DM link
-**Hashtags:** #Unboxing #JewelryUnboxing #BISOUMaroc #ShoppingHaul
+**Hashtags:** #Unboxing #JewelryUnboxing #ÔRIYAMaroc #ShoppingHaul
 
 **Caption:**
 ```
-Tliqa BISOU thabat...
+Tliqa ÔRIYA thabat...
 khedma dyal 5 dirhams gtgoul 🤯
 
 W ana ghaddah 3al wa7id...
@@ -207,17 +207,17 @@ DM for order code ⬇️
 - **Sound recommandé:** Soft background + voix over (can use trending beat low volume)
 - **Format:** Tutorial/How-To
 - **Structure:**
-  - **0-5sec Hook:** "3 ways to layer BISOU (le tric dyal les pros)"
+  - **0-5sec Hook:** "3 ways to layer ÔRIYA (le tric dyal les pros)"
   - **5-20sec Step 1:** Delicate chain close-up, explain layering logic, show 2-3 combos
   - **20-35sec Step 2:** Add bracelet + necklace combo, on wrist shots
   - **35-50sec Step 3:** Full layering look, full body shot or mirror selfie, spin around
   - **50-55sec Closing:** "Which combo was your fave?" + Text overlay "Save this 💛"
-  - **55-60sec CTA:** "Get BISOU pieces link in bio"
+  - **55-60sec CTA:** "Get ÔRIYA pieces link in bio"
 
 **Tone:** Expert but fun, like a friend giving you styling tips
 **Voice-over Darija:** "Hakakaaa... b7al hak... zine bezzaf"
 
-**Hashtags:** #StyleTip #JewelryTutorial #LayeringTutorial #FashionTip #BISOUStyle
+**Hashtags:** #StyleTip #JewelryTutorial #LayeringTutorial #FashionTip #ÔRIYAStyle
 
 **Caption:**
 ```
@@ -235,9 +235,9 @@ Save + tell us 👇
 - **Duration:** 30sec
 - **Sound recommandé:** "Essence" ou trending beat
 - **Format:** Real customer speaking (authenticity = algorithm boost)
-- **Hook (0-3sec):** Customer close-up, title: "BISOU changed my confidence 💛"
+- **Hook (0-3sec):** Customer close-up, title: "ÔRIYA changed my confidence 💛"
 - **Content (3-25sec):**
-  - Customer wearing BISOU (before/after if possible)
+  - Customer wearing ÔRIYA (before/after if possible)
   - Quote: "Kounti banyin liya 3azzba dyal prix... lakan khedma dyal l9ima wwaahh"
   - Show jewelry detail
   - Smile + confidence
@@ -245,11 +245,11 @@ Save + tell us 👇
 
 **Pro Tip:** Envoie un sample à une micro-influencer (5K-20K followers) = UGC authentique gratuit
 
-**Hashtags:** #CustomerReview #RealReview #JewelryReview #BISOUMaroc #Testimonial
+**Hashtags:** #CustomerReview #RealReview #JewelryReview #ÔRIYAMaroc #Testimonial
 
 **Caption:**
 ```
-BISOU arrived and...
+ÔRIYA arrived and...
 real talk: khedma dialiha zaouina 🥺💛
 
 Safi 3raftini nta winner
@@ -263,27 +263,27 @@ Order you own masterpiece ⬇️
 - **Duration:** 20-30sec
 - **Sound recommandé:** "Sab3a Qaoud" ou "Bounce"
 - **Format:** Trend dance/transition challenge
-- **Hook (0-3sec):** "POV: Someone just asked you if BISOU is real gold 👀"
+- **Hook (0-3sec):** "POV: Someone just asked you if ÔRIYA is real gold 👀"
 - **Content (3-27sec):**
   - Start: Confused face or reaction shot
   - Sound drops (beat/transition)
-  - Switch: Wearing BISOU jewelry
+  - Switch: Wearing ÔRIYA jewelry
   - Dance or confidence moment (can be simple swaying)
-  - Text: "BISOU: Real shine. Real quality. Real price. 💛"
+  - Text: "ÔRIYA: Real shine. Real quality. Real price. 💛"
 - **Closing (27-30sec):** Join the challenge CTA
 
 **Why this works:** Maroc trends love humor + relatability
 
-**Hashtags:** #TrendChallenge #BounceChallenge #BISOUChallenge #FYP #ForYou
+**Hashtags:** #TrendChallenge #BounceChallenge #ÔRIYAChallenge #FYP #ForYou
 
 **Caption:**
 ```
-Wahd zamel qalich BISOU matbgh l9ima...
+Wahd zamel qalich ÔRIYA matbgh l9ima...
 then i hit him with the sparkle 💛✨
 
 Join the challenge:
-Wear BISOU + show your shine
-#WearBISOUWithMe 👇
+Wear ÔRIYA + show your shine
+#WearÔRIYAWithMe 👇
 ```
 
 ---
@@ -297,21 +297,21 @@ Wear BISOU + show your shine
 - **Duration:** 30sec
 - **Sound recommandé:** "It Girl Energy" ou "Glow Up Anthem"
 - **Format:** Side-by-side transformation
-- **Hook (0-2sec):** Text: "Before BISOU vs After BISOU 💛"
+- **Hook (0-2sec):** Text: "Before ÔRIYA vs After ÔRIYA 💛"
 - **Content (2-25sec):**
   - Left side: Unconfident pose, sad/tired face (relatable)
   - Transition with sound
-  - Right side: Wearing BISOU, confidence pose, smile, head up
+  - Right side: Wearing ÔRIYA, confidence pose, smile, head up
   - Camera angle: Same outfit/setting for impact
 - **Closing (25-30sec):** "Confidence is affordable 💛✨"
 
-**The Psychology:** BISOU doesn't just sell jewelry = sells confidence
+**The Psychology:** ÔRIYA doesn't just sell jewelry = sells confidence
 
-**Hashtags:** #ConfidenceBoost #Transformation #GlowUp #BISOUEffect #SelfLove
+**Hashtags:** #ConfidenceBoost #Transformation #GlowUp #ÔRIYAEffect #SelfLove
 
 **Caption:**
 ```
-BISOU isn't just jewelry...
+ÔRIYA isn't just jewelry...
 c'est l7aja lli katkhtarek shine 💛
 
 Before & after real talk:
@@ -329,22 +329,22 @@ Get your shine ⬇️
 - **Format:** Duet or Stitch with micro-creator
 - **Script:**
   - Find macro-creator posting: "Rate my jewelry haul"
-  - Duet them: Show BISOU pieces
-  - Reaction: "Machi bezzaf had ljaw... BISOU better. 💛"
-  - Or Stitch their "Getting Ready" video with BISOU version
+  - Duet them: Show ÔRIYA pieces
+  - Reaction: "Machi bezzaf had ljaw... ÔRIYA better. 💛"
+  - Or Stitch their "Getting Ready" video with ÔRIYA version
 
 **How to Find Partners:**
 - Search: #MoroccoTok #JewelryReview #StyleTok (5K-50K followers)
-- DM micro-creators: "Collab opportunity" + free BISOU sample
-- Ask them to duet/stitch a BISOU video
+- DM micro-creators: "Collab opportunity" + free ÔRIYA sample
+- Ask them to duet/stitch a ÔRIYA video
 
 **Pro Win:** Cross-exposure + authenticity
 
-**Hashtags:** #Duet #Stitch #Collab #BISOUxCreator #CommunityLove
+**Hashtags:** #Duet #Stitch #Collab #ÔRIYAxCreator #CommunityLove
 
 **Caption:**
 ```
-POV: You just discovered BISOU through duet 💛✨
+POV: You just discovered ÔRIYA through duet 💛✨
 
 Tag the creator you wanna collab with!
 Let's build this together 👇
@@ -358,7 +358,7 @@ Let's build this together 👇
 - **Sound recommandé:** Soft background beat + voix over
 - **Format:** Tutorial/Tips
 - **Content:**
-  - **Hook (0-3sec):** "How to keep BISOU jewelry GLOWING ✨"
+  - **Hook (0-3sec):** "How to keep ÔRIYA jewelry GLOWING ✨"
   - **Tip 1 (3-15sec):** Clean with soft cloth + alcohol (show on cam)
   - **Tip 2 (15-28sec):** Remove before shower/swimming (why: protect plating)
   - **Tip 3 (28-40sec):** Store properly in dry place (show cute storage)
@@ -366,11 +366,11 @@ Let's build this together 👇
 
 **Value Play:** Shows you care about customers = trust + repeat purchases
 
-**Hashtags:** #JewelryCare #TipsTrick #ProductCare #BISOUTips #SustainableFashion
+**Hashtags:** #JewelryCare #TipsTrick #ProductCare #ÔRIYATips #SustainableFashion
 
 **Caption:**
 ```
-Keep your BISOU shine longer...
+Keep your ÔRIYA shine longer...
 5 tips dyal les pros 💛✨
 
 1. Soft cloth cleaning
@@ -389,23 +389,23 @@ You're welcome 😊
 - **Duration:** 20-25sec
 - **Sound recommandé:** Trending split-screen sound
 - **Format:** Split-screen POV
-- **Hook (0-2sec):** Text: "POV: Me wearing BISOU vs What my crush sees 👀"
+- **Hook (0-2sec):** Text: "POV: Me wearing ÔRIYA vs What my crush sees 👀"
 - **Content (2-22sec):**
-  - Left camera (selfie): You looking confident/flirty with BISOU
+  - Left camera (selfie): You looking confident/flirty with ÔRIYA
   - Right camera (mirror): Shows you from "his" perspective = same confidence
   - Sync with trending sound
   - Final frame: Text "Either way? Shine 💛"
 
 **Why Viral:** Humor + relatability + double-take ending
 
-**Hashtags:** #POV #CoupleHumor #ConfidenceCheck #BISOUMaroc #FYP
+**Hashtags:** #POV #CoupleHumor #ConfidenceCheck #ÔRIYAMaroc #FYP
 
 **Caption:**
 ```
 POV series but make it... shine 💛✨
 
 Bghiti test theory nta?
-Wear BISOU + tell us what happens 👇
+Wear ÔRIYA + tell us what happens 👇
 ```
 
 ---
@@ -415,7 +415,7 @@ Wear BISOU + tell us what happens 👇
 - **Duration:** 15sec (SHORT urgency format)
 - **Sound recommandé:** "Gold Digger" remix ou urgent trending beat
 - **Format:** Quick promo/flash sale
-- **Hook (0-2sec):** "FLASH SALE ALERT 🚨 BISOU 50% off for 24h only"
+- **Hook (0-2sec):** "FLASH SALE ALERT 🚨 ÔRIYA 50% off for 24h only"
 - **Content (2-12sec):**
   - Show 3-4 popular pieces
   - Price before/after (or "Code: FLASH50")
@@ -425,15 +425,15 @@ Wear BISOU + tell us what happens 👇
 
 **Pro Tip:** Create limited inventory for real = actual scarcity (better conversions)
 
-**Hashtags:** #FlashSale #SaleAlert #BISOUSale #DealAlert #LimitedTime
+**Hashtags:** #FlashSale #SaleAlert #ÔRIYASale #DealAlert #LimitedTime
 
 **Caption:**
 ```
 SAFI KHASSAK DREB! 🚨💛
 
-50% off BISOU pieces TODAY ONLY ⏰
+50% off ÔRIYA pieces TODAY ONLY ⏰
 
-DM for code: BISOU50
+DM for code: ÔRIYA50
 (Only 20 codes = first come, first served)
 
 Yallah ⬇️
@@ -445,29 +445,29 @@ Yallah ⬇️
 
 ---
 
-#### **DAY 11 - LUNDI | Behind-The-Scenes: Making BISOU**
+#### **DAY 11 - LUNDI | Behind-The-Scenes: Making ÔRIYA**
 - **Type:** Educational + Authenticity
 - **Duration:** 45-60sec
 - **Sound recommandé:** Trending or lo-fi background
 - **Format:** BTS/Production video
 - **Content:**
-  - **Hook (0-3sec):** "How BISOU jewelry is made (you will not believe the detail) 💛"
+  - **Hook (0-3sec):** "How ÔRIYA jewelry is made (you will not believe the detail) 💛"
   - **Segment 1 (3-15sec):** Raw materials/plating process (close-ups)
   - **Segment 2 (15-30sec):** Quality check process
   - **Segment 3 (30-45sec):** Packaging ritual (shows care)
-  - **Closing (45-60sec):** "That's why BISOU hits different 💛✨"
+  - **Closing (45-60sec):** "That's why ÔRIYA hits different 💛✨"
 
 **Why This Works:** Maroc market LOVES seeing local production = pride + authenticity
 
-**Hashtags:** #BehindTheScenes #MadeInMaroc #Craftsmanship #JewelryMaking #BISOUStory
+**Hashtags:** #BehindTheScenes #MadeInMaroc #Craftsmanship #JewelryMaking #ÔRIYAStory
 
 **Caption:**
 ```
-BISOU isn't just... made.
+ÔRIYA isn't just... made.
 It's CRAFTED. 💛✨
 
 Each piece gets love before it reaches you.
-That's the BISOU difference.
+That's the ÔRIYA difference.
 
 Made with pride in Morocco 🇲🇦
 ```
@@ -482,22 +482,22 @@ Made with pride in Morocco 🇲🇦
 - **Content:**
   - Full customer video
   - You react in corner (PIP - Picture in Picture) with heart eyes/thumbs up
-  - Add text: "This is why we BISOU 💛"
+  - Add text: "This is why we ÔRIYA 💛"
 
 **How to Get UGC:**
-- Hashtag: #BISOUCustomer or DM customers
+- Hashtag: #ÔRIYACustomer or DM customers
 - Incentive: "Repost + Free next item"
 - Tag customers = they share again (viral loop)
 
-**Hashtags:** #CustomerLove #UGC #BISOUCommunity #RealCustomers
+**Hashtags:** #CustomerLove #UGC #ÔRIYACommunity #RealCustomers
 
 **Caption:**
 ```
-This is BISOU energy 💛✨
+This is ÔRIYA energy 💛✨
 Real customers. Real shine. Real love.
 
 Your shine is EVERYTHING to us.
-Tag yourself if you're BISOU girl 👇
+Tag yourself if you're ÔRIYA girl 👇
 ```
 
 ---
@@ -508,20 +508,20 @@ Tag yourself if you're BISOU girl 👇
 - **Sound recommandé:** Upbeat trending beat + voix over
 - **Format:** Style guide
 - **Content:**
-  - **Hook (0-3sec):** "3 outfit combos + BISOU jewelry hacks 💛"
-  - **Outfit 1 (3-17sec):** Casual (t-shirt/jeans) + BISOU combo
-  - **Outfit 2 (17-32sec):** Business casual + BISOU pieces
-  - **Outfit 3 (32-48sec):** Luxury vibe + full BISOU jewelry
+  - **Hook (0-3sec):** "3 outfit combos + ÔRIYA jewelry hacks 💛"
+  - **Outfit 1 (3-17sec):** Casual (t-shirt/jeans) + ÔRIYA combo
+  - **Outfit 2 (17-32sec):** Business casual + ÔRIYA pieces
+  - **Outfit 3 (32-48sec):** Luxury vibe + full ÔRIYA jewelry
   - **Closing (48-50sec):** Save this 📌
 
-**Value:** Helps people see how versatile BISOU is
+**Value:** Helps people see how versatile ÔRIYA is
 
-**Hashtags:** #OutfitIdeas #StyleGuide #JewelryInspo #FashionTips #BISOUStyle
+**Hashtags:** #OutfitIdeas #StyleGuide #JewelryInspo #FashionTips #ÔRIYAStyle
 
 **Caption:**
 ```
 Same pieces. 3 different vibes.
-BISOU = the most versatile jewelry ever 💛✨
+ÔRIYA = the most versatile jewelry ever 💛✨
 
 Which outfit you building first?
 ```
@@ -538,61 +538,61 @@ Which outfit you building first?
   - Location: Your bedroom or trendy space
   - Quick skincare/makeup
   - Getting dressed footage
-  - BISOU jewelry final touch (slow-mo if can)
+  - ÔRIYA jewelry final touch (slow-mo if can)
   - Final look reveal
   - Confident pose
-- **Closing (27-30sec):** "All this + BISOU ready 💛"
+- **Closing (27-30sec):** "All this + ÔRIYA ready 💛"
 
 **Why:** Lifestyle content humanizes brand
 
-**Hashtags:** #GRWM #GetReady #NightOut #BISOUReady #StyleTok
+**Hashtags:** #GRWM #GetReady #NightOut #ÔRIYAReady #StyleTok
 
 **Caption:**
 ```
 Before the vibes hit...
-BISOU makes sure I sparkle 💛✨
+ÔRIYA makes sure I sparkle 💛✨
 
 What's your go-to jewelry combo?
 ```
 
 ---
 
-#### **DAY 15 - VENDREDI | Challenge Launch/Finale: #WearBISOUWithMe**
+#### **DAY 15 - VENDREDI | Challenge Launch/Finale: #WearÔRIYAWithMe**
 - **Type:** Challenge Participation + Viral Moment
 - **Duration:** 20-30sec
-- **Sound recommandé:** Custom BISOU sound (original music or trending remix)
+- **Sound recommandé:** Custom ÔRIYA sound (original music or trending remix)
 - **Format:** Challenge launch video
-- **Hook (0-3sec):** "Starting #WearBISOUWithMe challenge 💛 Show me your shine ✨"
+- **Hook (0-3sec):** "Starting #WearÔRIYAWithMe challenge 💛 Show me your shine ✨"
 - **Content (3-25sec):**
-  - You wearing full BISOU jewelry
+  - You wearing full ÔRIYA jewelry
   - Do a simple choreography (or vibe movement)
-  - Text on screen: "Your turn! Show your BISOU shine"
+  - Text on screen: "Your turn! Show your ÔRIYA shine"
   - Tag 3 micro-creators to do challenge
 - **Closing (25-30sec):** "DM us your video for repost 🎁"
 
 **Challenge Rules (Caption):**
-1. Wear BISOU jewelry
+1. Wear ÔRIYA jewelry
 2. Film 15-30sec video
 3. Use song [link]
-4. Tag #WearBISOUWithMe
+4. Tag #WearÔRIYAWithMe
 5. Nominate 3 friends
-6. Prize: Free BISOU haul for best video
+6. Prize: Free ÔRIYA haul for best video
 
 **Why This Explodes:** Challenges = algorithm gold
 
-**Hashtags:** #WearBISOUWithMe #Challenge #DuetThis #StitchThis #BISOUChallenge
+**Hashtags:** #WearÔRIYAWithMe #Challenge #DuetThis #StitchThis #ÔRIYAChallenge
 
 **Caption:**
 ```
 🚨 CHALLENGE TIME 💛✨
 
-#WearBISOUWithMe
+#WearÔRIYAWithMe
 Rules simple:
-• Wear BISOU
+• Wear ÔRIYA
 • Film yourself
 • Tag us + challenge
 
-PRIZE: Free BISOU haul for top 3 videos 🎁
+PRIZE: Free ÔRIYA haul for top 3 videos 🎁
 
 GO! 👇
 ```
@@ -604,11 +604,11 @@ GO! 👇
 ### Distribution Formula:
 
 ```
-📊 BISOU Content Mix:
+📊 ÔRIYA Content Mix:
 
 🎉 50% ENTERTAINMENT (Trends, Memes, Humor)
    ├─ Trend participation (dance, challenges, memes)
-   ├─ Humor/relatable content ("BISOU girl logic")
+   ├─ Humor/relatable content ("ÔRIYA girl logic")
    ├─ Duets/Stitches with trending creators
    ├─ Funny customer testimonials
    └─ Pop culture references (humor angle)
@@ -656,10 +656,10 @@ SUNDAY:
 ✓ Plan next week + engage comments
 ```
 
-### Why This Mix Works for BISOU:
+### Why This Mix Works for ÔRIYA:
 
 - **50% Entertainment:** TikTok algorithm = entertainment first. People scroll for fun, not to buy. Entertainment = views + followers
-- **30% Education:** Trust building. "BISOU knows jewelry" positioning. Lower sales friction (educated buyer = faster conversion)
+- **30% Education:** Trust building. "ÔRIYA knows jewelry" positioning. Lower sales friction (educated buyer = faster conversion)
 - **20% Sales:** Direct sales content. Not overwhelming. Positioned as "value" not "hard sell"
 
 **Key Rule:** Never post 2 sales videos in a row. Always buffer with entertainment/education.
@@ -800,46 +800,46 @@ MONTH 2+: Maintenance + Growth
 **What to Duet:**
 1. **Big Creators (10K-100K followers):**
    - Find: "Jewelry hauls", "Fashion review", "Getting ready"
-   - Duet with: BISOU alternative (cheaper, same vibe)
-   - Angle: "Why pay 1000 dirhams when BISOU = 100?"
-   - CTA: "DM for BISOU code"
+   - Duet with: ÔRIYA alternative (cheaper, same vibe)
+   - Angle: "Why pay 1000 dirhams when ÔRIYA = 100?"
+   - CTA: "DM for ÔRIYA code"
 
 2. **Trend Videos:**
    - Find: Trending sounds with jewelry theme
-   - Duet with: BISOU jewelry moment
+   - Duet with: ÔRIYA jewelry moment
    - Keep trending by participating 24-48 hours after trend peaks
 
 3. **Micro-creators (5K-20K):**
    - Find: Local Moroccan creators (micro scale = more open to collab)
-   - Offer: Free BISOU sample + duet opportunity
+   - Offer: Free ÔRIYA sample + duet opportunity
    - Win-win: You get UGC, they get free jewelry + exposure
 
 **Stitch Examples:**
-- Someone says: "Best jewelry under 500 dirhams?" → Stitch with BISOU pieces
-- Someone does GRWM → Stitch showing BISOU styling
-- Someone reviews jewelry → Stitch review of BISOU
+- Someone says: "Best jewelry under 500 dirhams?" → Stitch with ÔRIYA pieces
+- Someone does GRWM → Stitch showing ÔRIYA styling
+- Someone reviews jewelry → Stitch review of ÔRIYA
 
 **Weekly Goal:** 2-3 duets/stitches targeting relevant creators
 
 ---
 
-### B. Custom Challenge: #WearBISOUWithMe
+### B. Custom Challenge: #WearÔRIYAWithMe
 
 **Challenge Mechanics:**
 
 ```
-🏆 #WearBISOUWithMe Challenge
+🏆 #WearÔRIYAWithMe Challenge
 
 Rules (Keep Simple):
-1. Wear any BISOU piece
+1. Wear any ÔRIYA piece
 2. Film 15-30 seconds
 3. Sync to [song link]
-4. Use hashtag: #WearBISOUWithMe
-5. Tag 3 friends + @BISOU
+4. Use hashtag: #WearÔRIYAWithMe
+5. Tag 3 friends + @ÔRIYA
 
 Prize Pool:
-├─ 1st Place: 1000 DHS BISOU haul
-├─ 2nd Place: 500 DHS BISOU haul
+├─ 1st Place: 1000 DHS ÔRIYA haul
+├─ 2nd Place: 500 DHS ÔRIYA haul
 └─ 3rd Place: 200 DHS + free shipping 1 order
 
 Duration: 2 weeks (run 2x/year)
@@ -888,7 +888,7 @@ Authenticity: Real person, not overly polished
    - Track: Via unique code = transparent ROI
 
 3. **Duet/Cross-post Collab:**
-   - Duet their content with BISOU
+   - Duet their content with ÔRIYA
    - They duet yours
    - Free = mutual benefit
    - Win: Reach each other's audiences
@@ -900,7 +900,7 @@ Authenticity: Real person, not overly polished
 
 Love your style content, especially [specific video].
 
-Quick idea: Would you want to collab with BISOU
+Quick idea: Would you want to collab with ÔRIYA
 (Moroccan jewelry brand)?
 
 We're sending creators pieces + featuring their videos.
@@ -932,7 +932,7 @@ Hour 6-24: Trend gains steam ⚡
 └─ 50K+ creators picked it up
 └─ Algorithm HEAVILY pushing it
 └─ BEST TIME TO JUMP IN
-└─ 👉 THIS IS WHEN BISOU POSTS
+└─ 👉 THIS IS WHEN ÔRIYA POSTS
 
 Hour 24-48: Trend peaks
 └─ Everyone and their mom using it
@@ -970,17 +970,17 @@ Red Flag Trends to Skip:
 ├─ Dances requiring professional choreography (not your brand)
 ├─ Political/controversial trends (stick neutral)
 ├─ Trends from big creators (you'll be late)
-└─ Trends that don't fit BISOU vibe (keep authentic)
+└─ Trends that don't fit ÔRIYA vibe (keep authentic)
 ```
 
-**Template: How to Quickly Adapt Trend to BISOU:**
+**Template: How to Quickly Adapt Trend to ÔRIYA:**
 
 ```
 Trend Found: [Trend name/sound]
 ├─ Sound Length: [X seconds]
 ├─ Core Concept: [What's the meme/hook]
-├─ How to BISOU-ify:
-│  ├─ Angle 1: "BISOU girl version" (confidence angle)
+├─ How to ÔRIYA-ify:
+│  ├─ Angle 1: "ÔRIYA girl version" (confidence angle)
 │  ├─ Angle 2: "Jewelry version" (style angle)
 │  └─ Angle 3: "Humor version" (relatable angle)
 ├─ Best Hook: [0-3sec grabber]
@@ -994,9 +994,9 @@ Trend Found: [Trend name/sound]
 Trend: "POV: You just woke up vs You're getting ready"
 ├─ Sound: [Trending audio]
 ├─ Concept: Split comparison
-├─ BISOU Angle: "POV: Before BISOU vs After BISOU"
+├─ ÔRIYA Angle: "POV: Before ÔRIYA vs After ÔRIYA"
 ├─ Hook: "Confidence glowup" 💛
-├─ Content: You messy → You polished with BISOU
+├─ Content: You messy → You polished with ÔRIYA
 └─ Posted: Within 18 hours of trend appearing
 ```
 
@@ -1123,7 +1123,7 @@ Traffic to WhatsApp:
 ├─ Track: Via WhatsApp number (manually or link shortener with analytics)
 ├─ Goal: 10+ WhatsApp chats/week from TikTok
 ├─ Conversion: 20-30% of WhatsApp chats = actual sales
-├─ Most Important for BISOU (WhatsApp = your sales channel)
+├─ Most Important for ÔRIYA (WhatsApp = your sales channel)
 └─ Target: 20+ WhatsApp chats/week by week 3
 ```
 
@@ -1155,7 +1155,7 @@ Trending Sounds Performance:
 ### Monthly Analytics Report Template:
 
 ```
-📊 BISOU TikTok - Month [X] Report
+📊 ÔRIYA TikTok - Month [X] Report
 
 Period: [Date] to [Date]
 Followers: [X] (+[Y] new)
@@ -1229,7 +1229,7 @@ PAID Options (Optional for Month 2+):
 How to Track WhatsApp Conversions:
 
 OPTION 1 (Simple - Manual):
-├─ Add to WhatsApp Bio: "BISOU"
+├─ Add to WhatsApp Bio: "ÔRIYA"
 ├─ When customers chat: Ask "Where did you find us?"
 ├─ Log responses in spreadsheet
 └─ Weekly count: X customers from TikTok
@@ -1326,7 +1326,7 @@ Monthly (30 min deep dive):
 ### Week 1 Setup (2 hours total):
 
 ```
-□ Create TikTok Business Account for BISOU
+□ Create TikTok Business Account for ÔRIYA
 □ Write optimized bio (use templates from Section 1)
 □ Create profile picture (logo or jewelry close-up)
 □ Follow 50-100 jewelry/fashion micro-creators
@@ -1384,7 +1384,7 @@ Monthly Tasks (2 hours):
 
 ---
 
-## FINAL NOTES FOR BISOU 💛✨
+## FINAL NOTES FOR ÔRIYA 💛✨
 
 ### Tone Reminder:
 - **Be a friend, not a brand.** Talk like you're texting a girl about jewelry, not a corporate robot.
@@ -1402,10 +1402,10 @@ Monthly Tasks (2 hours):
 - TikTok algorithm favors SPEED + AUTHENTIC over polished perfection.
 - Best video = the one you posted today > the perfect video you're filming tomorrow.
 
-### The BISOU Unique Angle:
-- **Price point honesty.** Don't hide that it's affordable. Make it a feature: "Luxury vibe ≠ luxury price. BISOU for everyone."
+### The ÔRIYA Unique Angle:
+- **Price point honesty.** Don't hide that it's affordable. Make it a feature: "Luxury vibe ≠ luxury price. ÔRIYA for everyone."
 - **Moroccan pride.** Be proudly Moroccan. Darija, local references, "Made in Morocco" = differentiator against global jewelry.
-- **Confidence play.** BISOU doesn't sell jewelry; sells the confidence that jewelry gives you.
+- **Confidence play.** ÔRIYA doesn't sell jewelry; sells the confidence that jewelry gives you.
 
 ---
 
@@ -1415,7 +1415,7 @@ This strategy is a guide, not gospel. TikTok changes fast.
 - **Week 3+:** Data > strategy. If videos X format perform better, do more X.
 - **Always test:** Try 1 new video format/week. Some will flop; some will be goldmines.
 
-**You've got this! Go make BISOU the jewelry brand every Moroccan girl wants. 💛✨**
+**You've got this! Go make ÔRIYA the jewelry brand every Moroccan girl wants. 💛✨**
 
 ---
 

@@ -1,4 +1,4 @@
-# 📱 STRATÉGIE INSTAGRAM BISOU
+# 📱 STRATÉGIE INSTAGRAM ÔRIYA
 ## Bijoux Plaqués Or • Acier 316L • Anti-Allergique
 
 ---
@@ -15,7 +15,7 @@ Acier 316L • Anti-allergique • Made with Love
 
 ### ALTERNATIVE (Plus Premium)
 ```
-BISOU ➕ Luxe Accessible
+ÔRIYA ➕ Luxe Accessible
 Or plaqué 24k • Éternel • Hypoallergénique
 Shop now 👇
 ```
@@ -27,10 +27,10 @@ Shop now 👇
 ### 🔷 HASHTAGS MARQUE (Brand)
 | Hashtag | Volume | Priorité |
 |---------|--------|----------|
-| #bisoumaroc | Petit | ⭐⭐⭐ |
-| #bisoujewelry | Petit | ⭐⭐⭐ |
-| #bisoumarque | Petit | ⭐⭐⭐ |
-| #bisoubyou | Petit | ⭐⭐ |
+| #oriyamaroc | Petit | ⭐⭐⭐ |
+| #oriyajewelry | Petit | ⭐⭐⭐ |
+| #oriyamarque | Petit | ⭐⭐⭐ |
+| #oriyabyou | Petit | ⭐⭐ |
 
 ### 🎀 HASHTAGS PRODUITS (Category)
 | Hashtag | Volume | Priorité |
@@ -102,7 +102,7 @@ Shop now 👇
 ```
 Thème: Product Hero Shot
 Caption:
-"✨ C'est BISOU est officiellement LIVE ! 💛
+"✨ C'est ÔRIYA est officiellement LIVE ! 💛
 Découvrez notre collection de bijoux plaqués or,
 100% anti-allergique & hypoallergénique.
 Garanti 6 mois • Livraison partout au Maroc 🚚"
@@ -110,11 +110,11 @@ Garanti 6 mois • Livraison partout au Maroc 🚚"
 CTA: "📲 Commande ton premier bijou sur WhatsApp — lien en bio ↪️"
 
 Hashtags:
-#bisoumaroc #bijoux #orplaqué #bijouxfemme #luxeaccessible #casablanca #fashionmaroc #bijouxantialergique #marocfashion #acier316l
+#oriyamaroc #bijoux #orplaqué #bijouxfemme #luxeaccessible #casablanca #fashionmaroc #bijouxantialergique #marocfashion #acier316l
 
 Visuel:
 - Flat lay produit star (collier + bague) sur fond noir luxe
-- Logo BISOU en or au centre
+- Logo ÔRIYA en or au centre
 - Lighting: doré/warm
 ```
 
@@ -125,16 +125,16 @@ Visuel:
 Thème: Unboxing & Packaging Reveal
 Caption:
 "Notre emballage c'est presque du cinéma 🎬
-Chaque BISOU arrive comme un vrai cadeau ✨
+Chaque ÔRIYA arrive comme un vrai cadeau ✨
 Unwrap la magie → c'est pour tes poignets 💛"
 
 CTA: "Swipe up (si 10k followers) ou DM pour passer commande ! 📬"
 
 Hashtags:
-#unboxing #bisoumaroc #madewithlove #packagingdesign #bijouxpourelles #luxeaccessible #behindthescenes #casablanca
+#unboxing #oriyamaroc #madewithlove #packagingdesign #bijouxpourelles #luxeaccessible #behindthescenes #casablanca
 
 Visuel:
-- Video ou carousel: mains qui ouvrent boîte BISOU
+- Video ou carousel: mains qui ouvrent boîte ÔRIYA
 - Détail du packaging (pochette, cartes de soin)
 - Bijou révélé en dernier frame
 - Music: douce/luxe
@@ -146,20 +146,20 @@ Visuel:
 ```
 Thème: User-Generated Content / Testimonial
 Caption:
-"Fatima adore son collier BISOU 😍
+"Fatima adore son collier ÔRIYA 😍
 'Après 2 mois, zéro réaction allergique,
 c'est trop beau !' — Fatima, Rabat"
 
 CTA: "🌟 Toi aussi, deviens fan ? WhatsApp ou lien en bio 👇"
 
 Hashtags:
-#bisoumaroc #testimonial #bijouxfemme #casablanca #maroc #fashionmaroc #bijouxantialergique #femininité
+#oriyamaroc #testimonial #bijouxfemme #casablanca #maroc #fashionmaroc #bijouxantialergique #femininité
 
 Visuel:
-- Photo portrait: femme portant collier BISOU
+- Photo portrait: femme portant collier ÔRIYA
 - Background pastel (cream/beige)
 - Citation overlay: texte testimonial
-- Tag @bisoumaroc
+- Tag @oriyamaroc
 ```
 
 ---
@@ -170,7 +170,7 @@ Visuel:
 ```
 Thème: Product Deep-Dive (Colliers)
 Caption:
-"Nos colliers BISOU en 3 points clés 🔑
+"Nos colliers ÔRIYA en 3 points clés 🔑
 ✨ Plaqué or 24k — couleur éclatante
 🛡️ Acier 316L — jamais vert, jamais allergies
 💛 Designs intemporels — à jamais"
@@ -178,7 +178,7 @@ Caption:
 CTA: "Lequel pour toi ? Dis-le en commentaire 👇 ou WhatsApp pour commander"
 
 Hashtags:
-#colliersor #bisoumaroc #bijouxfemme #orplaqué #luxeaccessible #acier316l #fashionmaroc #bijouxpourelles #casablanca
+#colliersor #oriyamaroc #bijouxfemme #orplaqué #luxeaccessible #acier316l #fashionmaroc #bijouxpourelles #casablanca
 
 Visuel:
 - Carousel (3 slides): collier classique + collier layered + collier original
@@ -193,13 +193,13 @@ Visuel:
 Thème: Ring Collection Feature
 Caption:
 "Tes doigts méritent du luxe ✨
-Les bagues BISOU = signature style 💛
+Les bagues ÔRIYA = signature style 💛
 Minimalistes mais tellement elles en disent long sur toi..."
 
 CTA: "Trouve TA bague préférée en DM ou commande directement 📲"
 
 Hashtags:
-#bagues #bisoumaroc #bijouxfemme #minimalistejewelry #luxeaccessible #fashionmaroc #orplaqué #casablanca #stylefeminin
+#bagues #oriyamaroc #bijouxfemme #minimalistejewelry #luxeaccessible #fashionmaroc #orplaqué #casablanca #stylefeminin
 
 Visuel:
 - Flat lay: 3-4 bagues différentes sur surface luxe (marbre/velours noir)
@@ -213,14 +213,14 @@ Visuel:
 ```
 Thème: Bracelet Stack Guide
 Caption:
-"Empile tes bracelets BISOU 💛
+"Empile tes bracelets ÔRIYA 💛
 Solo ou en mix? Les deux sont parfaits!
 Ton poignet devient ta toile d'art ✨"
 
 CTA: "Cré ton combo: WhatsApp ou commentaire 👇"
 
 Hashtags:
-#bracelets #bisoumaroc #bijouxfemme #stackable #luxeaccessible #fashionmaroc #orplaqué #casablanca #accessoiresfemme
+#bracelets #oriyamaroc #bijouxfemme #stackable #luxeaccessible #fashionmaroc #orplaqué #casablanca #accessoiresfemme
 
 Visuel:
 - Carousel: bracelet solo + stack de 2 + stack de 3
@@ -236,14 +236,14 @@ Visuel:
 ```
 Thème: Craftsmanship & Made-with-Love
 Caption:
-"Derrière chaque BISOU, il y a de la passion 🖤
+"Derrière chaque ÔRIYA, il y a de la passion 🖤
 Nos artisans marocains créent tes bijoux avec attention
 Slow fashion, zero waste, 100% coeur 💛"
 
 CTA: "Découvre notre processus en vidéo (Reels) — swipe up ou bio"
 
 Hashtags:
-#behindthescenes #madewithlove #bisoumaroc #smallbusiness #marocfashion #artisanat #fashionmaroc #casablanca #slowfashion
+#behindthescenes #madewithlove #oriyamaroc #smallbusiness #marocfashion #artisanat #fashionmaroc #casablanca #slowfashion
 
 Visuel:
 - 3-4 carousel slides: atelier > dessein > plaquage > qualité check
@@ -262,12 +262,12 @@ Caption:
 
 🎁 MERCI pour votre love!
 Les 50 premiers + 15% DE RÉDUCTION
-Code: BISOU15 (valable 48h)"
+Code: ÔRIYA15 (valable 48h)"
 
 CTA: "Commande maintenant WhatsApp 📲 ou lien bio — code à la checkout"
 
 Hashtags:
-#bisoumaroc #testimonial #promo #bijouxfemme #maroc #fashionmaroc #luxeaccessible #blackfriday #casablanca
+#oriyamaroc #testimonial #promo #bijouxfemme #maroc #fashionmaroc #luxeaccessible #blackfriday #casablanca
 
 Visuel:
 - Flat lay produit star + code promo affiché
@@ -281,20 +281,20 @@ Visuel:
 ```
 Thème: Trend Participation (GRWM or Styling)
 Caption:
-"Je me prépare et je DOIS partir en bijoux BISOU 💛✨
+"Je me prépare et je DOIS partir en bijoux ÔRIYA 💛✨
 Qu'est-ce que tu mets quand tu es pressée?
 Mine: collier + bague = outfit chic en 2 sec"
 
-CTA: "Fais pareil! Tag-moi si tu portes BISOU 📸 ou commande ta version"
+CTA: "Fais pareil! Tag-moi si tu portes ÔRIYA 📸 ou commande ta version"
 
 Hashtags:
-#grwm #gettingreadywithme #bisoumaroc #bijouxfemme #outfitoftheday #fashionmaroc #stylefeminin #casablanca #reels2026
+#grwm #gettingreadywithme #oriyamaroc #bijouxfemme #outfitoftheday #fashionmaroc #stylefeminin #casablanca #reels2026
 
 Visuel:
 - Video REELS (15-30s) ou Carousel:
-  - Avant (sans bijou) → Après (avec bijou BISOU)
+  - Avant (sans bijou) → Après (avec bijou ÔRIYA)
   - Quick transitions, trending sound
-  - Text overlay: "Just added BISOU 💛"
+  - Text overlay: "Just added ÔRIYA 💛"
 ```
 
 ---
@@ -308,7 +308,7 @@ Visuel:
 ```
 [SLIDE 1]
 Headline: "On ouvre une commande? 📦"
-Visual: Boîte BISOU on dark background
+Visual: Boîte ÔRIYA on dark background
 Sticker: Poll "Collier ou Bague?"
 
 [SLIDE 2]
@@ -354,7 +354,7 @@ Sticker: Testimonial/Quote badge
 
 [SLIDE 3]
 Visual: Photo du client avec produit (si permission)
-Text: "@jessicamaroc wearing BISOU 🌟"
+Text: "@jessicamaroc wearing ÔRIYA 🌟"
 Tag: Jessica's account (si accord)
 
 [SLIDE 4]
@@ -389,7 +389,7 @@ Sticker: Sale icon
 Animation: Pulse or bounce
 
 [SLIDE 3]
-Code: "CODE: BISOU25"
+Code: "CODE: ÔRIYA25"
 Visual: Code dans une boîte doré
 Text: "À la checkout ✨"
 
@@ -437,7 +437,7 @@ Urgency: Countdown sticker
 
 [Timing: 5s] Quality Check
 - Scene: Final inspection, testing
-- Text: "Zéro défaut = BISOU Quality ✨"
+- Text: "Zéro défaut = ÔRIYA Quality ✨"
 
 [Timing: 5s] Packaging & CTA
 - Scene: Final product in box
@@ -445,26 +445,26 @@ Urgency: Countdown sticker
 - CTA: "Commande maintenant! 📲"
 
 Hashtags:
-#behindthescenes #madewithlove #bisoumaroc #artisanat #smallbusiness #reels2026 #fashionmaroc
+#behindthescenes #madewithlove #oriyamaroc #artisanat #smallbusiness #reels2026 #fashionmaroc
 ```
 
 ---
 
 ### 🔄 **REEL 2: BEFORE/AFTER (Sans Bijou → Avec Bijou) (20 sec)**
 
-**Concept:** "Le pouvoir de BISOU"
+**Concept:** "Le pouvoir de ÔRIYA"
 
 ```
 [Timing: 3s] Before - Simple look
 - Scene: Person in plain outfit
-- Text: "Avant BISOU... 😑"
+- Text: "Avant ÔRIYA... 😑"
 - Music: Sad/minimal sound
 
 [TRANSITION: Whoosh/Sparkle] ✨
 
-[Timing: 3s] After - With BISOU
+[Timing: 3s] After - With ÔRIYA
 - Scene: Same person, now wearing bijou
-- Text: "...Après BISOU! 💛✨"
+- Text: "...Après ÔRIYA! 💛✨"
 - Music: Uplifting drop
 - Confidence boost visible (smile, pose)
 
@@ -479,19 +479,19 @@ Hashtags:
 - Or: "DM pour commander! 📲"
 
 Hashtags:
-#beforeandafter #transformation #bisoumaroc #bijouxfemme #luxeaccessible #tiktokfashion #fashionreels
+#beforeandafter #transformation #oriyamaroc #bijouxfemme #luxeaccessible #tiktokfashion #fashionreels
 ```
 
 ---
 
 ### 🧪 **REEL 3: DURABILITÉ (Test d'Usure / Resistance) (25 sec)**
 
-**Concept:** "BISOU c'est pour la vie"
+**Concept:** "ÔRIYA c'est pour la vie"
 
 ```
 [Timing: 3s] Intro
-- Scene: Close-up BISOU bracelet
-- Text: "Testons la durabilité BISOU 💛"
+- Scene: Close-up ÔRIYA bracelet
+- Text: "Testons la durabilité ÔRIYA 💛"
 - Music: Scientific/trustworthy vibe
 
 [Timing: 5s] Water Test
@@ -519,24 +519,24 @@ Hashtags:
 - CTA: "Commande en confiance! 💛"
 
 Hashtags:
-#qualitytest #durability #bisoumaroc #hypoallergenic #bijouxfemme #trustworthy #reels2026
+#qualitytest #durability #oriyamaroc #hypoallergenic #bijouxfemme #trustworthy #reels2026
 ```
 
 ---
 
 ### 📣 **REEL 4: CUSTOMER TESTIMONIAL VIDEO (20 sec)**
 
-**Concept:** "Pourquoi elles aiment BISOU"
+**Concept:** "Pourquoi elles aiment ÔRIYA"
 
 ```
 [Timing: 3s] Introduction
-- Text: "Elle porte BISOU depuis 3 mois..."
+- Text: "Elle porte ÔRIYA depuis 3 mois..."
 - Visual: Fade in customer
 - Music: Warm, genuine
 
 [Timing: 12s] Interview
 - Customer speaks directly to camera:
-  "J'ai essayé plein de bijoux, mais BISOU...
+  "J'ai essayé plein de bijoux, mais ÔRIYA...
    c'est vraiment différent. Zero allergies,
    c'est super beau, et le prix c'est accessible.
    Je suis fan!" 💛
@@ -552,25 +552,25 @@ Hashtags:
 
 [Timing: 2s] CTA
 - Text: "Votre avis en commentaire? 👇"
-- Or: "@bisoumaroc pour vos stories!"
+- Or: "@oriyamaroc pour vos stories!"
 - Visual: Tag + CTA button
 
 Hashtags:
-#testimonial #customerreview #bisoumaroc #bijouxfemme #realfeedback #communitypower #reels2026
+#testimonial #customerreview #oriyamaroc #bijouxfemme #realfeedback #communitypower #reels2026
 ```
 
 ---
 
 ### 🔥 **REEL 5: TREND REPRISE (Trending Audio/Challenge) (15-20 sec)**
 
-**Concept:** "BISOU x [Trending Song/Challenge]"
+**Concept:** "ÔRIYA x [Trending Song/Challenge]"
 
 **Exemple avec trending "Get Ready With Me":**
 
 ```
 [Timing: 3s] Intro
 - Scene: Getting ready routine
-- Text: "Getting ready with BISOU 💛"
+- Text: "Getting ready with ÔRIYA 💛"
 - Music: Current trending song (2026)
 
 [Timing: 4s] Makeup/Outfit
@@ -578,7 +578,7 @@ Hashtags:
 - Music continues
 
 [Timing: 4s] Jewelry moment
-- Scene: Selecting BISOU piece
+- Scene: Selecting ÔRIYA piece
 - Slow-mo as you put it on
 - Text: "C'est la touche finale!" ✨
 - Music peak moment
@@ -587,16 +587,16 @@ Hashtags:
 - Scene: Final look in mirror
 - Confidence shot: Turn, smile
 - Text: "Ready to slay! 💛"
-- Or: "Just added BISOU"
+- Or: "Just added ÔRIYA"
 
 [Timing: 4s] Product + CTA
-- Visual: BISOU product close-up
+- Visual: ÔRIYA product close-up
 - Text: "Tag who you'd wear this with 👇"
 - Music outro
 - CTA: "Link in bio | DM to order"
 
 Hashtags:
-#grwm #gettingreadywithme #trendingnow #fashionreels #bisoumaroc #bijouxfemme #tiktokfashion #reels2026 #trending
+#grwm #gettingreadywithme #trendingnow #fashionreels #oriyamaroc #bijouxfemme #tiktokfashion #reels2026 #trending
 ```
 
 ---
@@ -626,7 +626,7 @@ Hashtags:
 - 1 post Instagram (carousel ou image)
 - 3-4 stories avec produit
 - 1 mention dans story "Swipe up" (si applicable)
-- Hashtag: #AD #BISOUMAROC #collaboration
+- Hashtag: #AD #ÔRIYAMAROC #collaboration
 
 **Durée:** 2 semaines (minimum)
 
@@ -647,8 +647,8 @@ Hashtags:
 **Deliverables:**
 - 2 posts Instagram (post + Reel OU carousel)
 - 5-6 stories avec produit (séquence)
-- 1 Reel featuring BISOU (20-30s)
-- Hashtag custom: #BISOUparNomInfluencer
+- 1 Reel featuring ÔRIYA (20-30s)
+- Hashtag custom: #ÔRIYAparNomInfluencer
 
 **Durée:** 4 semaines (contrat)
 
@@ -672,7 +672,7 @@ Hashtags:
 - 2 Reels complets (vidéos originales)
 - 8-10 stories campaign (avec polls, questions)
 - 1 TikTok video (si applicable)
-- Hashtag custom: #BISOUxNomInfluencer
+- Hashtag custom: #ÔRIYAxNomInfluencer
 - Obligation mention "Ad" ou "#AD"
 
 **Durée:** 8-12 semaines (contrat long terme)
@@ -690,7 +690,7 @@ Hashtags:
 
 ### 🎯 **CRITÈRES DE SÉLECTION INFLUENCER**
 
-**PARFAIT pour BISOU:**
+**PARFAIT pour ÔRIYA:**
 - ✅ Audience féminine 70%+
 - ✅ Âge 18-45 ans (prime: 25-35)
 - ✅ Intérêts: fashion, jewelry, lifestyle, beauty
@@ -700,7 +700,7 @@ Hashtags:
 
 **À ÉVITER:**
 - ❌ Engagement < 2% (fake followers)
-- ❌ Contenu décalé brand BISOU
+- ❌ Contenu décalé brand ÔRIYA
 - ❌ Trop de publicités (oversaturation)
 - ❌ Controverses récentes
 - ❌ Audience très jeune (< 14 ans)
@@ -710,14 +710,14 @@ Hashtags:
 ### 📧 **TEMPLATE EMAIL COLLABORATION**
 
 ```
-Objet: Collaboration BISOU x [Nom Influencer] 💛
+Objet: Collaboration ÔRIYA x [Nom Influencer] 💛
 
 Chère [Prénom],
 
 On adore ton style et ton authenticité!
 
 Nous aimerions faire appel à toi pour présenter
-notre collection de bijoux plaqués or BISOU
+notre collection de bijoux plaqués or ÔRIYA
 (anti-allergique, design minimaliste, luxe accessible).
 
 📦 On t'enverrait:
@@ -731,13 +731,13 @@ notre collection de bijoux plaqués or BISOU
 - Possibilité collaboration long-terme
 
 📅 Timeline: [Dates]
-Hashtags: #BISOUparXXX #AD #collaboration
+Hashtags: #ÔRIYAparXXX #AD #collaboration
 
 Intéressée? On voudrait une réponse avant [date].
 
 Au plaisir de collaborer! 💛
 
-BISOU Team
+ÔRIYA Team
 📲 WhatsApp: [numéro]
 ```
 
@@ -749,21 +749,21 @@ BISOU Team
 
 **Obligatoires:**
 - `#AD` ou `#PUBLICITÉ` (transparence)
-- `#BISOUMAROC` (brand awareness)
+- `#ÔRIYAMAROC` (brand awareness)
 - `#collaboration` ou `#partnership`
 
 **Custom per influencer:**
-- `#BISOUparFatima` (if Fatima)
-- `#BISOUxCasablanca` (if geo-specific)
+- `#ÔRIYAparFatima` (if Fatima)
+- `#ÔRIYAxCasablanca` (if geo-specific)
 
 **Mix with:**
 - Hashtags influencer's usual (leur audience)
-- Hashtags BISOU stratégiques (notre audience)
+- Hashtags ÔRIYA stratégiques (notre audience)
 - Hashtags tendance (viral potential)
 
 **Exemple complet:**
 ```
-#AD #BISOUmaroc #collaboration #BISOUparZainab
+#AD #ÔRIYAmaroc #collaboration #ÔRIYAparZainab
 #bijouxfemme #fashionmaroc #casablanca #luxeaccessible
 #reels2026 #orplaqué #antiallergique #maroc
 #bijouxpourelles #madewithlove #smallbusiness
@@ -771,7 +771,7 @@ BISOU Team
 
 ---
 
-## 📋 RÉSUMÉ STRATÉGIE INSTAGRAM BISOU
+## 📋 RÉSUMÉ STRATÉGIE INSTAGRAM ÔRIYA
 
 | Élément | Fréquence | Objectif |
 |---------|-----------|----------|
@@ -817,7 +817,7 @@ BISOU Team
 4. ✅ Lancer 1 Reel viral (artisanal process)
 5. ✅ Contacter 3 nano-influencers (engagement test)
 6. ✅ Mettre en place DM response (WhatsApp link)
-7. ✅ Créer hashtag branded campaign (#BISOUnaroc)
+7. ✅ Créer hashtag branded campaign (#ÔRIYAnaroc)
 8. ✅ Setup Instagram Shopping (si possible)
 9. ✅ Analyser analytics après 1 mois (ajuster)
 
@@ -825,6 +825,6 @@ BISOU Team
 
 **END OF STRATEGY DOCUMENT**
 
-*Créé pour BISOU — Bijoux Plaqués Or • Acier 316L • Anti-Allergique*
+*Créé pour ÔRIYA — Bijoux Plaqués Or • Acier 316L • Anti-Allergique*
 *Version 1.0 — Mars 2026*
 

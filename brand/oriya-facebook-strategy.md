@@ -1,4 +1,4 @@
-# STRATÉGIE FACEBOOK BISOU MAROC
+# STRATÉGIE FACEBOOK ÔRIYA MAROC
 ## Bijoux Plaqués Or - Maroc
 
 ---
@@ -6,7 +6,7 @@
 ## 1. CONFIGURATION PAGE FACEBOOK
 
 ### Informations Essentielles
-- **Nom de la page** : Bisou Maroc
+- **Nom de la page** : Ôriya Maroc
 - **Catégorie** : Bijouterie / Boutique de Bijoux
 - **Région** : Maroc
 - **Langue** : Français / Darija
@@ -19,14 +19,14 @@ Qualité premium, prix accessibles. Commande facile via WhatsApp.
 
 ### Description Longue (200+ mots)
 ```
-Bienvenue chez Bisou Maroc !
+Bienvenue chez Ôriya Maroc !
 
 Nous créons des bijoux plaqués or qui racontent votre histoire.
 Chaque pièce est pensée pour sublimer votre féminité, que vous soyez
 mère de famille, professionnelle moderne ou jeune femme en quête
 d'authenticité.
 
-Chez Bisou, on croit que le luxe n'est pas une question de prix,
+Chez Ôriya, on croit que le luxe n'est pas une question de prix,
 mais de feeling. Nos bijoux allient :
 
 ✨ Qualité premium : Plaqué or véritable, résiste au temps
@@ -35,7 +35,7 @@ mais de feeling. Nos bijoux allient :
 ⚡ Accessibilité : Des prix justes pour toutes les femmes marocaines
 
 Que ce soit pour un mariage, une occasion spéciale ou simplement
-pour vous sentir belle au quotidien, Bisou est là pour vous.
+pour vous sentir belle au quotidien, Ôriya est là pour vous.
 
 Découvrez nos collections de bagues, colliers, bracelets et
 boucles d'oreilles. Chaque achat est une pièce d'or, une confiance,
@@ -44,16 +44,16 @@ un bijou qui devient votre compagnon.
 Commander c'est facile : un message WhatsApp, et nous nous occupons
 du reste. Paiement flexible, livraison discrète, conseil gratuit.
 
-Bisou, c'est l'or qui vous ressemble.
+Ôriya, c'est l'or qui vous ressemble.
 ```
 
 ### Call-to-Action Principal
 - **Bouton CTA** : "Commande sur WhatsApp"
-- **Lien** : https://wa.me/212XXXXXXXXX (à compléter avec le numéro Bisou)
+- **Lien** : https://wa.me/212XXXXXXXXX (à compléter avec le numéro Ôriya)
 
 ### Website
 ```
-URL Principal : https://issam0505-bisou-maroc-dashboard.hf.space
+URL Principal : https://issam0505-oriya-maroc-dashboard.hf.space
 ```
 
 ---
@@ -67,7 +67,7 @@ URL Principal : https://issam0505-bisou-maroc-dashboard.hf.space
 - Fond : Dégradé noir/charbon avec textures subtiles (marbre ou velours)
 - Élément principal : 3-4 bijoux Or en disposition asymétrique (bague, collier, bracelet)
 - Accent : Touches de cream/beige pour contraste
-- Texte overlay (optionnel) : "Bisou Maroc ✨" en Or (font élégante, serif)
+- Texte overlay (optionnel) : "Ôriya Maroc ✨" en Or (font élégante, serif)
 - Éléments secondaires : Feuilles botaniques discrètes, fleurs séchées
 
 **Palette de couleurs** :
@@ -87,7 +87,7 @@ URL Principal : https://issam0505-bisou-maroc-dashboard.hf.space
 - Fond : Blanc ou cream très clair avec texture subtile
 - Élément principal : 1 bijou statement (gros plan, haute définition) - ex: bague imposante
 - Accent : Ombre légère pour profondeur
-- Texte : "Bisou Maroc" avec emoji (✨ ou 💎)
+- Texte : "Ôriya Maroc" avec emoji (✨ ou 💎)
 - Éléments secondaires : Géométrie minimaliste (lignes, points dorés)
 
 **Palette de couleurs** :
@@ -106,19 +106,19 @@ URL Principal : https://issam0505-bisou-maroc-dashboard.hf.space
 **Format** : Image + Carousel (3 slides)
 **Caption** :
 ```
-Salaam Bisou Maroc ! 🌙✨
+Salaam Ôriya Maroc ! 🌙✨
 
 Nous, c'est pas juste des bijoux... c'est une relation.
 
 Chaque femme marocaine mérite de se sentir magnifique. Pas besoin
 de se ruiner, pas besoin de faire du compromis sur la qualité.
 
-Chez Bisou, on a compris que vous vouliez des bijoux plaqués or
+Chez Ôriya, on a compris que vous vouliez des bijoux plaqués or
 qui durent, qui brillent, qui vous racontent.
 
 Bienvenue à notre table. ✨
 ```
-**Hashtags** : #BisouMaroc #BijouxOr #QueensMorocco #LuxeAccessible #BijouxTendance
+**Hashtags** : #ÔriyaMaroc #BijouxOr #QueensMorocco #LuxeAccessible #BijouxTendance
 **CTA** : "Découvre nos collections" (bouton Facebook ou lien WhatsApp)
 **Format image** :
 - Slide 1: Hero image couverture
@@ -131,7 +131,7 @@ Bienvenue à notre table. ✨
 **Format** : Carrousel (4 slides)
 **Caption** :
 ```
-Les 4 packs Bisou pour chaque moment de ta vie 💎
+Les 4 packs Ôriya pour chaque moment de ta vie 💎
 
 Pack Solo : Ton bijou statement qui parle pour toi
 Pack Couple : À partager avec celle qui te comprend
@@ -140,7 +140,7 @@ Pack Golden : Ton secret pour briller tous les jours
 
 Laquelle tu choisirais ? ↓
 ```
-**Hashtags** : #BijouxPacks #CombosBisou #LayeringGame #BijouxOr
+**Hashtags** : #BijouxPacks #CombosÔriya #LayeringGame #BijouxOr
 **CTA** : "En savoir plus sur les packs"
 **Format image** : Carrousel avec pack par slide, prix discret en bas
 
@@ -150,20 +150,20 @@ Laquelle tu choisirais ? ↓
 **Format** : Image + texte
 **Caption** :
 ```
-"Bisou, c'est mes bijoux de tous les jours."
+"Ôriya, c'est mes bijoux de tous les jours."
 
 Aida, 34 ans, Marrakech.
 
 Elle nous a dit : "J'ai acheté une bague il y a 6 mois. Elle brille
 toujours comme le premier jour. Et le prix ? Accessible sans regret."
 
-C'est ça, Bisou. Des bijoux qui vous suivent, pas juste qui vous
+C'est ça, Ôriya. Des bijoux qui vous suivent, pas juste qui vous
 plaisent un jour.
 
-Votre avis compte. Partagez votre expérience Bisou en commentaire 👇
+Votre avis compte. Partagez votre expérience Ôriya en commentaire 👇
 ```
-**Hashtags** : #AvisClients #BisouMaroc #QualitéOr #Authenticité
-**CTA** : "Partage ton avis Bisou"
+**Hashtags** : #AvisClients #ÔriyaMaroc #QualitéOr #Authenticité
+**CTA** : "Partage ton avis Ôriya"
 **Format image** : Photo cliente avec son bijou, style candid (pas trop posé)
 
 ---
@@ -172,7 +172,7 @@ Votre avis compte. Partagez votre expérience Bisou en commentaire 👇
 **Format** : Vidéo ou Carrousel (5 slides)
 **Caption** :
 ```
-L'art du layering selon Bisou ✨
+L'art du layering selon Ôriya ✨
 
 Fine + Statement = Perfection
 
@@ -182,10 +182,10 @@ Slide 3 : + Bracelet imposant
 Slide 4 : L'ensemble complet (photo finale)
 Slide 5 : "Ton tour ! Montre-nous ton layering"
 
-Combien de pièces Bisou as-tu déjà empilées ?
+Combien de pièces Ôriya as-tu déjà empilées ?
 ```
 **Hashtags** : #LayeringGame #BijouxTendance #StylingInspo #BijouxOr
-**CTA** : "Compose ton combo Bisou"
+**CTA** : "Compose ton combo Ôriya"
 **Format image** : Carrousel step-by-step ou vidéo 30 secondes
 
 ---
@@ -194,19 +194,19 @@ Combien de pièces Bisou as-tu déjà empilées ?
 **Format** : Image
 **Caption** :
 ```
-🎁 SURPRISE BISOU JEUDI !
+🎁 SURPRISE ÔRIYA JEUDI !
 
 Valable jusqu'à demain minuit :
 
-10% de réduction sur ta 2ème pièce Bisou
-(Code : BISOU10 - WhatsApp seulement)
+10% de réduction sur ta 2ème pièce Ôriya
+(Code : ÔRIYA10 - WhatsApp seulement)
 
 Oui, on veut que tu trouves ta paire. Parce qu'une seule bague,
 ça peut pas suffire. 😊
 
 Qui est avec nous ? 👇
 ```
-**Hashtags** : #BisouPromo #JeudiRéduction #BijouxMaroc #OffreSpéciale
+**Hashtags** : #ÔriyaPromo #JeudiRéduction #BijouxMaroc #OffreSpéciale
 **CTA** : "Commande sur WhatsApp"
 **Format image** : Image simple avec code promo en évidence, fond or/noir
 
@@ -221,7 +221,7 @@ Vendredi, c'est le jour où on se pose la vraie question...
 Tu préfères les bagues fines et discrètes ou les pièces statement
 qui parlent pour toi ? 💎
 
-Nous, chez Bisou, on dit que tu as raison dans les deux cas.
+Nous, chez Ôriya, on dit que tu as raison dans les deux cas.
 C'est toi qui décides qui tu es ce jour-là.
 
 Dis-nous en commentaire ! ↓
@@ -236,7 +236,7 @@ Dis-nous en commentaire ! ↓
 **Format** : Vidéo courte ou Carrousel (4 slides)
 **Caption** :
 ```
-Coulisses Bisou 🎬✨
+Coulisses Ôriya 🎬✨
 
 Comment on sélectionne l'or de tes bijoux ?
 Comment on teste la qualité ?
@@ -244,10 +244,10 @@ Comment on s'assure que tu reçois une pièce parfaite ?
 
 Spoiler : On est pointilleuses. 💪
 
-Regarde derrière le rideau et comprends pourquoi Bisou,
+Regarde derrière le rideau et comprends pourquoi Ôriya,
 c'est pas juste beau... c'est SOLIDE.
 ```
-**Hashtags** : #BisooBTS #QualitéOr #TransparentBisou #CraftsmanshipMatters
+**Hashtags** : #BisooBTS #QualitéOr #TransparentÔriya #CraftsmanshipMatters
 **CTA** : "Apprends comment on fonctionne"
 **Format image** : Vidéo 30-45 sec ou carrousel montrant processus (discrétion)
 
@@ -262,7 +262,7 @@ c'est pas juste beau... c'est SOLIDE.
 Les femmes marocaines ont compris quelque chose :
 la vraie beauté, ça dure.
 
-Un bijou Bisou, ce n'est pas une dépense d'impulse.
+Un bijou Ôriya, ce n'est pas une dépense d'impulse.
 C'est une pièce que tu vas garder, que tu vas offrir,
 que tu vas raconter.
 
@@ -272,7 +272,7 @@ Juste présent. Juste toi.
 Es-tu avec nous ? ✨
 ```
 **Hashtags** : #LuxeAccessible #InvestmentInBeauty #BijouxMaroc #Féminité
-**CTA** : "Trouve ta pièce Bisou"
+**CTA** : "Trouve ta pièce Ôriya"
 **Format image** : Photo lifestyle : femme mature portant bijou, naturelle, confiante
 
 ---
@@ -291,7 +291,7 @@ Slide 5 : "Laquelle est ta préférée ?"
 
 Chaque pièce raconte une histoire. Quelle est la tienne ? 👇
 ```
-**Hashtags** : #CollectionBisou #BijouxTendance #CoupDeCoeur #Design
+**Hashtags** : #CollectionÔriya #BijouxTendance #CoupDeCoeur #Design
 **CTA** : "Découvre les détails"
 **Format image** : Haute résolution, fond blanc/cream, shadow pour profondeur
 
@@ -301,12 +301,12 @@ Chaque pièce raconte une histoire. Quelle est la tienne ? 👇
 **Format** : Image + Texte
 **Caption** :
 ```
-Prête pour ta première Bisou ? 💎
+Prête pour ta première Ôriya ? 💎
 
 On te l'avoue : les meilleures décisions se prennent
 en 5 minutes avec quelqu'un de confiance.
 
-Bisou n'est jamais loin. Un message WhatsApp,
+Ôriya n'est jamais loin. Un message WhatsApp,
 et on devient tes conseillères bijoux.
 
 Styles ? Budget ? Occasion ? On te guide.
@@ -314,7 +314,7 @@ Aucune pression. Juste du conseil honnête.
 
 Envoie-nous un message. On t'attend. ✨
 ```
-**Hashtags** : #BisouMaroc #ConseilleBijoux #MessageNous #CommenceAujourdhui
+**Hashtags** : #ÔriyaMaroc #ConseilleBijoux #MessageNous #CommenceAujourdhui
 **CTA** : "Envoie un message WhatsApp"
 **Format image** : Photo d'un téléphone montrant conversation WhatsApp, chaleureuse
 
@@ -322,11 +322,11 @@ Envoie-nous un message. On t'attend. ✨
 
 ## 4. CAROUSEL POSTS (3 EXEMPLES DÉTAILLÉS)
 
-### CAROUSEL POST 1 : "Nos 4 Packs Bisou"
+### CAROUSEL POST 1 : "Nos 4 Packs Ôriya"
 
 **Titre du post** :
 ```
-Les 4 packs Bisou : Trouve le tien ! 💎
+Les 4 packs Ôriya : Trouve le tien ! 💎
 
 Chaque femme est différente. Tes bijoux aussi.
 Quel pack raconte ton histoire ?
@@ -342,7 +342,7 @@ Parfait pour : Les femmes qui aiment la simplicité
 
 - 1 Bague ou 1 Collier STATEMENT
 - Qualité premium plaqué or
-- Boîtier Bisou inclus
+- Boîtier Ôriya inclus
 - Garantie 6 mois
 
 Prix : 249-349 MAD
@@ -361,7 +361,7 @@ Parfait pour : Les meilleures amies
 
 - 2 Pièces assorties ou complémentaires
 - Plaqué or véritable
-- 2 Boîtiers Bisou (cadeaux)
+- 2 Boîtiers Ôriya (cadeaux)
 - Livraison ensemble
 
 Prix : 449-599 MAD
@@ -380,7 +380,7 @@ Parfait pour : Celles qui aiment l'art du layering
 
 - 3 Pièces : Fine chaîne + Bague classique + Bracelet
 - Portables seules ou ensemble
-- Boîtier spécial rangement Bisou
+- Boîtier spécial rangement Ôriya
 - Carnet de styling inclus
 
 Prix : 699-899 MAD
@@ -392,7 +392,7 @@ Prix : 699-899 MAD
 ```
 👑 PACK GOLDEN : L'Expérience Complète
 
-Parfait pour : Les vraies amoureux de Bisou
+Parfait pour : Les vraies amoureux de Ôriya
              Les femmes qui veulent tout
              Les grandes occasions
              S'offrir le meilleur
@@ -420,7 +420,7 @@ Envoie-nous un message pour commencer ! 💌
 
 **Titre du post** :
 ```
-Le Guide Complet du Layering selon Bisou ✨
+Le Guide Complet du Layering selon Ôriya ✨
 
 Tu veux ressembler aux filles qui savent ?
 On te montre comment faire.
@@ -499,9 +499,9 @@ Secret : Même les femmes de Fès et Casablanca qui portent ça
 disent "Je n'ai pas fait exprès" 😏
 ```
 
-**Slide 5 - L'Astuce Bisou**
+**Slide 5 - L'Astuce Ôriya**
 ```
-🎁 L'ASTUCE BISOU
+🎁 L'ASTUCE ÔRIYA
 
 Comment tu sais si c'est réussi ?
 
@@ -513,7 +513,7 @@ Comment tu sais si c'est réussi ?
 Règle d'or : Le layering c'est pas ce que les autres pensent.
 C'est ce que TU ressens.
 
-Bisou te donne les outils.
+Ôriya te donne les outils.
 Ton style, c'est le tien.
 
 Et si tu veux de l'aide ? On est là. 💌
@@ -522,7 +522,7 @@ Et si tu veux de l'aide ? On est là. 💌
 **CTA Final** :
 ```
 Teste ce weekend et montre-nous ton layering en commentaire !
-#BisouLayering
+#ÔriyaLayering
 ```
 
 ---
@@ -531,7 +531,7 @@ Teste ce weekend et montre-nous ton layering en commentaire !
 
 **Titre du post** :
 ```
-Les Vraies Bisou Girls Te Disent Pourquoi ✨
+Les Vraies Ôriya Girls Te Disent Pourquoi ✨
 
 Des témoignages sincères. Pas de pub. Juste de la vérité.
 ```
@@ -544,7 +544,7 @@ Des témoignages sincères. Pas de pub. Juste de la vérité.
 
 FATIMA, 38 ans - Rabat
 
-"Bisou m'a trouvé. Les bijoux d'or plaqué que j'avais avant,
+"Ôriya m'a trouvé. Les bijoux d'or plaqué que j'avais avant,
 ils noircissaient après 2 mois. Là, 8 mois et c'est parfait.
 
 Ma fille m'a même demandé d'où ça vient.
@@ -557,13 +557,13 @@ Merci Fatima. ❤️
 ```
 ⭐⭐⭐⭐⭐
 
-"Bisou, c'est du conseil. Pas juste de la vente."
+"Ôriya, c'est du conseil. Pas juste de la vente."
 
 LEILA, 26 ans - Marrakech
 
 "J'ai commandé une bague et j'étais stressée : et si ça me plaît pas ?
 
-Mais Bisou m'a appelée, on a discuté 20 minutes sur les styles,
+Mais Ôriya m'a appelée, on a discuté 20 minutes sur les styles,
 mes mains, mes préférences. Elle a compris avant moi.
 
 La bague est arrivée parfaite. Depuis j'ai recommandé à 3 copines.
@@ -581,7 +581,7 @@ Merci Leila. Vous êtes notre fierté. ❤️
 AMINA, 45 ans - Fès
 
 "Après un divorce difficile, je me suis sentie invisible.
-J'ai regardé les bijoux Bisou un soir et je me suis dit 'pourquoi pas'.
+J'ai regardé les bijoux Ôriya un soir et je me suis dit 'pourquoi pas'.
 
 J'ai commandé. Et en recevant, c'était comme un clin d'œil
 du monde qui disait 'tu es belle, tu existes, tu comptes'.
@@ -596,12 +596,12 @@ Merci Amina. Pour ton courage et ta confiance. ❤️
 ```
 ⭐⭐⭐⭐⭐
 
-"Qualité + Prix accessible = Bisou"
+"Qualité + Prix accessible = Ôriya"
 
 YASMINA, 24 ans - Casablanca
 
 "Je suis étudiante et je voulais des bijoux or sans me ruiner.
-Bisou c'est l'équilibre parfait.
+Ôriya c'est l'équilibre parfait.
 
 J'ai eu 3 pièces pour moins que 1 bague chez les joailliers.
 Et la qualité ? Franchement j'en reviens pas.
@@ -616,24 +616,24 @@ Merci Yasmina. À toi et toute ta génération. ❤️
 ```
 📢 C'EST TON TOUR !
 
-Si tu as un avis Bisou, on veut l'entendre.
+Si tu as un avis Ôriya, on veut l'entendre.
 
 Pas besoin d'être une influenceur.
 Pas besoin d'être parfaite.
 Juste d'être toi.
 
-Comment tu trouves tes bijoux Bisou ?
+Comment tu trouves tes bijoux Ôriya ?
 Comment ça a changé quelque chose dans ta vie ?
 
 Envoie-nous un message WhatsApp ou commente ici.
 On sera honorer de te partager.
 
-#BisouGirls #AvisAuthentique #ConfianceTotal
+#ÔriyaGirls #AvisAuthentique #ConfianceTotal
 ```
 
 **CTA Final** :
 ```
-Lire tous les avis Bisou : [lien vers page avis]
+Lire tous les avis Ôriya : [lien vers page avis]
 Tu as une histoire à partager ? Contacte-nous 💌
 ```
 
@@ -641,7 +641,7 @@ Tu as une histoire à partager ? Contacte-nous 💌
 
 ## 5. VIDEO STRATEGY (3 IDÉES COURTES 30-60 SEC)
 
-### VIDEO 1 : UNBOXING BISOU
+### VIDEO 1 : UNBOXING ÔRIYA
 
 **Durée** : 45 secondes
 **Style** : Intimate, ASMR vibe, warm
@@ -650,11 +650,11 @@ Tu as une histoire à partager ? Contacte-nous 💌
 ```
 [0-5 sec] OPEN
 - Son d'enveloppe qui s'ouvre (ASMR)
-- Close-up des mains féminines ouvrant un colis Bisou
-- Text overlay : "L'expérience Bisou commence ici"
+- Close-up des mains féminines ouvrant un colis Ôriya
+- Text overlay : "L'expérience Ôriya commence ici"
 
 [5-15 sec] UNBOXING
-- Ouverture du boîtier Bisou (élégant, minimaliste)
+- Ouverture du boîtier Ôriya (élégant, minimaliste)
 - Révélation du bijou or, lumière qui rebondit
 - Close-up du bijou : "Regardez ce détail..."
 
@@ -666,12 +666,12 @@ Tu as une histoire à partager ? Contacte-nous 💌
 [25-35 sec] FEELING
 - Portrait de femme qui découvre, sourire naturel
 - Elle essaie le bijou
-- Text : "Ça c'est Bisou."
+- Text : "Ça c'est Ôriya."
 
 [35-45 sec] CTA
 - Shot du colis complètement déballé
 - Text overlay : "Commande maintenant sur WhatsApp"
-- Logo Bisou final + lien WhatsApp
+- Logo Ôriya final + lien WhatsApp
 
 VOIX : Ton warm, féminin, accent marocain léger
 MUSIQUE : Ambient doux, luxueux (pas loud)
@@ -697,7 +697,7 @@ COULEURS : Or, cream, noir - cohérent avec identité
 - Text : "Salaam, je suis SARA"
 
 [5-15 sec] QUESTION
-- Voice over (Bisou) : "Pourquoi Bisou ?"
+- Voice over (Ôriya) : "Pourquoi Ôriya ?"
 - Sara parle naturellement (pas scripted, c'est mieux)
 - Exemple : "Parce que je voulais quelque chose de beau sans
   me ruiner. Et parce que ça dure vraiment."
@@ -714,9 +714,9 @@ COULEURS : Or, cream, noir - cohérent avec identité
 - Maybe scenes of her wearing it in daily life (work, family moment)
 
 [40-50 sec] RECOMMENDATION
-- "Je conseille Bisou à mes amies sans hésiter"
+- "Je conseille Ôriya à mes amies sans hésiter"
 - End shot: Wide smile to camera
-- Text overlay: "Join thousands of Bisou girls" + WhatsApp link
+- Text overlay: "Join thousands of Ôriya girls" + WhatsApp link
 
 VOIX : Real testimonial (no professional voice-over)
 MUSIQUE : Soft, background, subtle
@@ -762,9 +762,9 @@ AUTHENTICITY : Key! No over-production
 
 [35-45 sec] CALL TO ACTION
 - Final product shot on elegant background
-- Text overlay : "Décvrez tous les détails Bisou"
+- Text overlay : "Décvrez tous les détails Ôriya"
 - WhatsApp button/link prominent
-- Bisou logo + tagline : "L'or qui vous ressemble"
+- Ôriya logo + tagline : "L'or qui vous ressemble"
 
 VOIX : No voice-over (only music + ambient sound)
 MUSIQUE : Luxury, cinematic, slightly dramatic
@@ -813,7 +813,7 @@ COLORS : Gold, black, cream - consistent with brand
 - Audiences trop larges (optimiser budget)
 
 **Lookalike Audience** :
-- Basée sur : Clients Bisou actuels (1% lookalike initialement)
+- Basée sur : Clients Ôriya actuels (1% lookalike initialement)
 - À élargir : 1% → 3% → 5% au fur et à mesure
 
 ---
@@ -865,7 +865,7 @@ Format : Carousel + Single image
 Destination : Website dashboard
 Durée : Ongoing (permanent awareness)
 
-Message : "Découvre la collection Bisou"
+Message : "Découvre la collection Ôriya"
 CTA : "En savoir plus"
 Expected CTR : 2-4%
 Expected CPM : 8-15 MAD
@@ -878,7 +878,7 @@ Format : Carousel + Video (unboxing)
 Destination : WhatsApp click (avec script)
 Durée : 2-3 weeks (promotional)
 
-Message : "Commande ton first Bisou"
+Message : "Commande ton first Ôriya"
 CTA : "Commander maintenant"
 Expected Conversion Rate : 1-2%
 Expected CPC : 12-20 MAD
@@ -891,7 +891,7 @@ Format : Carousel testimonials + Questions
 Destination : Facebook Post (comments)
 Durée : Ongoing (weekly)
 
-Message : "Partage ton avis Bisou"
+Message : "Partage ton avis Ôriya"
 CTA : "Commente ton expérience"
 Expected Engagement Rate : 3-6%
 Expected Cost per Engagement : 0.5-1 MAD
@@ -938,7 +938,7 @@ Décembre : Year-end gift campaign
 **Custom CTA** : "Message WhatsApp" (si disponible dans région)
 
 **Landing Page Options** :
-1. Website dashboard (https://issam0505-bisou-maroc-dashboard.hf.space)
+1. Website dashboard (https://issam0505-oriya-maroc-dashboard.hf.space)
 2. Facebook Catalog (product feed)
 3. WhatsApp direct (best conversion)
 4. Landing page customized (if budget allows)
@@ -946,8 +946,8 @@ Décembre : Year-end gift campaign
 **WhatsApp Integration** :
 ```
 - Click button → WhatsApp message ouvre
-- Pre-filled message : "Salaam Bisou! Je suis intéressée par..."
-- Phone link : https://wa.me/212XXXXXXXXX?text=Salaam%20Bisou
+- Pre-filled message : "Salaam Ôriya! Je suis intéressée par..."
+- Phone link : https://wa.me/212XXXXXXXXX?text=Salaam%20Ôriya
 - Set expectations : "Nous répondons en moins de 2h"
 ```
 
@@ -1034,7 +1034,7 @@ Pour compliment/testimonial :
 Merci de nous faire confiance et d'avoir partagé
 ta belle expérience.
 
-Bisous très forts 💋✨"
+Ôriyas très forts 💋✨"
 ```
 
 Pour critique/retour négatif :
@@ -1057,17 +1057,17 @@ Envoie-moi un message privé. On va trouver une solution.
 "Salaam! Oui, 100% or plaqué. Pas du doré qui s'enlève.
 
 Voici la différence :
-- Or plaqué BISOU : Couche or véritable (2-3 microns)
+- Or plaqué ÔRIYA : Couche or véritable (2-3 microns)
   sur support metal hypoallergénique
 - Doré cheap : Peinture or qu'on gratte
 
-Garantie BISOU : 6 mois. Si ça s'use, on remplace.
-Aucun bijou Bisou ne s'enlève avant 8-10 mois d'utilisation."
+Garantie ÔRIYA : 6 mois. Si ça s'use, on remplace.
+Aucun bijou Ôriya ne s'enlève avant 8-10 mois d'utilisation."
 ```
 
 **Q2: Ça convient pour les peaux sensibles ?**
 ```
-"Oui! Bisou c'est pensé pour ça.
+"Oui! Ôriya c'est pensé pour ça.
 
 Support metal : Acier inoxydable hypoallergénique
 (pas nickel, pas cadmium, rien de louche)
@@ -1079,7 +1079,7 @@ les pièces les mieux adaptées."
 
 **Q3: Combien de temps pour la livraison ?**
 ```
-"Délais Bisou Maroc :
+"Délais Ôriya Maroc :
 
 Casablanca/Rabat : 24-48h
 Autres villes : 2-3 jours ouvrables
@@ -1103,7 +1103,7 @@ Remboursement : 7 jours après qu'on reçoive
 
 Conditions :
 - Bijou non porté / pas d'usure
-- Avec boîtier Bisou original
+- Avec boîtier Ôriya original
 - Pas scratché ou endommagé
 
 On cherche pas les petits détails. On comprend."
@@ -1128,7 +1128,7 @@ Pour l'instant, tu nous demandes. ❤️"
 ```
 "Salaam [Prénom]! 💎
 
-Bienvenue chez Bisou!
+Bienvenue chez Ôriya!
 
 Si tu as une question sur les bijoux, les tailles,
 les couleurs, ou juste pour papoter... je suis là.
@@ -1155,7 +1155,7 @@ Dis-moi comment on peut t'aider. 😊"
 Je crois tu nous as tapé un message par erreur?
 Ou tu cherchais notre WhatsApp ?
 
-Si c'est pour Bisou :
+Si c'est pour Ôriya :
 📲 WhatsApp: [numéro]
 📧 Messages Facebook : Je suis là 24/7
 
@@ -1182,7 +1182,7 @@ Pas de souci, reste tu! 🤭"
 ```
 Si quelqu'un dit : "C'est too expensive!"
 
-Réponse : "Salaam! On comprend. Bisou c'est luxury
+Réponse : "Salaam! On comprend. Ôriya c'est luxury
 pour la majorité des Marocaines (pas pour tous).
 
 Si tu veux des bijoux moins cher, y'a d'autres options!
@@ -1241,7 +1241,7 @@ Juste cool & confident.
 
 ## FINAL CHECKLIST
 
-Avant de lancer ta stratégie Bisou Facebook:
+Avant de lancer ta stratégie Ôriya Facebook:
 
 - [ ] Page Facebook crée avec infos complètes
 - [ ] Images couverture uploadées (2 versions)
@@ -1260,7 +1260,7 @@ Avant de lancer ta stratégie Bisou Facebook:
 
 ## CONCLUSION
 
-Bisou Maroc, c'est plus qu'une page Facebook.
+Ôriya Maroc, c'est plus qu'une page Facebook.
 C'est une communauté de femmes marocaines qui refusent
 de choisir entre qualité et accessibilité.
 
@@ -1272,5 +1272,5 @@ c'est juste les conséquences.
 
 Bon courage. On est avec toi. ✨
 
-*Écrit avec amour pour Bisou Maroc*
+*Écrit avec amour pour Ôriya Maroc*
 *Stratégie pour 2026*

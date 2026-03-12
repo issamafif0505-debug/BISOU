@@ -4,7 +4,7 @@
      viewBox="0 0 120 120"
      width="120" height="120"
      role="img"
-     aria-label="BISOU monogram">
+     aria-label="ÔRIYA monogram">
 
   <defs>
 
@@ -142,7 +142,7 @@
       </feMerge>
     </filter>
 
-    <!-- Path for curved "BISOU" text arc along bottom -->
+    <!-- Path for curved "ÔRIYA" text arc along bottom -->
     <!-- Arc: center (60,60), radius 43, from ~200° to ~340° -->
     <path id="m_arcBottom"
           d="M 22.7,78.5
@@ -315,7 +315,7 @@
   </g>
 
   <!-- ═══════════════════════════════════════════ -->
-  <!-- BISOU — curved arc text along bottom        -->
+  <!-- ÔRIYA — curved arc text along bottom        -->
   <!-- Small spaced caps following circle curve    -->
   <!-- ═══════════════════════════════════════════ -->
 
@@ -328,7 +328,7 @@
       letter-spacing="5.5"
       fill="url(#m_textGrad)">
       <textPath href="#m_arcBottom" startOffset="50%"
-                text-anchor="middle">BISOU</textPath>
+                text-anchor="middle">ÔRIYA</textPath>
     </text>
   </g>
 
@@ -340,7 +340,7 @@
     letter-spacing="5.5"
     fill="url(#m_textGrad)">
     <textPath href="#m_arcBottom" startOffset="50%"
-              text-anchor="middle">BISOU</textPath>
+              text-anchor="middle">ÔRIYA</textPath>
   </text>
 
   <!-- ═══════════════════════════════════════════ -->

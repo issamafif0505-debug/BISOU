@@ -1,4 +1,4 @@
-# BISOU — Stratégie de marque complète
+# ÔRIYA — Stratégie de marque complète
 > Bijoux plaqués or · Import Chine · Marché francophone
 
 ---
@@ -6,7 +6,7 @@
 ## 1. IDENTITÉ DE MARQUE
 
 ### Nom
-**BISOU**
+**ÔRIYA**
 
 ### Taglines
 - Principale : *"L'or qui t'embrasse"*
@@ -17,7 +17,7 @@
 Luxe accessible — bijoux plaqués or de qualité, packagés avec soin, vendus en ligne à des prix démocratiques (8€–80€).
 
 ### Territoire
-Entre Mango Accessories (accessible) et APM Monaco (aspirationnel). BISOU n'imite pas les grandes maisons — elle crée son propre territoire : **l'or émotionnel**.
+Entre Mango Accessories (accessible) et APM Monaco (aspirationnel). ÔRIYA n'imite pas les grandes maisons — elle crée son propre territoire : **l'or émotionnel**.
 
 ---
 
@@ -25,11 +25,11 @@ Entre Mango Accessories (accessible) et APM Monaco (aspirationnel). BISOU n'imit
 
 | Élément       | Valeur                              |
 |---------------|-------------------------------------|
-| Nom           | BISOU                               |
-| Domaine web   | bisou-or.fr · bisouor.com           |
-| Instagram     | @bisou.or                           |
-| TikTok        | @bisou.or                           |
-| Email pro     | contact@bisou-or.fr                 |
+| Nom           | ÔRIYA                               |
+| Domaine web   | oriya.ma · oriya.ma           |
+| Instagram     | @oriya.or                           |
+| TikTok        | @oriya.or                           |
+| Email pro     | contact@oriya.ma                 |
 
 ---
 
@@ -137,7 +137,7 @@ Entre Mango Accessories (accessible) et APM Monaco (aspirationnel). BISOU n'imit
 
 ### Phase 3 — Expansion (mois 6–12)
 - [ ] Extension géographique (Belgique, Suisse, Maroc)
-- [ ] Lancement programme fidélité BISOU CLUB
+- [ ] Lancement programme fidélité ÔRIYA CLUB
 - [ ] Recrutement 1er employé (service client)
 - [ ] Développement ligne gravure/personnalisation
 
@@ -173,4 +173,4 @@ Entre Mango Accessories (accessible) et APM Monaco (aspirationnel). BISOU n'imit
 
 ---
 
-*Document confidentiel BISOU · Version 1.0 · 2024*
+*Document confidentiel ÔRIYA · Version 1.0 · 2024*
