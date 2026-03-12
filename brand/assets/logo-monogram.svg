@@ -322,7 +322,7 @@
   <!-- Arc text glow layer -->
   <g filter="url(#m_textGlow)" opacity="0.55">
     <text
-      font-family="'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+      font-family="'Jost', 'Helvetica Neue', 'Arial', sans-serif"
       font-size="7.5"
       font-weight="300"
       letter-spacing="5.5"
@@ -334,7 +334,7 @@
 
   <!-- Arc text main layer -->
   <text
-    font-family="'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+    font-family="'Jost', 'Helvetica Neue', 'Arial', sans-serif"
     font-size="7.5"
     font-weight="300"
     letter-spacing="5.5"

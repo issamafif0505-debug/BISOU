@@ -549,11 +549,11 @@
 
   <!-- TABS -->
   <div class="tabs">
-    <button class="tab active" onclick="showTab('overview')">📊 Vue d'ensemble</button>
-    <button class="tab" onclick="showTab('orders')">📦 Commandes <span class="notif" id="pendingCount">3</span></button>
-    <button class="tab" onclick="showTab('scripts')">💬 Scripts WhatsApp</button>
-    <button class="tab" onclick="showTab('products')">💍 Produits</button>
-    <button class="tab" onclick="showTab('roi')">💰 ROI & Projections</button>
+    <button class="tab active" onclick="showTab('overview')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="4" rx="1"/><rect x="14" y="11" width="7" height="10" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>Vue d'ensemble</button>
+    <button class="tab" onclick="showTab('orders')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px"><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16v-2"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>Commandes <span class="notif" id="pendingCount">3</span></button>
+    <button class="tab" onclick="showTab('scripts')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Scripts WhatsApp</button>
+    <button class="tab" onclick="showTab('products')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>Produits</button>
+    <button class="tab" onclick="showTab('roi')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>ROI & Projections</button>
   </div>
 
   <!-- ======================== TAB: OVERVIEW ======================== -->
@@ -600,31 +600,31 @@
         <div class="card-title">Funnel COD — Ce Mois</div>
         <div class="funnel" id="funnel-container">
           <div class="funnel-step">
-            <div class="funnel-icon">📲</div>
+            <div class="funnel-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3498DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></div>
             <div class="funnel-label">Leads WhatsApp</div>
             <div><span class="funnel-count" id="f-leads">0</span><span class="funnel-pct">100%</span></div>
             <div class="funnel-bar" style="background:var(--blue);width:100%"></div>
           </div>
           <div class="funnel-step">
-            <div class="funnel-icon">✅</div>
+            <div class="funnel-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
             <div class="funnel-label">Commandes Confirmées</div>
             <div><span class="funnel-count" id="f-confirmed">0</span><span class="funnel-pct" id="f-confirmed-pct">—</span></div>
             <div class="funnel-bar" style="background:var(--gold);" id="f-confirmed-bar"></div>
           </div>
           <div class="funnel-step">
-            <div class="funnel-icon">🚚</div>
+            <div class="funnel-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F39C12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
             <div class="funnel-label">Expédiées</div>
             <div><span class="funnel-count" id="f-shipped">0</span><span class="funnel-pct" id="f-shipped-pct">—</span></div>
             <div class="funnel-bar" style="background:var(--orange);" id="f-shipped-bar"></div>
           </div>
           <div class="funnel-step">
-            <div class="funnel-icon">💰</div>
+            <div class="funnel-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M2 10h2"/><path d="M20 10h2"/><path d="M2 14h2"/><path d="M20 14h2"/></svg></div>
             <div class="funnel-label">Livrées & Payées</div>
             <div><span class="funnel-count" id="f-paid">0</span><span class="funnel-pct" id="f-paid-pct">—</span></div>
             <div class="funnel-bar" style="background:var(--green);" id="f-paid-bar"></div>
           </div>
           <div class="funnel-step">
-            <div class="funnel-icon">❌</div>
+            <div class="funnel-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div>
             <div class="funnel-label">Refusées / Retournées</div>
             <div><span class="funnel-count" id="f-refused">0</span><span class="funnel-pct" id="f-refused-pct">—</span></div>
             <div class="funnel-bar" style="background:var(--red);" id="f-refused-bar"></div>
@@ -665,28 +665,28 @@
         <div class="card-title">Performance par Ville</div>
         <div class="city-grid" id="city-stats">
           <div class="city-card">
-            <div class="city-name"><span class="city-flag">🏙️</span> Marrakech</div>
+            <div class="city-name"><span class="city-flag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span> Marrakech</div>
             <div class="city-stats">
               <div><div class="city-stat-label">Cmds</div><div class="city-stat-val" id="city-marrakech-total">0</div></div>
               <div><div class="city-stat-label">Livrées</div><div class="city-stat-val green" id="city-marrakech-del">0%</div></div>
             </div>
           </div>
           <div class="city-card">
-            <div class="city-name"><span class="city-flag">🌆</span> Casablanca</div>
+            <div class="city-name"><span class="city-flag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span> Casablanca</div>
             <div class="city-stats">
               <div><div class="city-stat-label">Cmds</div><div class="city-stat-val" id="city-casa-total">0</div></div>
               <div><div class="city-stat-label">Livrées</div><div class="city-stat-val green" id="city-casa-del">0%</div></div>
             </div>
           </div>
           <div class="city-card">
-            <div class="city-name"><span class="city-flag">🏛️</span> Rabat</div>
+            <div class="city-name"><span class="city-flag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span> Rabat</div>
             <div class="city-stats">
               <div><div class="city-stat-label">Cmds</div><div class="city-stat-val" id="city-rabat-total">0</div></div>
               <div><div class="city-stat-label">Livrées</div><div class="city-stat-val green" id="city-rabat-del">0%</div></div>
             </div>
           </div>
           <div class="city-card">
-            <div class="city-name"><span class="city-flag">🌊</span> Agadir</div>
+            <div class="city-name"><span class="city-flag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span> Agadir</div>
             <div class="city-stats">
               <div><div class="city-stat-label">Cmds</div><div class="city-stat-val" id="city-agadir-total">0</div></div>
               <div><div class="city-stat-label">Livrées</div><div class="city-stat-val green" id="city-agadir-del">0%</div></div>
@@ -702,7 +702,7 @@
 
     <!-- ADD ORDER -->
     <div class="card" style="margin-bottom:20px">
-      <div class="card-title">➕ Nouvelle Commande COD</div>
+      <div class="card-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>Nouvelle Commande COD</div>
       <div class="form-grid">
         <div class="form-group">
           <label>Nom Client</label>
@@ -772,7 +772,7 @@
         </div>
       </div>
       <div style="display:flex; gap:10px;">
-        <button class="btn btn-gold" onclick="addOrder()">✅ Ajouter la Commande</button>
+        <button class="btn btn-gold" onclick="addOrder()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px"><polyline points="20 6 9 17 4 12"/></svg>Ajouter la Commande</button>
         <button class="btn btn-outline" onclick="clearForm()">↺ Vider</button>
       </div>
     </div>

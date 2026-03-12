@@ -343,7 +343,7 @@
     <text
       x="280" y="108"
       text-anchor="middle"
-      font-family="'Times New Roman', 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif"
+      font-family="'Cormorant Garamond', 'Georgia', 'Palatino Linotype', serif"
       font-size="70"
       font-weight="400"
       letter-spacing="16"
@@ -354,7 +354,7 @@
   <text
     x="280" y="108"
     text-anchor="middle"
-    font-family="'Times New Roman', 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif"
+    font-family="'Cormorant Garamond', 'Georgia', 'Palatino Linotype', serif"
     font-size="70"
     font-weight="400"
     letter-spacing="16"
@@ -364,7 +364,7 @@
   <text
     x="280" y="108"
     text-anchor="middle"
-    font-family="'Times New Roman', 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif"
+    font-family="'Cormorant Garamond', 'Georgia', 'Palatino Linotype', serif"
     font-size="70"
     font-weight="400"
     letter-spacing="16"
@@ -399,7 +399,7 @@
     <text
       x="250" y="153"
       text-anchor="middle"
-      font-family="'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+      font-family="'Jost', 'Helvetica Neue', 'Arial', sans-serif"
       font-size="8.5"
       font-weight="200"
       letter-spacing="6"
@@ -411,7 +411,7 @@
   <text
     x="250" y="153"
     text-anchor="middle"
-    font-family="'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+    font-family="'Jost', 'Helvetica Neue', 'Arial', sans-serif"
     font-size="8.5"
     font-weight="200"
     letter-spacing="6"
