@@ -3,823 +3,801 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Système de Marque BISOU - Navigation Hub</title>
+    <title>BISOU — Système de Marque</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
         :root {
-            --gold-main: #D4AF37;
+            --gold:       #D4AF37;
             --gold-light: #F5E6A3;
-            --gold-mid: #C9A84C;
-            --gold-dark: #A8862E;
-            --black: #0D0D0D;
-            --black-soft: #1A1A1A;
-            --cream: #FDF6E3;
-            --rose: #F2D7D5;
-            --grey-light: #AAAAAA;
+            --gold-dark:  #A8862E;
+            --black:      #0D0D0D;
+            --card:       #111111;
+            --card-hover: #161616;
+            --border:     rgba(212,175,55,0.18);
+            --border-h:   rgba(212,175,55,0.60);
+            --text:       #E8E0CC;
+            --muted:      #7A7060;
         }
 
-        html, body {
-            height: 100%;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
-            background-color: var(--black);
-            color: var(--cream);
+            background: var(--black);
+            color: var(--text);
             font-family: 'Jost', sans-serif;
-            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
 
-        /* Hero Banner */
+        /* ── HERO ───────────────────────────────── */
         .hero {
-            width: 100%;
-            background: linear-gradient(135deg, var(--black) 0%, var(--black-soft) 100%);
-            padding: 80px 20px;
-            text-align: center;
-            border-bottom: 1px solid var(--gold-main);
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .hero-logo {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: var(--gold-main);
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-family: 'Jost', sans-serif;
-            font-size: 1.2rem;
-            color: var(--grey-light);
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-
-        /* Module Grid */
-        .modules-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
-        .card {
-            background-color: var(--black-soft);
-            border: 1px solid var(--gold-main);
-            padding: 40px 30px;
+            position: relative;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            transition: all 0.3s ease;
-            position: relative;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px 80px;
             overflow: hidden;
         }
 
-        .card::before {
+        /* animated gradient background */
+        .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 50% 40%, rgba(212,175,55,0.07) 0%, transparent 65%),
+                radial-gradient(ellipse 40% 30% at 20% 80%, rgba(212,175,55,0.04) 0%, transparent 50%),
+                radial-gradient(ellipse 40% 30% at 80% 20%, rgba(212,175,55,0.04) 0%, transparent 50%);
+            animation: breathe 8s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        /* gold separator line */
+        .hero::after {
+            content: '';
+            position: absolute;
             bottom: 0;
-            background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.1), transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.5), transparent);
+        }
+
+        /* canvas particles */
+        #particles {
+            position: absolute;
+            inset: 0;
             pointer-events: none;
         }
 
-        .card:hover {
-            transform: scale(1.03);
-            border-color: var(--gold-main);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-        }
-
-        .card:hover::before {
-            opacity: 1;
-        }
-
-        .card-icon {
-            font-size: 3rem;
-            margin-bottom: 25px;
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-            height: 60px;
+        }
+
+        /* logo */
+        .logo-wrap {
+            width: 110px;
+            height: 110px;
+            margin-bottom: 48px;
+            position: relative;
+        }
+
+        .logo-wrap::before {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212,175,55,0.12) 0%, transparent 70%);
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.15); opacity: 0.7; }
+        }
+
+        .logo-wrap svg { width: 100%; height: 100%; filter: drop-shadow(0 0 18px rgba(212,175,55,0.45)); }
+
+        /* eyebrow */
+        .hero-eyebrow {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .hero-eyebrow span { margin: 0 8px; opacity: 0.5; }
+
+        /* title */
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 300;
+            letter-spacing: 6px;
+            color: var(--gold-light);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            font-weight: 400;
+            color: var(--gold);
+        }
+
+        /* subtitle */
+        .hero-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            font-weight: 300;
+            font-style: italic;
+            color: var(--muted);
+            letter-spacing: 2px;
+            margin-bottom: 52px;
+        }
+
+        /* stats bar */
+        .stats-bar {
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: 0;
+            border: 1px solid var(--border);
+            background: rgba(212,175,55,0.04);
         }
 
-        .card h2 {
+        .stat-item {
+            padding: 14px 36px;
+            text-align: center;
+            border-right: 1px solid var(--border);
+        }
+        .stat-item:last-child { border-right: none; }
+
+        .stat-num {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--gold-main);
-            margin-bottom: 15px;
-            letter-spacing: 1px;
+            font-weight: 600;
+            color: var(--gold);
+            display: block;
+            line-height: 1;
+            margin-bottom: 4px;
         }
 
-        .card-description {
-            font-family: 'Jost', sans-serif;
-            font-size: 0.95rem;
-            color: var(--grey-light);
-            margin-bottom: 25px;
-            flex-grow: 1;
-            line-height: 1.5;
-        }
-
-        .card-badge {
-            display: inline-block;
-            background-color: rgba(212, 175, 55, 0.15);
-            color: #90EE90;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            margin-bottom: 20px;
+        .stat-label {
+            font-size: 0.68rem;
+            font-weight: 400;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border: 1px solid #90EE90;
+            color: var(--muted);
         }
 
-        .card-link {
-            color: var(--gold-main);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            display: inline-block;
+        /* scroll cue */
+        .scroll-cue {
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            opacity: 0.4;
+            animation: fadeDown 2s ease-in-out infinite;
         }
 
-        .card-link:hover {
+        @keyframes fadeDown {
+            0%, 100% { opacity: 0.4; transform: translateX(-50%) translateY(0); }
+            50% { opacity: 0.7; transform: translateX(-50%) translateY(6px); }
+        }
+
+        .scroll-cue-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--gold), transparent);
+        }
+
+        .scroll-cue-text {
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        /* ── SECTION HEADER ─────────────────────── */
+        .section-wrap {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 100px 40px 120px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 400;
             color: var(--gold-light);
-            margin-right: -8px;
+            letter-spacing: 2px;
         }
 
-        .card-link::after {
-            content: ' →';
-            transition: margin-left 0.3s ease;
+        .section-count {
+            font-size: 0.72rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--muted);
         }
 
-        /* Footer */
-        .footer {
-            border-top: 1px solid var(--gold-main);
-            padding: 40px 20px;
-            text-align: center;
-            background-color: var(--black);
+        /* ── GRID ───────────────────────────────── */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
         }
 
-        .footer-content {
-            max-width: 1200px;
+        /* ── CARD ───────────────────────────────── */
+        .card {
+            background: var(--card);
+            padding: 36px 28px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* shimmer on hover */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(105deg, transparent, rgba(212,175,55,0.05), transparent);
+            transition: left 0.5s ease;
+            pointer-events: none;
+        }
+
+        /* top gold line */
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            background: var(--card-hover);
+        }
+
+        .card:hover::before { left: 140%; }
+        .card:hover::after { opacity: 1; }
+
+        /* number */
+        .card-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: rgba(212,175,55,0.35);
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-num::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* icon */
+        .card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 18px;
+            display: block;
+            filter: grayscale(0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-icon { transform: scale(1.1); }
+
+        /* title */
+        .card h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        /* description */
+        .card-desc {
+            font-size: 0.8rem;
+            font-weight: 300;
+            color: var(--muted);
+            line-height: 1.55;
+            flex: 1;
+            margin-bottom: 24px;
+        }
+
+        /* badge */
+        .card-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.62rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #6FCF97;
+            margin-bottom: 18px;
+        }
+
+        .card-badge::before {
+            content: '';
+            width: 5px; height: 5px;
+            border-radius: 50%;
+            background: #6FCF97;
+            box-shadow: 0 0 6px #6FCF97;
+        }
+
+        /* link arrow */
+        .card-arrow {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+            transition: color 0.3s ease, gap 0.3s ease;
+        }
+
+        .card:hover .card-arrow {
+            color: var(--gold);
+            gap: 14px;
+        }
+
+        .card-arrow::after {
+            content: '→';
+            font-size: 0.9rem;
+        }
+
+        /* featured card (first card — larger) */
+        .card-featured {
+            grid-column: span 2;
+            grid-row: span 1;
+            background: linear-gradient(135deg, #111 0%, #0e0c07 100%);
+        }
+
+        .card-featured h2 { font-size: 1.8rem; }
+        .card-featured .card-icon { font-size: 2.4rem; }
+
+        /* ── FOOTER ─────────────────────────────── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1280px;
             margin: 0 auto;
         }
 
-        .footer p {
-            font-size: 0.85rem;
-            color: var(--grey-light);
-            letter-spacing: 0.5px;
-        }
-
         .footer-brand {
-            color: var(--gold-main);
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 10px;
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--gold);
+            letter-spacing: 3px;
         }
 
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .modules-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
-            }
+        .footer-copy {
+            font-size: 0.72rem;
+            color: var(--muted);
+            letter-spacing: 1px;
+        }
 
-            .hero h1 {
-                font-size: 2.8rem;
-            }
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            font-size: 0.72rem;
+            color: var(--muted);
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--gold); }
+
+        /* ── CARD ENTRANCE ANIMATIONS ───────────── */
+        .card {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: cardIn 0.5s ease forwards;
+        }
+
+        @keyframes cardIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card:nth-child(1)  { animation-delay: 0.05s; }
+        .card:nth-child(2)  { animation-delay: 0.10s; }
+        .card:nth-child(3)  { animation-delay: 0.15s; }
+        .card:nth-child(4)  { animation-delay: 0.20s; }
+        .card:nth-child(5)  { animation-delay: 0.25s; }
+        .card:nth-child(6)  { animation-delay: 0.30s; }
+        .card:nth-child(7)  { animation-delay: 0.35s; }
+        .card:nth-child(8)  { animation-delay: 0.40s; }
+        .card:nth-child(9)  { animation-delay: 0.45s; }
+        .card:nth-child(10) { animation-delay: 0.50s; }
+        .card:nth-child(11) { animation-delay: 0.55s; }
+        .card:nth-child(12) { animation-delay: 0.60s; }
+        .card:nth-child(13) { animation-delay: 0.65s; }
+        .card:nth-child(14) { animation-delay: 0.70s; }
+
+        /* ── RESPONSIVE ─────────────────────────── */
+        @media (max-width: 1100px) {
+            .modules-grid { grid-template-columns: repeat(3, 1fr); }
+            .card-featured { grid-column: span 1; }
         }
 
         @media (max-width: 768px) {
-            .modules-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-
-            .container {
-                padding: 60px 15px;
-            }
-
-            .hero {
-                padding: 60px 15px;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .card {
-                padding: 30px 25px;
-            }
-
-            .card h2 {
-                font-size: 1.5rem;
-            }
-
-            .card-icon {
-                font-size: 2.5rem;
-                margin-bottom: 20px;
-            }
-
-            .hero-logo {
-                width: 70px;
-                height: 70px;
-                margin-bottom: 30px;
-            }
+            .modules-grid { grid-template-columns: repeat(2, 1fr); }
+            .section-wrap { padding: 60px 20px 80px; }
+            .stats-bar { flex-wrap: wrap; }
+            .stat-item { padding: 12px 24px; border-right: none; border-bottom: 1px solid var(--border); }
+            .stat-item:last-child { border-bottom: none; }
+            footer { flex-direction: column; gap: 16px; text-align: center; }
+            .footer-links { justify-content: center; }
         }
 
         @media (max-width: 480px) {
-            .hero {
-                padding: 40px 12px;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-                letter-spacing: 1px;
-            }
-
-            .hero p {
-                font-size: 0.9rem;
-            }
-
-            .container {
-                padding: 40px 12px;
-            }
-
-            .modules-grid {
-                gap: 20px;
-            }
-
-            .card {
-                padding: 25px 20px;
-            }
-
-            .card h2 {
-                font-size: 1.3rem;
-            }
-
-            .card-icon {
-                font-size: 2rem;
-            }
-
-            .card-description {
-                font-size: 0.9rem;
-            }
-
-            .footer p {
-                font-size: 0.75rem;
-            }
+            .modules-grid { grid-template-columns: 1fr; }
+            .hero h1 { letter-spacing: 3px; }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Banner -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-logo">
-                <svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     viewBox="0 0 120 120"
-     width="80" height="80"
-     role="img"
-     aria-label="BISOU monogram">
 
-  <defs>
+<!-- ── HERO ── -->
+<section class="hero">
+    <canvas id="particles"></canvas>
 
-    <!-- ════════════════════════════════ -->
-    <!-- GRADIENTS                        -->
-    <!-- ════════════════════════════════ -->
-
-    <!-- Primary gold: diagonal sheen for ring borders -->
-    <linearGradient id="m_goldSheen" x1="0" y1="0" x2="1" y2="1"
-                    gradientUnits="objectBoundingBox">
-      <stop offset="0%"   stop-color="#F5E6A3"/>
-      <stop offset="25%"  stop-color="#D4AF37"/>
-      <stop offset="52%"  stop-color="#C9A84C"/>
-      <stop offset="78%"  stop-color="#A8862E"/>
-      <stop offset="100%" stop-color="#7A5C0E"/>
-    </linearGradient>
-
-    <!-- Gold ring sweep — rotated for outer ring -->
-    <linearGradient id="m_ringOuter" x1="0" y1="0" x2="1" y2="1"
-                    gradientUnits="userSpaceOnUse"
-                    x2="120" y2="120">
-      <stop offset="0%"   stop-color="#F5E6A3"/>
-      <stop offset="20%"  stop-color="#D4AF37"/>
-      <stop offset="45%"  stop-color="#C9A84C"/>
-      <stop offset="72%"  stop-color="#A8862E"/>
-      <stop offset="100%" stop-color="#7A5C0E"/>
-    </linearGradient>
-
-    <!-- Inner ring — slightly different angle -->
-    <linearGradient id="m_ringInner" x1="120" y1="0" x2="0" y2="120"
-                    gradientUnits="userSpaceOnUse">
-      <stop offset="0%"   stop-color="#7A5C0E"/>
-      <stop offset="30%"  stop-color="#A8862E"/>
-      <stop offset="55%"  stop-color="#D4AF37"/>
-      <stop offset="78%"  stop-color="#F5E6A3"/>
-      <stop offset="100%" stop-color="#D4AF37"/>
-    </linearGradient>
-
-    <!-- Radial gold for center motif -->
-    <radialGradient id="m_goldRadial" cx="42%" cy="32%" r="65%"
-                    gradientUnits="objectBoundingBox">
-      <stop offset="0%"   stop-color="#F5E6A3"/>
-      <stop offset="30%"  stop-color="#D4AF37"/>
-      <stop offset="65%"  stop-color="#A8862E"/>
-      <stop offset="100%" stop-color="#7A5C0E"/>
-    </radialGradient>
-
-    <!-- Shimmer overlay for center motif -->
-    <radialGradient id="m_shimmer" cx="30%" cy="22%" r="60%"
-                    gradientUnits="objectBoundingBox">
-      <stop offset="0%"   stop-color="#FFFBE8" stop-opacity="0.70"/>
-      <stop offset="40%"  stop-color="#F5E6A3" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#D4AF37"  stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Background glow radial -->
-    <radialGradient id="m_bgGlow" cx="50%" cy="50%" r="50%"
-                    gradientUnits="objectBoundingBox">
-      <stop offset="0%"   stop-color="#2A1A00" stop-opacity="0.75"/>
-      <stop offset="50%"  stop-color="#1A1200" stop-opacity="0.40"/>
-      <stop offset="100%" stop-color="#0D0D0D"  stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Arc text gradient -->
-    <linearGradient id="m_textGrad" x1="0" y1="0" x2="1" y2="0"
-                    gradientUnits="objectBoundingBox">
-      <stop offset="0%"   stop-color="#A8862E"/>
-      <stop offset="40%"  stop-color="#D4AF37"/>
-      <stop offset="60%"  stop-color="#F5E6A3"/>
-      <stop offset="100%" stop-color="#A8862E"/>
-    </linearGradient>
-
-    <!-- Sparkle dot gradient -->
-    <radialGradient id="m_sparkGrad" cx="50%" cy="30%" r="60%"
-                    gradientUnits="objectBoundingBox">
-      <stop offset="0%"   stop-color="#FFFBE8"/>
-      <stop offset="55%"  stop-color="#D4AF37"/>
-      <stop offset="100%" stop-color="#7A5C0E"/>
-    </radialGradient>
-
-    <!-- Facet light for heart diamond hybrid -->
-    <linearGradient id="m_facetLight" x1="0" y1="0" x2="1" y2="1"
-                    gradientUnits="objectBoundingBox">
-      <stop offset="0%"   stop-color="#FFFBE8" stop-opacity="0.88"/>
-      <stop offset="100%" stop-color="#D4AF37"  stop-opacity="0.20"/>
-    </linearGradient>
-
-    <!-- ════════════════════════════════ -->
-    <!-- FILTERS                          -->
-    <!-- ════════════════════════════════ -->
-
-    <!-- Center motif glow -->
-    <filter id="m_centerGlow" x="-25%" y="-25%" width="150%" height="150%"
-            color-interpolation-filters="sRGB">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blurA"/>
-      <feGaussianBlur in="SourceGraphic" stdDeviation="0.8" result="blurB"/>
-      <feColorMatrix in="blurA" type="matrix"
-        values="1.3 0.8 0   0 0.1
-                0.8 0.6 0   0 0.03
-                0   0   0   0 0
-                0   0   0   0.75 0" result="haloA"/>
-      <feColorMatrix in="blurB" type="matrix"
-        values="1.6 1.2 0.2 0 0.05
-                1.1 0.9 0.1 0 0.02
-                0   0   0   0 0
-                0   0   0   0.6 0" result="haloB"/>
-      <feMerge>
-        <feMergeNode in="haloA"/>
-        <feMergeNode in="haloB"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Ring glow filter -->
-    <filter id="m_ringGlow" x="-8%" y="-8%" width="116%" height="116%"
-            color-interpolation-filters="sRGB">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
-      <feColorMatrix in="blur" type="matrix"
-        values="1.2 0.8 0 0 0.08
-                0.8 0.6 0 0 0.02
-                0   0   0 0 0
-                0   0   0 0.6 0" result="tinted"/>
-      <feMerge>
-        <feMergeNode in="tinted"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Arc text glow -->
-    <filter id="m_textGlow" x="-10%" y="-50%" width="120%" height="200%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="0.7" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Path for curved "BISOU" text arc along bottom -->
-    <!-- Arc: center (60,60), radius 43, from ~200° to ~340° -->
-    <path id="m_arcBottom"
-          d="M 22.7,78.5
-             A 43,43 0 0 1 97.3,78.5"
-          fill="none"/>
-
-    <!-- Path for optional top arc text -->
-    <path id="m_arcTop"
-          d="M 22,60
-             A 38,38 0 0 1 98,60"
-          fill="none"/>
-
-  </defs>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- BACKGROUND                                  -->
-  <!-- ═══════════════════════════════════════════ -->
-
-  <!-- Square background clipped to circle -->
-  <rect width="120" height="120" fill="#0D0D0D"/>
-
-  <!-- Circular background with glow -->
-  <circle cx="60" cy="60" r="59" fill="#0D0D0D"/>
-  <circle cx="60" cy="60" r="52" fill="url(#m_bgGlow)"/>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- DOUBLE RING BORDER                          -->
-  <!-- Outer thin gold ring + gap + inner ring     -->
-  <!-- ═══════════════════════════════════════════ -->
-
-  <!-- Outer ring glow (wide soft halo) -->
-  <circle cx="60" cy="60" r="56"
-          fill="none"
-          stroke="url(#m_ringOuter)"
-          stroke-width="2.5"
-          opacity="0.25"
-          filter="url(#m_ringGlow)"/>
-
-  <!-- Outer ring — primary border -->
-  <circle cx="60" cy="60" r="56"
-          fill="none"
-          stroke="url(#m_ringOuter)"
-          stroke-width="0.9"
-          opacity="0.92"/>
-
-  <!-- Gap space: r=54 to r=52 (left intentionally empty) -->
-
-  <!-- Inner ring — thinner, subtler -->
-  <circle cx="60" cy="60" r="52"
-          fill="none"
-          stroke="url(#m_ringInner)"
-          stroke-width="0.5"
-          opacity="0.70"/>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- 12 O'CLOCK SPARKLE ORNAMENT                 -->
-  <!-- 3 dots of decreasing size + rays            -->
-  <!-- ═══════════════════════════════════════════ -->
-
-  <!-- Center sparkle dot (largest, top) -->
-  <circle cx="60" cy="4.5" r="2.2"
-          fill="url(#m_sparkGrad)" opacity="0.95"/>
-  <!-- Left flanking dot (medium) -->
-  <circle cx="53.5" cy="6.8" r="1.4"
-          fill="url(#m_sparkGrad)" opacity="0.82"/>
-  <!-- Right flanking dot (medium) -->
-  <circle cx="66.5" cy="6.8" r="1.4"
-          fill="url(#m_sparkGrad)" opacity="0.82"/>
-
-  <!-- Sparkle rays from center dot -->
-  <!-- Vertical ray up -->
-  <line x1="60" y1="1.0" x2="60" y2="2.5"
-        stroke="#F5E6A3" stroke-width="0.5" opacity="0.80"/>
-  <!-- Horizontal rays -->
-  <line x1="56.8" y1="4.5" x2="58.2" y2="4.5"
-        stroke="#F5E6A3" stroke-width="0.4" opacity="0.65"/>
-  <line x1="61.8" y1="4.5" x2="63.2" y2="4.5"
-        stroke="#F5E6A3" stroke-width="0.4" opacity="0.65"/>
-  <!-- Diagonal rays -->
-  <line x1="57.8" y1="2.3" x2="58.6" y2="3.1"
-        stroke="#F5E6A3" stroke-width="0.35" opacity="0.50"/>
-  <line x1="62.2" y1="2.3" x2="61.4" y2="3.1"
-        stroke="#F5E6A3" stroke-width="0.35" opacity="0.50"/>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- CENTER MOTIF: Stylized heart-diamond hybrid  -->
-  <!-- Pure SVG cubic bezier paths — no emoji       -->
-  <!-- Combines heart curves with gem facet angles  -->
-  <!-- ═══════════════════════════════════════════ -->
-
-  <g transform="translate(60, 55)" filter="url(#m_centerGlow)">
-
-    <!-- === HEART-DIAMOND HYBRID SHAPE === -->
-
-    <!-- Main body: heart lobes + sharp lower point -->
-    <path d="
-      M 0,-6
-      C 0,-14 -10,-18 -16,-14
-      C -22,-10 -20,-2 -14,4
-      C -9,9 -4,15 0,22
-      C 4,15 9,9 14,4
-      C 20,-2 22,-10 16,-14
-      C 10,-18 0,-14 0,-6
-      Z"
-          fill="url(#m_goldRadial)"/>
-
-    <!-- Left upper lobe dark facet — depth shadow -->
-    <path d="
-      M 0,-6
-      C 0,-14 -10,-18 -16,-14
-      C -22,-10 -20,-2 -14,4
-      L -5,6
-      Z"
-          fill="#3E2005" opacity="0.42"/>
-
-    <!-- Right upper lobe highlight facet -->
-    <path d="
-      M 0,-6
-      C 0,-14 10,-18 16,-14
-      C 22,-10 20,-2 14,4
-      L 5,6
-      Z"
-          fill="url(#m_facetLight)" opacity="0.42"/>
-
-    <!-- Central division facet — bright highlight running down -->
-    <path d="M 0,-6 L 5,6 L 0,22 L -5,6 Z"
-          fill="url(#m_facetLight)" opacity="0.30"/>
-
-    <!-- Top cleft highlight dot -->
-    <circle cx="0" cy="-6" r="1.5"
-            fill="#FFFBE8" opacity="0.90"/>
-
-    <!-- Upper left lobe highlight sweep -->
-    <path d="
-      M -16,-14
-      C -20,-10 -18,-4 -12,2
-      C -10,-2 -8,-8 -6,-12
-      Z"
-          fill="#FFFBE8" opacity="0.30"/>
-
-    <!-- Shimmer overlay on heart body -->
-    <path d="
-      M 0,-6
-      C 0,-14 -10,-18 -16,-14
-      C -22,-10 -20,-2 -14,4
-      C -9,9 -4,15 0,22
-      C 4,15 9,9 14,4
-      C 20,-2 22,-10 16,-14
-      C 10,-18 0,-14 0,-6
-      Z"
-          fill="url(#m_shimmer)"/>
-
-    <!-- === DIAMOND CROWN points at top of lobes === -->
-    <!-- Left lobe crown facet point -->
-    <path d="M -16,-14 L -19,-18 L -12,-16 Z"
-          fill="url(#m_sparkGrad)" opacity="0.70"/>
-    <!-- Right lobe crown facet point -->
-    <path d="M 16,-14 L 19,-18 L 12,-16 Z"
-          fill="url(#m_sparkGrad)" opacity="0.70"/>
-
-    <!-- Pavilion lower sparkle tip -->
-    <circle cx="0" cy="22" r="1.0"
-            fill="#D4AF37" opacity="0.85"/>
-
-  </g>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- BISOU — curved arc text along bottom        -->
-  <!-- Small spaced caps following circle curve    -->
-  <!-- ═══════════════════════════════════════════ -->
-
-  <!-- Arc text glow layer -->
-  <g filter="url(#m_textGlow)" opacity="0.55">
-    <text
-      font-family="'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
-      font-size="7.5"
-      font-weight="300"
-      letter-spacing="5.5"
-      fill="url(#m_textGrad)">
-      <textPath href="#m_arcBottom" startOffset="50%"
-                text-anchor="middle">BISOU</textPath>
-    </text>
-  </g>
-
-  <!-- Arc text main layer -->
-  <text
-    font-family="'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
-    font-size="7.5"
-    font-weight="300"
-    letter-spacing="5.5"
-    fill="url(#m_textGrad)">
-    <textPath href="#m_arcBottom" startOffset="50%"
-              text-anchor="middle">BISOU</textPath>
-  </text>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- SMALL SEPARATOR DOTS flanking arc text      -->
-  <!-- ═══════════════════════════════════════════ -->
-
-  <!-- Left separator diamond on arc -->
-  <polygon points="20,82 22,85 20,88 18,85"
-           fill="url(#m_sparkGrad)" opacity="0.75"/>
-  <!-- Right separator diamond on arc -->
-  <polygon points="100,82 102,85 100,88 98,85"
-           fill="url(#m_sparkGrad)" opacity="0.75"/>
-
-</svg>
-            </div>
-            <h1>Système de Marque BISOU</h1>
-            <p>Complete Brand Identity System · Marrakech → Tout le Maroc · COD</p>
+    <div class="hero-inner">
+        <!-- Logo SVG -->
+        <div class="logo-wrap">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="BISOU">
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%"   stop-color="#F5E6A3"/>
+                  <stop offset="30%"  stop-color="#D4AF37"/>
+                  <stop offset="65%"  stop-color="#A8862E"/>
+                  <stop offset="100%" stop-color="#7A5C0E"/>
+                </linearGradient>
+                <linearGradient id="g2" x1="120" y1="0" x2="0" y2="120" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%"   stop-color="#7A5C0E"/>
+                  <stop offset="50%"  stop-color="#D4AF37"/>
+                  <stop offset="100%" stop-color="#F5E6A3"/>
+                </linearGradient>
+                <radialGradient id="gr" cx="40%" cy="30%" r="65%">
+                  <stop offset="0%"   stop-color="#F5E6A3"/>
+                  <stop offset="40%"  stop-color="#D4AF37"/>
+                  <stop offset="100%" stop-color="#7A5C0E"/>
+                </radialGradient>
+                <radialGradient id="gs" cx="30%" cy="22%" r="60%">
+                  <stop offset="0%"   stop-color="#FFFBE8" stop-opacity=".70"/>
+                  <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+                </radialGradient>
+                <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="b"/>
+                  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <path id="arc" d="M 22.7,78.5 A 43,43 0 0 1 97.3,78.5" fill="none"/>
+              </defs>
+              <circle cx="60" cy="60" r="59" fill="#0D0D0D"/>
+              <circle cx="60" cy="60" r="56" fill="none" stroke="url(#g1)" stroke-width="0.9" opacity=".9"/>
+              <circle cx="60" cy="60" r="52" fill="none" stroke="url(#g2)" stroke-width="0.5" opacity=".6"/>
+              <circle cx="60" cy="4.5" r="2.2" fill="url(#gr)" opacity=".95"/>
+              <circle cx="53.5" cy="6.8" r="1.4" fill="url(#gr)" opacity=".8"/>
+              <circle cx="66.5" cy="6.8" r="1.4" fill="url(#gr)" opacity=".8"/>
+              <g transform="translate(60,55)" filter="url(#glow)">
+                <path d="M0,-6 C0,-14 -10,-18 -16,-14 C-22,-10 -20,-2 -14,4 C-9,9 -4,15 0,22 C4,15 9,9 14,4 C20,-2 22,-10 16,-14 C10,-18 0,-14 0,-6 Z" fill="url(#gr)"/>
+                <path d="M0,-6 C0,-14 -10,-18 -16,-14 C-22,-10 -20,-2 -14,4 C-9,9 -4,15 0,22 C4,15 9,9 14,4 C20,-2 22,-10 16,-14 C10,-18 0,-14 0,-6 Z" fill="url(#gs)"/>
+                <path d="M0,-6 L5,6 L0,22 L-5,6 Z" fill="rgba(255,251,232,0.18)"/>
+                <circle cx="0" cy="-6" r="1.5" fill="#FFFBE8" opacity=".9"/>
+              </g>
+              <text font-family="Helvetica Neue,Arial,sans-serif" font-size="7.5" font-weight="300" letter-spacing="5.5" fill="url(#g1)">
+                <textPath href="#arc" startOffset="50%" text-anchor="middle">BISOU</textPath>
+              </text>
+            </svg>
         </div>
-    </section>
 
-    <!-- Main Content -->
-    <main class="container">
-        <!-- Module Grid -->
-        <div class="modules-grid">
-            <!-- Card 1: Brand Guide -->
-            <div class="card">
-                <div class="card-icon">📘</div>
-                <h2>Brand Guide</h2>
-                <p class="card-description">L'identité de marque complète</p>
-                <span class="card-badge">✓ Prêt</span>
-                <a href="brand-guide.html" class="card-link">Accéder</a>
+        <p class="hero-eyebrow">Marrakech<span>·</span>Tout le Maroc<span>·</span>COD</p>
+        <h1><em>Système de Marque</em></h1>
+        <p class="hero-subtitle">Complete Brand Identity System · 2026</p>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-num">14</span>
+                <span class="stat-label">Modules</span>
             </div>
-
-            <!-- Card 2: Homepage -->
-            <div class="card">
-                <div class="card-icon">🌐</div>
-                <h2>Homepage</h2>
-                <p class="card-description">Site e-commerce BISOU</p>
-                <span class="card-badge">✓ Prêt</span>
-                <a href="website-homepage.html" class="card-link">Accéder</a>
+            <div class="stat-item">
+                <span class="stat-num">22</span>
+                <span class="stat-label">Produits</span>
             </div>
-
-            <!-- Card 3: Social Media Kit -->
-            <div class="card">
-                <div class="card-icon">📱</div>
-                <h2>Social Media Kit</h2>
-                <p class="card-description">Templates Instagram, TikTok, Pinterest</p>
-                <span class="card-badge">✓ Prêt</span>
-                <a href="social-media-kit.html" class="card-link">Accéder</a>
+            <div class="stat-item">
+                <span class="stat-num">COD</span>
+                <span class="stat-label">Cash on Delivery</span>
             </div>
-
-            <!-- Card 4: Email Templates -->
-            <div class="card">
-                <div class="card-icon">✉️</div>
-                <h2>Email Templates</h2>
-                <p class="card-description">Campagnes & newsletters</p>
-                <span class="card-badge">✓ Prêt</span>
-                <a href="email-newsletter.html" class="card-link">Accéder</a>
-            </div>
-
-            <!-- Card 5: Lookbook -->
-            <div class="card">
-                <div class="card-icon">✨</div>
-                <h2>Lookbook</h2>
-                <p class="card-description">Éditorial & inspiration</p>
-                <span class="card-badge">✓ Prêt</span>
-                <a href="lookbook.html" class="card-link">Accéder</a>
-            </div>
-
-            <!-- Card 6: Press Kit -->
-            <div class="card">
-                <div class="card-icon">📰</div>
-                <h2>Press Kit</h2>
-                <p class="card-description">Dossier presse & kit influenceurs Maroc</p>
-                <span class="card-badge">✓ Prêt</span>
-                <a href="press-kit.html" class="card-link">Accéder</a>
-            </div>
-
-            <!-- Card 7: Product Catalog -->
-            <div class="card">
-                <div class="card-icon">💎</div>
-                <h2>Catalogue Produits</h2>
-                <p class="card-description">30+ bijoux — 6 catégories — Prix MAD — COD Maroc</p>
-                <span class="card-badge">✓ Prêt</span>
-                <a href="product-catalog.html" class="card-link">Accéder</a>
-            </div>
-
-            <!-- Card 8: Packs Marketing -->
-            <div class="card">
-                <div class="card-icon">🎁</div>
-                <h2>Packs Marketing</h2>
-                <p class="card-description">4 packs COD · 159 / 229 / 279 / 449 MAD</p>
-                <span class="card-badge">✓ Prêt</span>
-                <a href="packs-marketing.html" class="card-link">Accéder</a>
-            </div>
-
-            <!-- Card 9: Stratégie Maroc -->
-            <div class="card">
-                <div class="card-icon">🇲🇦</div>
-                <h2>Stratégie Maroc</h2>
-                <p class="card-description">Plan complet lancement — Marrakech → national</p>
-                <span class="card-badge">✓ Prêt</span>
-                <a href="strategie-maroc.html" class="card-link">Accéder</a>
-            </div>
-
-            <!-- Card 10: Landing Marrakech -->
-            <div class="card">
-                <div class="card-icon">📍</div>
-                <h2>Landing Marrakech</h2>
-                <p class="card-description">Page de lancement locale — Marrakech first</p>
-                <span class="card-badge">✓ Prêt</span>
-                <a href="landing-marrakech.html" class="card-link">Accéder</a>
-            </div>
-
-            <!-- Card 11: Dashboard HF -->
-            <div class="card">
-                <div class="card-icon">📊</div>
-                <h2>Dashboard KPIs</h2>
-                <p class="card-description">Projections revenus · Packs · Stratégie Maroc</p>
-                <span class="card-badge">✓ Prêt</span>
-                <a href="https://issam0505-bisou-maroc-dashboard.static.hf.space/index.html" target="_blank" class="card-link">Accéder (Live)</a>
-            </div>
-
-            <!-- Card 12: Checkout COD -->
-            <div class="card">
-                <div class="card-icon">🛒</div>
-                <h2>Commande COD</h2>
-                <p class="card-description">Page de commande — Paiement à la livraison · Tout le Maroc</p>
-                <span class="card-badge">✓ PRÊT</span>
-                <a href="checkout-cod.html" class="card-link">Accéder</a>
-            </div>
-
-            <!-- Card 13: Dashboard COD Operations -->
-            <div class="card">
-                <div class="card-icon">📦</div>
-                <h2>Dashboard COD</h2>
-                <p class="card-description">Gestion commandes · Scripts WhatsApp · ROI & Projections</p>
-                <span class="card-badge">✓ PRÊT</span>
-                <a href="cod-dashboard.html" class="card-link">Accéder</a>
-            </div>
-
-            <!-- Card 14: UGC Studio Pro -->
-            <div class="card">
-                <div class="card-icon">🎬</div>
-                <h2>UGC Studio Pro</h2>
-                <p class="card-description">Création vidéos · Scripts · Briefs · Suivi performance</p>
-                <span class="card-badge">✓ PRÊT</span>
-                <a href="ugc-studio.html" class="card-link">Accéder</a>
+            <div class="stat-item">
+                <span class="stat-num">MAD</span>
+                <span class="stat-label">Dirhams marocains</span>
             </div>
         </div>
-    </main>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-brand">BISOU — Système de Marque</div>
-            <p>&copy; 2026 BISOU Brand System. All rights reserved.</p>
-        </div>
-    </footer>
+    <div class="scroll-cue">
+        <span class="scroll-cue-text">Explorer</span>
+        <div class="scroll-cue-line"></div>
+    </div>
+</section>
+
+<!-- ── MODULES ── -->
+<div class="section-wrap">
+    <div class="section-header">
+        <h2 class="section-title">Modules du système</h2>
+        <span class="section-count">14 modules · Tous opérationnels</span>
+    </div>
+
+    <div class="modules-grid">
+
+        <!-- 01 Brand Guide — FEATURED -->
+        <a class="card card-featured" href="brand-guide.html">
+            <span class="card-num">01</span>
+            <span class="card-icon">📘</span>
+            <h2>Brand Guide</h2>
+            <p class="card-desc">L'identité de marque complète — couleurs, typographie, voix, personas, architecture tarifaire.</p>
+            <span class="card-badge">Opérationnel</span>
+            <span class="card-arrow">Accéder</span>
+        </a>
+
+        <!-- 02 Homepage -->
+        <a class="card" href="website-homepage.html">
+            <span class="card-num">02</span>
+            <span class="card-icon">🌐</span>
+            <h2>Homepage</h2>
+            <p class="card-desc">Site e-commerce BISOU — hero, produits, CTA COD.</p>
+            <span class="card-badge">Opérationnel</span>
+            <span class="card-arrow">Accéder</span>
+        </a>
+
+        <!-- 03 Social Media Kit -->
+        <a class="card" href="social-media-kit.html">
+            <span class="card-num">03</span>
+            <span class="card-icon">📱</span>
+            <h2>Social Media Kit</h2>
+            <p class="card-desc">Templates Instagram, TikTok, Pinterest.</p>
+            <span class="card-badge">Opérationnel</span>
+            <span class="card-arrow">Accéder</span>
+        </a>
+
+        <!-- 04 Email -->
+        <a class="card" href="email-newsletter.html">
+            <span class="card-num">04</span>
+            <span class="card-icon">✉️</span>
+            <h2>Email Templates</h2>
+            <p class="card-desc">Campagnes & newsletters — séquences automatisées.</p>
+            <span class="card-badge">Opérationnel</span>
+            <span class="card-arrow">Accéder</span>
+        </a>
+
+        <!-- 05 Lookbook -->
+        <a class="card" href="lookbook.html">
+            <span class="card-num">05</span>
+            <span class="card-icon">✨</span>
+            <h2>Lookbook</h2>
+            <p class="card-desc">Éditorial & inspiration — collections Printemps 2026.</p>
+            <span class="card-badge">Opérationnel</span>
+            <span class="card-arrow">Accéder</span>
+        </a>
+
+        <!-- 06 Press Kit -->
+        <a class="card" href="press-kit.html">
+            <span class="card-num">06</span>
+            <span class="card-icon">📰</span>
+            <h2>Press Kit</h2>
+            <p class="card-desc">Dossier presse & kit influenceurs Maroc 2026.</p>
+            <span class="card-badge">Opérationnel</span>
+            <span class="card-arrow">Accéder</span>
+        </a>
+
+        <!-- 07 Product Catalog -->
+        <a class="card" href="product-catalog.html">
+            <span class="card-num">07</span>
+            <span class="card-icon">💎</span>
+            <h2>Catalogue Produits</h2>
+            <p class="card-desc">22 bijoux — 6 catégories — 139 à 599 MAD — COD Maroc.</p>
+            <span class="card-badge">Opérationnel</span>
+            <span class="card-arrow">Accéder</span>
+        </a>
+
+        <!-- 08 Packs -->
+        <a class="card" href="packs-marketing.html">
+            <span class="card-num">08</span>
+            <span class="card-icon">🎁</span>
+            <h2>Packs Marketing</h2>
+            <p class="card-desc">4 packs COD · 159 / 229 / 279 / 449 MAD.</p>
+            <span class="card-badge">Opérationnel</span>
+            <span class="card-arrow">Accéder</span>
+        </a>
+
+        <!-- 09 Stratégie -->
+        <a class="card" href="strategie-maroc.html">
+            <span class="card-num">09</span>
+            <span class="card-icon">🇲🇦</span>
+            <h2>Stratégie Maroc</h2>
+            <p class="card-desc">Plan complet lancement — Marrakech → national.</p>
+            <span class="card-badge">Opérationnel</span>
+            <span class="card-arrow">Accéder</span>
+        </a>
+
+        <!-- 10 Landing -->
+        <a class="card" href="landing-marrakech.html">
+            <span class="card-num">10</span>
+            <span class="card-icon">📍</span>
+            <h2>Landing Marrakech</h2>
+            <p class="card-desc">Page de lancement locale — Marrakech first.</p>
+            <span class="card-badge">Opérationnel</span>
+            <span class="card-arrow">Accéder</span>
+        </a>
+
+        <!-- 11 Dashboard KPIs -->
+        <a class="card" href="hf-app.html">
+            <span class="card-num">11</span>
+            <span class="card-icon">📊</span>
+            <h2>Dashboard KPIs</h2>
+            <p class="card-desc">Projections revenus · Packs · Stratégie Maroc.</p>
+            <span class="card-badge">Opérationnel</span>
+            <span class="card-arrow">Accéder</span>
+        </a>
+
+        <!-- 12 Checkout -->
+        <a class="card" href="checkout-cod.html">
+            <span class="card-num">12</span>
+            <span class="card-icon">🛒</span>
+            <h2>Commande COD</h2>
+            <p class="card-desc">Page de commande — paiement à la livraison · tout le Maroc.</p>
+            <span class="card-badge">Opérationnel</span>
+            <span class="card-arrow">Accéder</span>
+        </a>
+
+        <!-- 13 Dashboard COD -->
+        <a class="card" href="cod-dashboard.html">
+            <span class="card-num">13</span>
+            <span class="card-icon">📦</span>
+            <h2>Dashboard COD</h2>
+            <p class="card-desc">Gestion commandes · Scripts WhatsApp · ROI & Projections.</p>
+            <span class="card-badge">Opérationnel</span>
+            <span class="card-arrow">Accéder</span>
+        </a>
+
+        <!-- 14 UGC Studio -->
+        <a class="card" href="ugc-studio.html">
+            <span class="card-num">14</span>
+            <span class="card-icon">🎬</span>
+            <h2>UGC Studio Pro</h2>
+            <p class="card-desc">Création vidéos · Scripts · Briefs · Suivi performance.</p>
+            <span class="card-badge">Opérationnel</span>
+            <span class="card-arrow">Accéder</span>
+        </a>
+
+    </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+    <span class="footer-brand">B I S O U</span>
+    <span class="footer-copy">© 2026 BISOU — Système de Marque Complet</span>
+    <div class="footer-links">
+        <a href="brand-guide.html">Brand</a>
+        <a href="product-catalog.html">Produits</a>
+        <a href="checkout-cod.html">Commander</a>
+    </div>
+</footer>
+
+<script>
+// ── PARTICLES ──
+(function(){
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [];
+
+    function resize(){
+        W = canvas.width  = canvas.offsetWidth;
+        H = canvas.height = canvas.offsetHeight;
+    }
+
+    function rand(a, b){ return a + Math.random()*(b-a); }
+
+    function createParticles(){
+        particles = [];
+        const count = Math.floor(W * H / 14000);
+        for(let i = 0; i < count; i++){
+            particles.push({
+                x: rand(0, W),
+                y: rand(0, H),
+                r: rand(0.4, 1.4),
+                alpha: rand(0.1, 0.5),
+                speed: rand(0.02, 0.08),
+                phase: rand(0, Math.PI*2)
+            });
+        }
+    }
+
+    let t = 0;
+    function draw(){
+        ctx.clearRect(0, 0, W, H);
+        t += 0.008;
+        particles.forEach(p => {
+            const a = p.alpha * (0.5 + 0.5 * Math.sin(t * p.speed * 60 + p.phase));
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+            ctx.fillStyle = `rgba(212,175,55,${a})`;
+            ctx.fill();
+        });
+        requestAnimationFrame(draw);
+    }
+
+    window.addEventListener('resize', ()=>{ resize(); createParticles(); });
+    resize();
+    createParticles();
+    draw();
+})();
+</script>
 </body>
 </html>
