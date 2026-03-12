@@ -49,7 +49,7 @@ BISOU/                                 # Nom du dépôt (marque : ÔRIYA)
 │   ├── # ── Backend / Configuration ──
 │   ├── google-apps-script.js          # Google Apps Script (doPost/doGet pour Google Sheets)
 │   ├── writer.js                      # Fichier stub (console.log(42))
-│   ├── SETUP-ÔRIYA.md                 # Guide de configuration Google Sheets en 3 étapes
+│   ├── SETUP-ORIYA.md                 # Guide de configuration Google Sheets en 3 étapes
 │   │
 │   ├── # ── Documentation Stratégie ──
 │   ├── brand-strategy.md              # Stratégie de marque
@@ -142,7 +142,7 @@ Bijoux plaqué or — prix 139 à 599 MAD — catégories : Colliers, Bagues, Bo
 - `doPost(e)` : reçoit les commandes, génère un identifiant (`CMD-001`, `CMD-002`…)
 - `doGet(e)` : retourne toutes les commandes en JSON
 - 13 colonnes : N° CMD, Date, Prénom, Nom, Téléphone, Ville, Adresse, Produit, Prix MAD, Note, Statut, Livreur, Payé
-- Configuration manuelle via `SETUP-ÔRIYA.md` (3 étapes)
+- Configuration manuelle via `SETUP-ORIYA.md` (3 étapes)
 
 ### Clés localStorage
 ```
@@ -208,5 +208,5 @@ el.classList.toggle('open');
 
 ## Tâches restantes
 - [ ] Remplacer `212600000000` par le vrai numéro WhatsApp dans tous les fichiers (31+ occurrences)
-- [ ] Configurer Google Sheets via SETUP-ÔRIYA.md (configuration manuelle)
+- [ ] Configurer Google Sheets via SETUP-ORIYA.md (configuration manuelle)
 - [ ] `brand/writer.js` est un fichier stub (`console.log(42)`) — à implémenter ou supprimer
