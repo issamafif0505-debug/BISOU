@@ -1,0 +1,87 @@
+{
+  "common": {
+    "addToCart": "Ajouter au panier",
+    "orderCod": "Commander — Paiement à la livraison",
+    "orderNow": "Commander maintenant",
+    "buyNow": "Acheter maintenant",
+    "price": "Prix",
+    "mad": "MAD",
+    "free": "Gratuit",
+    "loading": "Chargement…",
+    "error": "Une erreur est survenue",
+    "retry": "Réessayer",
+    "close": "Fermer",
+    "continue": "Continuer",
+    "back": "Retour",
+    "next": "Suivant",
+    "search": "Rechercher",
+    "menu": "Menu",
+    "whatsapp": "WhatsApp",
+    "contactUs": "Nous contacter",
+    "discoverCollection": "Découvrir la collection"
+  },
+  "nav": {
+    "home": "Accueil",
+    "collections": "Collections",
+    "necklaces": "Colliers",
+    "rings": "Bagues",
+    "earrings": "Boucles d'oreilles",
+    "bracelets": "Bracelets",
+    "sets": "Coffrets",
+    "editions": "Éditions",
+    "blog": "Blog",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "L'or qui t'embrasse",
+    "subtitle": "Bijoux plaqués or, livrés partout au Maroc en paiement à la livraison",
+    "cta": "Découvrir la collection"
+  },
+  "product": {
+    "inStock": "En stock",
+    "outOfStock": "Rupture de stock",
+    "bestseller": "Best-seller",
+    "new": "Nouveau",
+    "limitedEdition": "Édition limitée",
+    "material": "Matière",
+    "description": "Description",
+    "details": "Détails",
+    "delivery": "Livraison 24-72h partout au Maroc",
+    "cod": "Paiement à la livraison — aucun acompte",
+    "returnPolicy": "Retour gratuit 7 jours"
+  },
+  "checkout": {
+    "title": "Finaliser ma commande",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "phone": "Téléphone",
+    "city": "Ville",
+    "address": "Adresse complète",
+    "note": "Note (optionnel)",
+    "submit": "Confirmer la commande",
+    "submitting": "Envoi en cours…",
+    "success": "Commande confirmée !",
+    "errorPhone": "Numéro de téléphone invalide",
+    "errorRequired": "Ce champ est obligatoire",
+    "codNotice": "Vous payez uniquement à la réception de votre commande"
+  },
+  "merci": {
+    "title": "Merci pour votre commande !",
+    "subtitle": "Votre commande {orderId} a bien été enregistrée",
+    "nextSteps": "Nous vous appellerons dans les 24h pour confirmer la livraison",
+    "contactWhatsapp": "Nous contacter sur WhatsApp",
+    "backHome": "Retour à l'accueil"
+  },
+  "footer": {
+    "about": "À propos",
+    "aboutText": "BISOU — Bijoux plaqués or fabriqués avec amour au Maroc.",
+    "links": "Liens utiles",
+    "cgv": "Conditions générales de vente",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "contact": "Contact",
+    "social": "Réseaux sociaux",
+    "copyright": "© {year} BISOU. Tous droits réservés."
+  }
+}

@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 500 180"
+     width="500" height="180"
+     role="img"
+     aria-label="BISOU — L'or qui t'embrasse">
+
+  <defs>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- GRADIENTS (matching main logo)      -->
+    <!-- ═══════════════════════════════════ -->
+
+    <!-- Primary 5-stop metallic gold sheen: top-to-bottom -->
+    <linearGradient id="goldSheen" x1="0" y1="0" x2="0" y2="1"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#F5E6A3"/>
+      <stop offset="22%"  stop-color="#D4AF37"/>
+      <stop offset="50%"  stop-color="#C9A84C"/>
+      <stop offset="78%"  stop-color="#A8862E"/>
+      <stop offset="100%" stop-color="#7A5C0E"/>
+    </linearGradient>
+
+    <!-- Horizontal gold reflect: angled sheen left-to-right -->
+    <linearGradient id="goldReflect" x1="0" y1="0" x2="1" y2="0"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#7A5C0E"/>
+      <stop offset="18%"  stop-color="#A8862E"/>
+      <stop offset="45%"  stop-color="#D4AF37"/>
+      <stop offset="65%"  stop-color="#F5E6A3"/>
+      <stop offset="82%"  stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#A8862E"/>
+    </linearGradient>
+
+    <!-- Diagonal sweep gold for wordmark — primary sheen -->
+    <linearGradient id="goldSweep" x1="0" y1="0" x2="1" y2="1"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#F5E6A3"/>
+      <stop offset="28%"  stop-color="#D4AF37"/>
+      <stop offset="52%"  stop-color="#C9A84C"/>
+      <stop offset="76%"  stop-color="#A8862E"/>
+      <stop offset="100%" stop-color="#7A5C0E"/>
+    </linearGradient>
+
+    <!-- Radial gold highlight — center burst for wordmark -->
+    <radialGradient id="goldRadial" cx="50%" cy="40%" r="55%"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#F5E6A3"/>
+      <stop offset="35%"  stop-color="#D4AF37"/>
+      <stop offset="70%"  stop-color="#A8862E"/>
+      <stop offset="100%" stop-color="#7A5C0E"/>
+    </radialGradient>
+
+    <!-- Shimmer overlay radial — translucent highlight sweep on wordmark -->
+    <radialGradient id="goldShimmer" cx="28%" cy="22%" r="62%"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#FFFBE8" stop-opacity="0.60"/>
+      <stop offset="40%"  stop-color="#F5E6A3" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#D4AF37"  stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Horizontal rule gradient — fade to transparent at both ends -->
+    <linearGradient id="ruleGrad" x1="0" y1="0" x2="1" y2="0"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#D4AF37" stop-opacity="0"/>
+      <stop offset="12%"  stop-color="#D4AF37" stop-opacity="0.65"/>
+      <stop offset="50%"  stop-color="#F5E6A3" stop-opacity="1"/>
+      <stop offset="88%"  stop-color="#D4AF37" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Tagline gradient — horizontal gold sweep -->
+    <linearGradient id="taglineGrad" x1="0" y1="0" x2="1" y2="0"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#A8862E"/>
+      <stop offset="35%"  stop-color="#D4AF37"/>
+      <stop offset="58%"  stop-color="#F5E6A3"/>
+      <stop offset="80%"  stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#A8862E"/>
+    </linearGradient>
+
+    <!-- Background radial glow — warm gold behind composition -->
+    <radialGradient id="bgGlow" cx="50%" cy="52%" r="50%"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#2C1E00" stop-opacity="0.70"/>
+      <stop offset="55%"  stop-color="#1A1200" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0D0D0D"  stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Jewelry element gradient — pendant/stone -->
+    <linearGradient id="jewelPendant" x1="0" y1="0" x2="0" y2="1"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#F5E6A3"/>
+      <stop offset="30%"  stop-color="#D4AF37"/>
+      <stop offset="65%"  stop-color="#A8862E"/>
+      <stop offset="100%" stop-color="#7A5C0E"/>
+    </linearGradient>
+
+    <!-- Ring gradient — metallic gold -->
+    <linearGradient id="ringGold" x1="0" y1="0" x2="1" y2="1"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#F5E6A3"/>
+      <stop offset="25%"  stop-color="#D4AF37"/>
+      <stop offset="50%"  stop-color="#C9A84C"/>
+      <stop offset="75%"  stop-color="#A8862E"/>
+      <stop offset="100%" stop-color="#7A5C0E"/>
+    </linearGradient>
+
+    <!-- Chain/necklace gradient -->
+    <linearGradient id="chainGold" x1="0" y1="0" x2="0" y2="1"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#D4AF37"/>
+      <stop offset="50%"  stop-color="#A8862E"/>
+      <stop offset="100%" stop-color="#7A5C0E"/>
+    </linearGradient>
+
+    <!-- Pendant highlight — translucent bright spot -->
+    <radialGradient id="pendantLight" cx="35%" cy="30%" r="65%"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#FFFBE8" stop-opacity="0.85"/>
+      <stop offset="45%"  stop-color="#F5E6A3" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#D4AF37"  stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Ring highlight accent -->
+    <linearGradient id="ringHighlight" x1="0" y1="0" x2="1" y2="1"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#FFFBE8" stop-opacity="0.70"/>
+      <stop offset="100%" stop-color="#D4AF37"  stop-opacity="0.10"/>
+    </linearGradient>
+
+    <!-- Corner ornament radial -->
+    <radialGradient id="dotGrad" cx="50%" cy="30%" r="60%"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#F5E6A3"/>
+      <stop offset="55%"  stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#7A5C0E"/>
+    </radialGradient>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- FILTERS                             -->
+    <!-- ═══════════════════════════════════ -->
+
+    <!-- Jewelry glow filter — applied to pendant and rings -->
+    <filter id="jewelryGlow" x="-40%" y="-40%" width="180%" height="180%"
+            color-interpolation-filters="sRGB">
+      <!-- Wide soft halo -->
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blurWide"/>
+      <!-- Tight crisp halo -->
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blurTight"/>
+      <!-- Tint wide halo warm gold -->
+      <feColorMatrix in="blurWide" type="matrix"
+        values="1.2 0.8 0   0 0.10
+                0.9 0.7 0   0 0.04
+                0   0   0   0 0
+                0   0   0   0.85 0" result="haloWarm"/>
+      <!-- Tint tight halo bright gold -->
+      <feColorMatrix in="blurTight" type="matrix"
+        values="1.6 1.2 0.3 0 0.06
+                1.1 0.9 0.2 0 0.03
+                0   0   0   0 0
+                0   0   0   0.75 0" result="haloBright"/>
+      <feMerge>
+        <feMergeNode in="haloWarm"/>
+        <feMergeNode in="haloBright"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft glow filter applied to wordmark — feGaussianBlur + feMerge -->
+    <filter id="glowFilter" x="-18%" y="-45%" width="136%" height="190%"
+            color-interpolation-filters="sRGB">
+      <!-- Wide soft halo -->
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4.5" result="blurWide"/>
+      <!-- Tight crisp halo -->
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blurTight"/>
+      <!-- Tint wide halo warm gold -->
+      <feColorMatrix in="blurWide" type="matrix"
+        values="1.1 0.7 0   0 0.08
+                0.8 0.6 0   0 0.03
+                0   0   0   0 0
+                0   0   0   0.9 0" result="haloWarm"/>
+      <!-- Tint tight halo bright gold -->
+      <feColorMatrix in="blurTight" type="matrix"
+        values="1.5 1.1 0.2 0 0.05
+                1.0 0.8 0.1 0 0.02
+                0   0   0   0 0
+                0   0   0   0.7 0" result="haloBright"/>
+      <feMerge>
+        <feMergeNode in="haloWarm"/>
+        <feMergeNode in="haloBright"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Tagline soft glow -->
+    <filter id="taglineGlow" x="-4%" y="-50%" width="108%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+  </defs>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- BACKGROUND                                     -->
+  <!-- ══════════════════════════════════════════════ -->
+
+  <!-- Solid dark background -->
+  <rect width="500" height="180" fill="#0D0D0D"/>
+
+  <!-- Radial warm glow behind composition -->
+  <ellipse cx="250" cy="90" rx="230" ry="82" fill="url(#bgGlow)"/>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- MICRO CORNER ORNAMENTS — diamond dots          -->
+  <!-- ══════════════════════════════════════════════ -->
+
+  <!-- Top-left -->
+  <polygon points="18,10 21,14 18,18 15,14"
+           fill="url(#dotGrad)" opacity="0.88"/>
+  <!-- Top-right -->
+  <polygon points="482,10 485,14 482,18 479,14"
+           fill="url(#dotGrad)" opacity="0.88"/>
+  <!-- Bottom-left -->
+  <polygon points="18,162 21,166 18,170 15,166"
+           fill="url(#dotGrad)" opacity="0.88"/>
+  <!-- Bottom-right -->
+  <polygon points="482,162 485,166 482,170 479,166"
+           fill="url(#dotGrad)" opacity="0.88"/>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- TOP HORIZONTAL RULE — 0.6px, fade ends        -->
+  <!-- ══════════════════════════════════════════════ -->
+
+  <line x1="28" y1="28" x2="472" y2="28"
+        stroke="url(#ruleGrad)" stroke-width="0.6" opacity="0.92"/>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- JEWELRY COMPOSITION — Necklace + Rings        -->
+  <!-- Elegant outline jewelry positioned left       -->
+  <!-- ══════════════════════════════════════════════ -->
+
+  <g transform="translate(60, 88)" filter="url(#jewelryGlow)">
+
+    <!-- ═ NECKLACE CHAIN — thin double-curve elegance ═ -->
+    <!-- Left chain segment: cubic bezier descent -->
+    <path d="M -8,-18
+             C -12,-14 -14,-8 -13,-2"
+          stroke="url(#chainGold)" stroke-width="1.2" fill="none"
+          stroke-linecap="round" opacity="0.85"/>
+
+    <!-- Right chain segment: symmetric curve -->
+    <path d="M 8,-18
+             C 12,-14 14,-8 13,-2"
+          stroke="url(#chainGold)" stroke-width="1.2" fill="none"
+          stroke-linecap="round" opacity="0.85"/>
+
+    <!-- Chain accent sparkles — small circles -->
+    <circle cx="-10" cy="-10" r="0.6" fill="#F5E6A3" opacity="0.70"/>
+    <circle cx="10" cy="-10" r="0.6" fill="#F5E6A3" opacity="0.70"/>
+
+    <!-- ═ PENDANT — elegant teardrop gemstone ═ -->
+
+    <!-- Pendant outer contour (outline path) -->
+    <path d="M 0,-2
+             C 6,-2 9,2 9,8
+             C 9,14 6,20 0,24
+             C -6,20 -9,14 -9,8
+             C -9,2 -6,-2 0,-2
+             Z"
+          fill="url(#jewelPendant)"/>
+
+    <!-- Pendant left facet shadow -->
+    <path d="M 0,-2 L -9,8 L -6,16 L 0,10 Z"
+          fill="#4A3208" opacity="0.50"/>
+
+    <!-- Pendant right facet highlight -->
+    <path d="M 0,-2 L 9,8 L 6,16 L 0,10 Z"
+          fill="url(#pendantLight)" opacity="0.65"/>
+
+    <!-- Pendant mid-line bright accent -->
+    <path d="M 0,-1 L 0,22 C -2,20 -5,15 -6,10 L 0,6 L 6,10 C 5,15 2,20 0,22 Z"
+          fill="url(#pendantLight)" opacity="0.40"/>
+
+    <!-- ═ SPARKLE at pendant top ═ -->
+    <circle cx="0" cy="-3" r="1.2" fill="#FFFBE8" opacity="0.90"/>
+    <line x1="0" y1="-7" x2="0" y2="0"
+          stroke="#F5E6A3" stroke-width="0.4" opacity="0.70"/>
+    <line x1="-3.5" y1="-3" x2="3.5" y2="-3"
+          stroke="#F5E6A3" stroke-width="0.4" opacity="0.65"/>
+
+    <!-- ═ STACKED RINGS MOTIF — three elegant bands ═ -->
+
+    <!-- RING 1 (upper) — elliptical outline -->
+    <ellipse cx="0" cy="-28" rx="11" ry="8"
+             fill="none" stroke="url(#ringGold)" stroke-width="2.2"
+             opacity="0.90"/>
+
+    <!-- Ring 1 highlight top -->
+    <path d="M -8,-33 Q 0,-36 8,-33"
+          fill="none" stroke="url(#ringHighlight)" stroke-width="1.4"
+          stroke-linecap="round" opacity="0.75"/>
+
+    <!-- RING 2 (middle) — stacked below with subtle overlap -->
+    <ellipse cx="0" cy="-42" rx="13" ry="9"
+             fill="none" stroke="url(#ringGold)" stroke-width="2.2"
+             opacity="0.88"/>
+
+    <!-- Ring 2 highlight top -->
+    <path d="M -9,-49 Q 0,-53 9,-49"
+          fill="none" stroke="url(#ringHighlight)" stroke-width="1.4"
+          stroke-linecap="round" opacity="0.72"/>
+
+    <!-- RING 3 (lower) — largest, overlapping top -->
+    <ellipse cx="0" cy="-16" rx="10" ry="7.5"
+             fill="none" stroke="url(#ringGold)" stroke-width="2.2"
+             opacity="0.92"/>
+
+    <!-- Ring 3 highlight top -->
+    <path d="M -7,-22 Q 0,-25 7,-22"
+          fill="none" stroke="url(#ringHighlight)" stroke-width="1.4"
+          stroke-linecap="round" opacity="0.78"/>
+
+    <!-- ═ ACCENT SPARKLES on rings ═ -->
+    <circle cx="-10" cy="-42" r="0.7" fill="#F5E6A3" opacity="0.65"/>
+    <circle cx="10" cy="-28" r="0.7" fill="#F5E6A3" opacity="0.68"/>
+    <circle cx="-11" cy="-16" r="0.6" fill="#D4AF37" opacity="0.60"/>
+
+  </g>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- WORDMARK: BISOU                                -->
+  <!-- Serif letterforms, wide-tracked, gold gradient -->
+  <!-- Glow layer beneath, shimmer layer on top       -->
+  <!-- ══════════════════════════════════════════════ -->
+
+  <!-- Glow layer — blurred and warm-tinted behind letterforms -->
+  <g filter="url(#glowFilter)" opacity="0.60">
+    <text
+      x="280" y="108"
+      text-anchor="middle"
+      font-family="'Times New Roman', 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif"
+      font-size="70"
+      font-weight="400"
+      letter-spacing="16"
+      fill="url(#goldSheen)">BISOU</text>
+  </g>
+
+  <!-- Main wordmark — diagonal gold sweep fill -->
+  <text
+    x="280" y="108"
+    text-anchor="middle"
+    font-family="'Times New Roman', 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif"
+    font-size="70"
+    font-weight="400"
+    letter-spacing="16"
+    fill="url(#goldSweep)">BISOU</text>
+
+  <!-- Shimmer overlay — radial highlight on letterforms -->
+  <text
+    x="280" y="108"
+    text-anchor="middle"
+    font-family="'Times New Roman', 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif"
+    font-size="70"
+    font-weight="400"
+    letter-spacing="16"
+    fill="url(#goldShimmer)"
+    opacity="0.80">BISOU</text>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- BOTTOM RULE — below wordmark, above tagline    -->
+  <!-- ══════════════════════════════════════════════ -->
+
+  <line x1="28" y1="126" x2="472" y2="126"
+        stroke="url(#ruleGrad)" stroke-width="0.6" opacity="0.90"/>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- TAGLINE ORNAMENT DIAMONDS                      -->
+  <!-- ══════════════════════════════════════════════ -->
+
+  <!-- Left side diamond ornament -->
+  <polygon points="96,147 99,151 96,155 93,151"
+           fill="url(#dotGrad)" opacity="0.82"/>
+  <!-- Right side diamond ornament -->
+  <polygon points="404,147 407,151 404,155 401,151"
+           fill="url(#dotGrad)" opacity="0.82"/>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- TAGLINE: L'OR QUI T'EMBRASSE                  -->
+  <!-- Ultra-light spaced caps, horizontal gold fade  -->
+  <!-- ══════════════════════════════════════════════ -->
+
+  <!-- Tagline glow layer -->
+  <g filter="url(#taglineGlow)" opacity="0.52">
+    <text
+      x="250" y="153"
+      text-anchor="middle"
+      font-family="'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+      font-size="8.5"
+      font-weight="200"
+      letter-spacing="6"
+      fill="url(#taglineGrad)"
+      transform="translate(-15,0)">L'OR QUI T'EMBRASSE</text>
+  </g>
+
+  <!-- Main tagline -->
+  <text
+    x="250" y="153"
+    text-anchor="middle"
+    font-family="'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+    font-size="8.5"
+    font-weight="200"
+    letter-spacing="6"
+    fill="url(#taglineGrad)"
+    transform="translate(-15,0)">L'OR QUI T'EMBRASSE</text>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- OUTER BORDER RULE — very faint base line       -->
+  <!-- ══════════════════════════════════════════════ -->
+
+  <line x1="28" y1="165" x2="472" y2="165"
+        stroke="url(#ruleGrad)" stroke-width="0.4" opacity="0.42"/>
+
+</svg>

@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────
+   BISOU — Design tokens
+   Variables CSS globales (couleurs, fonts, transitions)
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  /* ─── Couleurs principales ─── */
+  --gold: #d4af37;
+  --gold-light: #f5e6a3;
+  --gold-mid: #c9a84c;
+  --gold-dark: #a8862e;
+
+  --black: #0d0d0d;
+  --black-soft: #1a1a1a;
+  --card: #111111;
+  --cream: #fdf6e3;
+  --rose: #f2d7d5;
+  --white: #ffffff;
+  --grey: #aaaaaa;
+
+  /* ─── WhatsApp ─── */
+  --whatsapp: #25d366;
+  --wa: #25d366; /* alias legacy */
+
+  /* ─── Statuts ─── */
+  --status-green: #2ecc71;
+  --status-red: #e74c3c;
+  --status-orange: #f39c12;
+  --status-blue: #3498db;
+
+  /* ─── Layout ─── */
+  --radius: 12px;
+  --radius-lg: 20px;
+  --max-width: 1200px;
+
+  /* ─── Transitions ─── */
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ─── Fonts (les variables --font-cormorant / --font-jost
+         sont injectées par next/font dans <html>) ─── */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Reset & base
+   ───────────────────────────────────────────────────────────── */
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--black);
+    color: var(--cream);
+    font-family: var(--font-jost), 'Jost', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--cream);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+
+  a:hover {
+    color: var(--gold);
+  }
+
+  ::selection {
+    background-color: var(--gold);
+    color: var(--black);
+  }
+
+  /* Focus visible accessible */
+  :focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+
+  /* Scrollbar douce */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--black);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--black-soft);
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-dark);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Utilitaires BISOU
+   ───────────────────────────────────────────────────────────── */
+
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #d4af37 0%, #f5e6a3 50%, #a8862e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .bg-noise {
+    background-image: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #0d0d0d 60%);
+  }
+
+  .border-gold-soft {
+    border-color: rgba(212, 175, 55, 0.2);
+  }
+
+  .shadow-gold-hover {
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+
+  .shadow-gold-hover:hover {
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.18);
+    transform: translateY(-2px);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   RTL (arabe) — reglages specifiques
+   ───────────────────────────────────────────────────────────── */
+
+html[dir='rtl'] body {
+  font-family: var(--font-jost), 'Jost', 'Noto Naskh Arabic', sans-serif;
+}

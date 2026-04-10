@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh auth status)",
+      "Bash(cmdkey /list)",
+      "Bash(GIT_TERMINAL_PROMPT=0 git push https://issamafif0505-debug@github.com/issamafif0505-debug/BISOU.git master)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(ls -1 *.json *.mjs *.ts *.md)",
+      "Bash(mkdir -p /c/Users/conta/ISSAMOSSS/src/app/\\\\\\(shop\\\\\\)/collections/\\\\[slug\\\\])",
+      "Bash(mkdir -p /c/Users/conta/ISSAMOSSS/src/app/\\\\\\(shop\\\\\\)/produits/\\\\[slug\\\\])",
+      "Bash(mkdir -p /c/Users/conta/ISSAMOSSS/src/app/\\\\\\(shop\\\\\\)/merci/\\\\[orderId\\\\])",
+      "Bash(mkdir -p /c/Users/conta/ISSAMOSSS/src/app/\\\\\\(shop\\\\\\)/blog/\\\\[slug\\\\])"
+    ]
+  }
+}

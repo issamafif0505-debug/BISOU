@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "BISOU Brand — Principal (port 3000)",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "brand"],
+      "port": 8080
+    },
+    {
+      "name": "BISOU Brand — Alternatif (port 8080)",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "brand"],
+      "port": 8080
+    }
+  ]
+}

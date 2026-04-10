@@ -1,0 +1,87 @@
+{
+  "common": {
+    "addToCart": "",
+    "orderCod": "",
+    "orderNow": "",
+    "buyNow": "",
+    "price": "",
+    "mad": "",
+    "free": "",
+    "loading": "",
+    "error": "",
+    "retry": "",
+    "close": "",
+    "continue": "",
+    "back": "",
+    "next": "",
+    "search": "",
+    "menu": "",
+    "whatsapp": "",
+    "contactUs": "",
+    "discoverCollection": ""
+  },
+  "nav": {
+    "home": "",
+    "collections": "",
+    "necklaces": "",
+    "rings": "",
+    "earrings": "",
+    "bracelets": "",
+    "sets": "",
+    "editions": "",
+    "blog": "",
+    "about": "",
+    "contact": ""
+  },
+  "hero": {
+    "tagline": "",
+    "subtitle": "",
+    "cta": ""
+  },
+  "product": {
+    "inStock": "",
+    "outOfStock": "",
+    "bestseller": "",
+    "new": "",
+    "limitedEdition": "",
+    "material": "",
+    "description": "",
+    "details": "",
+    "delivery": "",
+    "cod": "",
+    "returnPolicy": ""
+  },
+  "checkout": {
+    "title": "",
+    "firstName": "",
+    "lastName": "",
+    "phone": "",
+    "city": "",
+    "address": "",
+    "note": "",
+    "submit": "",
+    "submitting": "",
+    "success": "",
+    "errorPhone": "",
+    "errorRequired": "",
+    "codNotice": ""
+  },
+  "merci": {
+    "title": "",
+    "subtitle": "",
+    "nextSteps": "",
+    "contactWhatsapp": "",
+    "backHome": ""
+  },
+  "footer": {
+    "about": "",
+    "aboutText": "",
+    "links": "",
+    "cgv": "",
+    "legal": "",
+    "privacy": "",
+    "contact": "",
+    "social": "",
+    "copyright": ""
+  }
+}
