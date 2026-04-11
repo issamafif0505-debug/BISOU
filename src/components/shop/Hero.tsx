@@ -67,7 +67,9 @@ export function Hero({
       />
 
       <Container className="relative z-10">
-        <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+        <div className="mx-auto flex max-w-3xl flex-col items-center text-center relative">
+          {/* Halo derrière le titre */}
+          <div aria-hidden="true" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-gold/5 rounded-full blur-[80px] pointer-events-none" />
           {/* Eyebrow */}
           <div className="mb-6 inline-flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-gold/80 font-sans">
             <span className="h-px w-8 bg-gold/60" />
@@ -76,9 +78,11 @@ export function Hero({
           </div>
 
           {/* Titre — 2 lignes façon legacy */}
-          <h1 className="font-serif font-light leading-[1.02] tracking-tight">
-            <span className="block text-[clamp(2.5rem,7vw,5.5rem)] text-cream">{titleTop}</span>
-            <span className="block text-[clamp(2.8rem,8vw,6.5rem)] italic text-gold-gradient mt-1">
+          <h1 className="font-serif leading-[1.05] tracking-tight">
+            <span className="block text-[clamp(3rem,8vw,6rem)] font-light text-cream" style={{textShadow: '0 0 40px rgba(253,246,227,0.25), 0 2px 8px rgba(0,0,0,0.8)'}}>
+              {titleTop}
+            </span>
+            <span className="block text-[clamp(3.2rem,9vw,7rem)] font-light italic text-gold-gradient mt-1">
               {titleBottom}
             </span>
           </h1>

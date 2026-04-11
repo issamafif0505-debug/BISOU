@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BISOU — Programme Ambassadrices</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+        :root {
+            --black:      #0D0D0D;
+            --gold:       #D4AF37;
+            --gold-light: #F5E6A3;
+            --gold-mid:   #C9A84C;
+            --gold-dark:  #A8862E;
+            --cream:      #FDF6E3;
+            --green-wa:   #25D366;
+            --grey-soft:  #1A1A1A;
+            --card:       #111111;
+            --border:     rgba(212,175,55,0.25);
+            --text-muted: #888888;
+            --text:       #E8E0CC;
+            --bronze:     #CD7F32;
+            --diamond:    #B9F2FF;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body:    'Jost', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--black);
+            color: var(--text);
+            font-family: var(--font-body);
+            font-weight: 300;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ── HEADER ── */
+        .site-header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(13,13,13,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-brand {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--gold);
+            letter-spacing: 6px;
+            text-decoration: none;
+        }
+
+        .header-sub {
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .header-back {
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .header-back:hover { color: var(--gold); }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 40px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 50% 45%, rgba(212,175,55,0.08) 0%, transparent 65%),
+                radial-gradient(ellipse 40% 30% at 10% 75%, rgba(212,175,55,0.04) 0%, transparent 50%),
+                radial-gradient(ellipse 40% 30% at 90% 20%, rgba(212,175,55,0.04) 0%, transparent 50%);
+            animation: breathe 8s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 100%; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4), transparent);
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            border: 1px solid var(--border);
+            padding: 8px 20px;
+            margin-bottom: 32px;
+            background: rgba(212,175,55,0.05);
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            font-weight: 300;
+            color: var(--gold-light);
+            letter-spacing: 4px;
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            font-weight: 400;
+            color: var(--gold);
+        }
+
+        .hero-lead {
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            max-width: 580px;
+            margin-top: 24px;
+            line-height: 1.7;
+        }
+
+        /* Stats row */
+        .hero-stats {
+            display: flex;
+            gap: 0;
+            margin-top: 48px;
+            border: 1px solid var(--border);
+            background: rgba(212,175,55,0.03);
+        }
+
+        .hero-stat {
+            padding: 20px 40px;
+            text-align: center;
+            border-right: 1px solid var(--border);
+        }
+
+        .hero-stat:last-child { border-right: none; }
+
+        .hero-stat-num {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--gold);
+            display: block;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .hero-stat-label {
+            font-size: 0.68rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        /* ── LAYOUT ── */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section.content { padding: 100px 0; }
+        section.content + section.content { border-top: 1px solid var(--border); }
+
+        .section-eyebrow {
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.7;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            font-weight: 400;
+            color: var(--gold-light);
+            letter-spacing: 2px;
+            margin-bottom: 48px;
+        }
+
+        /* ── SECTION 1 — NIVEAUX ── */
+        .niveaux-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: var(--border);
+        }
+
+        .niveau-card {
+            background: var(--card);
+            padding: 36px 28px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .niveau-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+        }
+
+        .niveau-card.bronze::before {
+            background: linear-gradient(90deg, transparent, var(--bronze), transparent);
+        }
+
+        .niveau-card.gold::before {
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .niveau-card.diamond::before {
+            background: linear-gradient(90deg, transparent, var(--diamond), transparent);
+        }
+
+        /* Gold card featured glow */
+        .niveau-card.gold {
+            background: linear-gradient(160deg, #111111 0%, #0F0E0A 100%);
+            box-shadow: 0 0 40px rgba(212,175,55,0.08);
+        }
+
+        .niveau-card.gold::after {
+            content: 'RECOMMANDÉ';
+            position: absolute;
+            top: 20px; right: 20px;
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            border: 1px solid rgba(212,175,55,0.4);
+            padding: 4px 8px;
+            background: rgba(212,175,55,0.08);
+        }
+
+        /* Diamond shimmer */
+        .niveau-card.diamond {
+            background: linear-gradient(160deg, #0C0D0F 0%, #111113 100%);
+        }
+
+        @keyframes shimmer-border {
+            0%   { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .niveau-tier {
+            font-size: 0.68rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .niveau-card.bronze .niveau-tier { color: var(--bronze); }
+        .niveau-card.gold   .niveau-tier { color: var(--gold); }
+        .niveau-card.diamond .niveau-tier { color: var(--diamond); }
+
+        .niveau-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .niveau-followers {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .niveau-gift {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: var(--text);
+            margin-bottom: 20px;
+            padding: 12px 16px;
+            background: rgba(212,175,55,0.06);
+            border: 1px solid var(--border);
+        }
+
+        .niveau-gift-icon { font-size: 1.1rem; }
+
+        .niveau-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 24px;
+            flex: 1;
+        }
+
+        .niveau-features li {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .niveau-features li::before {
+            content: '→';
+            color: var(--gold-dark);
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .niveau-card.gold .niveau-features li::before { color: var(--gold); }
+        .niveau-card.diamond .niveau-features li::before { color: var(--diamond); }
+
+        .niveau-code {
+            display: inline-block;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            padding: 10px 18px;
+            border: 1px solid;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .niveau-card.bronze .niveau-code {
+            color: var(--bronze);
+            border-color: rgba(205,127,50,0.4);
+            background: rgba(205,127,50,0.06);
+        }
+
+        .niveau-card.gold .niveau-code {
+            color: var(--gold);
+            border-color: rgba(212,175,55,0.4);
+            background: rgba(212,175,55,0.06);
+        }
+
+        .niveau-card.diamond .niveau-code {
+            color: var(--diamond);
+            border-color: rgba(185,242,255,0.3);
+            background: rgba(185,242,255,0.04);
+        }
+
+        /* ── SECTION 2 — COMMENT ÇA MARCHE ── */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            position: relative;
+        }
+
+        .steps-grid::before {
+            content: '';
+            position: absolute;
+            top: 28px; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), var(--border), transparent);
+            z-index: 0;
+        }
+
+        .step {
+            padding: 0 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-num {
+            width: 56px; height: 56px;
+            border-radius: 50%;
+            border: 2px solid var(--gold-dark);
+            background: var(--card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+            flex-shrink: 0;
+        }
+
+        .step h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .step p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .step-timing {
+            font-size: 0.68rem;
+            color: var(--gold-dark);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        /* ── SECTION 3 — TÉMOIGNAGES ── */
+        .temoignages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: var(--border);
+        }
+
+        .temoignage-card {
+            background: var(--card);
+            padding: 32px 28px;
+            position: relative;
+        }
+
+        .temoignage-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px; left: 24px;
+            font-family: var(--font-display);
+            font-size: 5rem;
+            color: rgba(212,175,55,0.1);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .temoignage-text {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 24px;
+            padding-top: 20px;
+            position: relative;
+        }
+
+        .temoignage-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .author-avatar {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            background: var(--grey-soft);
+            flex-shrink: 0;
+        }
+
+        .author-name {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .author-meta {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .author-level {
+            display: inline-block;
+            font-size: 0.62rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 2px;
+            margin-top: 4px;
+        }
+
+        .level-bronze {
+            color: var(--bronze);
+            border: 1px solid rgba(205,127,50,0.3);
+            background: rgba(205,127,50,0.06);
+        }
+
+        .level-gold {
+            color: var(--gold);
+            border: 1px solid rgba(212,175,55,0.3);
+            background: rgba(212,175,55,0.06);
+        }
+
+        .level-diamond {
+            color: var(--diamond);
+            border: 1px solid rgba(185,242,255,0.2);
+            background: rgba(185,242,255,0.04);
+        }
+
+        /* ── SECTION 4 — SCRIPT WHATSAPP ── */
+        .script-wrap {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .script-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .script-header {
+            padding: 14px 20px;
+            background: rgba(37,211,102,0.08);
+            border-bottom: 1px solid rgba(37,211,102,0.15);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .script-header-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--green-wa);
+            box-shadow: 0 0 8px rgba(37,211,102,0.5);
+        }
+
+        .script-header span {
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--green-wa);
+        }
+
+        .script-body {
+            padding: 28px;
+        }
+
+        .script-bubble {
+            background: rgba(37,211,102,0.07);
+            border: 1px solid rgba(37,211,102,0.12);
+            border-radius: 12px 12px 12px 2px;
+            padding: 18px 22px;
+            margin-bottom: 24px;
+        }
+
+        .script-bubble p {
+            font-size: 0.88rem;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .script-field {
+            color: var(--gold);
+            font-style: normal;
+        }
+
+        .script-note {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .btn-wa-script {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: var(--green-wa);
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 36px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s;
+        }
+
+        .btn-wa-script:hover { background: #1EBD59; }
+
+        .wa-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: #fff;
+            animation: pulse-wa 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse-wa {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.4); opacity: 0.7; }
+        }
+
+        /* ── SECTION 5 — FAQ ── */
+        .faq-list {
+            max-width: 820px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border: 1px solid var(--border);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-item:last-child { border-bottom: none; }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 22px 28px;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .faq-q-text {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            letter-spacing: 0.5px;
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            color: var(--gold-dark);
+            transition: transform 0.3s, color 0.3s;
+            flex-shrink: 0;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+            color: var(--gold);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 28px 22px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-answer { display: block; }
+
+        /* ── SECTION 6 — FORM ── */
+        .form-wrap {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .form-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 44px 40px;
+            position: relative;
+        }
+
+        .form-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .form-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--gold-light);
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-field.full { grid-column: 1 / -1; }
+
+        .form-label {
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .form-input {
+            background: rgba(212,175,55,0.04);
+            border: 1px solid var(--border);
+            padding: 12px 16px;
+            color: var(--text);
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 300;
+            outline: none;
+            transition: border-color 0.2s;
+            width: 100%;
+        }
+
+        .form-input:focus {
+            border-color: rgba(212,175,55,0.5);
+        }
+
+        .form-input::placeholder {
+            color: rgba(136,136,136,0.5);
+            font-size: 0.8rem;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+            background-size: 200% 100%;
+            border: none;
+            color: var(--black);
+            font-family: var(--font-body);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-position 0.4s ease, transform 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-position: right center;
+            transform: translateY(-1px);
+        }
+
+        .form-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 16px;
+            font-style: italic;
+        }
+
+        /* ── CTA FINAL ── */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(37,211,102,0.04) 0%, transparent 70%);
+        }
+
+        .cta-inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-inner h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            font-weight: 300;
+            color: var(--gold-light);
+            letter-spacing: 3px;
+            margin-bottom: 16px;
+        }
+
+        .cta-inner p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            margin-bottom: 36px;
+        }
+
+        .btn-wa-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--green-wa);
+            color: #fff;
+            text-decoration: none;
+            padding: 18px 48px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn-wa-cta:hover {
+            background: #1EBD59;
+            transform: translateY(-2px);
+        }
+
+        .btn-wa-cta::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+        }
+
+        .cta-subtext {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 16px;
+            letter-spacing: 1px;
+        }
+
+        /* ── ANIMATIONS ── */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in { animation: fadeInUp 0.7s ease forwards; opacity: 0; }
+        .fade-in-1 { animation-delay: 0.1s; }
+        .fade-in-2 { animation-delay: 0.2s; }
+        .fade-in-3 { animation-delay: 0.3s; }
+        .fade-in-4 { animation-delay: 0.4s; }
+
+        /* ── FOOTER ── */
+        .site-footer {
+            border-top: 1px solid var(--border);
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--gold);
+            letter-spacing: 4px;
+        }
+
+        .footer-copy {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--gold); }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1100px) {
+            .niveaux-grid { grid-template-columns: 1fr; }
+            .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+            .steps-grid::before { display: none; }
+            .temoignages-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .site-header { padding: 16px 20px; }
+            .container { padding: 0 20px; }
+            .hero-stats { flex-direction: column; }
+            .hero-stat { border-right: none; border-bottom: 1px solid var(--border); }
+            .hero-stat:last-child { border-bottom: none; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-card { padding: 28px 20px; }
+            .site-footer { flex-direction: column; gap: 16px; text-align: center; }
+            .footer-links { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div>
+        <a href="index.html" class="header-brand">BISOU</a>
+    </div>
+    <span class="header-sub">Programme Ambassadrices</span>
+    <a href="index.html" class="header-back">← Retour</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-badge fade-in fade-in-1">Rejoindre la famille BISOU</div>
+        <h1 class="fade-in fade-in-2">Deviens une</h1>
+        <h1 class="fade-in fade-in-2"><em>femme BISOU</em></h1>
+        <p class="hero-lead fade-in fade-in-3">
+            Porte nos bijoux, partage ta lumière, gagne des dirhams. Le programme ambassadrices BISOU est fait pour toi.
+        </p>
+        <div class="hero-stats fade-in fade-in-4">
+            <div class="hero-stat">
+                <span class="hero-stat-num">200–800</span>
+                <span class="hero-stat-label">MAD / mois</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-num">🎁</span>
+                <span class="hero-stat-label">Produits offerts</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-num">%</span>
+                <span class="hero-stat-label">Code promo exclusif</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 1 — NIVEAUX -->
+<section class="content">
+    <div class="container">
+        <p class="section-eyebrow">Programme ambassadrices</p>
+        <h2 class="section-title">Les 3 Niveaux</h2>
+        <div class="niveaux-grid">
+
+            <!-- BRONZE -->
+            <div class="niveau-card bronze">
+                <div class="niveau-tier">Bronze</div>
+                <h3>Bronze</h3>
+                <p class="niveau-followers">1 000 – 10 000 abonnés</p>
+                <div class="niveau-gift">
+                    <span class="niveau-gift-icon">✦</span>
+                    <span>Boucles d'oreilles offertes à l'entrée</span>
+                </div>
+                <ul class="niveau-features">
+                    <li>10% de commission sur chaque vente</li>
+                    <li>Accès au catalogue ambassadrices</li>
+                    <li>Platforms : Instagram, TikTok, Facebook</li>
+                    <li>Support par email sous 48h</li>
+                    <li>Kit de bienvenue digital (visuels, scripts)</li>
+                </ul>
+                <div class="niveau-code">BRONZE10</div>
+            </div>
+
+            <!-- GOLD -->
+            <div class="niveau-card gold">
+                <div class="niveau-tier">Gold</div>
+                <h3>Gold</h3>
+                <p class="niveau-followers">10 000 – 50 000 abonnés</p>
+                <div class="niveau-gift">
+                    <span class="niveau-gift-icon">✦</span>
+                    <span>Bracelet + Bague offerts à l'entrée</span>
+                </div>
+                <ul class="niveau-features">
+                    <li>15% de commission sur chaque vente</li>
+                    <li>Support prioritaire WhatsApp direct</li>
+                    <li>Contenus exclusifs en avant-première</li>
+                    <li>Invitation aux lancements de collection</li>
+                    <li>Tableau de bord commissions en temps réel</li>
+                </ul>
+                <div class="niveau-code">GOLD15</div>
+            </div>
+
+            <!-- DIAMOND -->
+            <div class="niveau-card diamond">
+                <div class="niveau-tier">Diamond</div>
+                <h3>Diamond</h3>
+                <p class="niveau-followers">50 000+ abonnés</p>
+                <div class="niveau-gift">
+                    <span class="niveau-gift-icon">✦</span>
+                    <span>Coffret complet BISOU à l'entrée</span>
+                </div>
+                <ul class="niveau-features">
+                    <li>20% de commission sur chaque vente</li>
+                    <li>Co-création d'une collection capsule</li>
+                    <li>Événements exclusifs Marrakech</li>
+                    <li>Séance photo BISOU offerte</li>
+                    <li>Nom sur la page ambassadrices du site</li>
+                </ul>
+                <div class="niveau-code">DIAMOND20</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 2 — COMMENT ÇA MARCHE -->
+<section class="content">
+    <div class="container">
+        <p class="section-eyebrow">Le processus</p>
+        <h2 class="section-title">Comment ça marche</h2>
+        <div class="steps-grid">
+
+            <div class="step">
+                <div class="step-num">1</div>
+                <h3>Candidature</h3>
+                <p>Envoie ton Instagram, ta ville et pourquoi tu aimes BISOU sur WhatsApp. Simple et rapide.</p>
+                <span class="step-timing">30 secondes</span>
+            </div>
+
+            <div class="step">
+                <div class="step-num">2</div>
+                <h3>Validation 48h</h3>
+                <p>Notre équipe Marrakech vérifie ton profil et ta communauté. Réponse garantie sous 48 heures.</p>
+                <span class="step-timing">48 heures max</span>
+            </div>
+
+            <div class="step">
+                <div class="step-num">3</div>
+                <h3>Kit envoyé</h3>
+                <p>Tu reçois ton premier bijou BISOU en COD + ton code ambassadrice personnalisé.</p>
+                <span class="step-timing">Livraison 48-72h</span>
+            </div>
+
+            <div class="step">
+                <div class="step-num">4</div>
+                <h3>Tu postes, tu gagnes</h3>
+                <p>Chaque commande passée avec ton code te rapporte ta commission directement en dirhams.</p>
+                <span class="step-timing">Commission immédiate</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 3 — TÉMOIGNAGES -->
+<section class="content">
+    <div class="container">
+        <p class="section-eyebrow">Elles témoignent</p>
+        <h2 class="section-title">La famille BISOU</h2>
+        <div class="temoignages-grid">
+
+            <div class="temoignage-card">
+                <p class="temoignage-text">
+                    J'ai commencé avec une boucle d'oreille offerte. En 2 mois, j'ai gagné 640 MAD de commissions et mes followers adorent BISOU. La qualité des bijoux vend tout seul.
+                </p>
+                <div class="temoignage-author">
+                    <div class="author-avatar">👩</div>
+                    <div>
+                        <div class="author-name">Yasmine</div>
+                        <div class="author-meta">23 ans · Casablanca · 8k Instagram</div>
+                        <span class="author-level level-bronze">Bronze</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="temoignage-card">
+                <p class="temoignage-text">
+                    Le code GOLD15 convertit vraiment bien sur mes vidéos bijoux. L'équipe BISOU répond vite sur WhatsApp et les produits sont toujours envoyés à temps pour mes collabs.
+                </p>
+                <div class="temoignage-author">
+                    <div class="author-avatar">👩</div>
+                    <div>
+                        <div class="author-name">Nadia</div>
+                        <div class="author-meta">28 ans · Marrakech · 32k TikTok</div>
+                        <span class="author-level level-gold">Gold</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="temoignage-card">
+                <p class="temoignage-text">
+                    Même avec une petite communauté, ça marche. Mes amies font confiance à mes recommandations. J'ai converti 14 commandes le premier mois sans forcer.
+                </p>
+                <div class="temoignage-author">
+                    <div class="author-avatar">👩</div>
+                    <div>
+                        <div class="author-name">Amina</div>
+                        <div class="author-meta">19 ans · Rabat · 4k Instagram</div>
+                        <span class="author-level level-bronze">Bronze</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 4 — SCRIPT WHATSAPP -->
+<section class="content">
+    <div class="container">
+        <p class="section-eyebrow">Message type</p>
+        <h2 class="section-title">Script WhatsApp</h2>
+        <div class="script-wrap">
+            <div class="script-card">
+                <div class="script-header">
+                    <span class="script-header-dot"></span>
+                    <span>Message de candidature — copie et personnalise</span>
+                </div>
+                <div class="script-body">
+                    <div class="script-bubble">
+                        <p>
+                            Bonjour BISOU 👋<br><br>
+                            Je souhaite rejoindre le programme ambassadrices.<br><br>
+                            📱 Mon Instagram : <em class="script-field">@[ton username]</em><br>
+                            📍 Ma ville : <em class="script-field">[ta ville]</em><br>
+                            👥 Mes abonnés : <em class="script-field">[nombre]</em><br>
+                            💛 Pourquoi BISOU : <em class="script-field">[ton message personnel]</em><br><br>
+                            Merci !
+                        </p>
+                    </div>
+                    <p class="script-note">Remplace les champs en or par tes informations. Plus ton message est sincère, plus vite tu seras acceptée.</p>
+                    <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%91%8B%0A%0AJe%20souhaite%20rejoindre%20le%20programme%20ambassadrices.%0A%0A%F0%9F%93%B1%20Mon%20Instagram%20%3A%20%40%5Busername%5D%0A%F0%9F%93%8D%20Ma%20ville%20%3A%20%5Bville%5D%0A%F0%9F%91%A5%20Mes%20abonn%C3%A9s%20%3A%20%5Bnombre%5D%0A%F0%9F%92%9B%20Pourquoi%20BISOU%20%3A%20%5Bmessage%5D%0A%0AMerci%20!" class="btn-wa-script" target="_blank" rel="noopener">
+                        <span class="wa-dot"></span>
+                        Envoyer ce message
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 5 — FAQ -->
+<section class="content">
+    <div class="container">
+        <p class="section-eyebrow">Questions fréquentes</p>
+        <h2 class="section-title">FAQ Ambassadrices</h2>
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-q-text">Est-ce payant ?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Non, c'est entièrement gratuit. Tu reçois même un bijou BISOU dès ton intégration dans le programme — c'est notre cadeau de bienvenue pour toi.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-q-text">Faut-il un minimum d'abonnés ?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Non, on commence dès 1 000 abonnés engagés. Ce qui compte pour nous, c'est la confiance que ta communauté a en toi — pas uniquement le nombre. Une micro-influenceuse avec 2k abonnés très engagés convertit souvent mieux qu'un compte inactif à 50k.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-q-text">Comment recevoir ma commission ?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Les commissions sont versées mensuellement par virement bancaire (CIH, Attijariwafa, Banque Populaire) ou via Orange Money. Tu reçois un récapitulatif détaillé chaque début de mois avec toutes tes ventes.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 6 — FORMULAIRE -->
+<section class="content">
+    <div class="container">
+        <p class="section-eyebrow">Candidature directe</p>
+        <h2 class="section-title" style="text-align:center;">Rejoindre le programme</h2>
+        <div class="form-wrap">
+            <div class="form-card">
+                <h3>Ta candidature BISOU</h3>
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label class="form-label">Prénom</label>
+                        <input type="text" class="form-input" placeholder="Ton prénom">
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Instagram</label>
+                        <input type="text" class="form-input" placeholder="@ton_username">
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Ville</label>
+                        <input type="text" class="form-input" placeholder="Marrakech, Casablanca…">
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Nombre d'abonnés</label>
+                        <input type="text" class="form-input" placeholder="ex: 8 500">
+                    </div>
+                    <div class="form-field full">
+                        <label class="form-label">Pourquoi BISOU ?</label>
+                        <textarea class="form-input form-textarea" placeholder="Raconte-nous pourquoi tu veux rejoindre la famille BISOU…"></textarea>
+                    </div>
+                </div>
+                <button class="btn-submit" type="button">Rejoindre le programme</button>
+                <p class="form-note">Ou directement sur WhatsApp ci-dessous ↓</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+    <div class="cta-inner">
+        <h2>Prête à devenir ambassadrice ?</h2>
+        <p>Réponse garantie sous 48h · Équipe Marrakech</p>
+        <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%2C%20je%20souhaite%20rejoindre%20le%20programme%20ambassadrices." class="btn-wa-cta" target="_blank" rel="noopener">
+            <span class="wa-dot"></span>
+            Candidater sur WhatsApp
+        </a>
+        <p class="cta-subtext">Réponse garantie sous 48h · Équipe Marrakech</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="site-footer">
+        <span class="footer-brand">B I S O U</span>
+        <span class="footer-copy">© 2026 BISOU — Programme Ambassadrices</span>
+        <div class="footer-links">
+            <a href="index.html">Hub</a>
+            <a href="brand-guide.html">Brand Guide</a>
+            <a href="ugc-studio.html">UGC Studio</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    // Open clicked if it was closed
+    if (!isOpen) item.classList.add('open');
+}
+</script>
+
+</body>
+</html>

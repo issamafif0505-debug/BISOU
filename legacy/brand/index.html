@@ -254,6 +254,36 @@
             color: var(--muted);
         }
 
+        /* ── CATEGORY GROUPS ────────────────────── */
+        .category-group {
+            margin-bottom: 56px;
+        }
+
+        .category-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-label {
+            font-size: 0.62rem;
+            font-weight: 500;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.6;
+            margin-bottom: 12px;
+            padding-left: 2px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .category-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
         /* ── GRID ───────────────────────────────── */
         .modules-grid {
             display: grid;
@@ -360,7 +390,7 @@
             margin-bottom: 24px;
         }
 
-        /* badge */
+        /* badge — operational */
         .card-badge {
             display: inline-flex;
             align-items: center;
@@ -379,6 +409,28 @@
             border-radius: 50%;
             background: #6FCF97;
             box-shadow: 0 0 6px #6FCF97;
+        }
+
+        /* badge — nouveau */
+        .card-badge-new {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 18px;
+            border: 1px solid rgba(212,175,55,0.35);
+            padding: 3px 10px 3px 7px;
+            background: rgba(212,175,55,0.06);
+        }
+
+        .card-badge-new::before {
+            content: '✦';
+            font-size: 0.55rem;
+            color: var(--gold);
         }
 
         /* link arrow */
@@ -465,6 +517,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* Animation delays for all 17 cards */
         .card:nth-child(1)  { animation-delay: 0.05s; }
         .card:nth-child(2)  { animation-delay: 0.10s; }
         .card:nth-child(3)  { animation-delay: 0.15s; }
@@ -479,6 +532,9 @@
         .card:nth-child(12) { animation-delay: 0.60s; }
         .card:nth-child(13) { animation-delay: 0.65s; }
         .card:nth-child(14) { animation-delay: 0.70s; }
+        .card:nth-child(15) { animation-delay: 0.75s; }
+        .card:nth-child(16) { animation-delay: 0.80s; }
+        .card:nth-child(17) { animation-delay: 0.85s; }
 
         /* ── RESPONSIVE ─────────────────────────── */
         @media (max-width: 1100px) {
@@ -563,7 +619,7 @@
 
         <div class="stats-bar">
             <div class="stat-item">
-                <span class="stat-num">14</span>
+                <span class="stat-num">17</span>
                 <span class="stat-label">Modules</span>
             </div>
             <div class="stat-item">
@@ -591,152 +647,211 @@
 <div class="section-wrap">
     <div class="section-header">
         <h2 class="section-title">Modules du système</h2>
-        <span class="section-count">14 modules · Tous opérationnels</span>
+        <span class="section-count">17 modules · Tous opérationnels</span>
     </div>
 
-    <div class="modules-grid">
+    <!-- ── IDENTITÉ ── -->
+    <div class="category-group">
+        <div class="category-label">Identité</div>
+        <div class="modules-grid">
 
-        <!-- 01 Brand Guide — FEATURED -->
-        <a class="card card-featured" href="brand-guide.html">
-            <span class="card-num">01</span>
-            <span class="card-icon">📘</span>
-            <h2>Brand Guide</h2>
-            <p class="card-desc">L'identité de marque complète — couleurs, typographie, voix, personas, architecture tarifaire.</p>
-            <span class="card-badge">Opérationnel</span>
-            <span class="card-arrow">Accéder</span>
-        </a>
+            <!-- 01 Brand Guide — FEATURED -->
+            <a class="card card-featured" href="brand-guide.html">
+                <span class="card-num">01</span>
+                <span class="card-icon">📘</span>
+                <h2>Brand Guide</h2>
+                <p class="card-desc">L'identité de marque complète — couleurs, typographie, voix, personas, architecture tarifaire.</p>
+                <span class="card-badge">Opérationnel</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
 
-        <!-- 02 Homepage -->
-        <a class="card" href="website-homepage.html">
-            <span class="card-num">02</span>
-            <span class="card-icon">🌐</span>
-            <h2>Homepage</h2>
-            <p class="card-desc">Site e-commerce BISOU — hero, produits, CTA COD.</p>
-            <span class="card-badge">Opérationnel</span>
-            <span class="card-arrow">Accéder</span>
-        </a>
+            <!-- 02 Social Media Kit -->
+            <a class="card" href="social-media-kit.html">
+                <span class="card-num">02</span>
+                <span class="card-icon">📱</span>
+                <h2>Social Media Kit</h2>
+                <p class="card-desc">Templates Instagram, TikTok, Pinterest.</p>
+                <span class="card-badge">Opérationnel</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
 
-        <!-- 03 Social Media Kit -->
-        <a class="card" href="social-media-kit.html">
-            <span class="card-num">03</span>
-            <span class="card-icon">📱</span>
-            <h2>Social Media Kit</h2>
-            <p class="card-desc">Templates Instagram, TikTok, Pinterest.</p>
-            <span class="card-badge">Opérationnel</span>
-            <span class="card-arrow">Accéder</span>
-        </a>
+            <!-- 03 Direction Photo — NOUVEAU -->
+            <a class="card" href="photo-guide.html">
+                <span class="card-num">03</span>
+                <span class="card-icon">📸</span>
+                <h2>Direction Photo</h2>
+                <p class="card-desc">3 setups, règles éclairage, palette, grille Instagram.</p>
+                <span class="card-badge-new">Nouveau</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
 
-        <!-- 04 Email -->
-        <a class="card" href="email-newsletter.html">
-            <span class="card-num">04</span>
-            <span class="card-icon">✉️</span>
-            <h2>Email Templates</h2>
-            <p class="card-desc">Campagnes & newsletters — séquences automatisées.</p>
-            <span class="card-badge">Opérationnel</span>
-            <span class="card-arrow">Accéder</span>
-        </a>
+            <!-- 04 Packaging — NOUVEAU -->
+            <a class="card" href="packaging.html">
+                <span class="card-num">04</span>
+                <span class="card-icon">📦</span>
+                <h2>Packaging & Unboxing</h2>
+                <p class="card-desc">Boîte signature, certificat d'authenticité, specs imprimerie.</p>
+                <span class="card-badge-new">Nouveau</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
 
-        <!-- 05 Lookbook -->
-        <a class="card" href="lookbook.html">
-            <span class="card-num">05</span>
-            <span class="card-icon">✨</span>
-            <h2>Lookbook</h2>
-            <p class="card-desc">Éditorial & inspiration — collections Printemps 2026.</p>
-            <span class="card-badge">Opérationnel</span>
-            <span class="card-arrow">Accéder</span>
-        </a>
+            <!-- 05 Lookbook -->
+            <a class="card" href="lookbook.html">
+                <span class="card-num">05</span>
+                <span class="card-icon">✨</span>
+                <h2>Lookbook</h2>
+                <p class="card-desc">Éditorial & inspiration — collections Printemps 2026.</p>
+                <span class="card-badge">Opérationnel</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
 
-        <!-- 06 Press Kit -->
-        <a class="card" href="press-kit.html">
-            <span class="card-num">06</span>
-            <span class="card-icon">📰</span>
-            <h2>Press Kit</h2>
-            <p class="card-desc">Dossier presse & kit influenceurs Maroc 2026.</p>
-            <span class="card-badge">Opérationnel</span>
-            <span class="card-arrow">Accéder</span>
-        </a>
+            <!-- 06 Press Kit -->
+            <a class="card" href="press-kit.html">
+                <span class="card-num">06</span>
+                <span class="card-icon">📰</span>
+                <h2>Press Kit</h2>
+                <p class="card-desc">Dossier presse & kit influenceurs Maroc 2026.</p>
+                <span class="card-badge">Opérationnel</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
 
-        <!-- 07 Product Catalog -->
-        <a class="card" href="product-catalog.html">
-            <span class="card-num">07</span>
-            <span class="card-icon">💎</span>
-            <h2>Catalogue Produits</h2>
-            <p class="card-desc">22 bijoux — 6 catégories — 139 à 599 MAD — COD Maroc.</p>
-            <span class="card-badge">Opérationnel</span>
-            <span class="card-arrow">Accéder</span>
-        </a>
-
-        <!-- 08 Packs -->
-        <a class="card" href="packs-marketing.html">
-            <span class="card-num">08</span>
-            <span class="card-icon">🎁</span>
-            <h2>Packs Marketing</h2>
-            <p class="card-desc">4 packs COD · 159 / 229 / 279 / 449 MAD.</p>
-            <span class="card-badge">Opérationnel</span>
-            <span class="card-arrow">Accéder</span>
-        </a>
-
-        <!-- 09 Stratégie -->
-        <a class="card" href="strategie-maroc.html">
-            <span class="card-num">09</span>
-            <span class="card-icon">🇲🇦</span>
-            <h2>Stratégie Maroc</h2>
-            <p class="card-desc">Plan complet lancement — Marrakech → national.</p>
-            <span class="card-badge">Opérationnel</span>
-            <span class="card-arrow">Accéder</span>
-        </a>
-
-        <!-- 10 Landing -->
-        <a class="card" href="landing-marrakech.html">
-            <span class="card-num">10</span>
-            <span class="card-icon">📍</span>
-            <h2>Landing Marrakech</h2>
-            <p class="card-desc">Page de lancement locale — Marrakech first.</p>
-            <span class="card-badge">Opérationnel</span>
-            <span class="card-arrow">Accéder</span>
-        </a>
-
-        <!-- 11 Dashboard KPIs -->
-        <a class="card" href="hf-app.html">
-            <span class="card-num">11</span>
-            <span class="card-icon">📊</span>
-            <h2>Dashboard KPIs</h2>
-            <p class="card-desc">Projections revenus · Packs · Stratégie Maroc.</p>
-            <span class="card-badge">Opérationnel</span>
-            <span class="card-arrow">Accéder</span>
-        </a>
-
-        <!-- 12 Checkout -->
-        <a class="card" href="checkout-cod.html">
-            <span class="card-num">12</span>
-            <span class="card-icon">🛒</span>
-            <h2>Commande COD</h2>
-            <p class="card-desc">Page de commande — paiement à la livraison · tout le Maroc.</p>
-            <span class="card-badge">Opérationnel</span>
-            <span class="card-arrow">Accéder</span>
-        </a>
-
-        <!-- 13 Dashboard COD -->
-        <a class="card" href="cod-dashboard.html">
-            <span class="card-num">13</span>
-            <span class="card-icon">📦</span>
-            <h2>Dashboard COD</h2>
-            <p class="card-desc">Gestion commandes · Scripts WhatsApp · ROI & Projections.</p>
-            <span class="card-badge">Opérationnel</span>
-            <span class="card-arrow">Accéder</span>
-        </a>
-
-        <!-- 14 UGC Studio -->
-        <a class="card" href="ugc-studio.html">
-            <span class="card-num">14</span>
-            <span class="card-icon">🎬</span>
-            <h2>UGC Studio Pro</h2>
-            <p class="card-desc">Création vidéos · Scripts · Briefs · Suivi performance.</p>
-            <span class="card-badge">Opérationnel</span>
-            <span class="card-arrow">Accéder</span>
-        </a>
-
+        </div>
     </div>
+
+    <!-- ── VENTE ── -->
+    <div class="category-group">
+        <div class="category-label">Vente</div>
+        <div class="modules-grid">
+
+            <!-- 07 Homepage -->
+            <a class="card card-featured" href="website-homepage.html">
+                <span class="card-num">07</span>
+                <span class="card-icon">🌐</span>
+                <h2>Homepage</h2>
+                <p class="card-desc">Site e-commerce BISOU — hero, produits, CTA COD. Vitrine principale de la marque.</p>
+                <span class="card-badge">Opérationnel</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
+
+            <!-- 08 Product Catalog -->
+            <a class="card" href="product-catalog.html">
+                <span class="card-num">08</span>
+                <span class="card-icon">💎</span>
+                <h2>Catalogue Produits</h2>
+                <p class="card-desc">22 bijoux — 6 catégories — 139 à 599 MAD — COD Maroc.</p>
+                <span class="card-badge">Opérationnel</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
+
+            <!-- 09 Checkout -->
+            <a class="card" href="checkout-cod.html">
+                <span class="card-num">09</span>
+                <span class="card-icon">🛒</span>
+                <h2>Commande COD</h2>
+                <p class="card-desc">Page de commande — paiement à la livraison · tout le Maroc.</p>
+                <span class="card-badge">Opérationnel</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
+
+            <!-- 10 Packs -->
+            <a class="card" href="packs-marketing.html">
+                <span class="card-num">10</span>
+                <span class="card-icon">🎁</span>
+                <h2>Packs Marketing</h2>
+                <p class="card-desc">4 packs COD · 159 / 229 / 279 / 449 MAD.</p>
+                <span class="card-badge">Opérationnel</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
+
+            <!-- 11 Landing -->
+            <a class="card" href="landing-marrakech.html">
+                <span class="card-num">11</span>
+                <span class="card-icon">📍</span>
+                <h2>Landing Marrakech</h2>
+                <p class="card-desc">Page de lancement locale — Marrakech first.</p>
+                <span class="card-badge">Opérationnel</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- ── MARKETING ── -->
+    <div class="category-group">
+        <div class="category-label">Marketing</div>
+        <div class="modules-grid">
+
+            <!-- 12 Email -->
+            <a class="card card-featured" href="email-newsletter.html">
+                <span class="card-num">12</span>
+                <span class="card-icon">✉️</span>
+                <h2>Email Templates</h2>
+                <p class="card-desc">Campagnes & newsletters — séquences automatisées. Fidélisation post-achat.</p>
+                <span class="card-badge">Opérationnel</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
+
+            <!-- 13 Ambassadrices — NOUVEAU -->
+            <a class="card" href="ambassador.html">
+                <span class="card-num">13</span>
+                <span class="card-icon">👑</span>
+                <h2>Ambassadrices</h2>
+                <p class="card-desc">Programme Bronze/Gold/Diamond — acquisition & commissions.</p>
+                <span class="card-badge-new">Nouveau</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
+
+            <!-- 14 UGC Studio -->
+            <a class="card" href="ugc-studio.html">
+                <span class="card-num">14</span>
+                <span class="card-icon">🎬</span>
+                <h2>UGC Studio Pro</h2>
+                <p class="card-desc">Création vidéos · Scripts · Briefs · Suivi performance.</p>
+                <span class="card-badge">Opérationnel</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
+
+            <!-- 15 Stratégie -->
+            <a class="card" href="strategie-maroc.html">
+                <span class="card-num">15</span>
+                <span class="card-icon">🇲🇦</span>
+                <h2>Stratégie Maroc</h2>
+                <p class="card-desc">Plan complet lancement — Marrakech → national.</p>
+                <span class="card-badge">Opérationnel</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- ── OPÉRATIONS ── -->
+    <div class="category-group">
+        <div class="category-label">Opérations</div>
+        <div class="modules-grid">
+
+            <!-- 16 Dashboard KPIs -->
+            <a class="card card-featured" href="hf-app.html">
+                <span class="card-num">16</span>
+                <span class="card-icon">📊</span>
+                <h2>Dashboard KPIs</h2>
+                <p class="card-desc">Projections revenus · Packs · Stratégie Maroc. Vue complète de la performance.</p>
+                <span class="card-badge">Opérationnel</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
+
+            <!-- 17 Dashboard COD -->
+            <a class="card" href="cod-dashboard.html">
+                <span class="card-num">17</span>
+                <span class="card-icon">📦</span>
+                <h2>Dashboard COD</h2>
+                <p class="card-desc">Gestion commandes · Scripts WhatsApp · ROI & Projections.</p>
+                <span class="card-badge">Opérationnel</span>
+                <span class="card-arrow">Accéder</span>
+            </a>
+
+        </div>
+    </div>
+
 </div>
 
 <!-- ── FOOTER ── -->

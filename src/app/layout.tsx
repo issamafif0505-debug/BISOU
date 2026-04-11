@@ -1,29 +1,10 @@
 import type { Metadata, Viewport } from 'next';
-import { Cormorant_Garamond, Jost } from 'next/font/google';
-import './globals.css';
 
 // ─────────────────────────────────────────────────────────────
-// Fonts — chargées auto-hebergees via next/font/google
-// ─────────────────────────────────────────────────────────────
-
-const cormorant = Cormorant_Garamond({
-  subsets: ['latin', 'latin-ext'],
-  weight: ['300', '400', '500', '600', '700'],
-  display: 'swap',
-  variable: '--font-cormorant',
-  preload: true,
-});
-
-const jost = Jost({
-  subsets: ['latin', 'latin-ext'],
-  weight: ['200', '300', '400', '500', '600', '700'],
-  display: 'swap',
-  variable: '--font-jost',
-  preload: true,
-});
-
-// ─────────────────────────────────────────────────────────────
-// Metadata racine — surchargeable par chaque route
+// Root layout — BARE (no <html>/<body>).
+// Each route group provides its own document structure:
+//   (shop)/layout.tsx  → <html lang="fr"> + Tailwind
+//   (payload)/layout.tsx → Payload's RootLayout (its own <html>)
 // ─────────────────────────────────────────────────────────────
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://bisou.ma';
@@ -114,20 +95,6 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
-// ─────────────────────────────────────────────────────────────
-// Root layout
-// ─────────────────────────────────────────────────────────────
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="fr" dir="ltr" className={`${cormorant.variable} ${jost.variable}`}>
-      <body className="min-h-screen bg-black text-cream font-sans antialiased">
-        {children}
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return children;
 }

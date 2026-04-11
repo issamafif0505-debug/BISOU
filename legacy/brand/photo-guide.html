@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BISOU — Direction Artistique Photo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+        :root {
+            --black:      #0D0D0D;
+            --gold:       #D4AF37;
+            --gold-light: #F5E6A3;
+            --gold-mid:   #C9A84C;
+            --gold-dark:  #A8862E;
+            --cream:      #FDF6E3;
+            --green-wa:   #25D366;
+            --grey-soft:  #1A1A1A;
+            --card:       #111111;
+            --border:     rgba(212,175,55,0.25);
+            --text-muted: #888888;
+            --text:       #E8E0CC;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body:    'Jost', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--black);
+            color: var(--text);
+            font-family: var(--font-body);
+            font-weight: 300;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ── HEADER ── */
+        .site-header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(13,13,13,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-brand {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--gold);
+            letter-spacing: 6px;
+            text-decoration: none;
+        }
+
+        .header-sub {
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .header-back {
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .header-back:hover { color: var(--gold); }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 40px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 70% 55% at 50% 45%, rgba(212,175,55,0.08) 0%, transparent 65%),
+                radial-gradient(ellipse 40% 30% at 15% 80%, rgba(212,175,55,0.04) 0%, transparent 50%),
+                radial-gradient(ellipse 35% 25% at 85% 20%, rgba(212,175,55,0.04) 0%, transparent 50%);
+            animation: breathe 8s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 100%; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4), transparent);
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            border: 1px solid var(--border);
+            padding: 8px 20px;
+            margin-bottom: 32px;
+            background: rgba(212,175,55,0.05);
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            font-weight: 300;
+            color: var(--gold-light);
+            letter-spacing: 4px;
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            font-weight: 400;
+            color: var(--gold);
+        }
+
+        .hero-lead {
+            font-family: var(--font-display);
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-style: italic;
+            font-weight: 300;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            max-width: 680px;
+            margin-top: 24px;
+            line-height: 1.6;
+        }
+
+        /* ── LAYOUT ── */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section { padding: 100px 0; }
+
+        section + section {
+            border-top: 1px solid var(--border);
+        }
+
+        /* ── SECTION TITLES ── */
+        .section-eyebrow {
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.7;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            font-weight: 400;
+            color: var(--gold-light);
+            letter-spacing: 2px;
+            margin-bottom: 48px;
+        }
+
+        /* ── SECTION 1 — 3 UNIVERS ── */
+        .univers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: var(--border);
+        }
+
+        .univers-card {
+            background: var(--card);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .univers-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .univers-card:hover::after { opacity: 1; }
+
+        .univers-photo {
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .univers-photo.noir {
+            background: linear-gradient(135deg, #050505 0%, #0D0D0D 40%, #111111 70%, #0A0A08 100%);
+        }
+        .univers-photo.noir::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 30%;
+            width: 60px; height: 60px;
+            background: radial-gradient(circle, rgba(212,175,55,0.35) 0%, transparent 70%);
+            transform: translate(-50%,-50%);
+        }
+
+        .univers-photo.peau {
+            background: linear-gradient(135deg, #2A1810 0%, #3D2010 40%, #1A1A1A 100%);
+        }
+        .univers-photo.peau::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(198,134,66,0.25) 0%, transparent 65%);
+        }
+
+        .univers-photo.creme {
+            background: linear-gradient(135deg, #1A160C 0%, #201A0C 50%, #111111 100%);
+        }
+        .univers-photo.creme::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(253,246,227,0.1) 0%, transparent 65%);
+        }
+
+        .photo-icon {
+            position: relative;
+            z-index: 2;
+            font-size: 3rem;
+            filter: drop-shadow(0 0 12px rgba(212,175,55,0.5));
+        }
+
+        .univers-body {
+            padding: 28px 28px 32px;
+        }
+
+        .univers-num {
+            font-family: var(--font-display);
+            font-size: 0.72rem;
+            color: rgba(212,175,55,0.35);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .univers-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .univers-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .univers-ambiance {
+            font-size: 0.72rem;
+            font-style: italic;
+            color: var(--gold-dark);
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .univers-uses {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            border-top: 1px solid var(--border);
+            padding-top: 14px;
+        }
+
+        .univers-uses strong {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* ── SECTION 2 — ÉCLAIRAGE ── */
+        .eclairage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            background: var(--border);
+        }
+
+        .eclairage-col {
+            background: var(--card);
+            padding: 40px;
+        }
+
+        .eclairage-col-title {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 28px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .eclairage-col-title.ok { color: #6FCF97; }
+        .eclairage-col-title.nok { color: #E74C3C; }
+
+        .eclairage-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .eclairage-list li {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .eclairage-list li::before {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            font-weight: 700;
+            margin-top: 1px;
+        }
+
+        .eclairage-col.ok .eclairage-list li::before {
+            content: '✓';
+            background: rgba(111,207,151,0.15);
+            color: #6FCF97;
+        }
+
+        .eclairage-col.nok .eclairage-list li::before {
+            content: '✗';
+            background: rgba(231,76,60,0.15);
+            color: #E74C3C;
+        }
+
+        /* ── SECTION 3 — PALETTE ── */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .swatch {
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .swatch-color {
+            height: 80px;
+            position: relative;
+        }
+
+        .swatch.forbidden .swatch-color::after {
+            content: '✗';
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: rgba(231,76,60,0.8);
+            background: rgba(231,76,60,0.08);
+        }
+
+        .swatch.allowed .swatch-color::after {
+            content: '✓';
+            position: absolute;
+            top: 8px; right: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: rgba(111,207,151,0.9);
+        }
+
+        .swatch-info {
+            background: var(--card);
+            padding: 12px 14px;
+        }
+
+        .swatch-name {
+            font-size: 0.78rem;
+            font-weight: 400;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .swatch-hex {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        .swatch.forbidden .swatch-hex {
+            color: #E74C3C;
+            opacity: 0.7;
+        }
+
+        /* ── SECTION 4 — POST-PROD ── */
+        .postprod-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+            background: var(--border);
+        }
+
+        .postprod-card {
+            background: var(--card);
+            padding: 32px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .postprod-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold-mid), transparent);
+        }
+
+        .postprod-icon {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .postprod-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .postprod-rule {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .postprod-spec {
+            font-size: 0.72rem;
+            color: var(--gold-dark);
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── SECTION 5 — GRILLE INSTAGRAM ── */
+        .grille-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .grille-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 28px;
+            position: relative;
+        }
+
+        .grille-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .grille-desc {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .grid-preview {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: var(--border);
+        }
+
+        .grid-cell {
+            aspect-ratio: 1;
+        }
+
+        /* Damier */
+        .grille-card.damier .grid-cell:nth-child(odd)  { background: #0D0D0D; }
+        .grille-card.damier .grid-cell:nth-child(even) { background: rgba(212,175,55,0.15); }
+
+        /* Horizontale */
+        .grille-card.horizontale .grid-cell:nth-child(1),
+        .grille-card.horizontale .grid-cell:nth-child(2),
+        .grille-card.horizontale .grid-cell:nth-child(3) { background: rgba(212,175,55,0.12); }
+        .grille-card.horizontale .grid-cell:nth-child(4),
+        .grille-card.horizontale .grid-cell:nth-child(5),
+        .grille-card.horizontale .grid-cell:nth-child(6) { background: #111111; }
+        .grille-card.horizontale .grid-cell:nth-child(7),
+        .grille-card.horizontale .grid-cell:nth-child(8),
+        .grille-card.horizontale .grid-cell:nth-child(9) { background: rgba(212,175,55,0.07); }
+
+        /* Libre */
+        .grille-card.libre .grid-cell { background: #111111; }
+        .grille-card.libre .grid-cell:nth-child(1) { background: rgba(212,175,55,0.18); }
+        .grille-card.libre .grid-cell:nth-child(4) { background: rgba(212,175,55,0.1); }
+        .grille-card.libre .grid-cell:nth-child(8) { background: rgba(212,175,55,0.14); }
+        .grille-card.libre .grid-cell:nth-child(6) { background: rgba(212,175,55,0.06); }
+
+        /* ── SECTION 6 — DONTS ── */
+        .donts-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: var(--border);
+        }
+
+        .dont-card {
+            background: var(--card);
+            padding: 28px;
+            position: relative;
+        }
+
+        .dont-indicator {
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            background: rgba(231,76,60,0.15);
+            color: #E74C3C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .dont-card h3 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .dont-card p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* ── SECTION 7 — FORMATS TABLE ── */
+        .formats-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid var(--border);
+        }
+
+        .formats-table th {
+            background: rgba(212,175,55,0.06);
+            padding: 14px 20px;
+            text-align: left;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .formats-table td {
+            padding: 14px 20px;
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            border-bottom: 1px solid rgba(212,175,55,0.08);
+            vertical-align: middle;
+        }
+
+        .formats-table tr:last-child td { border-bottom: none; }
+
+        .formats-table tr:hover td {
+            background: rgba(212,175,55,0.03);
+        }
+
+        .format-name {
+            color: var(--gold-light);
+            font-weight: 400;
+        }
+
+        .format-dim {
+            font-family: 'Courier New', monospace;
+            font-size: 0.78rem;
+            color: var(--gold-mid);
+        }
+
+        /* ── CTA ── */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(212,175,55,0.05) 0%, transparent 70%);
+        }
+
+        .cta-inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-inner h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            font-weight: 300;
+            color: var(--gold-light);
+            letter-spacing: 3px;
+            margin-bottom: 16px;
+        }
+
+        .cta-inner p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            margin-bottom: 36px;
+        }
+
+        .btn-wa {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--green-wa);
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s;
+        }
+
+        .btn-wa::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.1);
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+        }
+
+        .btn-wa:hover { background: #1EBD59; }
+        .btn-wa:hover::before { transform: translateX(100%); }
+
+        .wa-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: #fff;
+            animation: pulse-wa 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse-wa {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.4); opacity: 0.7; }
+        }
+
+        /* ── ANIMATIONS ── */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.7s ease forwards;
+            opacity: 0;
+        }
+
+        .fade-in-1 { animation-delay: 0.1s; }
+        .fade-in-2 { animation-delay: 0.2s; }
+        .fade-in-3 { animation-delay: 0.3s; }
+        .fade-in-4 { animation-delay: 0.4s; }
+
+        /* ── FOOTER ── */
+        .site-footer {
+            border-top: 1px solid var(--border);
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--gold);
+            letter-spacing: 4px;
+        }
+
+        .footer-copy {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--gold); }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1100px) {
+            .univers-grid { grid-template-columns: 1fr; }
+            .postprod-grid { grid-template-columns: repeat(2, 1fr); }
+            .grille-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .site-header { padding: 16px 20px; }
+            .container { padding: 0 20px; }
+            .eclairage-grid { grid-template-columns: 1fr; }
+            .palette-grid { grid-template-columns: repeat(2, 1fr); }
+            .donts-grid { grid-template-columns: 1fr 1fr; }
+            .grille-grid { grid-template-columns: 1fr; }
+            .formats-table { font-size: 0.78rem; }
+            .formats-table th, .formats-table td { padding: 10px 12px; }
+            .site-footer { flex-direction: column; gap: 16px; text-align: center; }
+            .footer-links { justify-content: center; }
+        }
+
+        @media (max-width: 480px) {
+            .postprod-grid { grid-template-columns: 1fr; }
+            .donts-grid { grid-template-columns: 1fr; }
+            .palette-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div>
+        <a href="index.html" class="header-brand">BISOU</a>
+    </div>
+    <span class="header-sub">Direction Artistique — Photo</span>
+    <a href="index.html" class="header-back">← Retour</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-badge fade-in fade-in-1">Guide Visuel 2026</div>
+        <h1 class="fade-in fade-in-2">L'image <em>avant tout</em></h1>
+        <h1 class="fade-in fade-in-2" style="font-size: clamp(1.4rem,3vw,2.2rem); margin-top:4px;"><em>direction artistique BISOU</em></h1>
+        <p class="hero-lead fade-in fade-in-3">
+            Chaque photo BISOU raconte la même histoire : l'or sur la peau, la lumière qui embrasse.
+        </p>
+    </div>
+</section>
+
+<!-- SECTION 1 — 3 UNIVERS -->
+<section>
+    <div class="container">
+        <p class="section-eyebrow">Univers visuels</p>
+        <h2 class="section-title">Les 3 Univers Photo</h2>
+        <div class="univers-grid">
+
+            <div class="univers-card">
+                <div class="univers-photo noir">
+                    <span class="photo-icon">💍</span>
+                </div>
+                <div class="univers-body">
+                    <div class="univers-num">SETUP 01</div>
+                    <h3>Studio Noir</h3>
+                    <p class="univers-desc">Fond velours noir, bijou posé sur surface réfléchissante noire, éclairage latéral rasant qui révèle le relief doré.</p>
+                    <p class="univers-ambiance">Ambiance : mystérieux, luxueux</p>
+                    <p class="univers-uses"><strong>Utiliser pour :</strong> fiches produit, campagnes pub Meta/TikTok, fond de site</p>
+                </div>
+            </div>
+
+            <div class="univers-card">
+                <div class="univers-photo peau">
+                    <span class="photo-icon">✨</span>
+                </div>
+                <div class="univers-body">
+                    <div class="univers-num">SETUP 02</div>
+                    <h3>Peau Cuivrée</h3>
+                    <p class="univers-desc">Bijou porté sur peau cuivrée marocaine, lumière dorée naturelle, fond flou sombre. L'identité visuelle BISOU.</p>
+                    <p class="univers-ambiance">Ambiance : sensuel, vibrant, identité</p>
+                    <p class="univers-uses"><strong>Utiliser pour :</strong> Instagram feed, lookbook, contenu UGC ambassadrices</p>
+                </div>
+            </div>
+
+            <div class="univers-card">
+                <div class="univers-photo creme">
+                    <span class="photo-icon">🌸</span>
+                </div>
+                <div class="univers-body">
+                    <div class="univers-num">SETUP 03</div>
+                    <h3>Fond Crème</h3>
+                    <p class="univers-desc">Fond crème #FDF6E3, tissu lin, bijou avec quelques pétales de rose sèche dorée. Le setup cadeau par excellence.</p>
+                    <p class="univers-ambiance">Ambiance : doux, cadeau, lifestyle</p>
+                    <p class="univers-uses"><strong>Utiliser pour :</strong> coffrets cadeaux, email marketing, WhatsApp catalogue</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 2 — ÉCLAIRAGE -->
+<section>
+    <div class="container">
+        <p class="section-eyebrow">Technique lumière</p>
+        <h2 class="section-title">Règles d'Éclairage</h2>
+        <div class="eclairage-grid">
+
+            <div class="eclairage-col ok">
+                <div class="eclairage-col-title ok">✓ À faire</div>
+                <ul class="eclairage-list">
+                    <li>Key light latéral à 45° — révèle le relief du bijou</li>
+                    <li>Réflecteur doré ou carton or pour déboucher les ombres</li>
+                    <li>Heure dorée extérieure : 6h–8h ou 17h–19h</li>
+                    <li>Température couleur : 3 200 K – 4 000 K (chaud)</li>
+                    <li>Softbox 60×60 cm ou bougie diffuse pour adoucir</li>
+                    <li>Fond foncé ou neutre — jamais plus lumineux que le bijou</li>
+                    <li>Mise au point nette sur les détails de ciselure</li>
+                </ul>
+            </div>
+
+            <div class="eclairage-col nok">
+                <div class="eclairage-col-title nok">✗ À éviter</div>
+                <ul class="eclairage-list">
+                    <li>Flash direct frontal — aplatit le relief, reflets durs</li>
+                    <li>Fond blanc cru — trop agressif, casse l'esthétique</li>
+                    <li>Lumière néon froide (5 500 K+) — tue le doré</li>
+                    <li>Surexposition — perd les détails dans les hautes lumières</li>
+                    <li>Ombres dures non contrôlées</li>
+                    <li>Contre-jour sans rattrapage — silhouette illisible</li>
+                    <li>Mélange de sources de couleurs différentes</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 3 — PALETTE -->
+<section>
+    <div class="container">
+        <p class="section-eyebrow">Couleurs autorisées</p>
+        <h2 class="section-title">Palette Couleurs Photo</h2>
+        <div class="palette-grid">
+
+            <div class="swatch allowed">
+                <div class="swatch-color" style="background:#0D0D0D;"></div>
+                <div class="swatch-info">
+                    <div class="swatch-name">Noir profond</div>
+                    <div class="swatch-hex">#0D0D0D</div>
+                </div>
+            </div>
+
+            <div class="swatch allowed">
+                <div class="swatch-color" style="background:#D4AF37;"></div>
+                <div class="swatch-info">
+                    <div class="swatch-name">Or chaud BISOU</div>
+                    <div class="swatch-hex">#D4AF37</div>
+                </div>
+            </div>
+
+            <div class="swatch allowed">
+                <div class="swatch-color" style="background:#FDF6E3;"></div>
+                <div class="swatch-info">
+                    <div class="swatch-name">Crème</div>
+                    <div class="swatch-hex">#FDF6E3</div>
+                </div>
+            </div>
+
+            <div class="swatch allowed">
+                <div class="swatch-color" style="background:#F2D7D5;"></div>
+                <div class="swatch-info">
+                    <div class="swatch-name">Rose poudré</div>
+                    <div class="swatch-hex">#F2D7D5</div>
+                </div>
+            </div>
+
+            <div class="swatch allowed">
+                <div class="swatch-color" style="background:#C68642;"></div>
+                <div class="swatch-info">
+                    <div class="swatch-name">Peau cuivrée marocaine</div>
+                    <div class="swatch-hex">#C68642</div>
+                </div>
+            </div>
+
+            <div class="swatch allowed">
+                <div class="swatch-color" style="background:#8B6914;"></div>
+                <div class="swatch-info">
+                    <div class="swatch-name">Bois clair</div>
+                    <div class="swatch-hex">#8B6914</div>
+                </div>
+            </div>
+
+            <div class="swatch forbidden">
+                <div class="swatch-color" style="background:#FFFFFF;"></div>
+                <div class="swatch-info">
+                    <div class="swatch-name">Blanc pur — trop agressif</div>
+                    <div class="swatch-hex">#FFFFFF</div>
+                </div>
+            </div>
+
+            <div class="swatch forbidden">
+                <div class="swatch-color" style="background:#27AE60;"></div>
+                <div class="swatch-info">
+                    <div class="swatch-name">Vert vif — clash avec l'or</div>
+                    <div class="swatch-hex">#27AE60</div>
+                </div>
+            </div>
+
+            <div class="swatch forbidden">
+                <div class="swatch-color" style="background:#3498DB;"></div>
+                <div class="swatch-info">
+                    <div class="swatch-name">Bleu froid — casse la chaleur</div>
+                    <div class="swatch-hex">#3498DB</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 4 — POST-PRODUCTION -->
+<section>
+    <div class="container">
+        <p class="section-eyebrow">Retouche & finition</p>
+        <h2 class="section-title">Post-Production</h2>
+        <div class="postprod-grid">
+
+            <div class="postprod-card">
+                <span class="postprod-icon">◑</span>
+                <h3>Contraste</h3>
+                <p class="postprod-rule">Augmenter le contraste avec modération pour préserver les détails dans les ombres. Ne pas écraser les noirs.</p>
+                <p class="postprod-spec">Lightroom : Contraste +12 / Noirs –10 / Récupération ombres +20</p>
+            </div>
+
+            <div class="postprod-card">
+                <span class="postprod-icon">🌡</span>
+                <h3>Température</h3>
+                <p class="postprod-rule">Toujours rester dans le chaud doré. Une photo froide tue instantanément l'esthétique BISOU.</p>
+                <p class="postprod-spec">Balance : 4 200 K – 4 800 K / Teinte légèrement jaune (–2)</p>
+            </div>
+
+            <div class="postprod-card">
+                <span class="postprod-icon">🎞</span>
+                <h3>Grain cinématique</h3>
+                <p class="postprod-rule">Ajouter un grain film léger pour l'aspect analogique premium. Évite le rendu trop "digital lisse".</p>
+                <p class="postprod-spec">Grain Lightroom : Quantité 12 / Taille 30 / Douceur 50</p>
+            </div>
+
+            <div class="postprod-card">
+                <span class="postprod-icon">✦</span>
+                <h3>Saturation</h3>
+                <p class="postprod-rule">Booster uniquement les tons dorés et ocres. Les carnations et les couleurs neutres restent naturelles.</p>
+                <p class="postprod-spec">Jaunes/Oranges +15 / Aquas –5 / Skin tones non modifiées</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 5 — GRILLE INSTAGRAM -->
+<section>
+    <div class="container">
+        <p class="section-eyebrow">Feed Instagram</p>
+        <h2 class="section-title">Grille Instagram</h2>
+        <div class="grille-grid">
+
+            <div class="grille-card damier">
+                <h3>Grille Damier</h3>
+                <p class="grille-desc">Alternance sombre / doré. Crée un rythme visuel hypnotique sur le feed. Idéal pour les lancements.</p>
+                <div class="grid-preview">
+                    <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                    <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                    <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                </div>
+            </div>
+
+            <div class="grille-card horizontale">
+                <h3>Grille Horizontale</h3>
+                <p class="grille-desc">Triptyques thématiques par rangée. Chaque groupe de 3 raconte une histoire cohérente.</p>
+                <div class="grid-preview">
+                    <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                    <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                    <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                </div>
+            </div>
+
+            <div class="grille-card libre">
+                <h3>Grille Libre</h3>
+                <p class="grille-desc">Collage mixte avec accent doré placé stratégiquement selon la règle du tiers.</p>
+                <div class="grid-preview">
+                    <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                    <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                    <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 6 — DON'TS -->
+<section>
+    <div class="container">
+        <p class="section-eyebrow">À proscrire</p>
+        <h2 class="section-title">Don'ts Visuels</h2>
+        <div class="donts-grid">
+
+            <div class="dont-card">
+                <div class="dont-indicator">✗</div>
+                <h3>Fond blanc banal</h3>
+                <p>Un fond blanc pur destroy l'atmosphère premium. BISOU n'est pas une fiche produit Amazon.</p>
+            </div>
+
+            <div class="dont-card">
+                <div class="dont-indicator">✗</div>
+                <h3>Flash direct</h3>
+                <p>Effet plat garanti. Reflets durs sur le métal. Aucune profondeur. Aucun luxe perceptible.</p>
+            </div>
+
+            <div class="dont-card">
+                <div class="dont-indicator">✗</div>
+                <h3>Filtre oversaturé</h3>
+                <p>Les filtres Instagram Valencia/X-Pro II tuent la subtilité. Retouche manuelle uniquement.</p>
+            </div>
+
+            <div class="dont-card">
+                <div class="dont-indicator">✗</div>
+                <h3>Tissu criard en fond</h3>
+                <p>Pas de rouge vif, bleu électrique ou motifs agressifs. Le fond ne doit jamais voler la vedette au bijou.</p>
+            </div>
+
+            <div class="dont-card">
+                <div class="dont-indicator">✗</div>
+                <h3>Photo pixelisée ou floue</h3>
+                <p>Résolution minimale 1080×1080 px. La mise au point sur le bijou est non négociable.</p>
+            </div>
+
+            <div class="dont-card">
+                <div class="dont-indicator">✗</div>
+                <h3>Typo Comic Sans / Arial</h3>
+                <p>Pour tout texte superposé : Cormorant Garamond ou Jost uniquement. Voir brand guide pour les règles.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 7 — FORMATS -->
+<section>
+    <div class="container">
+        <p class="section-eyebrow">Export & diffusion</p>
+        <h2 class="section-title">Formats & Dimensions</h2>
+        <table class="formats-table">
+            <thead>
+                <tr>
+                    <th>Format</th>
+                    <th>Dimensions</th>
+                    <th>Ratio</th>
+                    <th>Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="format-name">Instagram Post</td>
+                    <td class="format-dim">1080 × 1080 px</td>
+                    <td>1:1</td>
+                    <td>Feed principal — produits, lifestyle, campagnes</td>
+                </tr>
+                <tr>
+                    <td class="format-name">Instagram Story</td>
+                    <td class="format-dim">1080 × 1920 px</td>
+                    <td>9:16</td>
+                    <td>Stories & Reels — promotions, behind the scenes</td>
+                </tr>
+                <tr>
+                    <td class="format-name">TikTok Vidéo</td>
+                    <td class="format-dim">1080 × 1920 px</td>
+                    <td>9:16</td>
+                    <td>Vidéos produits, UGC ambassadrices</td>
+                </tr>
+                <tr>
+                    <td class="format-name">Facebook / Cover</td>
+                    <td class="format-dim">1200 × 628 px</td>
+                    <td>1.91:1</td>
+                    <td>Partages, publicités Facebook Ads</td>
+                </tr>
+                <tr>
+                    <td class="format-name">WhatsApp Catalogue</td>
+                    <td class="format-dim">800 × 800 px</td>
+                    <td>1:1</td>
+                    <td>Catalogue produit, messages clients COD</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-inner">
+        <h2>Besoin d'une séance photo BISOU ?</h2>
+        <p>Notre équipe Marrakech organise des shootings produit selon ce guide.</p>
+        <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%2C%20je%20souhaite%20organiser%20une%20séance%20photo." class="btn-wa" target="_blank" rel="noopener">
+            <span class="wa-dot"></span>
+            Contacter sur WhatsApp
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="site-footer">
+        <span class="footer-brand">B I S O U</span>
+        <span class="footer-copy">© 2026 BISOU — Direction Artistique Photo</span>
+        <div class="footer-links">
+            <a href="index.html">Hub</a>
+            <a href="brand-guide.html">Brand Guide</a>
+            <a href="lookbook.html">Lookbook</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

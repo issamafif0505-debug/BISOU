@@ -79,7 +79,7 @@ export const BlogPosts: CollectionConfig = {
       name: 'featuredImage',
       type: 'upload',
       relationTo: 'media',
-      required: true,
+      required: false,
       label: 'Image principale',
     },
     {

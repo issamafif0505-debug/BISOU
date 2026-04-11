@@ -5,6 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  devIndicators: false,
   experimental: {
     serverActions: {
       bodySizeLimit: '2mb',

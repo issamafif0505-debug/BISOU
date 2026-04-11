@@ -23,32 +23,8 @@
  * without spawning the Next.js dev server.
  */
 
-// Load .env.local / .env manually (no `dotenv` dep — we parse ourselves so
-// the seed runner works even when the repo hasn't added dotenv yet).
-// If you prefer, run with Node 20+ flag: `node --env-file=.env.local ...`
-import { existsSync, readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
-
-for (const envFile of ['.env.local', '.env']) {
-  const p = resolve(process.cwd(), envFile);
-  if (!existsSync(p)) continue;
-  for (const rawLine of readFileSync(p, 'utf8').split('\n')) {
-    const line = rawLine.trim();
-    if (!line || line.startsWith('#')) continue;
-    const eq = line.indexOf('=');
-    if (eq === -1) continue;
-    const key = line.slice(0, eq).trim();
-    let value = line.slice(eq + 1).trim();
-    // Strip surrounding quotes
-    if (
-      (value.startsWith('"') && value.endsWith('"')) ||
-      (value.startsWith("'") && value.endsWith("'"))
-    ) {
-      value = value.slice(1, -1);
-    }
-    if (!(key in process.env)) process.env[key] = value;
-  }
-}
+// Env loading + @next/env patch are handled by scripts/seed-patch.cjs
+// which runs before this file via NODE_OPTIONS="--require ./scripts/seed-patch.cjs".
 
 import { getPayload } from 'payload';
 

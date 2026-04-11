@@ -1,852 +1,1302 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogue Produits - BISOU</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue 2026 — BISOU Bijoux Plaqués Or</title>
+  <meta name="description" content="Découvrez les 22 bijoux plaqués or BISOU. Acier inoxydable 316L, plaqué or 18 carats, hypoallergénique. Livraison COD partout au Maroc.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-        :root {
-            --gold:        #D4AF37;
-            --gold-main:   #D4AF37;
-            --gold-light:  #F5E6A3;
-            --gold-mid:    #C9A84C;
-            --gold-dark:   #A8862E;
-            --black:       #0D0D0D;
-            --black-soft:  #1A1A1A;
-            --cream:       #FDF6E3;
-            --rose:        #F2D7D5;
-            --grey-light:  #AAAAAA;
-            --grey-mid:    #555555;
-            --whatsapp:    #25D366;
-        }
+    :root {
+      --black: #0D0D0D;
+      --gold: #D4AF37;
+      --gold-light: #F5E6A3;
+      --gold-mid: #C9A84C;
+      --cream: #FDF6E3;
+      --green-wa: #25D366;
+      --green-wa-dark: #128C7E;
+      --grey-soft: #1A1A1A;
+      --card: #111111;
+      --border: rgba(212,175,55,0.25);
+      --text-muted: #888888;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Jost', sans-serif;
+    }
 
-        body {
-            font-family: 'Jost', sans-serif;
-            background-color: var(--cream);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse-wa {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+      70%       { box-shadow: 0 0 0 14px transparent; }
+    }
+    @keyframes gradient-shift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes shimmer {
+      0%   { opacity: 0.4; }
+      50%  { opacity: 0.9; }
+      100% { opacity: 0.4; }
+    }
 
-        header {
-            background-color: var(--black);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-            border-bottom: 3px solid var(--gold);
-        }
+    html { scroll-behavior: smooth; }
 
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-            margin-bottom: 0.5rem;
-        }
+    body {
+      font-family: var(--font-body);
+      background-color: var(--black);
+      color: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        header p {
-            font-size: 1.1rem;
-            color: var(--gold);
-            font-weight: 300;
-        }
+    /* ─── BACK LINK ─────────────────────────────────────────── */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      width: 100%;
+      transition: color 0.3s ease;
+    }
+    .back-link:hover { color: var(--gold); }
+    .back-link svg { flex-shrink: 0; }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
+    /* ─── STICKY HEADER ─────────────────────────────────────── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #111111;
+      border-bottom: 1px solid rgba(212,175,55,0.2);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .header-logo {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-mid) 100%);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradient-shift 4s ease infinite;
+      text-decoration: none;
+    }
+    .header-subtitle {
+      font-family: var(--font-body);
+      font-size: 0.6rem;
+      font-weight: 300;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .header-count {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+    .header-count span {
+      color: var(--gold);
+      font-weight: 500;
+    }
 
-        .filters-section {
-            padding: 3rem 2rem;
-            background-color: white;
-            margin-bottom: 3rem;
-        }
+    /* ─── HERO ──────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      background: var(--black);
+      background-image:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,175,55,0.08) 0%, transparent 70%);
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(212,175,55,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212,175,55,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 0.35rem 1.1rem;
+      border: 1px solid rgba(212,175,55,0.4);
+      border-radius: 100px;
+      background: rgba(212,175,55,0.07);
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2rem;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+      color: var(--cream);
+      margin-bottom: 0.3rem;
+    }
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 300;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-mid));
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradient-shift 4s ease infinite;
+    }
+    .hero-subtitle {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-top: 1.2rem;
+      margin-bottom: 3rem;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+    .stat-card {
+      background: rgba(17,17,17,0.8);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.2rem 1.8rem;
+      min-width: 120px;
+      backdrop-filter: blur(8px);
+    }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--gold);
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+      display: block;
+    }
 
-        .filters-title {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+    /* ─── FILTERS ───────────────────────────────────────────── */
+    .filters-section {
+      background: #111111;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      position: sticky;
+      top: 68px;
+      z-index: 90;
+    }
+    .filters-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .filter-pill {
+      display: inline-block;
+      padding: 0.45rem 1.1rem;
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 100px;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .filter-pill:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+    .filter-pill.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #0D0D0D;
+      font-weight: 500;
+    }
+    .filter-count-display {
+      margin-left: auto;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    .filter-count-display strong {
+      color: var(--gold);
+    }
 
-        .filters-container {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+    /* ─── PRODUCTS GRID ─────────────────────────────────────── */
+    .products-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
 
-        .filter-btn {
-            padding: 0.8rem 1.5rem;
-            border: 2px solid var(--light-gray);
-            background-color: white;
-            color: var(--text-dark);
-            cursor: pointer;
-            font-size: 0.95rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-        }
+    /* ─── PRODUCT CARD ──────────────────────────────────────── */
+    .product-card {
+      background: #111111;
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.3s cubic-bezier(0.4,0,0.2,1),
+                  transform 0.3s cubic-bezier(0.4,0,0.2,1),
+                  box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+      opacity: 0;
+      position: relative;
+    }
+    .product-card.visible {
+      animation: fadeInUp 0.5s cubic-bezier(0.4,0,0.2,1) forwards;
+    }
+    .product-card:hover {
+      border-color: rgba(212,175,55,0.5);
+      transform: scale(1.02);
+      box-shadow: 0 8px 32px rgba(212,175,55,0.12);
+    }
+    .product-card.hidden {
+      display: none;
+    }
 
-        .filter-btn:hover {
-            border-color: var(--gold);
-            color: var(--gold);
-        }
+    .card-image {
+      aspect-ratio: 1/1;
+      background: #1A1A1A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-image svg {
+      width: 50%;
+      height: 50%;
+      opacity: 0.7;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .product-card:hover .card-image svg {
+      opacity: 1;
+      transform: scale(1.08);
+    }
+    .card-image-glow {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(212,175,55,0.05), transparent);
+      pointer-events: none;
+    }
 
-        .filter-btn.active {
-            background-color: var(--gold);
-            border-color: var(--gold);
-            color: white;
-        }
+    .card-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      border: 1px solid rgba(212,175,55,0.5);
+      background: rgba(212,175,55,0.12);
+      font-family: var(--font-body);
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .card-badge.nouveau {
+      border-color: rgba(212,175,55,0.7);
+      background: rgba(212,175,55,0.18);
+    }
 
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
+    .card-body {
+      padding: 1.25rem;
+    }
+    .card-category {
+      font-family: var(--font-body);
+      font-size: 0.62rem;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+    .card-name {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1.25;
+      margin-bottom: 0.6rem;
+    }
+    .card-price {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .card-price span {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      margin-left: 0.3rem;
+    }
 
-        .product-card {
-            background-color: white;
-            border: 1px solid var(--light-gray);
-            transition: all 0.3s ease;
-            display: none;
-        }
+    .card-cta {
+      display: block;
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: var(--green-wa);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.25s ease, transform 0.2s ease;
+      animation: pulse-wa 2.5s ease infinite;
+    }
+    .card-cta:hover {
+      background: var(--green-wa-dark);
+      transform: translateY(-1px);
+      animation: none;
+    }
 
-        .product-card.active {
-            display: block;
-        }
+    /* ─── CARE SECTION ──────────────────────────────────────── */
+    .care-section {
+      background: #0D0D0D;
+      border-top: 1px solid var(--border);
+      padding: 5rem 2rem;
+    }
+    .care-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .section-eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.15;
+      margin-bottom: 2.5rem;
+    }
+    .care-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .care-card {
+      background: #111111;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 12px;
+      padding: 1.75rem;
+    }
+    .care-icon {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      display: block;
+      filter: drop-shadow(0 0 8px rgba(212,175,55,0.3));
+    }
+    .care-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 0.75rem;
+    }
+    .care-text {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .care-text li {
+      margin-left: 1rem;
+      margin-bottom: 0.35rem;
+    }
+    .care-text li::marker { color: var(--gold); }
 
-        .product-card:hover {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transform: translateY(-5px);
-        }
+    /* ─── COD SECTION ───────────────────────────────────────── */
+    .cod-section {
+      position: relative;
+      background: var(--black);
+      padding: 5rem 2rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .cod-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(212,175,55,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cod-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .cod-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 0.4rem;
+    }
+    .cod-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .cod-sub {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+    }
+    .cod-features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .cod-feature {
+      background: rgba(17,17,17,0.8);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 1rem;
+    }
+    .cod-feature-number {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .cod-feature-label {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+    }
+    .cod-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2.5rem;
+      background: var(--green-wa);
+      color: #fff;
+      border-radius: 100px;
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      animation: pulse-wa 2.5s ease infinite;
+      transition: background 0.25s ease, transform 0.2s ease;
+    }
+    .cod-cta:hover {
+      background: var(--green-wa-dark);
+      transform: translateY(-2px);
+      animation: none;
+    }
+    .cod-cta svg { flex-shrink: 0; }
 
-        .product-image {
-            width: 100%;
-            aspect-ratio: 1;
-            background-color: var(--light-gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
+    /* ─── FOOTER ────────────────────────────────────────────── */
+    .site-footer {
+      background: #080808;
+      border-top: 1px solid var(--border);
+      padding: 3rem 2rem 2rem;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(212,175,55,0.12);
+      margin-bottom: 1.5rem;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-mid));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .footer-tagline {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .footer-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .footer-nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.25s ease;
+    }
+    .footer-nav a:hover { color: var(--gold); }
+    .footer-bottom {
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
 
-        .badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background-color: var(--gold);
-            color: white;
-            padding: 0.5rem 1rem;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            z-index: 10;
-        }
+    /* ─── GOLD DIVIDER ──────────────────────────────────────── */
+    .gold-divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 2rem;
+    }
 
-        .product-info {
-            padding: 1.5rem;
-        }
-
-        .product-name {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--black);
-        }
-
-        .product-description {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 0.8rem;
-        }
-
-        .product-material {
-            font-size: 0.85rem;
-            color: var(--gold);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .product-price {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--black);
-            margin-bottom: 1rem;
-        }
-
-        .cta-button {
-            width: 100%;
-            padding: 0.9rem;
-            background-color: var(--gold);
-            color: white;
-            border: none;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: var(--black);
-        }
-
-        .guide-section {
-            background-color: white;
-            padding: 3rem 2rem;
-            margin-bottom: 4rem;
-            border-top: 3px solid var(--gold);
-        }
-
-        .guide-title {
-            font-size: 1.8rem;
-            font-weight: 300;
-            margin-bottom: 2rem;
-            text-align: center;
-            letter-spacing: 1px;
-        }
-
-        .guide-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .guide-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 1.5rem;
-        }
-
-        .guide-table th {
-            background-color: var(--gold);
-            color: white;
-            padding: 1rem;
-            text-align: left;
-            font-weight: 600;
-        }
-
-        .guide-table td {
-            padding: 0.8rem 1rem;
-            border-bottom: 1px solid var(--light-gray);
-        }
-
-        .guide-table tr:hover {
-            background-color: var(--cream);
-        }
-
-        .size-guide-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--black);
-        }
-
-        .svg-diagram {
-            background-color: var(--cream);
-            padding: 1.5rem;
-            border-radius: 4px;
-        }
-
-        .care-section {
-            background-color: var(--light-gray);
-            padding: 3rem 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .care-title {
-            font-size: 1.8rem;
-            font-weight: 300;
-            margin-bottom: 2rem;
-            text-align: center;
-            letter-spacing: 1px;
-        }
-
-        .care-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-
-        .care-card {
-            background-color: white;
-            padding: 1.5rem;
-            border-left: 4px solid var(--gold);
-        }
-
-        .care-card h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--black);
-        }
-
-        .care-card ul {
-            list-style: none;
-        }
-
-        .care-card li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            color: #555;
-        }
-
-        .care-card li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--gold);
-            font-weight: bold;
-        }
-
-        .faq-section {
-            background-color: white;
-            padding: 3rem 2rem;
-            margin-bottom: 3rem;
-            border-top: 3px solid var(--gold);
-        }
-
-        .faq-title {
-            font-size: 1.8rem;
-            font-weight: 300;
-            margin-bottom: 2rem;
-            text-align: center;
-            letter-spacing: 1px;
-        }
-
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            margin-bottom: 1rem;
-            border-bottom: 1px solid var(--light-gray);
-        }
-
-        .faq-question {
-            padding: 1.5rem 0;
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--black);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            user-select: none;
-        }
-
-        .faq-question:hover {
-            color: var(--gold);
-        }
-
-        .faq-toggle {
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            color: #555;
-            padding: 0;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-            padding-bottom: 1.5rem;
-        }
-
-        .faq-item.active .faq-toggle {
-            transform: rotate(180deg);
-        }
-
-        footer {
-            background-color: var(--black);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            border-top: 3px solid var(--gold);
-        }
-
-        @media (max-width: 768px) {
-            header h1 { font-size: 1.8rem; }
-            .products-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-            .guide-content { grid-template-columns: 1fr; }
-            .care-grid { grid-template-columns: 1fr; }
-        }
-
-        @media (max-width: 480px) {
-            header h1 { font-size: 1.5rem; }
-            .products-grid { grid-template-columns: 1fr; }
-            .filters-container { flex-direction: column; }
-            .filter-btn { width: 100%; }
-        }
-    </style>
+    /* ─── RESPONSIVE ────────────────────────────────────────── */
+    @media (max-width: 1100px) {
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .cod-features { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .hero { padding: 3.5rem 1.25rem 3rem; }
+      .products-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .care-grid { grid-template-columns: 1fr; }
+      .filters-section { top: 60px; }
+      .site-header { padding: 0.85rem 1.25rem; }
+      .hero-stats { gap: 0.75rem; }
+      .stat-card { padding: 1rem 1.2rem; min-width: 100px; }
+    }
+    @media (max-width: 480px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .cod-features { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { flex-direction: column; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>BISOU</h1>
-        <p>Bijoux Plaqués Or - Collection Exclusive</p>
-    </header>
 
-    <div class="container">
-        <div class="filters-section">
-            <h2 class="filters-title">Filtrer par catégorie</h2>
-            <div class="filters-container">
-                <button class="filter-btn active" data-filter="all">Tous les produits</button>
-                <button class="filter-btn" data-filter="colliers">Colliers</button>
-                <button class="filter-btn" data-filter="bagues">Bagues</button>
-                <button class="filter-btn" data-filter="boucles">Boucles d'oreilles</button>
-                <button class="filter-btn" data-filter="bracelets">Bracelets</button>
-                <button class="filter-btn" data-filter="coffrets">Coffrets cadeaux</button>
-                <button class="filter-btn" data-filter="editions">Éditions limitées</button>
-            </div>
-        </div>
+  <!-- BACK LINK -->
+  <a href="index.html" class="back-link">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <path d="M8.5 2.5L4 7l4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Retour au système de marque
+  </a>
 
-        <div class="products-grid" id="productsGrid">
-            <!-- COLLIERS -->
-            <div class="product-card active" data-category="colliers">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><circle cx="100" cy="60" r="15" fill="#D4AF37" stroke="#1a1a1a" stroke-width="2"/><path d="M 85 75 Q 85 120 100 140 Q 115 120 115 75" fill="none" stroke="#D4AF37" stroke-width="3"/><circle cx="100" cy="145" r="8" fill="#D4AF37"/></svg>
-                    <span class="badge">BESTSELLER</span>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Collier Minimaliste Or</h3>
-                    <p class="product-description">Élégance intemporelle avec cette chaîne minimaliste</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">229 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Collier Minimaliste Or', 229)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="colliers">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><circle cx="100" cy="55" r="12" fill="#D4AF37" stroke="#1a1a1a" stroke-width="2"/><path d="M 80 67 L 80 130 Q 100 150 120 130 L 120 67" fill="none" stroke="#D4AF37" stroke-width="5" stroke-linecap="round"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Chaîne Épaisse Or</h3>
-                    <p class="product-description">Chaîne robuste et imposante pour un look affirmé</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">349 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Chaîne Épaisse Or', 349)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="colliers">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><circle cx="100" cy="55" r="10" fill="#D4AF37" stroke="#1a1a1a" stroke-width="1.5"/><path d="M 90 65 Q 90 110 100 135 Q 110 110 110 65" fill="none" stroke="#D4AF37" stroke-width="2"/><circle cx="100" cy="140" r="6" fill="#D4AF37"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Collier Délicat Fin</h3>
-                    <p class="product-description">Finesse et délicatesse pour un port quotidien</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">199 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Collier Délicat Fin', 199)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="colliers">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><circle cx="100" cy="50" r="12" fill="#D4AF37" stroke="#1a1a1a" stroke-width="2"/><line x1="100" y1="62" x2="100" y2="140" stroke="#D4AF37" stroke-width="3"/><path d="M 85 100 L 115 100" stroke="#D4AF37" stroke-width="2.5"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Chaîne Classique</h3>
-                    <p class="product-description">La chaîne qui traverse les générations</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">279 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Chaîne Classique', 279)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="colliers">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><circle cx="100" cy="55" r="11" fill="#D4AF37" stroke="#1a1a1a" stroke-width="2"/><path d="M 80 66 L 85 100 L 80 135 L 100 145 L 120 135 L 115 100 L 120 66 Q 100 70 80 66" fill="none" stroke="#D4AF37" stroke-width="3" stroke-linejoin="round"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Collier Maille Plate</h3>
-                    <p class="product-description">Maille plate pour un rendu contemporain</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">399 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Collier Maille Plate', 399)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <!-- BAGUES -->
-            <div class="product-card active" data-category="bagues">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><ellipse cx="100" cy="100" rx="45" ry="55" fill="none" stroke="#D4AF37" stroke-width="8"/><circle cx="100" cy="60" r="10" fill="#D4AF37"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Bague Signature Or</h3>
-                    <p class="product-description">Notre signature de marque, incontournable</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">179 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Bague Signature Or', 179)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="bagues">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><rect x="70" y="75" width="60" height="65" rx="8" fill="none" stroke="#D4AF37" stroke-width="7"/><rect x="75" y="80" width="50" height="55" fill="#D4AF37" opacity="0.3"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Chevalière Or</h3>
-                    <p class="product-description">Chevalière imposante et prestigieuse</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">299 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Chevalière Or', 299)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="bagues">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><ellipse cx="75" cy="100" rx="15" ry="40" fill="none" stroke="#D4AF37" stroke-width="6"/><ellipse cx="100" cy="100" rx="15" ry="40" fill="none" stroke="#D4AF37" stroke-width="6"/><ellipse cx="125" cy="100" rx="15" ry="40" fill="none" stroke="#D4AF37" stroke-width="6"/></svg>
-                    <span class="badge">BESTSELLER</span>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Bague Empilable</h3>
-                    <p class="product-description">À porter seule ou en trio pour plus d'effet</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">149 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Bague Empilable', 149)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="bagues">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><ellipse cx="100" cy="100" rx="50" ry="55" fill="none" stroke="#D4AF37" stroke-width="10"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Bague Large Or</h3>
-                    <p class="product-description">Large et confortable pour un style affirmé</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">249 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Bague Large Or', 249)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="bagues">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><ellipse cx="100" cy="100" rx="40" ry="50" fill="none" stroke="#D4AF37" stroke-width="6"/><path d="M 75 80 Q 100 60 125 80" fill="none" stroke="#D4AF37" stroke-width="2" stroke-dasharray="3,3"/><path d="M 75 120 Q 100 140 125 120" fill="none" stroke="#D4AF37" stroke-width="2" stroke-dasharray="3,3"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Bague Filigrane</h3>
-                    <p class="product-description">Détails filigranés pour une élégance raffinée</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">189 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Bague Filigrane', 189)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <!-- BOUCLES D'OREILLES -->
-            <div class="product-card active" data-category="boucles">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><circle cx="70" cy="100" r="25" fill="none" stroke="#D4AF37" stroke-width="6"/><circle cx="130" cy="100" r="25" fill="none" stroke="#D4AF37" stroke-width="6"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Créoles Or Classiques</h3>
-                    <p class="product-description">Les créoles incontournables de chaque femme</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">159 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Créoles Or Classiques', 159)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="boucles">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><circle cx="70" cy="90" r="12" fill="#D4AF37"/><circle cx="130" cy="90" r="12" fill="#D4AF37"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Puces Discrètes</h3>
-                    <p class="product-description">Discrétion et élégance pour tous les jours</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">139 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Puces Discrètes', 139)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="boucles">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><circle cx="70" cy="70" r="10" fill="#D4AF37"/><path d="M 70 80 L 70 120" stroke="#D4AF37" stroke-width="3" stroke-linecap="round"/><circle cx="70" cy="130" r="8" fill="#D4AF37"/><circle cx="130" cy="70" r="10" fill="#D4AF37"/><path d="M 130 80 L 130 120" stroke="#D4AF37" stroke-width="3" stroke-linecap="round"/><circle cx="130" cy="130" r="8" fill="#D4AF37"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Boucles Pendantes</h3>
-                    <p class="product-description">Élégance fluide avec ces pendantes dorées</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">199 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Boucles Pendantes', 199)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="boucles">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><circle cx="70" cy="100" r="30" fill="none" stroke="#D4AF37" stroke-width="8"/><circle cx="130" cy="100" r="30" fill="none" stroke="#D4AF37" stroke-width="8"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Hoops Chunky</h3>
-                    <p class="product-description">Imposantes et tendance pour un look fort</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">219 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Hoops Chunky', 219)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <!-- BRACELETS -->
-            <div class="product-card active" data-category="bracelets">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><path d="M 50 100 Q 100 70 150 100" fill="none" stroke="#D4AF37" stroke-width="4" stroke-linecap="round"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Bracelet Chaîne Fine</h3>
-                    <p class="product-description">Finesse et légèreté au poignet</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">189 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Bracelet Chaîne Fine', 189)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="bracelets">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><ellipse cx="100" cy="100" rx="55" ry="40" fill="none" stroke="#D4AF37" stroke-width="12"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Bracelet Jonc</h3>
-                    <p class="product-description">Jonc bangle pour un style minimaliste</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">239 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Bracelet Jonc', 239)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="bracelets">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><ellipse cx="100" cy="100" rx="55" ry="40" fill="none" stroke="#D4AF37" stroke-width="8"/><path d="M 50 90 L 150 90 M 50 100 L 150 100 M 50 110 L 150 110" stroke="#D4AF37" stroke-width="2"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Bracelet Maille Or</h3>
-                    <p class="product-description">Maille entrecroisée pour plus de texture</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">269 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Bracelet Maille Or', 269)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="bracelets">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><ellipse cx="100" cy="100" rx="55" ry="40" fill="none" stroke="#D4AF37" stroke-width="6"/><circle cx="70" cy="100" r="5" fill="#D4AF37"/><circle cx="90" cy="100" r="5" fill="#D4AF37"/><circle cx="110" cy="100" r="5" fill="#D4AF37"/><circle cx="130" cy="100" r="5" fill="#D4AF37"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Bracelet Gourmette</h3>
-                    <p class="product-description">Gourmette classique intemporelle</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">219 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Bracelet Gourmette', 219)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <!-- COFFRETS CADEAUX -->
-            <div class="product-card active" data-category="coffrets">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><rect x="50" y="60" width="100" height="80" fill="none" stroke="#D4AF37" stroke-width="3"/><line x1="100" y1="60" x2="100" y2="140" stroke="#D4AF37" stroke-width="2"/><line x1="50" y1="100" x2="150" y2="100" stroke="#D4AF37" stroke-width="2"/><line x1="75" y1="60" x2="75" y2="70" stroke="#D4AF37" stroke-width="3"/><line x1="125" y1="60" x2="125" y2="70" stroke="#D4AF37" stroke-width="3"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Pack Découverte</h3>
-                    <p class="product-description">Coffret parfait pour découvrir BISOU (3 pièces)</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">229 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Pack Découverte', 229)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="coffrets">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><rect x="40" y="50" width="120" height="100" fill="none" stroke="#D4AF37" stroke-width="4" rx="4"/><line x1="100" y1="50" x2="100" y2="60" stroke="#D4AF37" stroke-width="3"/><path d="M 50 65 Q 100 55 150 65" fill="none" stroke="#D4AF37" stroke-width="2" stroke-dasharray="4,2"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Coffret Luxe</h3>
-                    <p class="product-description">Coffret prestige avec présentation luxe (4 pièces)</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">449 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Coffret Luxe', 449)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="coffrets">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><rect x="60" y="70" width="80" height="70" fill="none" stroke="#D4AF37" stroke-width="3" rx="2"/><line x1="100" y1="70" x2="100" y2="75" stroke="#D4AF37" stroke-width="2"/><circle cx="80" cy="100" r="8" fill="#D4AF37" opacity="0.6"/><circle cx="120" cy="100" r="8" fill="#D4AF37" opacity="0.6"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Duo Parfait</h3>
-                    <p class="product-description">Le combo idéal : bague + boucles (2 pièces)</p>
-                    <p class="product-material">Or plaqué 18K</p>
-                    <p class="product-price">279 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Duo Parfait', 279)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <!-- ÉDITIONS LIMITÉES -->
-            <div class="product-card active" data-category="editions">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><defs><linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" /><stop offset="100%" style="stop-color:#D4AF37;stop-opacity:1" /></linearGradient></defs><rect width="200" height="200" fill="#E8E5E0"/><circle cx="100" cy="100" r="50" fill="url(#goldGradient)" opacity="0.8"/><path d="M 100 60 L 110 90 L 140 90 L 115 110 L 125 140 L 100 120 L 75 140 L 85 110 L 60 90 L 90 90 Z" fill="#1a1a1a"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Collection Édition Or 2026</h3>
-                    <p class="product-description">Série limitée exclusive - Collection 2026</p>
-                    <p class="product-material">Or plaqué 18K certifié</p>
-                    <p class="product-price">599 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Collection Édition Or 2026', 599)">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card active" data-category="editions">
-                <div class="product-image">
-                    <svg width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#E8E5E0"/><path d="M 60 80 Q 80 60 100 60 Q 120 60 140 80" fill="none" stroke="#D4AF37" stroke-width="3" stroke-linecap="round"/><circle cx="100" cy="155" r="3" fill="#D4AF37"/></svg>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Set Marrakech</h3>
-                    <p class="product-description">Inspirée par la magie de Marrakech - Édition limitée</p>
-                    <p class="product-material">Or plaqué 18K certifié</p>
-                    <p class="product-price">379 MAD</p>
-                    <button class="cta-button" onclick="addToCart('Set Marrakech', 379)">Ajouter au panier</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- GUIDES ET INFORMATIONS -->
-        <div class="guide-section">
-            <h2 class="guide-title">Guide des Tailles</h2>
-            <div class="guide-content">
-                <div>
-                    <h3 class="size-guide-title">Tableau des Tailles d'Anneaux</h3>
-                    <table class="guide-table">
-                        <thead>
-                            <tr><th>Taille FR</th><th>Diamètre (mm)</th><th>Circonférence (mm)</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>46</td><td>14.7</td><td>46</td></tr>
-                            <tr><td>48</td><td>15.3</td><td>48</td></tr>
-                            <tr><td>50</td><td>15.9</td><td>50</td></tr>
-                            <tr><td>52</td><td>16.5</td><td>52</td></tr>
-                            <tr><td>54</td><td>17.2</td><td>54</td></tr>
-                            <tr><td>56</td><td>17.8</td><td>56</td></tr>
-                        </tbody>
-                    </table>
-                    <h3 class="size-guide-title">Tableau des Tailles de Bracelets</h3>
-                    <table class="guide-table">
-                        <thead>
-                            <tr><th>Taille</th><th>Tour de poignet (cm)</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Petit (S)</td><td>15-16</td></tr>
-                            <tr><td>Moyen (M)</td><td>16-17</td></tr>
-                            <tr><td>Grand (L)</td><td>17-18</td></tr>
-                            <tr><td>XL</td><td>18-19</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div>
-                    <h3 class="size-guide-title">Schémas de Mesure</h3>
-                    <div class="svg-diagram">
-                        <svg width="100%" height="300" viewBox="0 0 200 300"><text x="100" y="20" font-size="14" fill="#1a1a1a" text-anchor="middle" font-weight="bold">Mesurer votre bague</text><circle cx="100" cy="70" r="30" fill="none" stroke="#D4AF37" stroke-width="2"/><line x1="70" y1="70" x2="130" y2="70" stroke="#D4AF37" stroke-width="2" stroke-dasharray="3,3"/><text x="100" y="105" font-size="12" fill="#666" text-anchor="middle">Diamètre intérieur</text><text x="100" y="140" font-size="14" fill="#1a1a1a" text-anchor="middle" font-weight="bold">Mesurer votre poignet</text><path d="M 50 180 Q 50 210 100 215 Q 150 210 150 180" fill="none" stroke="#D4AF37" stroke-width="2"/><line x1="50" y1="180" x2="150" y2="180" stroke="#D4AF37" stroke-width="2" stroke-dasharray="3,3"/><text x="100" y="245" font-size="12" fill="#666" text-anchor="middle">Tour de poignet</text><text x="100" y="270" font-size="12" fill="#D4AF37" font-weight="bold">Colliers : 40, 45, 50 cm</text></svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="care-section">
-            <h2 class="care-title">Guide d'Entretien des Bijoux Plaqués Or</h2>
-            <div class="care-grid">
-                <div class="care-card"><h3>Nettoyage Régulier</h3><ul><li>Nettoyez avec un chiffon doux et sec</li><li>Utilisez de l'eau tiède et du savon doux si nécessaire</li><li>Séchez immédiatement avec un chiffon propre</li><li>Évitez les produits chimiques agressifs</li></ul></div>
-                <div class="care-card"><h3>Conditions de Stockage</h3><ul><li>Gardez dans un endroit sec et tempéré</li><li>Utilisez une boîte ou pochette de rangement</li><li>Éloignez des sources d'humidité</li><li>Conservez loin des produits chimiques</li></ul></div>
-                <div class="care-card"><h3>À Éviter Absolument</h3><ul><li>Ne pas exposer à l'eau de javel</li><li>Ne pas utiliser de brosse métallique</li><li>Évitez les parfums et cosmétiques</li><li>Pas de baignade prolongée</li></ul></div>
-                <div class="care-card"><h3>Durée de Vie du Plaquage</h3><ul><li>Le plaquage dure généralement 2-3 ans</li><li>Dépend de la fréquence d'utilisation</li><li>Un entretien régulier prolonge la durée</li><li>Proposons service de re-plaquage</li></ul></div>
-            </div>
-        </div>
-
-        <div class="faq-section">
-            <h2 class="faq-title">Foire Aux Questions</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question"><span>Est-ce vraiment sans nickel?</span><span class="faq-toggle">⌄</span></div>
-                    <div class="faq-answer">Oui, tous nos bijoux sont certifiés sans nickel. Nous utilisons un alliage hypoallergénique de qualité supérieure pour notre base avant le plaquage or. Cela rend nos bijoux adaptés à tous les types de peaux, même les plus sensibles. Nos produits sont testés dermatologiquement et respectent les normes de sécurité internationales.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question"><span>Combien de temps dure le plaquage?</span><span class="faq-toggle">⌄</span></div>
-                    <div class="faq-answer">La durée de vie du plaquage dépend de votre utilisation. En moyenne, il dure entre 2 et 3 ans avec un port régulier. Si vous portez votre bijou quotidiennement, il peut s'user plus rapidement. Une utilisation occasionnelle peut prolonger la durée jusqu'à 5 ans. Un entretien régulier et un stockage approprié maximisent la longévité du plaquage.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question"><span>Comment nettoyer mes bijoux?</span><span class="faq-toggle">⌄</span></div>
-                    <div class="faq-answer">Pour nettoyer vos bijoux BISOU, utilisez un chiffon doux et sec pour le nettoyage quotidien. Pour un nettoyage plus approfondi, lavez avec de l'eau tiède et un savon doux, puis séchez immédiatement avec un chiffon propre et doux. Évitez les produits chimiques comme l'eau de javel, l'alcool ou les nettoyants industriels. Ne plongez jamais vos bijoux dans l'eau prolongée.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question"><span>Puis-je le commander en cadeau?</span><span class="faq-toggle">⌄</span></div>
-                    <div class="faq-answer">Absolument! Nous proposons des coffrets cadeaux spécialement conçus pour les occasions. Vous pouvez choisir le "Pack Découverte", le "Duo Parfait" ou notre "Coffret Luxe" avec présentation haut de gamme. Tous nos bijoux sont livrés dans un emballage élégant. Nous pouvons également ajouter un message personnalisé à votre commande sur demande.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question"><span>Avez-vous des paiements à l'arrivée?</span><span class="faq-toggle">⌄</span></div>
-                    <div class="faq-answer">Oui, nous proposons le paiement à la livraison (Cash on Delivery) pour votre confort et sécurité. Vous recevrez vos bijoux et paierez directement au livreur. Nous acceptons également les paiements par virement, carte bancaire et portefeuille électronique. Tous les modes de paiement sont sécurisés et votre transaction est protégée.</div>
-                </div>
-            </div>
-        </div>
+  <!-- STICKY HEADER -->
+  <header class="site-header">
+    <div class="header-brand">
+      <a href="index.html" class="header-logo">BISOU</a>
+      <span class="header-subtitle">Catalogue 2026</span>
     </div>
+    <div class="header-count">
+      <span id="visibleCount">22</span> bijoux affichés
+    </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2026 BISOU - Bijoux Plaqués Or. Tous droits réservés.</p>
-        <p>Une question? Contactez-nous via WhatsApp pour plus d'informations.</p>
-    </footer>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">22 Bijoux · 6 Catégories · 139–599 MAD</div>
+    <h1>La Collection<br><em>Printemps 2026</em></h1>
+    <p class="hero-subtitle">Acier inoxydable 316L · Plaqué or 18 carats · Hypoallergénique</p>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <span class="stat-number">22</span>
+        <span class="stat-label">Bijoux</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">6</span>
+        <span class="stat-label">Catégories</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">139</span>
+        <span class="stat-label">MAD Prix mini</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">COD</span>
+        <span class="stat-label">Paiement</span>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const productCards = document.querySelectorAll('.product-card');
+  <!-- FILTERS -->
+  <section class="filters-section">
+    <div class="filters-inner">
+      <button class="filter-pill active" data-filter="tous">Tous</button>
+      <button class="filter-pill" data-filter="colliers">Colliers</button>
+      <button class="filter-pill" data-filter="bagues">Bagues</button>
+      <button class="filter-pill" data-filter="boucles">Boucles d'oreilles</button>
+      <button class="filter-pill" data-filter="bracelets">Bracelets</button>
+      <button class="filter-pill" data-filter="coffrets">Coffrets</button>
+      <button class="filter-pill" data-filter="editions">Éditions limitées</button>
+      <div class="filter-count-display"><strong id="filterCount">22</strong> bijoux</div>
+    </div>
+  </section>
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                const filter = button.getAttribute('data-filter');
-                productCards.forEach(card => {
-                    if (filter === 'all') {
-                        card.classList.add('active');
-                    } else {
-                        if (card.getAttribute('data-category') === filter) {
-                            card.classList.add('active');
-                        } else {
-                            card.classList.remove('active');
-                        }
-                    }
-                });
-            });
+  <!-- PRODUCTS GRID -->
+  <section class="products-section">
+    <div class="products-grid" id="productsGrid">
+
+      <!-- 1. Collier Minimaliste Or -->
+      <div class="product-card" data-category="colliers">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <span class="card-badge">Bestseller</span>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="52" r="28" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.8"/>
+            <path d="M32 52 Q20 52 20 65 L20 80 Q20 95 60 95 Q100 95 100 80 L100 65 Q100 52 88 52" stroke="#D4AF37" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+            <circle cx="60" cy="95" r="3" fill="#D4AF37" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Colliers</p>
+          <h3 class="card-name">Collier Minimaliste Or</h3>
+          <p class="card-price">229 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20le%20Collier%20Minimaliste%20Or%20(229%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 2. Chaîne Épaisse Or -->
+      <div class="product-card" data-category="colliers">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="60" cy="50" rx="30" ry="20" stroke="#D4AF37" stroke-width="3" fill="none" opacity="0.8"/>
+            <path d="M30 50 Q18 55 18 68 L18 82 Q18 97 60 97 Q102 97 102 82 L102 68 Q102 55 90 50" stroke="#D4AF37" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+            <circle cx="60" cy="97" r="4" fill="#D4AF37" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Colliers</p>
+          <h3 class="card-name">Chaîne Épaisse Or</h3>
+          <p class="card-price">349 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20la%20Cha%C3%AEne%20%C3%89paisse%20Or%20(349%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 3. Collier Délicat Fin -->
+      <div class="product-card" data-category="colliers">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="50" r="22" stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.8"/>
+            <path d="M38 50 Q24 52 24 64 L24 78 Q24 96 60 96 Q96 96 96 78 L96 64 Q96 52 82 50" stroke="#D4AF37" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+            <circle cx="60" cy="50" r="4" fill="none" stroke="#D4AF37" stroke-width="1.5" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Colliers</p>
+          <h3 class="card-name">Collier Délicat Fin</h3>
+          <p class="card-price">199 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20le%20Collier%20D%C3%A9licat%20Fin%20(199%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 4. Chaîne Classique -->
+      <div class="product-card" data-category="colliers">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="52" r="26" stroke="#D4AF37" stroke-width="1.8" fill="none" opacity="0.7"/>
+            <path d="M34 52 Q22 54 22 66 L22 80 Q22 96 60 96 Q98 96 98 80 L98 66 Q98 54 86 52" stroke="#D4AF37" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.5"/>
+            <line x1="48" y1="30" x2="72" y2="30" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Colliers</p>
+          <h3 class="card-name">Chaîne Classique</h3>
+          <p class="card-price">279 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20la%20Cha%C3%AEne%20Classique%20(279%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 5. Collier Maille Plate -->
+      <div class="product-card" data-category="colliers">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="34" y="38" width="52" height="10" rx="5" stroke="#D4AF37" stroke-width="1.8" fill="none" opacity="0.8"/>
+            <path d="M34 48 Q22 52 22 66 L22 80 Q22 96 60 96 Q98 96 98 80 L98 66 Q98 52 86 48" stroke="#D4AF37" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+            <rect x="50" y="32" width="20" height="6" rx="3" stroke="#D4AF37" stroke-width="1.2" fill="none" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Colliers</p>
+          <h3 class="card-name">Collier Maille Plate</h3>
+          <p class="card-price">399 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20le%20Collier%20Maille%20Plate%20(399%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 6. Bague Signature Or -->
+      <div class="product-card" data-category="bagues">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="60" r="30" stroke="#D4AF37" stroke-width="6" fill="none" opacity="0.8"/>
+            <circle cx="60" cy="60" r="20" stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.3"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Bagues</p>
+          <h3 class="card-name">Bague Signature Or</h3>
+          <p class="card-price">179 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20la%20Bague%20Signature%20Or%20(179%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 7. Chevalière Or -->
+      <div class="product-card" data-category="bagues">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="60" r="30" stroke="#D4AF37" stroke-width="9" fill="none" opacity="0.8"/>
+            <rect x="44" y="44" width="32" height="32" rx="4" stroke="#D4AF37" stroke-width="1.5" fill="none" opacity="0.5"/>
+            <text x="60" y="65" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#D4AF37" opacity="0.6">B</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Bagues</p>
+          <h3 class="card-name">Chevalière Or</h3>
+          <p class="card-price">299 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20la%20Chevali%C3%A8re%20Or%20(299%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 8. Bague Empilable -->
+      <div class="product-card" data-category="bagues">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <span class="card-badge">Bestseller</span>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="52" r="22" stroke="#D4AF37" stroke-width="4" fill="none" opacity="0.9"/>
+            <circle cx="60" cy="63" r="22" stroke="#C9A84C" stroke-width="4" fill="none" opacity="0.6"/>
+            <circle cx="60" cy="74" r="22" stroke="#F5E6A3" stroke-width="4" fill="none" opacity="0.3"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Bagues</p>
+          <h3 class="card-name">Bague Empilable</h3>
+          <p class="card-price">149 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20la%20Bague%20Empilable%20(149%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 9. Bague Large Or -->
+      <div class="product-card" data-category="bagues">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="60" r="32" stroke="#D4AF37" stroke-width="12" fill="none" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Bagues</p>
+          <h3 class="card-name">Bague Large Or</h3>
+          <p class="card-price">249 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20la%20Bague%20Large%20Or%20(249%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 10. Bague Filigrane -->
+      <div class="product-card" data-category="bagues">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="60" r="28" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.8"/>
+            <circle cx="60" cy="60" r="20" stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.5" stroke-dasharray="3 4"/>
+            <circle cx="60" cy="60" r="12" stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.3" stroke-dasharray="2 3"/>
+            <circle cx="60" cy="60" r="4" fill="#D4AF37" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Bagues</p>
+          <h3 class="card-name">Bague Filigrane</h3>
+          <p class="card-price">189 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20la%20Bague%20Filigrane%20(189%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 11. Créoles Or Classiques -->
+      <div class="product-card" data-category="boucles">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42" cy="60" r="20" stroke="#D4AF37" stroke-width="4" fill="none" opacity="0.8"/>
+            <circle cx="78" cy="60" r="20" stroke="#D4AF37" stroke-width="4" fill="none" opacity="0.8"/>
+            <circle cx="42" cy="38" r="3" fill="#D4AF37" opacity="0.7"/>
+            <circle cx="78" cy="38" r="3" fill="#D4AF37" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Boucles d'oreilles</p>
+          <h3 class="card-name">Créoles Or Classiques</h3>
+          <p class="card-price">159 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20les%20Cr%C3%A9oles%20Or%20Classiques%20(159%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 12. Puces Discrètes -->
+      <div class="product-card" data-category="boucles">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42" cy="60" r="10" stroke="#D4AF37" stroke-width="2.5" fill="rgba(212,175,55,0.1)" opacity="0.9"/>
+            <circle cx="78" cy="60" r="10" stroke="#D4AF37" stroke-width="2.5" fill="rgba(212,175,55,0.1)" opacity="0.9"/>
+            <circle cx="42" cy="48" r="2.5" fill="#D4AF37" opacity="0.7"/>
+            <circle cx="78" cy="48" r="2.5" fill="#D4AF37" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Boucles d'oreilles</p>
+          <h3 class="card-name">Puces Discrètes</h3>
+          <p class="card-price">139 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20les%20Puces%20Discr%C3%A8tes%20(139%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 13. Boucles Pendantes -->
+      <div class="product-card" data-category="boucles">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42" cy="42" r="7" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.9"/>
+            <circle cx="78" cy="42" r="7" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.9"/>
+            <line x1="42" y1="49" x2="42" y2="65" stroke="#D4AF37" stroke-width="1.5" opacity="0.6"/>
+            <line x1="78" y1="49" x2="78" y2="65" stroke="#D4AF37" stroke-width="1.5" opacity="0.6"/>
+            <ellipse cx="42" cy="74" rx="8" ry="12" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.8"/>
+            <ellipse cx="78" cy="74" rx="8" ry="12" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Boucles d'oreilles</p>
+          <h3 class="card-name">Boucles Pendantes</h3>
+          <p class="card-price">199 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20les%20Boucles%20Pendantes%20(199%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 14. Hoops Chunky -->
+      <div class="product-card" data-category="boucles">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="60" r="22" stroke="#D4AF37" stroke-width="7" fill="none" opacity="0.8"/>
+            <circle cx="80" cy="60" r="22" stroke="#D4AF37" stroke-width="7" fill="none" opacity="0.8"/>
+            <circle cx="40" cy="36" r="3.5" fill="#D4AF37" opacity="0.7"/>
+            <circle cx="80" cy="36" r="3.5" fill="#D4AF37" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Boucles d'oreilles</p>
+          <h3 class="card-name">Hoops Chunky</h3>
+          <p class="card-price">219 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20les%20Hoops%20Chunky%20(219%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 15. Bracelet Chaîne Fine -->
+      <div class="product-card" data-category="bracelets">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="60" cy="60" rx="42" ry="22" stroke="#D4AF37" stroke-width="1.5" fill="none" opacity="0.8"/>
+            <ellipse cx="60" cy="60" rx="34" ry="16" stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.3" stroke-dasharray="4 3"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Bracelets</p>
+          <h3 class="card-name">Bracelet Chaîne Fine</h3>
+          <p class="card-price">189 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20le%20Bracelet%20Cha%C3%AEne%20Fine%20(189%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 16. Bracelet Jonc -->
+      <div class="product-card" data-category="bracelets">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="60" cy="60" rx="44" ry="24" stroke="#D4AF37" stroke-width="5" fill="none" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Bracelets</p>
+          <h3 class="card-name">Bracelet Jonc</h3>
+          <p class="card-price">239 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20le%20Bracelet%20Jonc%20(239%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 17. Bracelet Maille Or -->
+      <div class="product-card" data-category="bracelets">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="60" cy="60" rx="44" ry="24" stroke="#D4AF37" stroke-width="9" fill="none" opacity="0.7"/>
+            <ellipse cx="60" cy="60" rx="44" ry="24" stroke="#F5E6A3" stroke-width="1" fill="none" opacity="0.3"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Bracelets</p>
+          <h3 class="card-name">Bracelet Maille Or</h3>
+          <p class="card-price">269 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20le%20Bracelet%20Maille%20Or%20(269%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 18. Bracelet Gourmette -->
+      <div class="product-card" data-category="bracelets">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="60" cy="60" rx="44" ry="22" stroke="#D4AF37" stroke-width="3" fill="none" opacity="0.8"/>
+            <ellipse cx="60" cy="60" rx="38" ry="17" stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.4" stroke-dasharray="6 4"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Bracelets</p>
+          <h3 class="card-name">Bracelet Gourmette</h3>
+          <p class="card-price">219 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20le%20Bracelet%20Gourmette%20(219%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 19. Pack Découverte -->
+      <div class="product-card" data-category="coffrets">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="28" y="50" width="64" height="44" rx="6" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.8"/>
+            <rect x="28" y="38" width="64" height="16" rx="4" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.6"/>
+            <line x1="60" y1="38" x2="60" y2="94" stroke="#D4AF37" stroke-width="1.5" opacity="0.4"/>
+            <path d="M50 38 Q60 28 70 38" stroke="#D4AF37" stroke-width="1.5" fill="none" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Coffrets</p>
+          <h3 class="card-name">Pack Découverte</h3>
+          <p class="card-price">229 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20le%20Pack%20D%C3%A9couverte%20(229%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 20. Coffret Luxe -->
+      <div class="product-card" data-category="coffrets">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="22" y="52" width="76" height="50" rx="6" stroke="#D4AF37" stroke-width="2.5" fill="none" opacity="0.9"/>
+            <rect x="22" y="38" width="76" height="18" rx="5" stroke="#D4AF37" stroke-width="2.5" fill="none" opacity="0.7"/>
+            <rect x="48" y="34" width="24" height="4" rx="2" stroke="#D4AF37" stroke-width="1.5" fill="none" opacity="0.6"/>
+            <line x1="60" y1="52" x2="60" y2="102" stroke="#D4AF37" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="60" cy="76" r="5" stroke="#D4AF37" stroke-width="1.5" fill="rgba(212,175,55,0.15)" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Coffrets</p>
+          <h3 class="card-name">Coffret Luxe</h3>
+          <p class="card-price">449 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20le%20Coffret%20Luxe%20(449%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 21. Duo Parfait -->
+      <div class="product-card" data-category="coffrets">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="26" y="42" width="30" height="40" rx="5" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.8"/>
+            <rect x="64" y="42" width="30" height="40" rx="5" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.8"/>
+            <rect x="26" y="34" width="30" height="12" rx="3" stroke="#D4AF37" stroke-width="1.5" fill="none" opacity="0.5"/>
+            <rect x="64" y="34" width="30" height="12" rx="3" stroke="#D4AF37" stroke-width="1.5" fill="none" opacity="0.5"/>
+            <path d="M56 62 L64 62" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Coffrets</p>
+          <h3 class="card-name">Duo Parfait</h3>
+          <p class="card-price">279 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20le%20Duo%20Parfait%20(279%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+      <!-- 22. Collection Édition Or 2026 -->
+      <div class="product-card" data-category="editions">
+        <div class="card-image">
+          <div class="card-image-glow"></div>
+          <span class="card-badge nouveau">Nouveau</span>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="60,16 70,44 100,44 76,62 85,90 60,73 35,90 44,62 20,44 50,44" stroke="#D4AF37" stroke-width="2" fill="rgba(212,175,55,0.08)" opacity="0.9"/>
+            <polygon points="60,28 67,48 88,48 72,60 78,80 60,68 42,80 48,60 32,48 53,48" stroke="#F5E6A3" stroke-width="1" fill="none" opacity="0.4"/>
+            <circle cx="60" cy="60" r="6" fill="#D4AF37" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Éditions Limitées</p>
+          <h3 class="card-name">Collection Édition Or 2026</h3>
+          <p class="card-price">599 MAD<span>COD</span></p>
+          <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20commander%20la%20Collection%20%C3%89dition%20Or%202026%20(599%20MAD)%20en%20paiement%20%C3%A0%20la%20livraison." class="card-cta" target="_blank" rel="noopener">Commander — COD</a>
+        </div>
+      </div>
+
+    </div><!-- /products-grid -->
+  </section>
+
+  <!-- CARE SECTION -->
+  <section class="care-section">
+    <div class="care-inner">
+      <div class="gold-divider"></div>
+      <span class="section-eyebrow">Entretien & Qualité</span>
+      <h2 class="section-title">Prendre soin de tes bijoux</h2>
+      <div class="care-grid">
+
+        <div class="care-card">
+          <span class="care-icon">✦</span>
+          <h3 class="care-title">Entretien quotidien</h3>
+          <ul class="care-text">
+            <li>Essuie tes bijoux avec un chiffon doux et sec après chaque port.</li>
+            <li>Range-les séparément dans leur pochette pour éviter les rayures.</li>
+            <li>Remets-les en dernier, après parfum et crème.</li>
+            <li>Nettoie doucement avec un coton humide si nécessaire.</li>
+          </ul>
+        </div>
+
+        <div class="care-card">
+          <span class="care-icon">◇</span>
+          <h3 class="care-title">À éviter</h3>
+          <ul class="care-text">
+            <li>Contact prolongé avec l'eau, la mer ou la piscine.</li>
+            <li>Parfums, huiles et produits chimiques directement sur le bijou.</li>
+            <li>Dormir avec tes bijoux ou les porter au sport.</li>
+            <li>Exposition prolongée au soleil ou à la chaleur.</li>
+          </ul>
+        </div>
+
+        <div class="care-card">
+          <span class="care-icon">◈</span>
+          <h3 class="care-title">Garantie 6 mois</h3>
+          <p class="care-text">
+            Chaque bijou BISOU est garanti 6 mois contre tout défaut de fabrication. En cas de problème, contacte-nous directement sur WhatsApp — nous trouverons une solution dans les 48h. Notre engagement : ta satisfaction totale, sans discussion.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COD SECTION -->
+  <section class="cod-section">
+    <div class="cod-inner">
+      <div class="gold-divider"></div>
+      <p class="section-eyebrow" style="text-align:center;">Livraison au Maroc</p>
+      <h2 class="cod-title">Paiement à la livraison<br><em>Partout au Maroc</em></h2>
+      <p class="cod-sub">Tu paies quand tu reçois — simple, sûr, marocain</p>
+      <div class="cod-features">
+        <div class="cod-feature">
+          <span class="cod-feature-number">24–72h</span>
+          <span class="cod-feature-label">Livraison</span>
+        </div>
+        <div class="cod-feature">
+          <span class="cod-feature-number">COD</span>
+          <span class="cod-feature-label">Paiement</span>
+        </div>
+        <div class="cod-feature">
+          <span class="cod-feature-number">7 j</span>
+          <span class="cod-feature-label">Retour</span>
+        </div>
+        <div class="cod-feature">
+          <span class="cod-feature-number">6 m</span>
+          <span class="cod-feature-label">Garantie</span>
+        </div>
+      </div>
+      <a href="https://wa.me/212600000000?text=Bonjour%20BISOU%20%F0%9F%8C%B8%20Je%20souhaite%20d%C3%A9couvrir%20votre%20catalogue%20et%20passer%20commande." class="cod-cta" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Commander sur WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <span class="footer-logo">BISOU</span>
+          <span class="footer-tagline">L'or qui t'embrasse</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="product-catalog.html">Collections</a>
+          <a href="brand-guide.html">À propos</a>
+          <a href="https://wa.me/212600000000" target="_blank" rel="noopener">Contact</a>
+          <a href="#cgv">CGV</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        © 2026 BISOU — Bijoux plaqués or au Maroc
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── CATEGORY FILTER ───────────────────────────────────────
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const productCards = document.querySelectorAll('.product-card');
+    const filterCountEl = document.getElementById('filterCount');
+    const visibleCountEl = document.getElementById('visibleCount');
+
+    function updateCount() {
+      const visible = document.querySelectorAll('.product-card:not(.hidden)').length;
+      if (filterCountEl) filterCountEl.textContent = visible;
+      if (visibleCountEl) visibleCountEl.textContent = visible;
+    }
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+
+        const filter = pill.dataset.filter;
+
+        productCards.forEach(card => {
+          if (filter === 'tous') {
+            card.classList.remove('hidden');
+          } else {
+            const cat = card.dataset.category;
+            if (cat === filter) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          }
         });
 
-        function addToCart(productName, price) {
-            window.location.href = `checkout-cod.html?produit=${encodeURIComponent(productName)}&prix=${price}`;
+        updateCount();
+      });
+    });
+
+    // ── INTERSECTION OBSERVER (fadeInUp) ─────────────────────
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          const card = entry.target;
+          const index = Array.from(productCards).indexOf(card);
+          card.style.animationDelay = (index * 0.05) + 's';
+          card.classList.add('visible');
+          observer.unobserve(card);
         }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
 
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                faqItem.classList.toggle('active');
-            });
-        });
-    </script>
+    productCards.forEach(card => observer.observe(card));
+
+    // Initial count
+    updateCount();
+  </script>
+</body>
+</html>

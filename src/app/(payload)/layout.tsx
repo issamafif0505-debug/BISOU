@@ -1,28 +1,35 @@
 /**
  * Payload admin route group — root layout
  * -----------------------------------------
- * Payload 3.0 ships its own admin UI stylesheet and React tree. We delegate
- * everything to `@payloadcms/next/layouts` so our own `src/app/layout.tsx`
- * (shop-facing) doesn't leak Tailwind / marketing fonts into the admin.
+ * Payload 3.x requires RootLayout to receive:
+ *  - config       : SanitizedConfig
+ *  - importMap    : ImportMap (client component map)
+ *  - serverFunction : ServerFunctionClient (server action wrapping handleServerFunctions)
  *
  * Route group: `(payload)` — does NOT contribute to the URL.
  * Admin lives at `/admin`.
  */
 
 import React from 'react';
-// Payload's Next.js helpers re-export a RootLayout that wires up the admin.
-// Importing via the package entry keeps us future-proof across Payload 3.x.
-import { RootLayout } from '@payloadcms/next/layouts';
+import { handleServerFunctions, RootLayout } from '@payloadcms/next/layouts';
+import type { ServerFunctionClient } from 'payload';
 
 import config from '../../../payload.config';
-import '@payloadcms/next/css';
+import { importMap } from './admin/importMap';
 
 type Args = {
   children: React.ReactNode;
 };
 
+const serverFunction: ServerFunctionClient = async (args) => {
+  'use server';
+  return handleServerFunctions({ ...args, config, importMap });
+};
+
 const Layout = ({ children }: Args) => (
-  <RootLayout config={config}>{children}</RootLayout>
+  <RootLayout config={config} importMap={importMap} serverFunction={serverFunction}>
+    {children}
+  </RootLayout>
 );
 
 export default Layout;

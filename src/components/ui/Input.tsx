@@ -1,4 +1,6 @@
-import { forwardRef, type InputHTMLAttributes, type TextareaHTMLAttributes } from 'react';
+'use client';
+
+import { forwardRef, useId, type InputHTMLAttributes, type TextareaHTMLAttributes } from 'react';
 import { cn } from '@/lib/cn';
 
 interface BaseFieldProps {
@@ -24,7 +26,8 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   { label, error, hint, required, className, id, ...props },
   ref,
 ) {
-  const inputId = id ?? `input-${props.name ?? Math.random().toString(36).slice(2, 7)}`;
+  const generatedId = useId();
+  const inputId = id ?? `input-${props.name ?? generatedId}`;
   return (
     <div className="flex flex-col gap-1.5">
       {label ? (
@@ -63,7 +66,8 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
   { label, error, hint, required, className, id, rows = 4, ...props },
   ref,
 ) {
-  const textareaId = id ?? `textarea-${props.name ?? Math.random().toString(36).slice(2, 7)}`;
+  const generatedId = useId();
+  const textareaId = id ?? `textarea-${props.name ?? generatedId}`;
   return (
     <div className="flex flex-col gap-1.5">
       {label ? (

@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BISOU Bijoux — Système de packaging premium. L'unboxing est le premier bijou. Boîte laquée noire, ruban doré, certificat d'authenticité.">
+<title>BISOU — Packaging & Unboxing Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   BISOU — PACKAGING & UNBOXING
+   Design System: Dark Luxury × Gold
+   ============================================================ */
+
+:root {
+  --black:      #0D0D0D;
+  --gold:       #D4AF37;
+  --gold-light: #F5E6A3;
+  --gold-mid:   #C9A84C;
+  --gold-dark:  #A8862E;
+  --cream:      #FDF6E3;
+  --rose:       #F2D7D5;
+  --green-wa:   #25D366;
+  --grey-soft:  #1A1A1A;
+  --card:       #111111;
+  --border:     rgba(212,175,55,0.25);
+  --text-muted: #888888;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Jost', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: #E8E0CC;
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; }
+h1 { font-size: clamp(2.8rem, 9vw, 5.5rem); }
+h2 { font-size: clamp(1.8rem, 5vw, 3rem); }
+h3 { font-size: clamp(1.2rem, 3vw, 1.7rem); }
+a { color: inherit; text-decoration: none; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes pulse-wa {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+  70%       { box-shadow: 0 0 0 14px transparent; }
+}
+@keyframes radial-glow {
+  0%, 100% { opacity: 0.35; }
+  50%       { opacity: 0.55; }
+}
+@keyframes float-box {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50%       { transform: translateY(-8px) rotate(1deg); }
+}
+@keyframes ribbon-shimmer {
+  0%   { opacity: 0.6; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* ── UTILITIES ── */
+.gold-text {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold-mid) 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease infinite;
+}
+.center { text-align: center; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.section-pad { padding: 90px 24px; }
+.animate { opacity: 0; animation: fadeInUp 0.7s ease forwards; }
+
+/* ── STICKY HEADER ── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.header-logo {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+.header-subtitle {
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.header-back {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.header-back:hover { color: var(--gold); }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 100px 24px;
+}
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 55% 45% at 50% 55%, rgba(212,175,55,0.13) 0%, transparent 70%);
+  animation: radial-glow 5s ease-in-out infinite;
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-block;
+  border: 1px solid var(--border);
+  background: rgba(212,175,55,0.06);
+  color: var(--gold);
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  padding: 7px 18px;
+  border-radius: 20px;
+  margin-bottom: 28px;
+}
+.hero h1 { line-height: 1; margin-bottom: 6px; }
+.hero-italic-line {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--cream);
+  display: block;
+  margin-bottom: 24px;
+}
+.hero-subtitle {
+  font-size: 1rem;
+  color: #BBAA99;
+  max-width: 560px;
+  margin: 0 auto 44px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero-stat {
+  text-align: center;
+}
+.hero-stat-num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  display: block;
+  color: var(--gold);
+}
+.hero-stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── SECTION HEADER COMMON ── */
+.section-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 14px;
+}
+.section-title-block { text-align: center; max-width: 1100px; margin: 0 auto; }
+.section-title-block h2 { margin-bottom: 14px; }
+.section-title-block p { font-size: 0.9rem; color: var(--text-muted); max-width: 500px; margin: 0 auto; }
+
+.gold-divider {
+  width: 60px; height: 1px;
+  background: var(--gold);
+  margin: 0 auto;
+  opacity: 0.5;
+}
+
+/* ── PACKAGING ITEM LAYOUT ── */
+.pkg-section {
+  padding: 80px 24px;
+}
+.pkg-section--alt { background: var(--grey-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+.pkg-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.pkg-grid--reverse { direction: rtl; }
+.pkg-grid--reverse > * { direction: ltr; }
+
+.pkg-visual {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.pkg-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(212,175,55,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.pkg-content { display: flex; flex-direction: column; gap: 20px; }
+.pkg-number {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--gold);
+  opacity: 0.15;
+  line-height: 1;
+  display: block;
+  margin-bottom: -16px;
+}
+.pkg-content h3 { color: var(--cream); }
+.pkg-content p { color: #BBAA99; font-size: 0.9rem; line-height: 1.8; }
+
+/* ── SPECS LIST ── */
+.specs-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+.specs-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 0.85rem;
+  color: #BBAA99;
+  line-height: 1.5;
+}
+.specs-list li::before {
+  content: '◈';
+  color: var(--gold);
+  opacity: 0.7;
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 0.7rem;
+}
+.spec-key {
+  font-weight: 500;
+  color: var(--cream);
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+/* ── VARIANTS ── */
+.variants-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+.variant-chip {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(212,175,55,0.05);
+}
+
+/* ── CARE CARD ── */
+.care-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  max-width: 440px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+.care-card-face {
+  padding: 32px 28px;
+  border-bottom: 1px solid var(--border);
+}
+.care-card-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 14px;
+}
+.care-card-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--cream);
+  margin-bottom: 18px;
+}
+.care-tips {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.care-tips li {
+  font-size: 0.82rem;
+  color: #BBAA99;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.care-tips li::before {
+  content: '—';
+  color: var(--gold);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+.care-card-back {
+  padding: 24px 28px;
+  background: rgba(212,175,55,0.03);
+  text-align: center;
+}
+.care-card-back-text {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.care-card-back-logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 6px;
+}
+.care-card-back-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ── GIFT MESSAGE CARD ── */
+.gift-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  max-width: 380px;
+  padding: 36px 32px;
+  position: relative;
+}
+.gift-card::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(212,175,55,0.12);
+  border-radius: 8px;
+  pointer-events: none;
+}
+.gift-card-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 20px;
+}
+.gift-card-example {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+.gift-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 12px;
+}
+.gift-line {
+  border-bottom: 1px solid rgba(212,175,55,0.15);
+  padding-bottom: 10px;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  font-style: italic;
+}
+.gift-card-footer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.gift-card-logo {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  opacity: 0.7;
+}
+.gift-card-heart {
+  font-size: 1.2rem;
+  color: var(--rose);
+  opacity: 0.8;
+}
+
+/* ── CERTIFICATE ── */
+.cert-card {
+  background: var(--card);
+  border: 2px solid rgba(212,175,55,0.3);
+  border-radius: 12px;
+  padding: 40px 36px;
+  max-width: 460px;
+  position: relative;
+  text-align: center;
+}
+.cert-corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--gold);
+  border-style: solid;
+  opacity: 0.5;
+}
+.cert-corner--tl { top: 8px; left: 8px; border-width: 2px 0 0 2px; }
+.cert-corner--tr { top: 8px; right: 8px; border-width: 2px 2px 0 0; }
+.cert-corner--bl { bottom: 8px; left: 8px; border-width: 0 0 2px 2px; }
+.cert-corner--br { bottom: 8px; right: 8px; border-width: 0 2px 2px 0; }
+
+.cert-eyebrow {
+  font-size: 0.6rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 16px;
+}
+.cert-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--cream);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.cert-divider {
+  width: 80px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 24px;
+  opacity: 0.4;
+}
+.cert-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+.cert-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(212,175,55,0.1);
+  padding-bottom: 10px;
+}
+.cert-field-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.cert-field-value {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--cream);
+}
+.cert-qr {
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(212,175,55,0.25);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  background: rgba(212,175,55,0.04);
+}
+.cert-guarantee {
+  font-size: 0.75rem;
+  color: #BBAA99;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  font-style: italic;
+  font-family: var(--font-display);
+}
+.cert-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 4px;
+}
+.cert-logo {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+}
+.cert-warranty {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── BAG VISUAL ── */
+.bag-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.bag-label-text {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── PRINTING SPECS TABLE ── */
+.print-section {
+  padding: 80px 24px;
+  background: var(--black);
+}
+.print-table {
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.print-table thead tr {
+  background: linear-gradient(135deg, rgba(212,175,55,0.15) 0%, rgba(212,175,55,0.04) 100%);
+  border-bottom: 1px solid var(--border);
+}
+.print-table th {
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 400;
+}
+.print-table td {
+  padding: 14px 18px;
+  font-size: 0.83rem;
+  color: #BBAA99;
+  border-top: 1px solid rgba(212,175,55,0.07);
+  line-height: 1.5;
+}
+.print-table tbody tr:nth-child(odd)  { background: var(--card); }
+.print-table tbody tr:nth-child(even) { background: #161616; }
+.print-table tbody tr:hover { background: rgba(212,175,55,0.04); }
+.print-note {
+  max-width: 1100px;
+  margin: 20px auto 0;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: rgba(212,175,55,0.04);
+  border: 1px solid rgba(212,175,55,0.12);
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.print-note-icon {
+  color: var(--gold);
+  opacity: 0.7;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── CTA ── */
+.cta-section {
+  background: var(--grey-soft);
+  padding: 80px 24px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--green-wa);
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  transition: transform 0.3s, background 0.3s;
+  animation: pulse-wa 2.5s ease-in-out infinite;
+  margin-top: 28px;
+}
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+  animation: none;
+  box-shadow: 0 8px 24px rgba(37,211,102,0.35);
+}
+.cta-sub {
+  margin-top: 18px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  padding: 40px 24px;
+  text-align: center;
+}
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  display: block;
+  margin-bottom: 14px;
+}
+.footer-copyright {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 860px) {
+  .pkg-grid { grid-template-columns: 1fr; gap: 36px; }
+  .pkg-grid--reverse { direction: ltr; }
+  .pkg-visual { aspect-ratio: 4/3; }
+}
+@media (max-width: 600px) {
+  .hero-stats { gap: 24px; }
+  .variants-row { flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+     STICKY HEADER
+══════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div>
+      <span class="header-logo gold-text">BISOU</span>
+    </div>
+    <div style="text-align:center;">
+      <span class="header-subtitle">Packaging &amp; Unboxing</span>
+    </div>
+    <a href="index.html" class="header-back">← Retour</a>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div style="position:relative; z-index:1;" class="animate">
+    <span class="hero-badge">Expérience Unboxing</span>
+    <h1 class="gold-text">L'unboxing,</h1>
+    <span class="hero-italic-line">c'est le premier baiser</span>
+    <p class="hero-subtitle">Chaque commande BISOU est emballée comme un cadeau — même quand tu te l'offres à toi-même.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">6</span>
+        <span class="hero-stat-label">Éléments de packaging</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">100%</span>
+        <span class="hero-stat-label">Recyclable</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">♥</span>
+        <span class="hero-stat-label">Conçu à Marrakech</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     SECTION 1 — LA BOÎTE SIGNATURE
+══════════════════════════════════ -->
+<section class="pkg-section">
+  <div class="pkg-grid container">
+
+    <!-- Visual -->
+    <div class="pkg-visual animate" style="animation: float-box 5s ease-in-out infinite, fadeInUp 0.7s ease forwards;">
+      <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Box body -->
+        <rect x="30" y="60" width="160" height="130" rx="4" fill="#0D0D0D" stroke="#D4AF37" stroke-width="1.2" stroke-opacity="0.5"/>
+        <!-- Box lid -->
+        <rect x="22" y="38" width="176" height="30" rx="3" fill="#111" stroke="#D4AF37" stroke-width="1.2" stroke-opacity="0.7"/>
+        <!-- Lid detail -->
+        <rect x="28" y="43" width="164" height="20" rx="2" fill="none" stroke="#D4AF37" stroke-width="0.5" stroke-opacity="0.3"/>
+        <!-- Monogram B -->
+        <text x="110" y="140" font-family="Georgia,serif" font-size="72" font-weight="300" fill="#D4AF37" fill-opacity="0.4" text-anchor="middle" dominant-baseline="middle">B</text>
+        <!-- Gold foil effect lines -->
+        <line x1="80" y1="155" x2="140" y2="155" stroke="#D4AF37" stroke-width="0.5" stroke-opacity="0.3"/>
+        <text x="110" y="170" font-family="sans-serif" font-size="7" fill="#D4AF37" fill-opacity="0.4" text-anchor="middle" letter-spacing="3">BISOU</text>
+        <!-- Lid shine -->
+        <rect x="30" y="40" width="60" height="6" rx="3" fill="white" fill-opacity="0.03"/>
+      </svg>
+    </div>
+
+    <!-- Content -->
+    <div class="pkg-content animate" style="animation-delay:0.15s">
+      <span class="pkg-number">01</span>
+      <span class="section-eyebrow">Pièce maîtresse</span>
+      <h3>La Boîte Signature</h3>
+      <p>La première impression est gravée dans le noir mat. Ourée d'un monogramme B doré estampé à chaud, la boîte BISOU transforme chaque réception en moment d'émotion.</p>
+      <ul class="specs-list">
+        <li><span class="spec-key">Format bague/boucles</span>12 × 12 × 4 cm</li>
+        <li><span class="spec-key">Format collier/bracelet</span>22 × 6 × 3 cm</li>
+        <li><span class="spec-key">Matière</span>Carton rigide 700 g/m² laqué noir mat</li>
+        <li><span class="spec-key">Finition extérieure</span>Monogramme B doré à chaud (foil gold)</li>
+        <li><span class="spec-key">Intérieur</span>Velours noir, insert mousse découpé au laser</li>
+        <li><span class="spec-key">Fermeture</span>Aimantée — ouverture premium</li>
+      </ul>
+      <div class="variants-row">
+        <span class="variant-chip">Noir Mat</span>
+        <span class="variant-chip">Noir Brillant</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     SECTION 2 — SACHET & RUBAN
+══════════════════════════════════ -->
+<section class="pkg-section pkg-section--alt">
+  <div class="pkg-grid pkg-grid--reverse container">
+
+    <!-- Content -->
+    <div class="pkg-content animate">
+      <span class="pkg-number">02</span>
+      <span class="section-eyebrow">L'enveloppe de soie</span>
+      <h3>Sachet &amp; Ruban</h3>
+      <p>Avant même d'ouvrir la boîte, les mains sentent la douceur du papier de soie. Le ruban or se dénoue lentement — c'est voulu. L'attente fait partie du rituel.</p>
+      <ul class="specs-list">
+        <li><span class="spec-key">Papier de soie</span>Noir BISOU 45 g/m² avec filigrane logo</li>
+        <li><span class="spec-key">Ruban</span>Satiné or, 1 cm de large, 25 cm de long</li>
+        <li><span class="spec-key">Nœud</span>Papillon centré, symétrique</li>
+        <li><span class="spec-key">Sticker rond</span>"BISOU — L'or qui t'embrasse" · or sur fond noir</li>
+        <li><span class="spec-key">Fermeture</span>Sticker circulaire Ø 3 cm, dorure brillante</li>
+      </ul>
+      <div class="variants-row">
+        <span class="variant-chip">Tissu noir</span>
+        <span class="variant-chip">Ruban or satiné</span>
+      </div>
+    </div>
+
+    <!-- Visual -->
+    <div class="pkg-visual animate" style="animation-delay:0.1s">
+      <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Folded tissue paper -->
+        <path d="M40 80 Q100 60 160 80 L155 140 Q100 155 45 140 Z" fill="#0D0D0D" stroke="#D4AF37" stroke-width="0.8" stroke-opacity="0.4"/>
+        <!-- Fold creases -->
+        <path d="M70 72 Q100 65 130 72" stroke="#D4AF37" stroke-width="0.5" stroke-opacity="0.25" fill="none"/>
+        <path d="M55 110 Q100 105 145 110" stroke="#D4AF37" stroke-width="0.4" stroke-opacity="0.15" fill="none"/>
+        <!-- Ribbon horizontal -->
+        <rect x="32" y="104" width="136" height="7" rx="3.5" fill="#D4AF37" fill-opacity="0.7" style="animation: ribbon-shimmer 2s ease-in-out infinite;"/>
+        <!-- Ribbon knot -->
+        <ellipse cx="100" cy="107.5" rx="16" ry="8" fill="#D4AF37" fill-opacity="0.5"/>
+        <!-- Ribbon bow left -->
+        <path d="M84 107 Q68 90 72 80 Q80 86 84 107" fill="#D4AF37" fill-opacity="0.6"/>
+        <!-- Ribbon bow right -->
+        <path d="M116 107 Q132 90 128 80 Q120 86 116 107" fill="#D4AF37" fill-opacity="0.6"/>
+        <!-- Center knot circle -->
+        <circle cx="100" cy="107" r="6" fill="#C9A84C" opacity="0.8"/>
+        <!-- Sticker circle -->
+        <circle cx="100" cy="150" r="14" fill="#0D0D0D" stroke="#D4AF37" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="100" y="154" font-family="sans-serif" font-size="5" fill="#D4AF37" fill-opacity="0.7" text-anchor="middle" letter-spacing="1">BISOU</text>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     SECTION 3 — CARTE DE SOIN
+══════════════════════════════════ -->
+<section class="pkg-section">
+  <div class="pkg-grid container">
+
+    <!-- Visual: Care Card Recto/Verso -->
+    <div class="pkg-visual animate" style="align-items:stretch; padding:24px; aspect-ratio:auto; min-height:360px;">
+      <div class="care-card" style="width:100%; max-width:none;">
+        <div class="care-card-face">
+          <span class="care-card-label">Prendre soin de ton bijou BISOU</span>
+          <div class="care-card-title">Guide d'entretien</div>
+          <ul class="care-tips">
+            <li>Évite le contact avec les parfums et les cosmétiques</li>
+            <li>Retire ton bijou avant la douche ou le bain</li>
+            <li>Range chaque pièce séparément pour éviter les rayures</li>
+            <li>Nettoie avec un chiffon microfibre doux et sec</li>
+            <li>Évite la piscine — le chlore abîme le plaqué or</li>
+          </ul>
+        </div>
+        <div class="care-card-back">
+          <p class="care-card-back-text">Chaque pièce BISOU est fabriquée en acier inoxydable 316L, plaqué or 18 carats. Avec les bons soins, ton bijou reste éclatant des années.</p>
+          <span class="care-card-back-logo">BISOU</span>
+          <span class="care-card-back-tagline">L'or qui t'embrasse</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="pkg-content animate" style="animation-delay:0.15s">
+      <span class="pkg-number">03</span>
+      <span class="section-eyebrow">Recto · Verso</span>
+      <h3>Carte de Soin</h3>
+      <p>Une carte glissée dans chaque boîte. Sur le recto : cinq conseils d'entretien pour préserver l'éclat du bijou. Sur le verso : la promesse matière et le logo BISOU.</p>
+      <ul class="specs-list">
+        <li><span class="spec-key">Format</span>85 × 55 mm (standard carte de visite)</li>
+        <li><span class="spec-key">Matière</span>Carton 400 g/m², finition mat</li>
+        <li><span class="spec-key">Recto</span>5 conseils d'entretien, fond noir, texte crème</li>
+        <li><span class="spec-key">Verso</span>Promesse matière + logo + tagline dorés</li>
+        <li><span class="spec-key">Impression</span>4/4 couleurs + vernis sélectif or sur verso</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     SECTION 4 — CARTE DÉDICACE
+══════════════════════════════════ -->
+<section class="pkg-section pkg-section--alt">
+  <div class="pkg-grid pkg-grid--reverse container">
+
+    <!-- Content -->
+    <div class="pkg-content animate">
+      <span class="pkg-number">04</span>
+      <span class="section-eyebrow">Option cadeau</span>
+      <h3>Carte Dédicace</h3>
+      <p>Offrir BISOU, c'est offrir une émotion double : le bijou et le mot. La carte dédicace est proposée à chaque commande — parce que même un cadeau à soi-même mérite une déclaration.</p>
+      <ul class="specs-list">
+        <li><span class="spec-key">Format</span>120 × 85 mm, plié en deux</li>
+        <li><span class="spec-key">Matière</span>Carton ivoire 300 g/m², texture lin</li>
+        <li><span class="spec-key">Bordure</span>Filet doré imprimé, coins arrondis 4 mm</li>
+        <li><span class="spec-key">Intérieur</span>Lignes dorées pour message manuscrit</li>
+        <li><span class="spec-key">Option</span>Message personnalisé saisi à la commande</li>
+      </ul>
+    </div>
+
+    <!-- Visual -->
+    <div class="pkg-visual animate" style="animation-delay:0.1s">
+      <div class="gift-card">
+        <span class="gift-card-label">Carte Dédicace · BISOU</span>
+        <p class="gift-card-example">"Pour toi, avec tout mon amour"</p>
+        <div class="gift-lines">
+          <div class="gift-line">Message personnalisé ici...</div>
+          <div class="gift-line">&nbsp;</div>
+          <div class="gift-line">&nbsp;</div>
+        </div>
+        <div class="gift-card-footer">
+          <span class="gift-card-logo">BISOU</span>
+          <span class="gift-card-heart">♥</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     SECTION 5 — CERTIFICAT D'AUTHENTICITÉ
+══════════════════════════════════ -->
+<section class="pkg-section">
+  <div class="pkg-grid container">
+
+    <!-- Visual -->
+    <div class="pkg-visual animate" style="padding:28px;">
+      <div class="cert-card">
+        <div class="cert-corner cert-corner--tl"></div>
+        <div class="cert-corner cert-corner--tr"></div>
+        <div class="cert-corner cert-corner--bl"></div>
+        <div class="cert-corner cert-corner--br"></div>
+
+        <span class="cert-eyebrow">BISOU — Marrakech, Maroc</span>
+        <div class="cert-title">Certificat d'Authenticité</div>
+        <div class="cert-divider"></div>
+
+        <div class="cert-fields">
+          <div class="cert-field">
+            <span class="cert-field-label">Référence</span>
+            <span class="cert-field-value">BSU-COL-001</span>
+          </div>
+          <div class="cert-field">
+            <span class="cert-field-label">Matière</span>
+            <span class="cert-field-value">Acier 316L · Or 18K</span>
+          </div>
+          <div class="cert-field">
+            <span class="cert-field-label">Fabrication</span>
+            <span class="cert-field-value">Janvier 2026</span>
+          </div>
+        </div>
+
+        <div class="cert-qr">
+          <!-- Conceptual QR placeholder -->
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="2" y="2" width="12" height="12" rx="1" stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.5"/>
+            <rect x="5" y="5" width="6" height="6" rx="0.5" fill="#D4AF37" opacity="0.3"/>
+            <rect x="18" y="2" width="12" height="12" rx="1" stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.5"/>
+            <rect x="21" y="5" width="6" height="6" rx="0.5" fill="#D4AF37" opacity="0.3"/>
+            <rect x="2" y="18" width="12" height="12" rx="1" stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.5"/>
+            <rect x="5" y="21" width="6" height="6" rx="0.5" fill="#D4AF37" opacity="0.3"/>
+            <rect x="18" y="18" width="4" height="4" fill="#D4AF37" opacity="0.4"/>
+            <rect x="24" y="18" width="4" height="4" fill="#D4AF37" opacity="0.4"/>
+            <rect x="18" y="24" width="4" height="4" fill="#D4AF37" opacity="0.4"/>
+            <rect x="24" y="24" width="4" height="4" fill="#D4AF37" opacity="0.4"/>
+          </svg>
+        </div>
+
+        <p class="cert-guarantee">BISOU garantit l'authenticité de cette pièce — Acier 316L · Plaqué or 18 carats · Hypoallergénique</p>
+
+        <div class="cert-footer">
+          <span class="cert-logo">BISOU</span>
+          <span class="cert-warranty">Garantie 6 mois</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="pkg-content animate" style="animation-delay:0.15s">
+      <span class="pkg-number">05</span>
+      <span class="section-eyebrow">Preuve de qualité</span>
+      <h3>Certificat d'Authenticité</h3>
+      <p>Chaque bijou BISOU est accompagné d'un certificat numéroté. Ce document n'est pas une formalité — c'est la preuve concrète d'un engagement qualité, signé par la marque.</p>
+      <ul class="specs-list">
+        <li><span class="spec-key">Format</span>100 × 70 mm, impression recto</li>
+        <li><span class="spec-key">Papier</span>Ivoire 250 g/m², texturé</li>
+        <li><span class="spec-key">Cadre décoratif</span>Filet or double, coins stylisés</li>
+        <li><span class="spec-key">Champs</span>Référence produit · Matière · Date de fabrication</li>
+        <li><span class="spec-key">QR Code</span>Vérification authenticité en ligne (conceptuel)</li>
+        <li><span class="spec-key">Garantie</span>6 mois pièces et main d'œuvre, échanges inclus</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     SECTION 6 — SAC BOUTIQUE
+══════════════════════════════════ -->
+<section class="pkg-section pkg-section--alt">
+  <div class="pkg-grid pkg-grid--reverse container">
+
+    <!-- Content -->
+    <div class="pkg-content animate">
+      <span class="pkg-number">06</span>
+      <span class="section-eyebrow">La touche finale</span>
+      <h3>Sac Boutique</h3>
+      <p>Le sac porte la commande, mais il raconte aussi la marque à tous ceux qui le voient dans la rue, chez soi, dans le bureau. Un objet de désir avant même d'être ouvert.</p>
+      <ul class="specs-list">
+        <li><span class="spec-key">Matière</span>Kraft noir premium 150 g/m², texturé</li>
+        <li><span class="spec-key">Dimensions</span>20 × 25 × 10 cm (standard)</li>
+        <li><span class="spec-key">Poignées</span>Cordon coton ciré noir, 25 cm</li>
+        <li><span class="spec-key">Impression</span>Logo BISOU foil or face avant, mat</li>
+        <li><span class="spec-key">Fermeture</span>Sticker BISOU circulaire doré</li>
+        <li><span class="spec-key">Durabilité</span>Réutilisable · Recyclable · Sans plastique</li>
+      </ul>
+      <div class="variants-row">
+        <span class="variant-chip">Kraft Noir</span>
+        <span class="variant-chip">Cordon Or</span>
+        <span class="variant-chip">Recyclable</span>
+      </div>
+    </div>
+
+    <!-- Visual -->
+    <div class="pkg-visual animate" style="animation-delay:0.1s;">
+      <div class="bag-wrap">
+        <svg width="160" height="200" viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Bag body -->
+          <rect x="15" y="50" width="130" height="140" rx="4" fill="#0D0D0D" stroke="#D4AF37" stroke-width="1" stroke-opacity="0.45"/>
+          <!-- Bag fold top -->
+          <rect x="15" y="50" width="130" height="20" rx="0" fill="#111" stroke="#D4AF37" stroke-width="0.5" stroke-opacity="0.3"/>
+          <!-- Handles left -->
+          <path d="M45 50 Q40 20 50 15 Q60 10 65 30 L65 50" stroke="#D4AF37" stroke-width="2" fill="none" stroke-opacity="0.7" stroke-linecap="round"/>
+          <!-- Handles right -->
+          <path d="M95 50 Q90 20 100 15 Q110 10 115 30 L115 50" stroke="#D4AF37" stroke-width="2" fill="none" stroke-opacity="0.7" stroke-linecap="round"/>
+          <!-- Logo on bag -->
+          <text x="80" y="130" font-family="Georgia,serif" font-size="28" font-weight="300" fill="#D4AF37" fill-opacity="0.5" text-anchor="middle" dominant-baseline="middle" letter-spacing="4">BISOU</text>
+          <line x1="35" y1="145" x2="125" y2="145" stroke="#D4AF37" stroke-width="0.5" stroke-opacity="0.25"/>
+          <text x="80" y="158" font-family="sans-serif" font-size="6" fill="#D4AF37" fill-opacity="0.35" text-anchor="middle" letter-spacing="3">MARRAKECH</text>
+          <!-- Subtle side shadow -->
+          <line x1="145" y1="55" x2="145" y2="185" stroke="#D4AF37" stroke-width="0.3" stroke-opacity="0.2"/>
+        </svg>
+        <span class="bag-label-text">Sac Boutique BISOU</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     SECTION 7 — SPECS IMPRIMERIE
+══════════════════════════════════ -->
+<section class="print-section">
+  <div class="section-title-block animate">
+    <span class="section-eyebrow">Production</span>
+    <h2>Specs <em>Imprimerie</em></h2>
+    <p>Tous les fichiers BAT sont fournis en PDF haute résolution, couleurs CMJN validées.</p>
+    <div class="gold-divider" style="margin-top:20px;"></div>
+  </div>
+
+  <table class="print-table animate">
+    <thead>
+      <tr>
+        <th>Élément</th>
+        <th>Dimensions</th>
+        <th>Matière</th>
+        <th>Finition</th>
+        <th>Type fournisseur</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong style="color:var(--cream)">Boîte bague/boucles</strong></td>
+        <td>12 × 12 × 4 cm</td>
+        <td>Carton rigide 700 g/m²</td>
+        <td>Laquage noir mat + foil or</td>
+        <td>Cartonnerie premium</td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--cream)">Boîte collier/bracelet</strong></td>
+        <td>22 × 6 × 3 cm</td>
+        <td>Carton rigide 700 g/m²</td>
+        <td>Laquage noir mat + foil or</td>
+        <td>Cartonnerie premium</td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--cream)">Papier de soie</strong></td>
+        <td>500 × 350 mm (plié)</td>
+        <td>Soie noir 45 g/m²</td>
+        <td>Impression filigrane logo</td>
+        <td>Papeterie spécialisée</td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--cream)">Ruban satiné</strong></td>
+        <td>10 mm × 25 cm/unité</td>
+        <td>Satin polyester or</td>
+        <td>Fil or tissé, bords nets</td>
+        <td>Mercerie professionnelle</td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--cream)">Sticker rond</strong></td>
+        <td>Ø 30 mm</td>
+        <td>Papier couché 120 g</td>
+        <td>Dorure brillante + fond noir mat</td>
+        <td>Étiqueteur numérique</td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--cream)">Carte de soin</strong></td>
+        <td>85 × 55 mm</td>
+        <td>Carton 400 g/m²</td>
+        <td>4/4 couleurs + vernis sélectif or</td>
+        <td>Imprimeur offset</td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--cream)">Carte dédicace</strong></td>
+        <td>120 × 85 mm plié</td>
+        <td>Carton ivoire 300 g, texture lin</td>
+        <td>Filet or imprimé, coins arrondis</td>
+        <td>Imprimeur numérique</td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--cream)">Certificat d'authenticité</strong></td>
+        <td>100 × 70 mm</td>
+        <td>Papier ivoire 250 g texturé</td>
+        <td>Numéroté · foil or cadre</td>
+        <td>Imprimeur sécurisé</td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--cream)">Sac boutique</strong></td>
+        <td>20 × 25 × 10 cm</td>
+        <td>Kraft noir 150 g/m²</td>
+        <td>Logo foil or face avant</td>
+        <td>Sac papier spécialisé</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="print-note animate">
+    <span class="print-note-icon">◈</span>
+    <span>
+      <strong style="color:var(--cream)">Commandes minimum :</strong> 500 unités par référence.
+      Fichiers BAT disponibles en PDF haute résolution (300 dpi, CMJN, traits de coupe inclus).
+      Profil couleur ISO Coated v2 · Or Pantone 871 C.
+    </span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CTA
+══════════════════════════════════ -->
+<section class="cta-section">
+  <div class="animate">
+    <span class="section-eyebrow">Commander un sample</span>
+    <h2>Découvrez le <em>packaging en vrai</em></h2>
+    <p style="color:var(--text-muted); font-size:0.9rem; max-width:440px; margin:16px auto 0; line-height:1.7;">
+      Demandez un sample kit packaging BISOU — boîte, sachet, cartes et certificat — pour valider la qualité avant toute commande de production.
+    </p>
+    <a href="https://wa.me/212600000000" class="btn-whatsapp" target="_blank">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      Commander un sample kit packaging
+    </a>
+    <p class="cta-sub">Réponse sous 24h · Livraison Marrakech &amp; Casablanca · Prix sur devis</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FOOTER
+══════════════════════════════════ -->
+<footer class="site-footer">
+  <span class="footer-logo gold-text">BISOU</span>
+  <div class="gold-divider" style="margin-bottom:20px;"></div>
+  <span class="footer-copyright">&copy; 2026 BISOU &mdash; Marrakech, Maroc &mdash; Tous droits réservés</span>
+</footer>
+
+<script>
+  // Intersection Observer — animate on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.animationPlayState = 'running';
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.animate').forEach(el => {
+    el.style.animationPlayState = 'paused';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>

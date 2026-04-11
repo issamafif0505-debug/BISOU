@@ -68,10 +68,12 @@ export default buildConfig({
   secret: process.env.PAYLOAD_SECRET || 'BISOU_DEV_SECRET_CHANGE_ME',
 
   // Postgres adapter (Railway / Neon / Supabase compatible).
+  // push: true syncs schema automatically in dev — disable before production.
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URI,
     },
+    push: process.env.NODE_ENV !== 'production',
   }),
 
   // TypeScript types auto-generated (re-run via `pnpm generate:types`).

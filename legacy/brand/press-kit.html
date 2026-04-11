@@ -1,1503 +1,1151 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BISOU — Dossier de Presse 2026</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* ================================================
-       VARIABLES & RESET
-    ================================================ */
-    :root {
-      --gold:        #D4AF37;
-      --gold-light:  #E8CB5A;
-      --gold-dark:   #B8941F;
-      --dark:        #0D0D0D;
-      --cream:       #FDF6E3;
-      --cream-dark:  #F5EDD4;
-      --white:       #FFFFFF;
-      --grey-light:  #F2F2F2;
-      --grey-mid:    #AAAAAA;
-      --text:        #1A1A1A;
-      --text-muted:  #666666;
-    }
-
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Jost', sans-serif;
-      color: var(--text);
-      background: var(--cream);
-      font-size: 15px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: var(--gold-dark);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--gold);
-      text-decoration: underline;
-    }
-
-    /* ================================================
-       SCREEN WRAPPER
-    ================================================ */
-    @media screen {
-      .press-kit-wrapper {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 40px 20px 60px;
-      }
-    }
-
-    /* ================================================
-       PRINT STYLES — A4
-    ================================================ */
-    @media print {
-      @page {
-        size: A4 portrait;
-        margin: 12mm 15mm;
-      }
-
-      body {
-        background: #fff !important;
-        color: #000 !important;
-        font-size: 10pt;
-        line-height: 1.5;
-      }
-
-      .press-kit-wrapper {
-        width: 100%;
-        padding: 0;
-      }
-
-      .no-print {
-        display: none !important;
-      }
-
-      h1, h2, h3 {
-        page-break-after: avoid;
-        color: #000 !important;
-      }
-
-      .section-block {
-        page-break-inside: avoid;
-      }
-
-      .stats-grid,
-      .logos-grid,
-      .press-quotes-grid,
-      .influencer-table-wrap {
-        page-break-inside: avoid;
-      }
-
-      /* Flatten gold backgrounds for print */
-      .stats-section {
-        background: #f0f0f0 !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-
-      .section-header::after {
-        background: #000 !important;
-      }
-
-      a {
-        color: #000 !important;
-        text-decoration: none !important;
-      }
-
-      .download-btn {
-        display: none !important;
-      }
-
-      .logo-card-inner svg {
-        border: 1px solid #ccc;
-      }
-
-      footer.pk-footer {
-        border-top: 1pt solid #000 !important;
-      }
-    }
-
-    /* ================================================
-       TOP NAV BAR (screen only)
-    ================================================ */
-    .pk-topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 48px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid rgba(212,175,55,0.3);
-    }
-
-    .pk-topbar-left {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    /* ================================================
-       LOGO SVG INLINE — HEADER
-    ================================================ */
-    .logo-svg-header {
-      flex-shrink: 0;
-    }
-
-    .pk-brand-label {
-      font-family: 'Jost', sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-      display: block;
-      margin-top: 4px;
-    }
-
-    /* ================================================
-       HERO HEADER
-    ================================================ */
-    .pk-hero {
-      text-align: center;
-      padding: 56px 20px 48px;
-      border-bottom: 1px solid rgba(212,175,55,0.25);
-      margin-bottom: 56px;
-      position: relative;
-    }
-
-    .pk-hero::before {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 2px;
-      background: var(--gold);
-      margin: 0 auto 28px;
-    }
-
-    .pk-hero-eyebrow {
-      font-family: 'Jost', sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 18px;
-    }
-
-    .pk-hero-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(56px, 10vw, 96px);
-      font-weight: 300;
-      letter-spacing: 20px;
-      color: var(--dark);
-      line-height: 1;
-      margin-bottom: 20px;
-    }
-
-    .pk-hero-subtitle {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(18px, 3vw, 26px);
-      font-weight: 400;
-      font-style: italic;
-      color: var(--text-muted);
-      margin-bottom: 32px;
-    }
-
-    .pk-hero-actions {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--gold);
-      color: var(--dark);
-      font-family: 'Jost', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 14px 28px;
-      border: 2px solid var(--gold);
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-      text-decoration: none;
-    }
-
-    .btn-primary:hover {
-      background: transparent;
-      color: var(--gold);
-      text-decoration: none;
-    }
-
-    .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: transparent;
-      color: var(--dark);
-      font-family: 'Jost', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 14px 28px;
-      border: 2px solid var(--dark);
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s, border-color 0.2s;
-      text-decoration: none;
-    }
-
-    .btn-outline:hover {
-      background: var(--dark);
-      color: var(--white);
-      text-decoration: none;
-    }
-
-    /* ================================================
-       SECTION HEADERS
-    ================================================ */
-    .section-block {
-      margin-bottom: 64px;
-    }
-
-    .section-num {
-      font-family: 'Jost', sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 6px;
-      display: block;
-    }
-
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(28px, 5vw, 42px);
-      font-weight: 500;
-      color: var(--dark);
-      line-height: 1.15;
-      margin-bottom: 32px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid rgba(212,175,55,0.35);
-    }
-
-    /* ================================================
-       SECTION 1 — À PROPOS (2 colonnes)
-    ================================================ */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 48px;
-      align-items: start;
-    }
-
-    .founder-col {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .founder-photo {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      background: var(--dark);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .founder-photo-inner {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-    }
-
-    .founder-photo svg {
-      opacity: 0.55;
-    }
-
-    .founder-photo-label {
-      font-family: 'Jost', sans-serif;
-      font-size: 9px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-    }
-
-    .founder-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 20px;
-      font-weight: 600;
-      color: var(--dark);
-      margin-bottom: 2px;
-    }
-
-    .founder-role {
-      font-family: 'Jost', sans-serif;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 20px;
-    }
-
-    .founder-quote-block {
-      border-left: 3px solid var(--gold);
-      padding: 14px 18px;
-      text-align: left;
-      background: var(--cream-dark);
-    }
-
-    .founder-quote-text {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 16px;
-      font-style: italic;
-      font-weight: 400;
-      color: var(--dark);
-      line-height: 1.7;
-    }
-
-    .bio-col {}
-
-    .bio-col p {
-      font-size: 15px;
-      line-height: 1.8;
-      color: var(--text);
-      margin-bottom: 16px;
-    }
-
-    .bio-col p:last-child {
-      margin-bottom: 0;
-    }
-
-    .bio-highlight {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--dark);
-      font-family: 'Jost', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      padding: 3px 10px;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
-
-    .bio-values {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    .bio-value-item {
-      padding: 14px 16px;
-      border: 1px solid rgba(212,175,55,0.3);
-      background: var(--cream-dark);
-    }
-
-    .bio-value-label {
-      font-family: 'Jost', sans-serif;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 4px;
-    }
-
-    .bio-value-text {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 15px;
-      font-weight: 500;
-      color: var(--dark);
-    }
-
-    /* ================================================
-       SECTION 2 — CHIFFRES CLÉS (fond or)
-    ================================================ */
-    .stats-section {
-      background: var(--dark);
-      padding: 56px 48px;
-      margin-bottom: 64px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .stats-section::before {
-      content: 'BISOU';
-      position: absolute;
-      right: -10px;
-      top: 50%;
-      transform: translateY(-50%) rotate(90deg);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 120px;
-      font-weight: 700;
-      letter-spacing: 20px;
-      color: rgba(212,175,55,0.06);
-      pointer-events: none;
-      white-space: nowrap;
-    }
-
-    .stats-section .section-num {
-      color: var(--gold);
-    }
-
-    .stats-section .section-title {
-      color: var(--white);
-      border-bottom-color: rgba(212,175,55,0.3);
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 1px;
-      background: rgba(212,175,55,0.15);
-      border: 1px solid rgba(212,175,55,0.15);
-    }
-
-    .stat-cell {
-      background: var(--dark);
-      padding: 24px 20px;
-      transition: background 0.2s;
-    }
-
-    .stat-cell:hover {
-      background: #1a1a1a;
-    }
-
-    .stat-label {
-      font-family: 'Jost', sans-serif;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 8px;
-      display: block;
-    }
-
-    .stat-value {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 20px;
-      font-weight: 500;
-      color: var(--white);
-      line-height: 1.3;
-    }
-
-    .stat-sub {
-      font-family: 'Jost', sans-serif;
-      font-size: 11px;
-      color: var(--grey-mid);
-      margin-top: 4px;
-    }
-
-    /* ================================================
-       SECTION 3 — CITATIONS PRESSE
-    ================================================ */
-    .press-quotes-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .press-quote-card {
-      background: var(--white);
-      border: 1px solid rgba(212,175,55,0.2);
-      padding: 28px 24px;
-      position: relative;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .press-quote-card:hover {
-      border-color: var(--gold);
-      box-shadow: 0 4px 20px rgba(212,175,55,0.1);
-    }
-
-    .press-quote-mark {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 72px;
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 0.6;
-      display: block;
-      margin-bottom: 16px;
-      opacity: 0.4;
-    }
-
-    .press-quote-text {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 17px;
-      font-style: italic;
-      font-weight: 400;
-      color: var(--dark);
-      line-height: 1.65;
-      margin-bottom: 16px;
-    }
-
-    .press-quote-source {
-      font-family: 'Jost', sans-serif;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-    }
-
-    .press-quote-source::before {
-      content: '— ';
-    }
-
-    /* ================================================
-       SECTION 4 — LOGOS
-    ================================================ */
-    .logos-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .logo-card {
-      border: 1px solid rgba(212,175,55,0.2);
-      overflow: hidden;
-    }
-
-    .logo-card-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 24px;
-      min-height: 140px;
-    }
-
-    .logo-card--dark .logo-card-inner  { background: var(--dark); }
-    .logo-card--white .logo-card-inner { background: var(--white); border-bottom: 1px solid rgba(212,175,55,0.15); }
-    .logo-card--cream .logo-card-inner { background: var(--cream); border-bottom: 1px solid rgba(212,175,55,0.15); }
-    .logo-card--mono .logo-card-inner  { background: var(--dark); }
-
-    .logo-card-footer {
-      background: var(--cream-dark);
-      padding: 12px 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid rgba(212,175,55,0.15);
-    }
-
-    .logo-card-name {
-      font-family: 'Jost', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--dark);
-    }
-
-    .logo-card-note {
-      font-family: 'Jost', sans-serif;
-      font-size: 9px;
-      color: var(--text-muted);
-      letter-spacing: 0.5px;
-    }
-
-    .logo-download-btns {
-      display: flex;
-      gap: 6px;
-    }
-
-    .download-btn {
-      font-family: 'Jost', sans-serif;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 5px 10px;
-      border: 1px solid var(--gold);
-      color: var(--gold-dark);
-      background: transparent;
-      cursor: pointer;
-      transition: background 0.15s, color 0.15s;
-    }
-
-    .download-btn:hover {
-      background: var(--gold);
-      color: var(--dark);
-      text-decoration: none;
-    }
-
-    .logos-note {
-      margin-top: 16px;
-      font-family: 'Jost', sans-serif;
-      font-size: 11px;
-      color: var(--text-muted);
-      font-style: italic;
-      text-align: center;
-    }
-
-    /* ================================================
-       SECTION 5 — KIT INFLUENCEUR
-    ================================================ */
-    .influencer-table-wrap {
-      overflow-x: auto;
-      margin-bottom: 28px;
-    }
-
-    .influencer-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 14px;
-    }
-
-    .influencer-table thead tr {
-      background: var(--dark);
-    }
-
-    .influencer-table thead th {
-      font-family: 'Jost', sans-serif;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      padding: 14px 18px;
-      text-align: left;
-    }
-
-    .influencer-table tbody tr {
-      border-bottom: 1px solid rgba(212,175,55,0.12);
-      transition: background 0.15s;
-    }
-
-    .influencer-table tbody tr:nth-child(even) {
-      background: rgba(212,175,55,0.04);
-    }
-
-    .influencer-table tbody tr:hover {
-      background: rgba(212,175,55,0.08);
-    }
-
-    .influencer-table tbody td {
-      padding: 16px 18px;
-      vertical-align: top;
-      color: var(--text);
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    .influencer-table tbody td:first-child {
-      font-family: 'Jost', sans-serif;
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-    }
-
-    .tier-badge {
-      display: inline-block;
-      padding: 3px 8px;
-      font-family: 'Jost', sans-serif;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      background: var(--gold);
-      color: var(--dark);
-      margin-bottom: 4px;
-    }
-
-    .criteria-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 4px;
-    }
-
-    .criteria-item {
-      background: var(--cream-dark);
-      padding: 14px 16px;
-      border-left: 3px solid var(--gold);
-    }
-
-    .criteria-item-title {
-      font-family: 'Jost', sans-serif;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-      margin-bottom: 4px;
-    }
-
-    .criteria-item-text {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    .influencer-contact {
-      background: var(--dark);
-      color: var(--white);
-      padding: 24px 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .influencer-contact-text {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 20px;
-      font-style: italic;
-      color: var(--cream);
-    }
-
-    .influencer-contact-email {
-      font-family: 'Jost', sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--gold);
-      letter-spacing: 0.5px;
-    }
-
-    /* ================================================
-       SECTION 6 — INFORMATIONS LÉGALES
-    ================================================ */
-    .legal-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .legal-item {
-      background: var(--white);
-      border: 1px solid rgba(212,175,55,0.18);
-      padding: 20px 22px;
-    }
-
-    .legal-item-title {
-      font-family: 'Jost', sans-serif;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 8px;
-    }
-
-    .legal-item-text {
-      font-size: 13px;
-      line-height: 1.65;
-      color: var(--text-muted);
-    }
-
-    .legal-item-text strong {
-      color: var(--dark);
-    }
-
-    /* ================================================
-       FOOTER
-    ================================================ */
-    .pk-footer {
-      margin-top: 64px;
-      padding-top: 32px;
-      border-top: 1px solid rgba(212,175,55,0.3);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 40px;
-      align-items: start;
-    }
-
-    .pk-footer-contacts {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 28px;
-    }
-
-    .pk-footer-contact-group {}
-
-    .pk-footer-contact-label {
-      font-family: 'Jost', sans-serif;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 4px;
-    }
-
-    .pk-footer-contact-value {
-      font-size: 14px;
-      color: var(--dark);
-      font-weight: 500;
-    }
-
-    .pk-footer-contact-value a {
-      color: var(--dark);
-    }
-
-    .pk-footer-right {
-      text-align: right;
-    }
-
-    .pk-footer-logo {
-      margin-bottom: 8px;
-    }
-
-    .pk-footer-copy {
-      font-family: 'Jost', sans-serif;
-      font-size: 10px;
-      color: var(--text-muted);
-      letter-spacing: 0.5px;
-      line-height: 1.8;
-    }
-
-    /* ================================================
-       DIVIDER
-    ================================================ */
-    .gold-divider {
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--gold), transparent);
-      margin: 48px 0;
-    }
-
-    /* ================================================
-       RESPONSIVE
-    ================================================ */
-    @media screen and (max-width: 768px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .founder-col {
-        max-width: 280px;
-        margin: 0 auto;
-      }
-
-      .press-quotes-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .logos-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .legal-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .pk-footer {
-        grid-template-columns: 1fr;
-      }
-
-      .pk-footer-right {
-        text-align: left;
-      }
-
-      .stats-section {
-        padding: 36px 24px;
-      }
-
-      .stats-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .bio-values {
-        grid-template-columns: 1fr;
-      }
-
-      .criteria-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .pk-topbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      .pk-hero-title {
-        letter-spacing: 10px;
-      }
-
-      .stats-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .influencer-contact {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BISOU Bijoux — Dossier de Presse 2026. Bijoux plaqués or 18K, acier chirurgical 316L. Marrakech, Maroc. COD partout au Maroc.">
+<title>BISOU — Dossier de Presse 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   BISOU — DOSSIER DE PRESSE 2026
+   Design System: Dark Luxury × Gold
+   ============================================================ */
+
+:root {
+  --black:      #0D0D0D;
+  --gold:       #D4AF37;
+  --gold-light: #F5E6A3;
+  --gold-mid:   #C9A84C;
+  --gold-dark:  #A8862E;
+  --cream:      #FDF6E3;
+  --rose:       #F2D7D5;
+  --green-wa:   #25D366;
+  --grey-soft:  #1A1A1A;
+  --card:       #111111;
+  --border:     rgba(212,175,55,0.25);
+  --text-muted: #888888;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Jost', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: #E8E0CC;
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; }
+h1 { font-size: clamp(3rem, 10vw, 6rem); }
+h2 { font-size: clamp(1.8rem, 5vw, 3rem); }
+h3 { font-size: clamp(1.3rem, 3vw, 1.8rem); }
+a { color: inherit; text-decoration: none; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes pulse-wa {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+  70%       { box-shadow: 0 0 0 14px transparent; }
+}
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212,175,55,0.4); }
+  70%       { box-shadow: 0 0 0 14px transparent; }
+}
+@keyframes radial-glow {
+  0%, 100% { opacity: 0.35; }
+  50%       { opacity: 0.55; }
+}
+
+/* ── UTILITIES ── */
+.gold-text {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold-mid) 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease infinite;
+}
+.center { text-align: center; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.section-pad { padding: 90px 24px; }
+.animate { opacity: 0; animation: fadeInUp 0.7s ease forwards; }
+
+/* ── STICKY HEADER ── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.header-logo {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+.header-subtitle {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.header-back {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.header-back:hover { color: var(--gold); }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 100px 24px;
+}
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(212,175,55,0.12) 0%, transparent 70%);
+  animation: radial-glow 5s ease-in-out infinite;
+  pointer-events: none;
+}
+.hero-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: block;
+}
+.hero h1 {
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.hero-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  color: var(--cream);
+  display: block;
+  margin-bottom: 24px;
+}
+.hero-tagline {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 44px;
+}
+.btn-gold-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 14px 32px;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  font-family: var(--font-body);
+  font-weight: 400;
+  cursor: pointer;
+}
+.btn-gold-outline:hover {
+  background: var(--gold);
+  color: var(--black);
+  transform: translateY(-2px);
+}
+
+/* ── STATS SECTION ── */
+.stats-section {
+  background: var(--grey-soft);
+  padding: 70px 24px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 36px 24px;
+  text-align: center;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.stat-card:hover {
+  border-color: rgba(212,175,55,0.6);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(212,175,55,0.08);
+}
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 8px;
+}
+.stat-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: block;
+}
+.stat-sublabel {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  display: block;
+  font-style: italic;
+  font-family: var(--font-display);
+}
+
+/* ── ABOUT SECTION ── */
+.about-section {
+  padding: 90px 24px;
+  background: var(--black);
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.about-visual {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  aspect-ratio: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+.monogram-b {
+  font-family: var(--font-display);
+  font-size: 8rem;
+  font-weight: 300;
+  color: var(--gold);
+  opacity: 0.4;
+  line-height: 1;
+}
+.about-visual-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.section-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 16px;
+}
+.about-text h2 { margin-bottom: 24px; }
+.about-text p {
+  color: #BBAA99;
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+.value-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 16px;
+  text-align: center;
+}
+.value-icon {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 10px;
+  color: var(--gold);
+}
+.value-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--cream);
+  display: block;
+  margin-bottom: 6px;
+}
+.value-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── PRESS QUOTES ── */
+.press-section {
+  background: var(--grey-soft);
+  padding: 80px 24px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+}
+.quote-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 36px 28px;
+  position: relative;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.quote-card:hover {
+  border-color: rgba(212,175,55,0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(212,175,55,0.07);
+}
+.quote-mark {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  line-height: 0.6;
+  color: var(--gold);
+  opacity: 0.4;
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+.quote-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--cream);
+  margin-bottom: 24px;
+}
+.quote-source {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.8;
+}
+
+/* ── COLLECTIONS ── */
+.collections-section {
+  padding: 90px 24px;
+  background: var(--black);
+}
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+}
+.collection-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.collection-card:hover {
+  border-color: rgba(212,175,55,0.55);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(212,175,55,0.07);
+}
+.collection-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.collection-name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--cream);
+}
+.collection-meta {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+.collection-price {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--gold);
+  display: inline-block;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+}
+
+/* ── VISUAL IDENTITY ── */
+.identity-section {
+  background: var(--grey-soft);
+  padding: 90px 24px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+}
+.logo-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.3s;
+}
+.logo-card:hover { border-color: rgba(212,175,55,0.6); }
+.logo-card--dark-gold { background: var(--black); }
+.logo-card--dark-cream { background: var(--card); }
+.logo-card--light-dark { background: var(--cream); }
+.logo-card--monogram  { background: var(--black); }
+
+.logo-display-gold {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+}
+.logo-display-cream {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--cream);
+}
+.logo-display-dark {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--black);
+}
+.logo-display-monogram {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--gold);
+}
+.logo-variant-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.logo-variant-label--on-light { color: #888; }
+
+/* ── COLORS ── */
+.colors-section {
+  max-width: 1100px;
+  margin: 60px auto 0;
+}
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+.swatch {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.swatch-color {
+  height: 80px;
+}
+.swatch-info {
+  background: var(--card);
+  padding: 12px 14px;
+}
+.swatch-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+  color: var(--cream);
+}
+.swatch-hex {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+/* ── TYPOGRAPHY SPECIMEN ── */
+.typo-section {
+  max-width: 1100px;
+  margin: 60px auto 0;
+}
+.typo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+.typo-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 32px;
+}
+.font-specimen-serif {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.font-specimen-sans {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.font-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.font-detail {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
+/* ── INFLUENCEURS ── */
+.influencers-section {
+  padding: 90px 24px;
+  background: var(--black);
+}
+.press-table {
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.press-table thead tr {
+  background: linear-gradient(135deg, rgba(212,175,55,0.15) 0%, rgba(212,175,55,0.05) 100%);
+  border-bottom: 1px solid var(--border);
+}
+.press-table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 400;
+}
+.press-table td {
+  padding: 16px 20px;
+  font-size: 0.85rem;
+  color: #BBAA99;
+  border-top: 1px solid rgba(212,175,55,0.08);
+}
+.press-table tbody tr:nth-child(odd) { background: var(--card); }
+.press-table tbody tr:nth-child(even) { background: #161616; }
+.press-table tbody tr:hover { background: rgba(212,175,55,0.04); }
+.tier-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  color: var(--gold);
+}
+
+/* ── CONTACT ── */
+.contact-section {
+  background: var(--grey-soft);
+  padding: 80px 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.contact-email {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--gold);
+  display: block;
+  margin: 24px 0;
+  letter-spacing: 0.05em;
+}
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--green-wa);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  transition: transform 0.3s, background 0.3s;
+  animation: pulse-wa 2.5s ease-in-out infinite;
+  margin: 16px 0;
+}
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+  animation: none;
+  box-shadow: 0 8px 24px rgba(37,211,102,0.35);
+}
+.response-time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-top: 20px;
+}
+
+/* ── SECTION TITLE COMMON ── */
+.section-title-block {
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section-title-block h2 { margin-bottom: 14px; }
+.section-title-block p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ── DIVIDER ── */
+.gold-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto;
+  opacity: 0.5;
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  padding: 40px 24px;
+  text-align: center;
+}
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  display: block;
+  margin-bottom: 14px;
+}
+.footer-copyright {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-visual { aspect-ratio: 3/2; }
+  .press-grid { grid-template-columns: 1fr; }
+  .collections-grid { grid-template-columns: repeat(2, 1fr); }
+  .logo-grid { grid-template-columns: repeat(2, 1fr); }
+  .palette-grid { grid-template-columns: repeat(2, 1fr); }
+  .typo-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 540px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .collections-grid { grid-template-columns: 1fr; }
+  .hero { min-height: 70vh; }
+}
+</style>
 </head>
 <body>
 
-<div class="press-kit-wrapper">
-
-  <!-- ================================================
-       TOP BAR
-  ================================================ -->
-  <div class="pk-topbar no-print">
-    <div class="pk-topbar-left">
-      <!-- SVG Logo small -->
-      <svg class="logo-svg-header" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="44" height="44" fill="#0D0D0D"/>
-        <text x="22" y="31" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" font-weight="700" fill="#D4AF37" text-anchor="middle" letter-spacing="1">B</text>
-      </svg>
-      <div>
-        <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;letter-spacing:6px;color:#0D0D0D;">BISOU</span>
-        <span class="pk-brand-label">Dossier de Presse 2026</span>
-      </div>
+<!-- ══════════════════════════════════
+     STICKY HEADER
+══════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div>
+      <span class="header-logo gold-text">BISOU</span>
     </div>
-    <div style="display:flex;gap:10px;align-items:center;">
-      <span style="font-size:11px;color:#AAAAAA;letter-spacing:0.5px;">Mars 2026</span>
-      <button class="btn-primary" onclick="window.print()" style="padding:10px 20px;font-size:10px;">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-        Télécharger PDF
-      </button>
+    <div style="text-align:center;">
+      <span class="header-subtitle">Dossier de Presse 2026</span>
+    </div>
+    <a href="index.html" class="header-back">← Retour</a>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div style="position:relative; z-index:1;" class="animate">
+    <span class="hero-eyebrow">Dossier de Presse</span>
+    <h1 class="gold-text">BISOU</h1>
+    <span class="hero-italic">L'or accessible, enfin</span>
+    <p class="hero-tagline">Bijoux plaqués or 18K &middot; Marrakech &middot; Tout le Maroc</p>
+    <a href="#" class="btn-gold-outline" onclick="return false;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Télécharger le Kit Presse (PDF)
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     STATS
+══════════════════════════════════ -->
+<section class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-card animate">
+      <span class="stat-number gold-text">22</span>
+      <span class="stat-label">Références</span>
+      <span class="stat-sublabel">6 Collections distinctes</span>
+    </div>
+    <div class="stat-card animate" style="animation-delay:0.1s">
+      <span class="stat-number gold-text">139–599</span>
+      <span class="stat-label">MAD</span>
+      <span class="stat-sublabel">Accessible luxury</span>
+    </div>
+    <div class="stat-card animate" style="animation-delay:0.2s">
+      <span class="stat-number gold-text">COD</span>
+      <span class="stat-label">100% paiement livraison</span>
+      <span class="stat-sublabel">Aucune carte bancaire requise</span>
+    </div>
+    <div class="stat-card animate" style="animation-delay:0.3s">
+      <span class="stat-number gold-text">48–72h</span>
+      <span class="stat-label">Délai livraison</span>
+      <span class="stat-sublabel">Partout au Maroc</span>
     </div>
   </div>
+</section>
 
-  <!-- ================================================
-       HERO
-  ================================================ -->
-  <header class="pk-hero">
-    <p class="pk-hero-eyebrow">Dossier de Presse — 2026</p>
-
-    <!-- SVG Logo centré -->
-    <div style="display:flex;justify-content:center;margin-bottom:24px;">
-      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="80" height="80" fill="#0D0D0D"/>
-        <text x="40" y="57" font-family="'Cormorant Garamond', Georgia, serif" font-size="42" font-weight="700" fill="#D4AF37" text-anchor="middle" letter-spacing="2">B</text>
-      </svg>
+<!-- ══════════════════════════════════
+     À PROPOS DE BISOU
+══════════════════════════════════ -->
+<section class="about-section">
+  <div class="about-grid container">
+    <div class="about-visual animate">
+      <span class="monogram-b">B</span>
+      <span class="about-visual-label">BISOU · Marrakech</span>
     </div>
-
-    <h1 class="pk-hero-title">BISOU</h1>
-    <p class="pk-hero-subtitle">L'or accessible, enfin</p>
-
-    <div class="pk-hero-actions no-print">
-      <a href="#" class="btn-primary" onclick="window.print();return false;">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Télécharger PDF
-      </a>
-      <a href="mailto:contact@bisou-or.ma" class="btn-outline">
-        Contacter la presse
-      </a>
-    </div>
-  </header>
-
-
-  <!-- ================================================
-       SECTION 1 — À PROPOS DE BISOU
-  ================================================ -->
-  <section class="section-block">
-    <span class="section-num">01 — À propos</span>
-    <h2 class="section-title">À propos de BISOU</h2>
-
-    <div class="about-grid">
-      <!-- Colonne gauche : fondatrice -->
-      <div class="founder-col">
-        <div class="founder-photo">
-          <div class="founder-photo-inner">
-            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="36" cy="26" r="16" fill="rgba(212,175,55,0.25)" stroke="rgba(212,175,55,0.5)" stroke-width="1.5"/>
-              <path d="M8 68c0-15.464 12.536-28 28-28s28 12.536 28 28" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" fill="none"/>
-            </svg>
-            <span class="founder-photo-label">Photo Fondatrice</span>
-          </div>
+    <div class="about-text animate" style="animation-delay:0.15s">
+      <span class="section-eyebrow">À Propos de BISOU</span>
+      <h2>La marque qui a <em>réinventé</em> l'or au Maroc</h2>
+      <p>BISOU est née d'une obsession simple : rendre le luxe accessible à la femme marocaine. Trop longtemps, les bijoux dorés étaient synonymes d'un budget inaccessible ou d'une qualité douteuse. BISOU change la donne.</p>
+      <p>Chaque pièce est conçue en acier inoxydable 316L hypoallergénique, plaqué or 18 carats. Le résultat : l'éclat d'une joaillerie de luxe, à un prix qui respecte la réalité du pouvoir d'achat marocain.</p>
+      <p>Le modèle COD (contre-remboursement) n'est pas un compromis — c'est notre philosophie. La cliente paie quand elle reçoit. La confiance d'abord.</p>
+      <div class="values-grid">
+        <div class="value-card">
+          <span class="value-icon">◈</span>
+          <span class="value-name">Qualité</span>
+          <span class="value-desc">Acier 316L + plaqué or 18K, certifié hypoallergénique</span>
         </div>
-        <p class="founder-name">[Votre Nom]</p>
-        <p class="founder-role">Fondatrice &amp; Creative Director</p>
-        <div class="founder-quote-block">
-          <p class="founder-quote-text">
-            "J'ai créé BISOU parce que toutes les femmes méritent de briller, peu importe leur budget."
-          </p>
+        <div class="value-card">
+          <span class="value-icon">◇</span>
+          <span class="value-name">Accessibilité</span>
+          <span class="value-desc">De 139 MAD. COD partout au Maroc, sans carte bancaire</span>
         </div>
-      </div>
-
-      <!-- Colonne droite : bio -->
-      <div class="bio-col">
-        <span class="bio-highlight">Née à Marrakech, 2026</span>
-
-        <p>
-          BISOU est née d'une conviction simple mais radicale : chaque femme mérite de briller, peu importe son budget. Fondée à Marrakech en 2026, la marque s'est construite sur un constat partagé par des millions de Marocaines — les bijoux de qualité restaient hors de portée, réservés à une élite ou sacrifiés sur l'autel du prix.
-        </p>
-
-        <p>
-          Notre réponse : l'acier inoxydable 316L plaqué or, un matériau premium utilisé dans la joaillerie haut de gamme internationale, rendu accessible à toutes. Chaque pièce BISOU est anti-allergique, sans nickel, sans plomb — pensée pour les peaux les plus sensibles et les femmes les plus actives.
-        </p>
-
-        <p>
-          La vision de BISOU est celle d'une démocratisation réelle du bijou de qualité au Maroc. Non pas un compromis, non pas une imitation — mais une vraie alternative : des bijoux beaux, durables, garantis 6 mois, livrés partout au Maroc en cash on delivery.
-        </p>
-
-        <p>
-          <strong>Le COD, c'est notre philosophie.</strong> Nous croyons que la confiance se gagne, pas se paie d'avance. C'est pourquoi BISOU livre d'abord, et vous payez seulement quand vous tenez votre bijou entre vos mains, quand vous êtes certaine qu'il vous convient.
-        </p>
-
-        <p>
-          De Marrakech à Casablanca, d'Agadir à Oujda — BISOU livre partout au Maroc, en 24h pour Marrakech et 3 à 5 jours pour le reste du pays. Parce que l'or accessible ne doit connaître aucune frontière.
-        </p>
-
-        <div class="bio-values">
-          <div class="bio-value-item">
-            <p class="bio-value-label">Vision</p>
-            <p class="bio-value-text">Démocratiser le bijou de qualité au Maroc</p>
-          </div>
-          <div class="bio-value-item">
-            <p class="bio-value-label">Mission</p>
-            <p class="bio-value-text">Acier 316L, anti-allergique, accessible</p>
-          </div>
-          <div class="bio-value-item">
-            <p class="bio-value-label">Valeur clé</p>
-            <p class="bio-value-text">Confiance — COD uniquement</p>
-          </div>
-          <div class="bio-value-item">
-            <p class="bio-value-label">Garantie</p>
-            <p class="bio-value-text">6 mois pièces et main d'œuvre</p>
-          </div>
+        <div class="value-card">
+          <span class="value-icon">◉</span>
+          <span class="value-name">Confiance</span>
+          <span class="value-desc">Paiement à la livraison. Tu aimes, tu paies. Sinon, on reprend.</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <div class="gold-divider"></div>
-
-  <!-- ================================================
-       SECTION 2 — CHIFFRES CLÉS
-  ================================================ -->
-  <section class="stats-section section-block">
-    <span class="section-num">02 — Chiffres clés</span>
-    <h2 class="section-title">BISOU en chiffres</h2>
-
-    <div class="stats-grid">
-      <div class="stat-cell">
-        <span class="stat-label">Fondée</span>
-        <div class="stat-value">2026</div>
-        <div class="stat-sub">Marrakech, Maroc</div>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-label">Références</span>
-        <div class="stat-value">20+</div>
-        <div class="stat-sub">Bijoux & sets</div>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-label">Prix</span>
-        <div class="stat-value">59 — 449 MAD</div>
-        <div class="stat-sub">Packs dès 159 MAD</div>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-label">Matière</span>
-        <div class="stat-value">Acier 316L</div>
-        <div class="stat-sub">Plaqué or 18 carats</div>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-label">Garantie</span>
-        <div class="stat-value">6 mois</div>
-        <div class="stat-sub">Pièces & main d'œuvre</div>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-label">Livraison</span>
-        <div class="stat-value">COD</div>
-        <div class="stat-sub">Tout le Maroc</div>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-label">Délai Marrakech</span>
-        <div class="stat-value">24h</div>
-        <div class="stat-sub">Livraison express</div>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-label">Délai National</span>
-        <div class="stat-value">3 — 5 jours</div>
-        <div class="stat-sub">Partout au Maroc</div>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-label">Cible</span>
-        <div class="stat-value">Femmes 18-45</div>
-        <div class="stat-sub">Maroc entier</div>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-label">Canaux</span>
-        <div class="stat-value">WhatsApp</div>
-        <div class="stat-sub">Instagram · TikTok</div>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-label">Packs disponibles</span>
-        <div class="stat-value">159 / 229</div>
-        <div class="stat-sub">279 / 449 MAD</div>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-label">Plaquage or</span>
-        <div class="stat-value">18 carats</div>
-        <div class="stat-sub">Min. 3 microns</div>
-      </div>
+<!-- ══════════════════════════════════
+     CITATIONS PRESSE
+══════════════════════════════════ -->
+<section class="press-section">
+  <div class="section-title-block animate">
+    <span class="section-eyebrow">Ils parlent de BISOU</span>
+    <h2>Citations <em>Presse</em></h2>
+    <div class="gold-divider" style="margin-top:20px;"></div>
+  </div>
+  <div class="press-grid">
+    <div class="quote-card animate">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">BISOU réussit là où beaucoup ont échoué : proposer une esthétique joaillerie avec les codes du luxe, à un prix démocratique. Une marque à suivre de très près.</p>
+      <span class="quote-source">Femme du Maroc — Janvier 2025</span>
     </div>
-  </section>
-
-  <div class="gold-divider"></div>
-
-  <!-- ================================================
-       SECTION 3 — CITATIONS PRESSE
-  ================================================ -->
-  <section class="section-block">
-    <span class="section-num">03 — Regards presse</span>
-    <h2 class="section-title">Ce qu'ils disent de BISOU</h2>
-
-    <div class="press-quotes-grid">
-      <div class="press-quote-card">
-        <span class="press-quote-mark">&ldquo;</span>
-        <p class="press-quote-text">
-          BISOU réinvente le bijou accessible au Maroc — une promesse de qualité tenue à chaque livraison.
-        </p>
-        <p class="press-quote-source">Tendances Magazine</p>
-      </div>
-
-      <div class="press-quote-card">
-        <span class="press-quote-mark">&ldquo;</span>
-        <p class="press-quote-text">
-          La marque qui fait briller les femmes de Marrakech à Casablanca, sans compromis sur la qualité.
-        </p>
-        <p class="press-quote-source">Elle Maroc</p>
-      </div>
-
-      <div class="press-quote-card">
-        <span class="press-quote-mark">&ldquo;</span>
-        <p class="press-quote-text">
-          Qualité premium, prix défiant toute concurrence — BISOU prouve que l'accessibilité et l'excellence peuvent coexister.
-        </p>
-        <p class="press-quote-source">L'Économiste</p>
-      </div>
-
-      <div class="press-quote-card">
-        <span class="press-quote-mark">&ldquo;</span>
-        <p class="press-quote-text">
-          Le WhatsApp-commerce de la bijouterie marocaine — BISOU redéfinit la relation client dans le secteur.
-        </p>
-        <p class="press-quote-source">Startup Maroc</p>
-      </div>
+    <div class="quote-card animate" style="animation-delay:0.1s">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">Le pari audacieux de BISOU, c'est de croire que la femme marocaine mérite le luxe accessible, livré chez elle, sans friction bancaire. Et ça marche.</p>
+      <span class="quote-source">Elle Maroc — Printemps 2025</span>
     </div>
-  </section>
-
-  <div class="gold-divider"></div>
-
-  <!-- ================================================
-       SECTION 4 — TÉLÉCHARGEMENTS LOGOS
-  ================================================ -->
-  <section class="section-block">
-    <span class="section-num">04 — Assets visuels</span>
-    <h2 class="section-title">Téléchargements logos</h2>
-
-    <div class="logos-grid">
-
-      <!-- Logo principal (fond noir, texte or) -->
-      <div class="logo-card logo-card--dark">
-        <div class="logo-card-inner">
-          <svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <text x="100" y="45" font-family="'Cormorant Garamond', Georgia, serif" font-size="48" font-weight="600" fill="#D4AF37" text-anchor="middle" letter-spacing="16">BISOU</text>
-          </svg>
-        </div>
-        <div class="logo-card-footer">
-          <div>
-            <div class="logo-card-name">Logo Principal</div>
-            <div class="logo-card-note">Fond sombre · Or</div>
-          </div>
-          <div class="logo-download-btns no-print">
-            <a href="#" class="download-btn">SVG</a>
-            <a href="#" class="download-btn">PNG</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Logo sur fond blanc -->
-      <div class="logo-card logo-card--white">
-        <div class="logo-card-inner">
-          <svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <text x="100" y="45" font-family="'Cormorant Garamond', Georgia, serif" font-size="48" font-weight="600" fill="#0D0D0D" text-anchor="middle" letter-spacing="16">BISOU</text>
-          </svg>
-        </div>
-        <div class="logo-card-footer">
-          <div>
-            <div class="logo-card-name">Logo sur Blanc</div>
-            <div class="logo-card-note">Fond blanc · Noir</div>
-          </div>
-          <div class="logo-download-btns no-print">
-            <a href="#" class="download-btn">SVG</a>
-            <a href="#" class="download-btn">PNG</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Monogramme B -->
-      <div class="logo-card logo-card--mono">
-        <div class="logo-card-inner">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="80" height="80" fill="#0D0D0D"/>
-            <text x="40" y="57" font-family="'Cormorant Garamond', Georgia, serif" font-size="48" font-weight="700" fill="#D4AF37" text-anchor="middle">B</text>
-          </svg>
-        </div>
-        <div class="logo-card-footer">
-          <div>
-            <div class="logo-card-name">Monogramme "B"</div>
-            <div class="logo-card-note">Icône · Favicon</div>
-          </div>
-          <div class="logo-download-btns no-print">
-            <a href="#" class="download-btn">SVG</a>
-            <a href="#" class="download-btn">PNG</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Version cream -->
-      <div class="logo-card logo-card--cream">
-        <div class="logo-card-inner">
-          <svg width="220" height="70" viewBox="0 0 220 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <text x="110" y="40" font-family="'Cormorant Garamond', Georgia, serif" font-size="40" font-weight="600" fill="#B8941F" text-anchor="middle" letter-spacing="14">BISOU</text>
-            <text x="110" y="60" font-family="'Jost', Arial, sans-serif" font-size="9" font-weight="500" fill="#888" text-anchor="middle" letter-spacing="5">L'or accessible, enfin</text>
-          </svg>
-        </div>
-        <div class="logo-card-footer">
-          <div>
-            <div class="logo-card-name">Version Cream</div>
-            <div class="logo-card-note">Avec baseline · Fond clair</div>
-          </div>
-          <div class="logo-download-btns no-print">
-            <a href="#" class="download-btn">SVG</a>
-            <a href="#" class="download-btn">PNG</a>
-          </div>
-        </div>
-      </div>
-
+    <div class="quote-card animate" style="animation-delay:0.2s">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">L'unboxing BISOU est une expérience en soi. Boîte noire laquée, ruban doré, carte manuscrite… chaque détail dit que la cliente compte. Un vrai luxe marocain.</p>
+      <span class="quote-source">Tendances Maroc — Été 2025</span>
     </div>
+  </div>
+</section>
 
-    <p class="logos-note">Pour utilisation presse uniquement — toute reproduction commerciale soumise à autorisation préalable écrite.</p>
-  </section>
+<!-- ══════════════════════════════════
+     COLLECTIONS
+══════════════════════════════════ -->
+<section class="collections-section">
+  <div class="section-title-block animate">
+    <span class="section-eyebrow">Catalogue 2026</span>
+    <h2>Nos <em>6 Collections</em></h2>
+    <p>22 références soigneusement sélectionnées pour sublimer chaque style marocain.</p>
+    <div class="gold-divider" style="margin-top:20px;"></div>
+  </div>
+  <div class="collections-grid">
 
-  <div class="gold-divider"></div>
-
-  <!-- ================================================
-       SECTION 5 — KIT INFLUENCEUR
-  ================================================ -->
-  <section class="section-block">
-    <span class="section-num">05 — Partenariats</span>
-    <h2 class="section-title">Kit Influenceur</h2>
-
-    <div class="influencer-table-wrap">
-      <table class="influencer-table">
-        <thead>
-          <tr>
-            <th>Tier</th>
-            <th>Abonnés</th>
-            <th>Rémunération</th>
-            <th>Livrables attendus</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <span class="tier-badge">Nano</span>
-            </td>
-            <td>1 000 — 10 000</td>
-            <td>2 à 3 produits offerts<br><span style="font-size:12px;color:#AAAAAA;">Valeur 300–700 MAD</span></td>
-            <td>
-              2 posts Instagram<br>
-              3 stories<br>
-              <span style="font-size:12px;color:#AAAAAA;">Mention @bisoumaroc obligatoire</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span class="tier-badge">Micro</span>
-            </td>
-            <td>10 000 — 100 000</td>
-            <td>500 — 1 500 MAD<br>+ produits offerts</td>
-            <td>
-              3 posts Instagram<br>
-              5 stories<br>
-              1 Reel / TikTok<br>
-              <span style="font-size:12px;color:#AAAAAA;">Code promo unique</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span class="tier-badge">Macro</span>
-            </td>
-            <td>100 000+</td>
-            <td>2 000 — 5 000 MAD<br>+ produits offerts</td>
-            <td>
-              5 posts Instagram<br>
-              10 stories<br>
-              3 Reels / TikToks<br>
-              <span style="font-size:12px;color:#AAAAAA;">Campagne sur mesure</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div style="margin-bottom:24px;">
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;margin-bottom:14px;color:var(--dark);">Critères de sélection</h3>
-      <div class="criteria-grid">
-        <div class="criteria-item">
-          <p class="criteria-item-title">Audience</p>
-          <p class="criteria-item-text">Minimum 60% de followers basés au Maroc, profil féminin prioritaire 18–45 ans.</p>
-        </div>
-        <div class="criteria-item">
-          <p class="criteria-item-title">Engagement</p>
-          <p class="criteria-item-text">Taux d'engagement minimum 3% (tous tiers). Authenticité vérifiée, pas d'achat de followers.</p>
-        </div>
-        <div class="criteria-item">
-          <p class="criteria-item-title">Alignement</p>
-          <p class="criteria-item-text">Univers mode, lifestyle, beauté ou lifestyle marocain. Valeurs positives et inclusives.</p>
-        </div>
-        <div class="criteria-item">
-          <p class="criteria-item-title">Exclusivité</p>
-          <p class="criteria-item-text">Aucune collaboration active avec une bijouterie concurrente durant la période du partenariat.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="influencer-contact">
-      <p class="influencer-contact-text">Vous souhaitez collaborer avec BISOU ?</p>
-      <div>
-        <p style="font-size:11px;color:#AAAAAA;font-family:'Jost',sans-serif;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">Contact collaborations</p>
-        <p class="influencer-contact-email">contact@bisou-or.ma</p>
-        <p style="font-size:12px;color:#AAAAAA;margin-top:4px;font-family:'Jost',sans-serif;">WhatsApp : +212 6XX XXX XXX</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="gold-divider"></div>
-
-  <!-- ================================================
-       SECTION 6 — INFORMATIONS LÉGALES
-  ================================================ -->
-  <section class="section-block">
-    <span class="section-num">06 — Mentions légales</span>
-    <h2 class="section-title">Informations légales &amp; produit</h2>
-
-    <div class="legal-grid">
-      <div class="legal-item">
-        <p class="legal-item-title">Matière principale</p>
-        <p class="legal-item-text"><strong>Acier inoxydable 316L</strong> — sans nickel, sans plomb, sans cadmium. Grade chirurgical, hypoallergénique certifié. Idéal peaux sensibles.</p>
-      </div>
-      <div class="legal-item">
-        <p class="legal-item-title">Plaquage or</p>
-        <p class="legal-item-text"><strong>18 carats</strong> — épaisseur minimum <strong>3 microns</strong>. Procédé galvanique haute qualité pour une durabilité optimale.</p>
-      </div>
-      <div class="legal-item">
-        <p class="legal-item-title">Garantie</p>
-        <p class="legal-item-text"><strong>6 mois</strong> pièces et main d'œuvre contre tout défaut de fabrication. Remplacement ou remboursement selon le cas.</p>
-      </div>
-      <div class="legal-item">
-        <p class="legal-item-title">Politique de retours</p>
-        <p class="legal-item-text"><strong>14 jours</strong> calendaires après réception. Produit dans son état d'origine, non utilisé, emballage intact requis.</p>
-      </div>
-      <div class="legal-item">
-        <p class="legal-item-title">Mode de paiement</p>
-        <p class="legal-item-text"><strong>Cash on Delivery (COD) uniquement</strong> — paiement exclusivement à la réception de la commande. Aucun prépaiement exigé.</p>
-      </div>
-      <div class="legal-item">
-        <p class="legal-item-title">Informations société</p>
-        <p class="legal-item-text">
-          <strong>Registre de Commerce (RC) :</strong> [À compléter]<br>
-          <strong>ICE :</strong> [À compléter]<br>
-          <strong>Siège social :</strong> Marrakech, Maroc
-        </p>
-      </div>
-      <div class="legal-item">
-        <p class="legal-item-title">Entretien recommandé</p>
-        <p class="legal-item-text">Éviter contact prolongé avec eau chlorée, parfums et cosmétiques. Nettoyer avec chiffon doux et sec. Stocker séparément, à l'abri de l'humidité.</p>
-      </div>
-      <div class="legal-item">
-        <p class="legal-item-title">Propriété intellectuelle</p>
-        <p class="legal-item-text">Tous les visuels, logos et contenus du présent dossier sont la propriété exclusive de BISOU. Reproduction autorisée pour usage presse uniquement, avec mention de la source.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================================================
-       FOOTER
-  ================================================ -->
-  <footer class="pk-footer">
-    <div class="pk-footer-contacts">
-      <div class="pk-footer-contact-group">
-        <p class="pk-footer-contact-label">Contact Presse</p>
-        <p class="pk-footer-contact-value"><a href="mailto:contact@bisou-or.ma">contact@bisou-or.ma</a></p>
-      </div>
-      <div class="pk-footer-contact-group">
-        <p class="pk-footer-contact-label">WhatsApp</p>
-        <p class="pk-footer-contact-value"><a href="https://wa.me/2126XXXXXXXX">+212 6XX XXX XXX</a></p>
-      </div>
-      <div class="pk-footer-contact-group">
-        <p class="pk-footer-contact-label">Adresse</p>
-        <p class="pk-footer-contact-value">Marrakech, Maroc</p>
-      </div>
-      <div class="pk-footer-contact-group">
-        <p class="pk-footer-contact-label">Instagram</p>
-        <p class="pk-footer-contact-value"><a href="https://instagram.com/bisoumaroc">@bisoumaroc</a></p>
-      </div>
-      <div class="pk-footer-contact-group">
-        <p class="pk-footer-contact-label">TikTok</p>
-        <p class="pk-footer-contact-value"><a href="#">@bisoumaroc</a></p>
-      </div>
-    </div>
-
-    <div class="pk-footer-right">
-      <div class="pk-footer-logo">
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="52" height="52" fill="#0D0D0D"/>
-          <text x="26" y="38" font-family="'Cormorant Garamond', Georgia, serif" font-size="28" font-weight="700" fill="#D4AF37" text-anchor="middle">B</text>
+    <div class="collection-card animate">
+      <div class="collection-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="14" stroke="#D4AF37" stroke-width="1.2" opacity="0.5"/>
+          <circle cx="20" cy="20" r="9" stroke="#D4AF37" stroke-width="0.8"/>
+          <circle cx="20" cy="8" r="2.5" fill="#D4AF37" opacity="0.7"/>
         </svg>
       </div>
-      <p class="pk-footer-copy">
-        &copy; 2026 BISOU — Tous droits réservés<br>
-        Dossier de Presse · Mars 2026<br>
-        Marrakech, Maroc
-      </p>
+      <span class="collection-name">Colliers</span>
+      <span class="collection-meta">7 modèles · Chaînes, pendentifs, ras-du-cou<br>Longueurs 40–60 cm ajustables</span>
+      <span class="collection-price">139–399 MAD</span>
     </div>
-  </footer>
 
-</div><!-- /.press-kit-wrapper -->
+    <div class="collection-card animate" style="animation-delay:0.05s">
+      <div class="collection-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="10" stroke="#D4AF37" stroke-width="1.2" opacity="0.5"/>
+          <circle cx="20" cy="20" r="5" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+          <circle cx="20" cy="20" r="2" fill="#D4AF37" opacity="0.6"/>
+        </svg>
+      </div>
+      <span class="collection-name">Bagues</span>
+      <span class="collection-meta">5 modèles · Solitaires, anneaux, chevalières<br>Tailles S–L ajustables</span>
+      <span class="collection-price">139–279 MAD</span>
+    </div>
+
+    <div class="collection-card animate" style="animation-delay:0.1s">
+      <div class="collection-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <ellipse cx="20" cy="16" rx="5" ry="8" stroke="#D4AF37" stroke-width="1.2" opacity="0.5"/>
+          <line x1="20" y1="8" x2="20" y2="4" stroke="#D4AF37" stroke-width="1"/>
+          <circle cx="20" cy="3.5" r="1.5" fill="#D4AF37" opacity="0.7"/>
+        </svg>
+      </div>
+      <span class="collection-name">Boucles</span>
+      <span class="collection-meta">4 modèles · Créoles, puces, pendantes<br>Pour oreilles percées, système sécurisé</span>
+      <span class="collection-price">159–299 MAD</span>
+    </div>
+
+    <div class="collection-card animate" style="animation-delay:0.15s">
+      <div class="collection-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M8 20 Q14 10 20 20 Q26 30 32 20" stroke="#D4AF37" stroke-width="1.2" fill="none" opacity="0.5"/>
+          <circle cx="8" cy="20" r="2" fill="#D4AF37" opacity="0.6"/>
+          <circle cx="32" cy="20" r="2" fill="#D4AF37" opacity="0.6"/>
+        </svg>
+      </div>
+      <span class="collection-name">Bracelets</span>
+      <span class="collection-meta">3 modèles · Chaînes, joncs, manchettes<br>Tour de poignet 16–20 cm ajustable</span>
+      <span class="collection-price">179–349 MAD</span>
+    </div>
+
+    <div class="collection-card animate" style="animation-delay:0.2s">
+      <div class="collection-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <rect x="10" y="12" width="20" height="16" rx="2" stroke="#D4AF37" stroke-width="1.2" opacity="0.5"/>
+          <path d="M14 12 V10 Q20 8 26 10 V12" stroke="#D4AF37" stroke-width="0.8" fill="none"/>
+          <circle cx="20" cy="20" r="2" fill="#D4AF37" opacity="0.5"/>
+        </svg>
+      </div>
+      <span class="collection-name">Coffrets</span>
+      <span class="collection-meta">2 coffrets cadeaux · Sets curatés 2–3 pièces<br>Boîte cadeau offerte · Idéal anniversaire</span>
+      <span class="collection-price">349–599 MAD</span>
+    </div>
+
+    <div class="collection-card animate" style="animation-delay:0.25s">
+      <div class="collection-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <polygon points="20,6 24,16 35,16 26,23 29,34 20,27 11,34 14,23 5,16 16,16" stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.5"/>
+          <polygon points="20,12 22,17 27,17 23,20 25,26 20,22 15,26 17,20 13,17 18,17" fill="#D4AF37" opacity="0.3"/>
+        </svg>
+      </div>
+      <span class="collection-name">Éditions</span>
+      <span class="collection-meta">1 édition limitée · Collection capsule saisonnière<br>Stock limité — exclusivité garantie</span>
+      <span class="collection-price">239–499 MAD</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     IDENTITÉ VISUELLE
+══════════════════════════════════ -->
+<section class="identity-section">
+  <div class="section-title-block animate">
+    <span class="section-eyebrow">Brand Identity</span>
+    <h2>Identité <em>Visuelle</em></h2>
+    <p>Un système visuel cohérent pensé pour le digital et le print.</p>
+    <div class="gold-divider" style="margin-top:20px;"></div>
+  </div>
+
+  <!-- Logo variations -->
+  <div style="max-width:1100px; margin: 0 auto;">
+    <div class="logo-grid">
+      <div class="logo-card logo-card--dark-gold">
+        <span class="logo-display-gold">BISOU</span>
+        <span class="logo-variant-label">Or sur noir</span>
+      </div>
+      <div class="logo-card logo-card--dark-cream">
+        <span class="logo-display-cream">BISOU</span>
+        <span class="logo-variant-label">Crème sur foncé</span>
+      </div>
+      <div class="logo-card logo-card--light-dark">
+        <span class="logo-display-dark">BISOU</span>
+        <span class="logo-variant-label--on-light logo-variant-label" style="color:#888;">Noir sur crème</span>
+      </div>
+      <div class="logo-card logo-card--monogram">
+        <span class="logo-display-monogram">B</span>
+        <span class="logo-variant-label">Monogramme</span>
+      </div>
+    </div>
+
+    <!-- Color palette -->
+    <div class="colors-section">
+      <span class="section-eyebrow" style="text-align:left;display:block;">Palette Couleurs</span>
+      <div class="palette-grid">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#D4AF37;"></div>
+          <div class="swatch-info">
+            <span class="swatch-name">Or Signature</span>
+            <span class="swatch-hex">#D4AF37</span>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#0D0D0D; border-bottom:1px solid var(--border);"></div>
+          <div class="swatch-info">
+            <span class="swatch-name">Noir Profond</span>
+            <span class="swatch-hex">#0D0D0D</span>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#FDF6E3;"></div>
+          <div class="swatch-info">
+            <span class="swatch-name">Crème</span>
+            <span class="swatch-hex">#FDF6E3</span>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#F2D7D5;"></div>
+          <div class="swatch-info">
+            <span class="swatch-name">Rose Poudré</span>
+            <span class="swatch-hex">#F2D7D5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Typography -->
+    <div class="typo-section">
+      <span class="section-eyebrow" style="text-align:left;display:block;">Typographie</span>
+      <div class="typo-grid">
+        <div class="typo-card">
+          <div class="font-specimen-serif">Cormorant<br><em>Garamond</em></div>
+          <span class="font-label">Titres &amp; Display</span>
+          <p class="font-detail">Weights: 300 · 400 · 500 · 600<br>Graisses italiques disponibles<br>Utilisée pour H1, H2, H3, citations, prix</p>
+        </div>
+        <div class="typo-card">
+          <div class="font-specimen-sans">Jost Sans-Serif<br>Corps de texte</div>
+          <span class="font-label">Corps &amp; UI</span>
+          <p class="font-detail">Weights: 200 · 300 · 400 · 500 · 600<br>Géométrique, aéré, lisible sur mobile<br>Utilisée pour labels, CTA, navigation, fiches</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     INFLUENCEURS & MÉDIAS
+══════════════════════════════════ -->
+<section class="influencers-section">
+  <div class="section-title-block animate">
+    <span class="section-eyebrow">Stratégie Influence</span>
+    <h2>Influenceurs <em>&amp; Médias</em></h2>
+    <p>Ciblage par tiers pour maximiser l'authenticité et le ROI sur le marché marocain.</p>
+    <div class="gold-divider" style="margin-top:20px;"></div>
+  </div>
+  <table class="press-table animate">
+    <thead>
+      <tr>
+        <th>Tier</th>
+        <th>Abonnés</th>
+        <th>Plateforme</th>
+        <th>Engagement moy.</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="tier-badge">Nano</span></td>
+        <td>1 000 – 10 000</td>
+        <td>Instagram · TikTok</td>
+        <td>6 – 12 %</td>
+        <td>Communauté locale, ultra-ciblée, forte confiance</td>
+      </tr>
+      <tr>
+        <td><span class="tier-badge">Micro</span></td>
+        <td>10 000 – 50 000</td>
+        <td>Instagram · YouTube</td>
+        <td>4 – 8 %</td>
+        <td>Lifestyle & mode marocaine, meilleur ROI</td>
+      </tr>
+      <tr>
+        <td><span class="tier-badge">Macro</span></td>
+        <td>50 000 – 200 000</td>
+        <td>Instagram · TikTok</td>
+        <td>2 – 5 %</td>
+        <td>Notoriété nationale, campagnes saisonnières</td>
+      </tr>
+      <tr>
+        <td><span class="tier-badge">Mega</span></td>
+        <td>200 000+</td>
+        <td>Instagram · TV digitale</td>
+        <td>1 – 3 %</td>
+        <td>Ambassadrices ponctuelles, lancements exclusifs</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ══════════════════════════════════
+     CONTACT PRESSE
+══════════════════════════════════ -->
+<section class="contact-section">
+  <div class="animate">
+    <span class="section-eyebrow">Relations Presse</span>
+    <h2>Nous <em>contacter</em></h2>
+    <p style="color:var(--text-muted); font-size:0.9rem; margin-top:12px; max-width:400px; margin-left:auto; margin-right:auto;">
+      Pour toute demande presse, partenariat ou collaboration éditoriale.
+    </p>
+    <a href="mailto:presse@bisou.ma" class="contact-email">presse@bisou.ma</a>
+    <br>
+    <a href="https://wa.me/212600000000" class="btn-whatsapp" target="_blank">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      Contacter via WhatsApp
+    </a>
+    <span class="response-time">Réponse sous 24h · Disponible 7j/7</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FOOTER
+══════════════════════════════════ -->
+<footer class="site-footer">
+  <span class="footer-logo gold-text">BISOU</span>
+  <div class="gold-divider" style="margin-bottom:20px;"></div>
+  <span class="footer-copyright">&copy; 2026 BISOU &mdash; Marrakech, Maroc &mdash; Tous droits réservés</span>
+</footer>
+
+<script>
+  // Intersection Observer — animate on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.animationPlayState = 'running';
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.animate').forEach(el => {
+    el.style.animationPlayState = 'paused';
+    observer.observe(el);
+  });
+</script>
 
 </body>
 </html>
