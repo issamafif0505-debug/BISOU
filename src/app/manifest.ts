@@ -28,7 +28,6 @@ export default function manifest(): MetadataRoute.Manifest {
         src: '/icons/maskable-512.png',
         sizes: '512x512',
         type: 'image/png',
-        // @ts-expect-error — MetadataRoute.Manifest does not type 'purpose' yet
         purpose: 'maskable',
       },
     ],
@@ -37,7 +36,6 @@ export default function manifest(): MetadataRoute.Manifest {
         src: '/og/default.png',
         sizes: '1200x630',
         type: 'image/png',
-        // @ts-expect-error — MetadataRoute.Manifest does not type 'form_factor' yet
         form_factor: 'wide',
       },
     ],

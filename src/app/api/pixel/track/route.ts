@@ -85,11 +85,11 @@ export async function POST(req: NextRequest) {
 
   const capiCustomData: CAPICustomData | undefined = customData
     ? {
-        currency: customData.currency ?? 'MAD',
+        currency: 'MAD' as const,
         value: customData.value,
         content_ids: customData.contentIds,
         content_name: customData.contentName,
-        content_type: customData.contentType ?? 'product',
+        content_type: (customData.contentType as 'product' | 'product_group' | undefined) ?? 'product',
       }
     : undefined;
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
  * BISOU Seed Runner
  * ==================
@@ -127,7 +128,7 @@ async function seed() {
       limit: 1,
     });
     if (existing.docs.length > 0) {
-      categoryIdBySlug.set(cat.slug, existing.docs[0].id);
+      categoryIdBySlug.set(cat.slug, existing.docs[0]!.id);
       categoriesCounter.skipped++;
       continue;
     }
@@ -159,7 +160,7 @@ async function seed() {
       limit: 1,
     });
     if (existing.docs.length > 0) {
-      cityIdBySlug.set(city.slug, existing.docs[0].id);
+      cityIdBySlug.set(city.slug, existing.docs[0]!.id);
       citiesCounter.skipped++;
       continue;
     }
@@ -192,7 +193,7 @@ async function seed() {
       limit: 1,
     });
     if (existing.docs.length > 0) {
-      productIdBySlug.set(prod.slug, existing.docs[0].id);
+      productIdBySlug.set(prod.slug, existing.docs[0]!.id);
       productsCounter.skipped++;
       continue;
     }
