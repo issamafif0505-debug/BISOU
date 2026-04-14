@@ -3,6 +3,38 @@
 @tailwind utilities;
 
 /* ─────────────────────────────────────────────────────────────
+   Payload Admin — protection contre Tailwind Preflight
+   @tailwind base (Preflight) reset les inputs en
+   background:transparent / border:0 et casse l'UI admin.
+   On rétablit les valeurs navigateur dans le contexte Payload
+   qui ajoute data-theme sur <html>.
+   ───────────────────────────────────────────────────────────── */
+
+/* Payload admin uses data-theme="dark"|"light" on <html>.
+   We use !important to override Tailwind Preflight which zeroes out
+   all input borders and backgrounds globally. */
+
+html[data-theme='dark'] input:not([type='checkbox']):not([type='radio']),
+html[data-theme='dark'] textarea,
+html[data-theme='dark'] select {
+  background-color: var(--theme-input-bg, #1a1c20) !important;
+  border: 1px solid var(--theme-border-color, rgba(255,255,255,0.2)) !important;
+  border-radius: 4px !important;
+  color: var(--theme-text, #fff) !important;
+  box-sizing: border-box !important;
+}
+
+html[data-theme='light'] input:not([type='checkbox']):not([type='radio']),
+html[data-theme='light'] textarea,
+html[data-theme='light'] select {
+  background-color: var(--theme-input-bg, #ffffff) !important;
+  border: 1px solid var(--theme-border-color, rgba(0,0,0,0.2)) !important;
+  border-radius: 4px !important;
+  color: var(--theme-text, #000) !important;
+  box-sizing: border-box !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
    BISOU — Design tokens
    Variables CSS globales (couleurs, fonts, transitions)
    ───────────────────────────────────────────────────────────── */

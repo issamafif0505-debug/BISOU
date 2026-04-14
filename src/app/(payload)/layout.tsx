@@ -12,6 +12,7 @@
 
 import React from 'react';
 import { handleServerFunctions, RootLayout } from '@payloadcms/next/layouts';
+import '@payloadcms/ui/styles.css';
 import type { ServerFunctionClient } from 'payload';
 
 import config from '../../../payload.config';

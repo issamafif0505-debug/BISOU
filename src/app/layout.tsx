@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import './admin-fix.css';
 
 // ─────────────────────────────────────────────────────────────
 // Root layout — BARE (no <html>/<body>).

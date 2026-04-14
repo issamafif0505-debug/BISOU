@@ -1,0 +1,78 @@
+/*
+ * admin-fix.css
+ * Importé dans le root layout (app/layout.tsx) pour corriger l'admin Payload.
+ *
+ * Problème : @tailwind base (Preflight) dans globals.css reset border:0 et
+ * background:transparent sur tous les inputs. Comme globals.css est code-splittié
+ * uniquement sur les routes (shop), il n'est pas chargé sur l'admin. Mais son
+ * effet persiste via les chunks Next.js communs.
+ *
+ * Solution : importer ce fichier dans le root layout pour qu'il s'applique à
+ * toutes les routes dont /admin. On cible les inputs via le marqueur
+ * data-theme que Payload ajoute sur <html>.
+ */
+
+/* ─── Payload Admin dark theme ─────────────────────────────── */
+html[data-theme='dark'] input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='submit']):not([type='range']),
+html[data-theme='dark'] textarea,
+html[data-theme='dark'] select {
+  background-color: #1b1c1f !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 4px !important;
+  color: #fff !important;
+}
+
+html[data-theme='dark'] input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='submit']):not([type='range']):focus,
+html[data-theme='dark'] textarea:focus,
+html[data-theme='dark'] select:focus {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  outline: none !important;
+}
+
+/* ─── Payload Admin light theme ─────────────────────────────── */
+html[data-theme='light'] input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='submit']):not([type='range']),
+html[data-theme='light'] textarea,
+html[data-theme='light'] select {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  border-radius: 4px !important;
+  color: #000 !important;
+}
+
+html[data-theme='light'] input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='submit']):not([type='range']):focus,
+html[data-theme='light'] textarea:focus,
+html[data-theme='light'] select:focus {
+  border-color: rgba(0, 0, 0, 0.5) !important;
+  outline: none !important;
+}
+
+/* ─── Payload Admin buttons (Tailwind Preflight resets buttons to bg:transparent / padding:0) ── */
+html[data-theme] button,
+html[data-theme] [type='submit'],
+html[data-theme] [type='button'],
+html[data-theme] [type='reset'] {
+  background-color: revert !important;
+  border: revert !important;
+  padding: revert !important;
+  cursor: pointer !important;
+  font: revert !important;
+  color: revert !important;
+  line-height: revert !important;
+  text-align: revert !important;
+  border-radius: revert !important;
+  display: revert !important;
+  -webkit-appearance: revert !important;
+  appearance: revert !important;
+}
+
+/* Restore margin/padding resets that Preflight zeroes out */
+html[data-theme] * {
+  box-sizing: revert;
+}
+
+/* Payload labels */
+html[data-theme] label {
+  display: revert !important;
+  color: revert !important;
+  font-weight: revert !important;
+}
