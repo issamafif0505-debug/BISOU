@@ -76,3 +76,7 @@ temp/
 # ─── Claude Code local ───────────────────────────
 .claude/worktrees/
 .claude/cache/
+.claude/settings.local.json
+
+# ─── Build / Deploy ───────────────────────────────
+.vercel
