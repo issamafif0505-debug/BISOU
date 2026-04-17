@@ -10,7 +10,7 @@
  *   4. (Optional) resolve product slug → Payload product ID
  *   5. Create the order via Payload local API (hook generates CMD-###)
  *   6. Fire-and-forget to UpConfirm (non-blocking)
- *   7. (TODO Agent 5) Fire Meta CAPI server-side event (Purchase)
+ *   7. Fire Meta CAPI server-side Purchase event (dedup with browser Pixel)
  *   8. Return `{ ok, orderId, whatsappUrl }` — client opens WhatsApp + redirects
  *
  * Errors:
@@ -24,9 +24,11 @@ import { NextResponse, type NextRequest } from 'next/server';
 
 import { getPayloadClient } from '@/lib/payload';
 import { checkRateLimit, gcRateLimit } from '@/lib/rate-limit';
+import { sendCAPIEvent, buildUserData } from '@/lib/meta-capi';
 import { submitOrderToUpConfirm } from '@/lib/upconfirm';
 import { orderSchema } from '@/lib/validation';
 import { buildWhatsAppOrderUrl } from '@/lib/whatsapp';
+import { BASE_URL } from '@/lib/seo';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -136,13 +138,34 @@ export async function POST(req: NextRequest) {
       address: order.adresse,
     });
 
-    // 7. TODO(Agent 5): Meta CAPI server event
-    //   void sendMetaCapiEvent({
-    //     event_name: 'Purchase',
-    //     event_id: orderIdStr,                // Same as Pixel client event for dedup
-    //     user_data: { fbc: data.metaFbc, fbp: data.metaFbp, phone: order.telephone },
-    //     custom_data: { value: order.prix_mad, currency: 'MAD', content_ids: [orderIdStr] },
-    //   });
+    // 7. Meta CAPI — Purchase event server-side (non-blocking, dedup avec Pixel)
+    //    event_id = orderIdStr → même valeur que l'event browser → Meta dédup en 1 conversion
+    void sendCAPIEvent({
+      event_name: 'Purchase',
+      event_id: orderIdStr,
+      action_source: 'website',
+      event_source_url: `${BASE_URL}/checkout`,
+      user_data: buildUserData({
+        phone: order.telephone,
+        firstName: order.prenom,
+        lastName: order.nom,
+        city: cityName,
+        country: 'ma',
+        ip,
+        userAgent: req.headers.get('user-agent'),
+        fbc: data.metaFbc ?? null,
+        fbp: data.metaFbp ?? null,
+      }),
+      custom_data: {
+        currency: 'MAD',
+        value: Number(order.prix_mad),
+        content_ids: [orderIdStr],
+        content_name: order.produit,
+        content_type: 'product',
+        order_id: orderIdStr,
+        num_items: 1,
+      },
+    });
 
     // 8. Build WhatsApp URL for client redirect
     const whatsappUrl = buildWhatsAppOrderUrl({

@@ -109,7 +109,7 @@ export function hashPII(value: string | null | undefined): string | undefined {
 
 /**
  * Normalise + hash a Moroccan phone number. Returns the SHA-256 of the
- * E.164 digits (e.g. `212600000000` → hash). Accepts `+212...`, `0...`,
+ * E.164 digits (e.g. `212XXXXXXXXX` → sha256). Accepts `+212...`, `0...`,
  * `212...`, and strips non-digit characters.
  */
 export function hashPhoneMA(phone: string | null | undefined): string | undefined {
