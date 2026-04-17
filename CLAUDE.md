@@ -297,6 +297,7 @@ lg: 1100px
 | `bisou-seo-ecommerce` | Schema.org, sitemap dynamique, Core Web Vitals |
 | `bisou-payload-collections` | Patterns Payload 3.0 (hooks, auth, relations, migrations) |
 | `bisou-luxury-copy` | Copywriting français luxe bijoux |
+| `bisou-gsap` | Animations GSAP — useGSAP scope, ScrollTrigger, tokens motion, hero/cards/shimmer |
 
 Skills globaux utilisables aussi : `payload`, `next-best-practices`, `frontend-design`, `analytics-tracking`.
 
@@ -355,12 +356,25 @@ python -m http.server 3001 --directory legacy/brand
 
 ## État actuel du projet
 
-- [x] Structure racine (package.json, tsconfig, tailwind, next.config, middleware) — **Agent 1**
-- [x] Documentation (CLAUDE.md, README.md, SETUP.md, .env.example) — **Agent 1**
-- [x] Skills custom squelettes — **Agent 1**
-- [x] Migration legacy → `legacy/brand/` + `docs/` — **Agent 1**
-- [ ] `payload.config.ts` + collections + seeds — **Agent 2**
-- [ ] Pages publiques shop + composants UI — **Agent 3**
-- [ ] Tunnel COD + WhatsApp + UpConfirm — **Agent 4**
-- [ ] SEO, Schema.org, Meta Pixel, blog — **Agent 5**
-- [ ] PWA, pages légales, Vercel, Cloudflare — **Agent 6**
+- [x] Structure racine (package.json, tsconfig, tailwind, next.config, middleware) — **Agent 1** ✅
+- [x] Documentation (CLAUDE.md, README.md, SETUP.md, .env.example) — **Agent 1** ✅
+- [x] Skills custom squelettes — **Agent 1** ✅ (+1 skill GSAP ajouté)
+- [x] Migration legacy → `legacy/brand/` + `docs/` — **Agent 1** ✅
+- [x] `payload.config.ts` + 11 collections (dont Reviews) + seeds complets — **Agent 2** ✅
+- [x] 14 pages publiques shop + 49 composants UI + copywriting luxe — **Agent 3** ✅
+- [x] Tunnel COD + WhatsApp (server+client) + UpConfirm + HMAC signature webhook — **Agent 4** ✅
+- [x] SEO complet (sitemap, robots, OG image, Schema.org), Meta CAPI Purchase, 7 skills — **Agent 5** ✅
+- [x] PWA (manifest + icons 192/512/maskable), pages légales (CGV/mentions/confidentialité), GSAP animations — **Agent 6** ✅
+
+### Améliorations supplémentaires (avril 2026)
+- [x] Skill `bisou-gsap` + `src/lib/gsap.ts` + `src/lib/motion-tokens.ts`
+- [x] GSAP Hero text reveal + `HeroAnimations.tsx` (client island)
+- [x] `ScrollReveal.tsx` + `StatsAnimated.tsx` (compteurs animés 316L/48h/COD)
+- [x] `Testimonials.tsx` connecté à la collection Payload `Reviews` (avec fallback)
+- [x] `verifyWhatsAppSignature()` — HMAC-SHA256 dans `lib/whatsapp.ts`
+- [x] Meta CAPI `Purchase` event server-side dans `POST /api/orders`
+- [x] Pages légales complètes (CGV 10 articles, ML, confidentialité loi 09-08 + RGPD)
+- [x] Remotion re-render HQ (`--image-format=png --crf=14`, résolution problème bitrate 1.4→10+ Mbps)
+- [ ] 5 articles blog 1200+ mots (en cours de rédaction — `src/seed/blog.seed.ts`)
+- [ ] Cloudinary adapter (Phase 2 optionnel)
+- [ ] Alya Pay BNPL (Phase 2 optionnel)

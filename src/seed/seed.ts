@@ -295,19 +295,54 @@ async function seed() {
       slug: 'cgv',
       title_fr: 'Conditions Générales de Vente',
       placeholder:
-        "Bienvenue sur BISOU. Ces Conditions Générales de Vente régissent toutes les commandes passées via bisou.ma. Paiement à la livraison (COD), livraison sous 24 à 72h au Maroc, retour sous 7 jours, garantie 6 mois sur le plaquage or 18K.",
+        "Article 1 — Objet. Les présentes Conditions Générales de Vente (CGV) régissent l'ensemble des transactions effectuées sur bisou.ma entre BISOU SARL et tout client particulier résidant au Maroc.",
+      paras: [
+        "Article 1 — Objet. Les présentes CGV régissent toutes les commandes passées sur bisou.ma entre BISOU SARL (ci-après « BISOU ») et tout acheteur particulier résidant au Royaume du Maroc.",
+        "Article 2 — Commandes. Toute commande est confirmée par e-mail ou message WhatsApp dans les 2 heures suivant la validation en ligne. BISOU se réserve le droit d'annuler toute commande en cas de rupture de stock ou d'adresse de livraison non desservie.",
+        "Article 3 — Prix. Les prix sont exprimés en dirhams marocains (MAD) toutes taxes comprises. BISOU se réserve le droit de modifier ses prix à tout moment ; le prix applicable est celui affiché au moment de la validation de la commande.",
+        "Article 4 — Paiement à la livraison (COD). Le paiement s'effectue exclusivement en espèces lors de la réception du colis. Aucun paiement en ligne n'est requis. Le client doit disposer de la somme exacte lors de la livraison.",
+        "Article 5 — Livraison. La livraison est assurée partout au Maroc dans un délai de 24 à 72 heures ouvrées après confirmation de la commande. Les frais de livraison sont indiqués au moment de la commande. BISOU n'est pas responsable des délais de livraison en cas de force majeure ou de grèves de transporteurs.",
+        "Article 6 — Retours et échanges. Le client dispose de 7 jours calendaires à compter de la réception pour retourner un article non porté, dans son emballage d'origine. Les frais de retour sont à la charge du client. Le remboursement est effectué sous forme d'avoir ou de remboursement en espèces dans un délai de 14 jours.",
+        "Article 7 — Garantie. Tous les bijoux BISOU sont garantis 6 mois contre les défauts de fabrication et le déplaquage anormal. Cette garantie couvre uniquement les défauts liés à la fabrication, et non l'usure normale ou les dommages causés par un mauvais entretien.",
+        "Article 8 — Responsabilité. BISOU ne saurait être tenu responsable des dommages indirects découlant de l'utilisation de ses produits. La responsabilité de BISOU est limitée au montant de la commande concernée.",
+        "Article 9 — Litiges. En cas de litige, une solution amiable sera recherchée en priorité. À défaut, les tribunaux de Marrakech seront compétents. Le droit marocain est applicable aux présentes CGV.",
+        "Article 10 — Contact. Pour toute question relative à une commande : contact@bisou.ma ou via WhatsApp sur notre numéro professionnel.",
+      ],
     },
     {
       slug: 'mentions-legales',
       title_fr: 'Mentions légales',
       placeholder:
-        "BISOU est une marque marocaine de bijoux plaqué or 18K. Raison sociale : BISOU SARL. Siège : Marrakech, Maroc. Pour toute question légale, contactez : contact@bisou.ma.",
+        "BISOU est une marque marocaine de bijoux plaqué or 18K. Éditeur : BISOU SARL, Marrakech, Maroc. Contact : contact@bisou.ma.",
+      paras: [
+        "Éditeur du site. bisou.ma est édité par la société BISOU SARL, société à responsabilité limitée de droit marocain. Siège social : Marrakech, Maroc. E-mail : contact@bisou.ma.",
+        "Directeur de la publication. Le directeur de la publication est le gérant de BISOU SARL.",
+        "Hébergement. Le site bisou.ma est hébergé par Vercel Inc., 340 Pine Street, Suite 701, San Francisco, California 94104, USA. Les données sont stockées dans la région Europe (Paris).",
+        "Base de données. La base de données est hébergée chez Railway Technologies Inc., États-Unis, sur des serveurs en Europe.",
+        "Propriété intellectuelle. L'ensemble des éléments composant le site bisou.ma (textes, images, logos, vidéos, graphismes) sont la propriété exclusive de BISOU SARL et sont protégés par le droit d'auteur marocain (Loi 2-00 relative aux droits d'auteur et droits voisins) et international. Toute reproduction, représentation ou diffusion, totale ou partielle, sans accord écrit préalable est interdite.",
+        "Marques. BISOU® est une marque déposée de BISOU SARL. Toute utilisation non autorisée de cette marque est passible de poursuites.",
+        "Cookies. bisou.ma utilise des cookies techniques nécessaires au fonctionnement du site, ainsi que des cookies analytiques (Meta Pixel) pour mesurer l'audience. Vous pouvez configurer votre navigateur pour refuser les cookies non essentiels.",
+        "Contact. Pour toute question juridique ou réclamation relative au site : contact@bisou.ma. Nous nous engageons à répondre dans un délai de 72 heures ouvrées.",
+      ],
     },
     {
       slug: 'politique-confidentialite',
       title_fr: 'Politique de confidentialité',
       placeholder:
-        "Nous respectons votre vie privée (loi 09-08 CNDP Maroc + RGPD européen). Vos données personnelles ne sont utilisées que pour traiter votre commande. Aucune revente à des tiers.",
+        "BISOU respecte votre vie privée (loi 09-08 CNDP Maroc + RGPD). Vos données sont utilisées uniquement pour traiter votre commande. Aucune revente à des tiers.",
+      paras: [
+        "1. Responsable du traitement. BISOU SARL, dont le siège est à Marrakech (Maroc), est responsable du traitement de vos données personnelles collectées via bisou.ma.",
+        "2. Données collectées. Lors d'une commande : prénom, nom, téléphone, adresse de livraison, ville. Aucune donnée bancaire n'est collectée — le paiement s'effectue en espèces à la livraison (COD). Lors de la navigation : cookies techniques, adresse IP, données d'utilisation anonymisées.",
+        "3. Finalités du traitement. Vos données sont utilisées pour : traiter et livrer vos commandes, vous contacter via WhatsApp pour confirmer la livraison, mesurer l'efficacité de nos publicités (Meta Pixel, anonymisé), améliorer notre service client.",
+        "4. Base légale. Le traitement est fondé sur l'exécution du contrat de vente (COD) et, pour les cookies analytiques, sur votre consentement. Nous respectons la loi 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel (CNDP Maroc) et, pour les visiteurs résidant dans l'UE, le Règlement Général sur la Protection des Données (RGPD).",
+        "5. Durée de conservation. Les données de commande sont conservées 5 ans à des fins comptables et légales. Les données analytiques sont conservées 13 mois maximum.",
+        "6. Destinataires des données. Vos données ne sont jamais vendues à des tiers. Elles peuvent être partagées avec : notre prestataire logistique (nom et adresse de livraison uniquement), Meta Platforms (données anonymisées ou hachées pour les publicités), UpConfirm (confirmation de commande par IA).",
+        "7. Vos droits. Conformément à la loi 09-08 et au RGPD, vous disposez des droits d'accès, de rectification, d'opposition, de suppression et de portabilité de vos données. Pour exercer ces droits : contact@bisou.ma. Vous pouvez également introduire une réclamation auprès de la CNDP (www.cndp.ma).",
+        "8. Cookies. bisou.ma utilise des cookies essentiels (nécessaires au fonctionnement), des cookies de préférence (langue, panier) et des cookies analytiques (Meta Pixel). Un bandeau de consentement vous permet de configurer vos préférences lors de votre première visite.",
+        "9. Sécurité. BISOU met en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte ou altération (chiffrement HTTPS, accès restreint à la base de données, authentification des administrateurs).",
+        "10. Modifications. Cette politique peut être mise à jour. La date de dernière modification est indiquée en bas de page. Nous vous encourageons à la consulter régulièrement.",
+        "Dernière mise à jour : avril 2026.",
+      ],
     },
   ];
   for (const page of legalPages) {
@@ -325,10 +360,8 @@ async function seed() {
       data: {
         slug: page.slug,
         title_fr: page.title_fr,
-        content_fr: paragraphs(
-          page.placeholder,
-          "TODO — rédiger la version juridique définitive avant la mise en production.",
-        ),
+        // Use full paragraphs if available (new content), else fall back to placeholder.
+        content_fr: paragraphs(...('paras' in page && Array.isArray(page.paras) ? page.paras : [page.placeholder])),
         seo: {
           title: page.title_fr,
           description: page.placeholder,

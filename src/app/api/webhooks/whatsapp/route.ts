@@ -18,6 +18,7 @@
  */
 
 import { NextResponse, type NextRequest } from 'next/server';
+import { verifyWhatsAppSignature } from '@/lib/whatsapp';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -41,21 +42,33 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-  // Read raw body for eventual signature verification
+  // Read raw body BEFORE any parsing — HMAC is computed on the raw bytes.
   const rawBody = await req.text();
 
+  // Verify signature — reject any request that doesn't come from Meta.
+  const signature = req.headers.get('x-hub-signature-256');
+  const appSecret = process.env.WA_APP_SECRET;
+
+  if (!verifyWhatsAppSignature(rawBody, signature, appSecret)) {
+    // eslint-disable-next-line no-console
+    console.warn('[BISOU] WhatsApp webhook: invalid signature — rejected');
+    return NextResponse.json({ error: 'Invalid signature' }, { status: 401 });
+  }
+
   try {
-    const json = JSON.parse(rawBody);
+    const json = JSON.parse(rawBody) as Record<string, unknown>;
     // eslint-disable-next-line no-console
     console.log(
       '[BISOU] WhatsApp webhook received:',
       JSON.stringify(json).slice(0, 500),
     );
+    // TODO(Phase 2): parse message payloads, link to Orders via phone number,
+    // update `statut` when client replies with a confirmation keyword.
   } catch {
     // eslint-disable-next-line no-console
     console.warn('[BISOU] WhatsApp webhook received non-JSON body');
   }
 
-  // Always ack 200 so Meta doesn't retry
+  // Always ack 200 so Meta doesn't retry (even on parse errors).
   return NextResponse.json({ ok: true });
 }

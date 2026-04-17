@@ -16,6 +16,7 @@
  */
 
 import 'server-only';
+import crypto from 'node:crypto';
 
 const WA_PHONE = process.env.WA_PHONE_NUMBER;
 
@@ -91,4 +92,45 @@ export function buildWhatsAppProductQuestionUrl(
 ): string {
   const text = `Bonjour BISOU, je suis intéressé(e) par "${productName}" (${price} MAD). Pouvez-vous me donner plus d'informations ?`;
   return `https://wa.me/${phoneOrFallback()}?text=${encodeURIComponent(text)}`;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Webhook signature verification
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Verify the `x-hub-signature-256` header sent by Meta on every webhook POST.
+ *
+ * Meta computes: `sha256_hmac(WA_APP_SECRET, rawBody)` and sends it as
+ * `sha256=<hex-digest>`.
+ *
+ * @param rawBody  Raw request body string (before JSON.parse).
+ * @param header   Value of the `x-hub-signature-256` header.
+ * @param secret   `WA_APP_SECRET` env variable (the Meta App Secret).
+ * @returns        `true` when the signature is valid and the payload is authentic.
+ */
+export function verifyWhatsAppSignature(
+  rawBody: string,
+  header: string | null,
+  secret: string | undefined,
+): boolean {
+  if (!header || !secret) return false;
+
+  const expected = header.startsWith('sha256=') ? header.slice(7) : header;
+
+  const computed = crypto
+    .createHmac('sha256', secret)
+    .update(rawBody, 'utf8')
+    .digest('hex');
+
+  // Timing-safe comparison prevents timing attacks.
+  try {
+    return crypto.timingSafeEqual(
+      Buffer.from(computed, 'hex'),
+      Buffer.from(expected, 'hex'),
+    );
+  } catch {
+    // Buffers of different lengths throw — treat as invalid signature.
+    return false;
+  }
 }
