@@ -4,6 +4,7 @@ import { Hero } from '@/components/shop/Hero';
 import { BestsellersSection } from '@/components/shop/BestsellersSection';
 import { Testimonials } from '@/components/shop/Testimonials';
 import { CategoryCard } from '@/components/shop/CategoryCard';
+import { StatsAnimated } from '@/components/shop/StatsAnimated';
 import { Container, SectionTitle } from '@/components/ui';
 import { buildWhatsAppContactUrl } from '@/lib/whatsapp';
 import type { ProductCardData } from '@/components/shop/ProductCard';
@@ -115,18 +116,13 @@ export default async function HomePage() {
               Hypoallergénique, waterproof, anti-ternissement. Garantie 6 mois incluse.
               Paiement uniquement à la livraison — zéro risque pour vous.
             </p>
-            <div className="grid grid-cols-3 gap-6 mt-4 w-full">
-              {[
+            <StatsAnimated
+              items={[
                 { stat: '316L', label: 'Acier hypoallergénique' },
                 { stat: '48h', label: 'Livraison Maroc' },
                 { stat: 'COD', label: 'Paiement à réception' },
-              ].map((item) => (
-                <div key={item.stat} className="flex flex-col items-center gap-1">
-                  <span className="font-serif text-3xl text-gold">{item.stat}</span>
-                  <span className="text-xs text-grey uppercase tracking-[0.15em] font-sans text-center">{item.label}</span>
-                </div>
-              ))}
-            </div>
+              ]}
+            />
           </div>
         </Container>
       </section>
