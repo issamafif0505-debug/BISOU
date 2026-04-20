@@ -3,7 +3,7 @@
   "framework": "nextjs",
   "buildCommand": "pnpm build",
   "devCommand": "pnpm dev",
-  "installCommand": "pnpm install",
+  "installCommand": "pnpm install --production=false",
   "outputDirectory": ".next",
   "regions": ["cdg1"],
   "env": {
